@@ -62,7 +62,9 @@ export function AppFooter() {
 							</ul>
 						</div>
 						<div>
-							<h3 className="text-sm/6 font-semibold text-gray-900 dark:text-white">About</h3>
+							<h3 className="text-sm/6 font-semibold text-gray-900 dark:text-white">
+								About
+							</h3>
 							<ul role="list" className="mt-6 space-y-4">
 								<li>
 									<a
@@ -80,9 +82,10 @@ export function AppFooter() {
 									Disclaimer
 								</h4>
 								<p className="mt-2 text-xs/5 text-gray-600 dark:text-gray-400">
-									This application is not affiliated with, endorsed by, or connected to
-									Supermarket Simulator or its developers. All trademarks and game
-									content are the property of their respective owners.
+									This application is not affiliated with, endorsed by, or
+									connected to Supermarket Simulator or its developers. All
+									trademarks and game content are the property of their respective
+									owners.
 								</p>
 							</div>
 						</div>

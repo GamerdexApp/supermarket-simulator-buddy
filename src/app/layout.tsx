@@ -1,10 +1,10 @@
 import { ThemeModeScript } from "flowbite-react";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Script from "next/script";
 import { PlaythroughProvider } from "@/lib/contexts/PlaythroughContext";
 import { UIProvider } from "@/lib/contexts/UIContext";
 import { LayoutWrapper } from "@/comps/layout/LayoutWrapper";
-import Script from "next/script";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -95,11 +95,11 @@ export default function RootLayout({
 				</UIProvider>
 
 				<Script
-		          defer
-		          src="https://static.cloudflareinsights.com/beacon.min.js"
-		          data-cf-beacon='{"token": "6004659b06fb403dacb4dffb9543e35a"}'
-		          strategy="afterInteractive"
-		        />
+					defer
+					src="https://static.cloudflareinsights.com/beacon.min.js"
+					data-cf-beacon='{"token": "6004659b06fb403dacb4dffb9543e35a"}'
+					strategy="afterInteractive"
+				/>
 			</body>
 		</html>
 	);
