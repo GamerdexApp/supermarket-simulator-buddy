@@ -25,8 +25,8 @@
     "dependencies": {
         "flowbite-react": "^0.12.17",
         "next": "^16.3.6",
-        "react": "^19.3.0",
-        "react-dom": "^19.3.0",
+        "react": "^19.3.1",
+        "react-dom": "^19.3.1",
         "react-toastify": "^11.1.0"
     },
     "devDependencies": {
