@@ -1,6 +1,16 @@
 import type { AppData, Playthrough } from "@/types/playthrough";
 
-type ParseResult = { ok: true; data: AppData } | { ok: false; error: string };
+export interface ParseStats {
+  /** Entries in the file's playthroughs list. */
+  read: number;
+  /** Entries without an id or a name, and repeats of an id. */
+  skipped: number;
+  /** Negative store levels that become 0. */
+  levelsFixed: number;
+}
+
+type ParseResult =
+  { ok: true; data: AppData; stats: ParseStats } | { ok: false; error: string };
 
 const isRecord = (value: unknown): value is Record<string, unknown> =>
   typeof value === "object" && value !== null && !Array.isArray(value);
@@ -20,7 +30,7 @@ const withValidStoreLevel = (playthrough: Playthrough): Playthrough =>
 
 const rejected = (reason: string): ParseResult => ({
   ok: false,
-  error: `${reason} Nothing was changed.`,
+  error: `This file is not a Supermarket Simulator Buddy backup: ${reason} Nothing was changed.`,
 });
 
 /**
@@ -31,18 +41,23 @@ const rejected = (reason: string): ParseResult => ({
  */
 export const parseBackupData = (raw: unknown): ParseResult => {
   if (!isRecord(raw) || !Array.isArray(raw.playthroughs)) {
-    return rejected("The file has no list of playthroughs.");
+    return rejected("the playthroughs list is missing.");
   }
 
   const seen = new Set<string>();
-  const playthroughs = raw.playthroughs
-    .filter(hasIdAndName)
-    .filter((playthrough) => {
-      if (seen.has(playthrough.id)) return false;
-      seen.add(playthrough.id);
-      return true;
-    })
-    .map(withValidStoreLevel);
+  const kept = raw.playthroughs.filter(hasIdAndName).filter((playthrough) => {
+    if (seen.has(playthrough.id)) return false;
+    seen.add(playthrough.id);
+    return true;
+  });
+  const playthroughs = kept.map(withValidStoreLevel);
+  const stats: ParseStats = {
+    read: raw.playthroughs.length,
+    skipped: raw.playthroughs.length - kept.length,
+    levelsFixed: kept.filter(
+      (playthrough, index) => playthrough !== playthroughs[index],
+    ).length,
+  };
 
   const requestedActive =
     typeof raw.activePlaythroughId === "string"
@@ -52,7 +67,11 @@ export const parseBackupData = (raw: unknown): ParseResult => {
     ? requestedActive
     : (playthroughs[0]?.id ?? null);
 
-  return { ok: true, data: { ...raw, playthroughs, activePlaythroughId } };
+  return {
+    ok: true,
+    data: { ...raw, playthroughs, activePlaythroughId },
+    stats,
+  };
 };
 
 /** Checks the text of a backup file. */
@@ -61,7 +80,7 @@ export const parseBackup = (text: string): ParseResult => {
   try {
     raw = JSON.parse(text);
   } catch {
-    return rejected("The file is not valid JSON.");
+    return rejected("it is not valid JSON.");
   }
   return parseBackupData(raw);
 };

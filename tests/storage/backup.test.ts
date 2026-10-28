@@ -28,6 +28,7 @@ describe("parseBackup", () => {
     expect(parseBackup(JSON.stringify(saved, null, 2))).toEqual({
       ok: true,
       data: saved,
+      stats: { read: 4, skipped: 0, levelsFixed: 0 },
     });
   });
 
@@ -56,6 +57,11 @@ describe("parseBackup", () => {
     const result = parseBackup(file(saved));
 
     expect(result.ok && result.data.playthroughs).toEqual([kept]);
+    expect(result.ok && result.stats).toEqual({
+      read: 5,
+      skipped: 4,
+      levelsFixed: 0,
+    });
   });
 
   it("writes a negative store level as 0", () => {
@@ -64,6 +70,7 @@ describe("parseBackup", () => {
     const result = parseBackup(file(asAppData([below])));
 
     expect(result.ok && result.data.playthroughs[0].storeLevel).toBe(0);
+    expect(result.ok && result.stats.levelsFixed).toBe(1);
   });
 
   it("keeps the file's active playthrough when it exists, otherwise picks the first", () => {
