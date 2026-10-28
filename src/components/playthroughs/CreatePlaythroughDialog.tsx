@@ -12,7 +12,13 @@ import { PlaythroughFields } from "./PlaythroughFields";
 const text = playthroughsText.create;
 
 /** Mounted only while open, so every open starts empty. */
-function CreateDialogContent({ onClose }: { onClose: () => void }) {
+interface CreateDialogProps {
+	onClose: () => void;
+	/** Runs after the new playthrough is saved and active. */
+	onCreated?: () => void;
+}
+
+function CreateDialogContent({ onClose, onCreated }: CreateDialogProps) {
 	const formId = useId();
 	const { addPlaythrough } = usePlaythrough();
 	const showToast = useToast();
@@ -35,6 +41,7 @@ function CreateDialogContent({ onClose }: { onClose: () => void }) {
 		if (!id) return;
 		showToast({ variant: "success", title: text.done(trimmedName) });
 		onClose();
+		onCreated?.();
 	};
 
 	return (
@@ -77,6 +84,6 @@ function CreateDialogContent({ onClose }: { onClose: () => void }) {
 	);
 }
 
-export function CreatePlaythroughDialog({ open, onClose }: { open: boolean; onClose: () => void }) {
-	return open ? <CreateDialogContent onClose={onClose} /> : null;
+export function CreatePlaythroughDialog({ open, ...props }: CreateDialogProps & { open: boolean }) {
+	return open ? <CreateDialogContent {...props} /> : null;
 }

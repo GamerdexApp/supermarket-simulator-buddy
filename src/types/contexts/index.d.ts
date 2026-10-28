@@ -27,9 +27,6 @@ export interface PlaythroughContextType {
 }
 
 export interface UIContextType {
-  sidebarOpen: boolean;
-  toggleSidebar: () => void;
-  setSidebarOpen: (open: boolean) => void;
   drawerOpen: boolean;
   openDrawer: () => void;
   closeDrawer: () => void;
