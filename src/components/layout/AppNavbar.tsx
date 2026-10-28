@@ -1,9 +1,14 @@
 "use client";
 
-import { Button, DarkThemeToggle, Navbar, NavbarBrand } from "flowbite-react";
+import { Button, Navbar, NavbarBrand } from "flowbite-react";
 import Image from "next/image";
-import { HiMenu, HiX } from "react-icons/hi";
+import { HiMenu, HiMoon, HiSun, HiX } from "react-icons/hi";
 import { useUI } from "@/lib/contexts/UIContext";
+import { setTheme } from "@/lib/theme";
+
+/** Writes the new theme key, so the old top bar and the new Settings choice agree. */
+const toggleTheme = () =>
+	setTheme(document.documentElement.classList.contains("dark") ? "light" : "dark");
 
 export function AppNavbar() {
 	const { sidebarOpen, toggleSidebar } = useUI();
@@ -29,7 +34,15 @@ export function AppNavbar() {
 				</NavbarBrand>
 			</div>
 			<div className="flex md:order-2">
-				<DarkThemeToggle />
+				<button
+					type="button"
+					onClick={toggleTheme}
+					aria-label="Toggle dark mode"
+					className="rounded-lg p-2.5 text-gray-500 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700"
+				>
+					<HiMoon className="size-5 dark:hidden" />
+					<HiSun className="hidden size-5 dark:block" />
+				</button>
 			</div>
 		</Navbar>
 	);
