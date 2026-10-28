@@ -92,9 +92,9 @@ function LicenseCard({ license, playthrough, onUnlock, onUndo }: LicenseCardProp
 			className={`flex flex-col gap-3 p-4 ${state === "unlocked" ? "bg-tint" : ""} ${state === "locked" ? "border-dashed" : ""}`}
 		>
 			<div className="flex items-start justify-between gap-3">
-				<h3 id={titleId} className="text-lg font-semibold">
+				<h2 id={titleId} className="text-lg font-semibold">
 					{licenseText.title(number)}
-				</h3>
+				</h2>
 				<Badge tone={STATE_TONE[state]}>{text.states[state]}</Badge>
 			</div>
 			<div className="grid grid-cols-2 gap-2">

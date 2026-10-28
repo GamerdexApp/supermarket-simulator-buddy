@@ -51,9 +51,9 @@ function EmployeeCard({ roleId, employee, playthrough, onHire, onFire }: Employe
 		>
 			<div className="flex items-start justify-between gap-3">
 				<div className="flex flex-col">
-					<h4 id={titleId} className="font-semibold">
+					<h3 id={titleId} className="font-semibold">
 						{name}
-					</h4>
+					</h3>
 					<span className="text-muted font-mono text-xs">{employee.id}</span>
 				</div>
 				{hired && <Badge tone="kept">{hiringText.hiredBadge}</Badge>}
@@ -118,12 +118,12 @@ export function HiringTab({ playthrough }: { playthrough: Playthrough }) {
 				return (
 					<section key={role.id} className="flex flex-col gap-3">
 						<div className="flex flex-wrap items-baseline justify-between gap-2">
-							<h3 className="text-lg font-semibold">
+							<h2 className="text-lg font-semibold">
 								{hiringText.roles[role.id].title}
 								<span className="text-muted ms-2 font-mono text-sm font-normal">
 									{hiringText.hiredOf(roleTotals.hired, roleTotals.total)}
 								</span>
-							</h3>
+							</h2>
 							{roleTotals.dailyWages > 0 && (
 								<span className="font-mono">
 									{hiringText.roleWages(formatMoney(roleTotals.dailyWages))}

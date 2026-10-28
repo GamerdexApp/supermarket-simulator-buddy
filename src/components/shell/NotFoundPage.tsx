@@ -53,7 +53,11 @@ export function NotFoundPage() {
 					className="mt-6 flex flex-wrap justify-center gap-x-4 gap-y-2"
 				>
 					{sections.map((item) => (
-						<Link key={item.href} href={item.href} className="text-link underline">
+						<Link
+							key={item.href}
+							href={item.href}
+							className="text-link inline-flex min-h-11 items-center underline lg:min-h-0"
+						>
 							{item.label}
 						</Link>
 					))}

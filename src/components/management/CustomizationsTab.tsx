@@ -23,7 +23,7 @@ export function CustomizationsTab() {
 			<div className="grid gap-4 md:grid-cols-2 2xl:grid-cols-3">
 				{management.customizations.map((customization) => (
 					<Card key={customization.name} className="flex flex-col gap-2 p-4">
-						<h3 className="text-lg font-semibold">{customization.name}</h3>
+						<h2 className="text-lg font-semibold">{customization.name}</h2>
 						<p className="text-muted">{customization.description}</p>
 						<div className="bg-bg flex w-fit flex-col rounded-md px-3 py-2">
 							<span className="text-muted text-xs">{text.price}</span>

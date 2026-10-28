@@ -60,9 +60,9 @@ function OwnedItemCard({
 				<ItemImage src={item.imageUrl} muted={item.state === "locked"} />
 				<div className="flex min-w-0 flex-1 flex-col gap-1">
 					<div className="flex items-start justify-between gap-2">
-						<h3 id={titleId} className="font-semibold">
+						<h2 id={titleId} className="font-semibold">
 							{item.name}
-						</h3>
+						</h2>
 						{item.state === "unlocked" && (
 							<Badge tone="kept">{text.states.unlocked}</Badge>
 						)}
