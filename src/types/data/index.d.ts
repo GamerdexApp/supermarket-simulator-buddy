@@ -42,12 +42,16 @@ export interface Growth {
   sectionNum: string;
   storeLevel: number;
   price: number;
+  /** Floor area in tiles, for example "4x4". */
+  size: string;
 }
 
 export interface Storage {
   sectionNum: string;
   storeLevel: number;
   price: number;
+  /** Floor area in tiles, for example "4x4". */
+  size: string;
 }
 
 export interface Hiring {

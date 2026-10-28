@@ -147,7 +147,7 @@ export function PlaythroughsPage() {
 							}
 						/>
 					) : (
-						<div className="columns-1 gap-4 lg:columns-2 2xl:columns-3">
+						<div className="grid items-start gap-4 lg:grid-cols-2 2xl:grid-cols-3">
 							{visible.map((playthrough) => (
 								<PlaythroughCard
 									key={playthrough.id}

@@ -47,7 +47,7 @@ export function PlaythroughCard({
 			role="group"
 			aria-labelledby={titleId}
 			highlighted={isActive}
-			className="mb-4 flex break-inside-avoid flex-col gap-3 p-4"
+			className="flex flex-col gap-3 p-4"
 		>
 			<div className="flex items-start justify-between gap-3">
 				<h2 id={titleId} className="min-w-0 truncate text-lg font-semibold">
