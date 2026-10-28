@@ -1,20 +1,30 @@
-import { ThemeModeScript } from "flowbite-react";
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { IBM_Plex_Mono, IBM_Plex_Sans, Poppins } from "next/font/google";
 import Script from "next/script";
 import { PlaythroughProvider } from "@/lib/contexts/PlaythroughContext";
 import { UIProvider } from "@/lib/contexts/UIContext";
-import { LayoutWrapper } from "@/comps/layout/LayoutWrapper";
+import { applyThemeBeforePaint } from "@/lib/themeScript";
+import { ThemeSync } from "@/comps/layout/ThemeSync";
+import { ToastProvider } from "@/comps/ui/Toast";
 import "./globals.css";
 
-const geistSans = Geist({
-	variable: "--font-geist-sans",
+const plexSans = IBM_Plex_Sans({
+	variable: "--font-plex-sans",
 	subsets: ["latin"],
+	weight: ["400", "500", "600"],
 });
 
-const geistMono = Geist_Mono({
-	variable: "--font-geist-mono",
+const plexMono = IBM_Plex_Mono({
+	variable: "--font-plex-mono",
 	subsets: ["latin"],
+	weight: ["400", "500"],
+});
+
+const poppins = Poppins({
+	variable: "--font-poppins",
+	subsets: ["latin"],
+	weight: "800",
+	style: "italic",
 });
 
 const SITE_URL = "https://supermarket-simulator.gamerdex.app";
@@ -81,17 +91,22 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang="en" suppressHydrationWarning className="h-full">
+		<html
+			lang="en"
+			suppressHydrationWarning
+			className={`${plexSans.variable} ${plexMono.variable} ${poppins.variable} h-full`}
+		>
 			<head>
-				<ThemeModeScript />
+				<script dangerouslySetInnerHTML={{ __html: applyThemeBeforePaint }} />
 			</head>
-			<body
-				className={`${geistSans.variable} ${geistMono.variable} min-h-screen bg-gray-50 antialiased dark:bg-gray-900`}
-			>
+			<body className="bg-bg min-h-dvh antialiased">
 				<UIProvider>
-					<PlaythroughProvider>
-						<LayoutWrapper>{children}</LayoutWrapper>
-					</PlaythroughProvider>
+					<ToastProvider>
+						<PlaythroughProvider>
+							<ThemeSync />
+							{children}
+						</PlaythroughProvider>
+					</ToastProvider>
 				</UIProvider>
 
 				<Script
