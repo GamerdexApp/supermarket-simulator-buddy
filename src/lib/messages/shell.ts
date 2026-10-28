@@ -15,10 +15,15 @@ export const shellText = {
     active: "Active",
     all: "All playthroughs",
     create: "New playthrough",
-    storeLevel: (level: number) => `Store level ${level}`,
+    level: (level: number) => `Level ${level}`,
+    rowDetail: (level: number, date: string) => `Level ${level} · ${date}`,
+    switched: (name: string) => `Switched to ${name}`,
+    empty: "No Playthroughs created yet",
   },
   storeLevel: {
     label: "Store level",
+    edit: (level: number) => `Store level ${level}, select to type a level`,
+    atZero: "Already at level 0",
   },
   empty: {
     title: "No playthrough selected",
@@ -47,9 +52,11 @@ export const shellText = {
   },
   notFound: {
     title: "Page not found",
-    body: "That page does not exist or has moved.",
+    body: "There is no page at",
+    didYouMean: "Did you mean",
+    quickLinks: "Sections",
     toOverview: "Go to Overview",
-    toHome: "Go home",
+    toHome: "Back to home",
   },
 } as const;
 
