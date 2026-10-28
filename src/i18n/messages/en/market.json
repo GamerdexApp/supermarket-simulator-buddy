@@ -1,0 +1,93 @@
+{
+    "title": "Market",
+    "tabsLabel": "Market",
+    "tabs": {
+        "products": "Products",
+        "furniture": "Furniture",
+        "paint": "Paint",
+        "tools": "Tools",
+        "vehicles": "Vehicles"
+    },
+    "sublines": {
+        "products": "{name} · Products your licenses unlock",
+        "furniture": "{name} · Furniture prices",
+        "paint": "{name} · Paint prices",
+        "tools": "{name} · Tools you own",
+        "vehicles": "{name} · Vehicles you own"
+    },
+    "emptyDescription": "Pick or create a playthrough to see which products, tools and vehicles you have.",
+    "free": "Free",
+    "undoUnlock": "Undo unlock",
+    "unlock": "Unlock",
+    "locked": "Locked",
+    "states": {
+        "unlocked": "Unlocked",
+        "canUnlock": "Can unlock",
+        "locked": "Locked"
+    },
+    "products": {
+        "search": "Search by name or company...",
+        "displayType": "Filter by Display Type",
+        "allDisplayTypes": "All Display Types",
+        "category": "Filter by Category",
+        "allCategories": "All Categories",
+        "option": "{label} ({count})",
+        "filtersTitle": "Filter products",
+        "showing": "Showing {shown} of {count, plural, one {{amount} product} other {{amount} products}}",
+        "showButton": "Show {count, plural, one {{amount} product} other {{amount} products}}",
+        "unlocked": "Unlocked Products ({count})",
+        "locked": "Locked Products ({count})",
+        "lockedHelp": "Unlock the license in Management to sell these.",
+        "noUnlocked": "No unlocked products match your filters.",
+        "noLocked": "No locked products match your filters.",
+        "requires": "Requires: License {number}",
+        "itemsPerBox": "Items per box",
+        "weightPerBox": "Weight per box",
+        "kg": "{weight} kg",
+        "boxesPerStorage": "Boxes per storage",
+        "details": "Details for {name}",
+        "detail": {
+            "company": "Company",
+            "displayType": "Display type",
+            "category": "Category",
+            "boughtAt": "Bought at",
+            "license": "License",
+            "unlocked": "License {number}, unlocked",
+            "locked": "License {number}, not unlocked yet",
+            "none": "Not listed",
+            "toLicenses": "Open Licenses",
+            "close": "Close"
+        },
+        "stores": {
+            "liquor_store": "Liquor Store",
+            "janitorial_supply": "Janitorial Supply",
+            "deli_and_grocery": "Deli and Grocery",
+            "meat_and_dairy": "Meat and Dairy",
+            "green_market": "Green Market"
+        }
+    },
+    "furniture": {
+        "heading": "All Furniture ({count})",
+        "note": "Prices from the game. Furniture has no saved state."
+    },
+    "paint": {
+        "heading": "All Paint ({count})",
+        "note": "Prices from the game. Paint has no saved state."
+    },
+    "tools": {
+        "totalSpent": "Total Spent on Tools",
+        "unlockedOf": "{owned} of {count, plural, one {{amount} tool unlocked} other {{amount} tools unlocked}}",
+        "requiresLicenses": "Requires {count, plural, one {{amount} license} other {{amount} licenses}} · you own {owned}",
+        "unlocked": "{name} unlocked",
+        "undone": "{name} locked again"
+    },
+    "vehicles": {
+        "totalSpent": "Total Spent on Vehicles",
+        "unlockedOf": "{owned} of {count, plural, one {{amount} vehicle unlocked} other {{amount} vehicles unlocked}}",
+        "price": "Price",
+        "storeLevel": "Store level",
+        "requiresLevel": "Requires store level {level} · you are level {current}",
+        "unlocked": "{name} unlocked",
+        "undone": "{name} locked again"
+    }
+}

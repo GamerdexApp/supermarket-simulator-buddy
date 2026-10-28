@@ -85,14 +85,19 @@ describe("parseBackup", () => {
   });
 
   it.each([
-    ["text that is not JSON", "not json"],
-    ["a file without a playthroughs list", file({ hello: "world" })],
-    ["a list that is not an array", file({ playthroughs: {} })],
-  ])("rejects %s", (_label, text) => {
-    const result = parseBackup(text);
-
-    expect(result.ok).toBe(false);
-    expect(!result.ok && result.error).toMatch(/Nothing was changed\.$/);
+    ["text that is not JSON", "not json", "notJson"],
+    [
+      "a file without a playthroughs list",
+      file({ hello: "world" }),
+      "playthroughsMissing",
+    ],
+    [
+      "a list that is not an array",
+      file({ playthroughs: {} }),
+      "playthroughsMissing",
+    ],
+  ])("rejects %s", (_label, text, error) => {
+    expect(parseBackup(text)).toEqual({ ok: false, error });
   });
 });
 
@@ -150,12 +155,14 @@ describe("planImport", () => {
     const device = asAppData([progressedPlaythrough()]);
     const incoming = asAppData([emptyPlaythrough()]);
 
-    expect(summarizeImport(planImport(device, incoming, "merge"))).toBe(
-      "1 added, 1 kept",
-    );
-    expect(summarizeImport(planImport(device, incoming, "replace"))).toBe(
-      "1 replaced, 1 removed",
-    );
+    expect(summarizeImport(planImport(device, incoming, "merge"))).toEqual([
+      { result: "added", count: 1 },
+      { result: "kept", count: 1 },
+    ]);
+    expect(summarizeImport(planImport(device, incoming, "replace"))).toEqual([
+      { result: "replaced", count: 1 },
+      { result: "removed", count: 1 },
+    ]);
   });
 });
 

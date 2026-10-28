@@ -1,0 +1,63 @@
+{
+    "title": "Daftar Belanja",
+    "subline": "Rencanakan pembelian produk untuk {name}",
+    "emptyDescription": "Buat sesi main untuk merencanakan pembelian.",
+    "addProducts": "Tambah Produk",
+    "summary": {
+        "title": "Ringkasan Belanja",
+        "purchased": "{bought} / {count, plural, other {{amount} item dibeli}}",
+        "boxes": "{count, plural, other {total {amount} kotak}}",
+        "reset": "Reset Daftar"
+    },
+    "reset": {
+        "title": "Reset daftar belanja?",
+        "body": "Ini menghapus {count, plural, other {{amount} item}} ({bought} dibeli, {boxCount, plural, other {{boxes} kotak}}).",
+        "cancel": "Batal",
+        "confirm": "Reset daftar",
+        "done": "Daftar belanja direset",
+        "doneMessage": "{count, plural, other {{amount} item}} dihapus."
+    },
+    "empty": {
+        "title": "Daftar belanjamu kosong",
+        "body": "Rencanakan produk yang akan dibeli sebelum kamu pergi belanja lagi.",
+        "steps": {
+            "item1": "Tambahkan produk dari lisensi yang sudah kamu buka.",
+            "item2": "Ketuk produk lagi untuk menambah satu kotak.",
+            "item3": "Centang item saat kamu membelinya."
+        },
+        "missing": "Ada produk yang tidak muncul? Buka lisensinya di Manajemen.",
+        "toManagement": "Ke Lisensi"
+    },
+    "shop": {
+        "noShop": "Tidak Ada Toko",
+        "items": "{count, plural, other {{amount} item}}",
+        "progress": "{bought} dari {total} dibeli · {count, plural, other {{amount} kotak}}"
+    },
+    "row": {
+        "purchased": "Tandai dibeli: {label}",
+        "boxes": "Kotak",
+        "remove": "Hapus {label}",
+        "removed": "{name} dihapus"
+    },
+    "undo": "Urungkan",
+    "dialog": {
+        "title": "Tambah Produk ke Daftar Belanja",
+        "search": "Cari Produk",
+        "searchPlaceholder": "Cari nama atau perusahaan...",
+        "source": "Hanya produk dari lisensi yang terbuka yang ditampilkan.",
+        "showing": "Menampilkan {shown} dari {total}",
+        "pick": "Ketuk produk untuk menambahkannya",
+        "noResults": "Tidak ada produk yang cocok dengan \"{term}\"",
+        "noResultsHint": "Produk yang tidak muncul mungkin butuh lisensi yang belum kamu buka.",
+        "clearSearch": "Hapus pencarian",
+        "addOne": "Tambah satu kotak {label}",
+        "pending": "Item yang Akan Ditambah ({count})",
+        "noPending": "Belum ada item. Ketuk produk di sebelah kiri untuk menambah satu kotak. Ketuk lagi untuk menambah lagi.",
+        "merges": "Produk yang sudah ada di daftarmu akan mendapat tambahan kotak ini di barisnya.",
+        "boxes": "{count, plural, other {{amount} kotak}}",
+        "removePending": "Hapus {label} dari item yang akan ditambah",
+        "cancel": "Batal",
+        "submit": "{count, plural, other {Tambah {amount} Item ke Daftar}}",
+        "added": "{count, plural, other {{amount} item}} ditambahkan"
+    }
+}

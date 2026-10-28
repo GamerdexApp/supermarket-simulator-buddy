@@ -1,26 +1,29 @@
 "use client";
 
 import type { FirstSyncChoice } from "@gamerdexapp/gamerdex-sync";
+import { useTranslations } from "next-intl";
 import { useState } from "react";
 import { type PendingChoice, useSync } from "@/lib/contexts/SyncContext";
-import { syncText } from "@/lib/messages/sync";
+import { formatNumber } from "@/lib/format";
 import type { SyncDocument } from "@/lib/sync/document";
 import { Button } from "@/comps/ui/Button";
 import { Dialog } from "@/comps/ui/Dialog";
 
-const text = syncText;
-
 const options = [
-	{ choice: "merge", label: text.choice.merge, hint: text.choice.mergeHint },
-	{ choice: "keep-local", label: text.choice.keepLocal, hint: text.choice.keepLocalHint },
-	{ choice: "keep-cloud", label: text.choice.keepCloud, hint: text.choice.keepCloudHint },
+	{ choice: "merge", key: "merge" },
+	{ choice: "keep-local", key: "keepLocal" },
+	{ choice: "keep-cloud", key: "keepCloud" },
 ] as const;
 
 function Summary({ title, data }: { title: string; data: SyncDocument }) {
+	const t = useTranslations("sync");
+	const count = data.playthroughs.length;
 	return (
 		<div className="border-line bg-surface flex flex-col gap-1 rounded-md border-[1.5px] p-3">
 			<span className="font-semibold">{title}</span>
-			<span className="text-muted">{text.playthroughCount(data.playthroughs.length)}</span>
+			<span className="text-muted">
+				{t("playthroughCount", { count, amount: formatNumber(count) })}
+			</span>
 			<span className="font-mono text-xs break-words">
 				{data.playthroughs.map((playthrough) => playthrough.name).join(", ")}
 			</span>
@@ -35,6 +38,7 @@ interface FirstSyncDialogProps {
 }
 
 export function FirstSyncDialog({ open, choice, onLater }: FirstSyncDialogProps) {
+	const t = useTranslations("sync");
 	const { syncNow, status } = useSync();
 	const [picked, setPicked] = useState<FirstSyncChoice>("merge");
 	const working = status === "syncing";
@@ -43,30 +47,30 @@ export function FirstSyncDialog({ open, choice, onLater }: FirstSyncDialogProps)
 		<Dialog
 			open={open}
 			onClose={onLater}
-			title={text.choice.title}
-			description={text.choice.body}
+			title={t("choice.title")}
+			description={t("choice.body")}
 			variant="wide"
 			footer={
 				<>
 					<Button variant="secondary" disabled={working} onClick={onLater}>
-						{text.first.later}
+						{t("first.later")}
 					</Button>
 					<Button
 						variant="primary"
 						loading={working}
 						onClick={() => void syncNow(picked)}
 					>
-						{working ? text.status.syncing : text.first.apply}
+						{working ? t("status.syncing") : t("first.apply")}
 					</Button>
 				</>
 			}
 		>
 			<div className="grid gap-3 sm:grid-cols-2">
-				<Summary title={text.first.thisDevice} data={choice.local} />
-				<Summary title={text.first.cloud} data={choice.remote} />
+				<Summary title={t("first.thisDevice")} data={choice.local} />
+				<Summary title={t("first.cloud")} data={choice.remote} />
 			</div>
 			<fieldset disabled={working} className="mt-4 flex flex-col gap-2">
-				<legend className="sr-only">{text.first.optionsLabel}</legend>
+				<legend className="sr-only">{t("first.optionsLabel")}</legend>
 				{options.map((option) => (
 					<label
 						key={option.choice}
@@ -87,14 +91,14 @@ export function FirstSyncDialog({ open, choice, onLater }: FirstSyncDialogProps)
 						/>
 						<span className="flex flex-col gap-0.5">
 							<span className="font-semibold">
-								{option.label}
+								{t(`choice.${option.key}`)}
 								{option.choice === "merge" && (
 									<span className="text-link ms-2 text-xs">
-										{text.first.recommended}
+										{t("first.recommended")}
 									</span>
 								)}
 							</span>
-							<span className="text-muted">{option.hint}</span>
+							<span className="text-muted">{t(`choice.${option.key}Hint`)}</span>
 						</span>
 					</label>
 				))}

@@ -1,0 +1,56 @@
+{
+    "title": "Vue d'ensemble",
+    "subline": "{name} · Tout en un coup d'œil",
+    "emptyDescription": "Choisissez ou créez une partie pour voir sa progression en un coup d'œil.",
+    "identity": {
+        "created": "Créée le : {date}",
+        "lastModified": "Dernière modification : {date}",
+        "manage": "Gérer les parties"
+    },
+    "storeLevel": {
+        "title": "Niveau du magasin",
+        "subtitle": "Niveau de progression actuel",
+        "hint": "Modifiez-le avec le sélecteur Niveau du magasin dans la barre latérale."
+    },
+    "financial": {
+        "title": "Aperçu financier",
+        "activeLoans": "Prêts actifs",
+        "dailyPayments": "Paiements journaliers",
+        "totalDebt": "Dette totale des prêts",
+        "none": "Aucun prêt actif. Ouvrez la banque pour en contracter un.",
+        "formula": "Chaque prêt coûte son capital plus le capital multiplié par le taux journalier et par la durée. Chaque prêt actif est compté comme payé chaque jour.",
+        "view": "Voir la banque"
+    },
+    "investment": {
+        "title": "Investissement total",
+        "subtitle": "Dépenses cumulées de la gestion et du marché",
+        "formula": "Gestion {managementSpent} + Marché {marketSpent} = {total}"
+    },
+    "management": {
+        "title": "Gestion",
+        "licenses": "Licences",
+        "growth": "Agrandissements",
+        "storage": "Extensions d'entrepôt",
+        "employees": "Employés",
+        "unlocked": "{owned} sur {total} débloqués",
+        "hired": "{owned} sur {total} embauchés",
+        "perDay": "{amount}/jour",
+        "hiringNote": "Frais d'embauche payés jusqu'ici : {amount}. Ils ne font pas partie du total investi.",
+        "total": "Total investi",
+        "view": "Voir la gestion"
+    },
+    "market": {
+        "title": "Marché",
+        "products": "Produits",
+        "licensesUnlocked": "{count, plural, one {{amount} licence débloquée} other {{amount} licences débloquées}}",
+        "available": "{amount} disponibles",
+        "tools": "Outils",
+        "vehicles": "Véhicules",
+        "furniture": "Mobilier",
+        "furnitureItems": "{count, plural, one {{amount} article disponible} other {{amount} articles disponibles}}",
+        "unlocked": "{owned} sur {total} débloqués",
+        "note": "Le mobilier et la peinture ne sont pas enregistrés, leurs dépenses ne sont donc pas comptées.",
+        "total": "Total investi",
+        "view": "Voir le marché"
+    }
+}

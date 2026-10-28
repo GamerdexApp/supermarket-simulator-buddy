@@ -1,0 +1,81 @@
+{
+    "skipToContent": "Chuyển đến nội dung",
+    "closeMenu": "Đóng menu",
+    "openMenu": "Mở menu",
+    "menuLabel": "Menu trang",
+    "mainNav": "Chính",
+    "brandWords": {
+        "item1": "Supermarket",
+        "item2": "Simulator",
+        "item3": "Buddy"
+    },
+    "noPlaythroughHint": "Tạo một lượt chơi để bắt đầu theo dõi.",
+    "switcher": {
+        "sectionLabel": "Lượt chơi",
+        "loading": "Đang tải",
+        "none": "Chưa chọn",
+        "switch": "Đổi lượt chơi",
+        "playthroughs": "Lượt chơi",
+        "active": "Đang dùng",
+        "all": "Mọi lượt chơi",
+        "create": "Lượt chơi mới",
+        "level": "Cấp {level}",
+        "rowDetail": "Cấp {level} · {date}",
+        "switched": "Đã chuyển sang {name}",
+        "empty": "Chưa tạo lượt chơi nào"
+    },
+    "storeLevel": {
+        "label": "Cấp cửa hàng",
+        "edit": "Cấp cửa hàng {level}, chọn để nhập cấp",
+        "atZero": "Đã ở cấp 0"
+    },
+    "empty": {
+        "title": "Chưa chọn lượt chơi",
+        "description": "Tạo một lượt chơi hoặc chọn từ danh sách để xem trang này.",
+        "create": "Lượt chơi mới",
+        "all": "Mọi lượt chơi"
+    },
+    "footer": {
+        "tagline": "Công cụ theo dõi tiến độ miễn phí cho Supermarket Simulator. Dữ liệu nằm trong trình duyệt của bạn, hoặc trong bộ nhớ đám mây của riêng bạn nếu bạn bật đồng bộ.",
+        "support": "Hỗ trợ",
+        "about": "Giới thiệu",
+        "settings": "Cài đặt",
+        "discord": "Discord",
+        "github": "GitHub",
+        "officialGame": "Game chính thức",
+        "privacy": "Chính sách quyền riêng tư",
+        "terms": "Điều khoản dịch vụ",
+        "disclaimerTitle": "Miễn trừ trách nhiệm",
+        "disclaimer": "Dự án này không liên kết, không được bảo trợ và không liên quan đến Supermarket Simulator hay nhà phát triển của game. Mọi nhãn hiệu và nội dung game thuộc về chủ sở hữu.",
+        "framework": "Xây dựng trên nền tảng Gamerdex, nền tảng chung cho các công cụ theo dõi tiến độ game miễn phí.",
+        "visitGamerdex": "Ghé Gamerdex"
+    },
+    "notFound": {
+        "title": "Không tìm thấy trang",
+        "body": "Không có trang nào tại <code>{path}</code>.",
+        "didYouMean": "Có phải bạn muốn tìm <link>{suggestion}</link>?",
+        "quickLinks": "Các mục",
+        "toOverview": "Đến Tổng quan",
+        "toHome": "Về trang chủ"
+    },
+    "saveFailed": {
+        "title": "Chưa lưu",
+        "message": "Trình duyệt không lưu được thay đổi. Hãy tải bản sao lưu để không mất dữ liệu.",
+        "exportBackup": "Tải bản sao lưu"
+    },
+    "nav": {
+        "groups": {
+            "store": "Cửa hàng của bạn",
+            "plan": "Kế hoạch"
+        },
+        "items": {
+            "overview": "Tổng quan",
+            "market": "Chợ",
+            "management": "Quản lý",
+            "bank": "Ngân hàng",
+            "shoppingList": "Danh sách mua sắm",
+            "settings": "Cài đặt",
+            "playthroughs": "Lượt chơi"
+        }
+    }
+}

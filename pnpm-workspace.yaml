@@ -1,4 +1,6 @@
 allowBuilds:
+  "@parcel/watcher": false
+  "@swc/core": false
   unrs-resolver: false
 overrides:
   deepmerge-ts: ^8.0.2

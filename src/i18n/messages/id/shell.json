@@ -1,0 +1,81 @@
+{
+    "skipToContent": "Langsung ke konten",
+    "closeMenu": "Tutup menu",
+    "openMenu": "Buka menu",
+    "menuLabel": "Menu situs",
+    "mainNav": "Utama",
+    "brandWords": {
+        "item1": "Supermarket",
+        "item2": "Simulator",
+        "item3": "Buddy"
+    },
+    "noPlaythroughHint": "Buat sesi main untuk mulai melacak.",
+    "switcher": {
+        "sectionLabel": "Sesi main",
+        "loading": "Memuat",
+        "none": "Belum dipilih",
+        "switch": "Ganti sesi main",
+        "playthroughs": "Sesi main",
+        "active": "Aktif",
+        "all": "Semua sesi main",
+        "create": "Sesi main baru",
+        "level": "Level {level}",
+        "rowDetail": "Level {level} · {date}",
+        "switched": "Beralih ke {name}",
+        "empty": "Belum ada sesi main yang dibuat"
+    },
+    "storeLevel": {
+        "label": "Level toko",
+        "edit": "Level toko {level}, pilih untuk mengetik level",
+        "atZero": "Sudah di level 0"
+    },
+    "empty": {
+        "title": "Tidak ada sesi main yang dipilih",
+        "description": "Buat sesi main atau pilih satu dari daftarmu untuk melihat halaman ini.",
+        "create": "Sesi main baru",
+        "all": "Semua sesi main"
+    },
+    "footer": {
+        "tagline": "Pelacak progres gratis untuk Supermarket Simulator. Datamu tetap di browsermu, atau di penyimpanan cloud milikmu sendiri jika kamu menyalakan sinkronisasi.",
+        "support": "Dukungan",
+        "about": "Tentang",
+        "settings": "Pengaturan",
+        "discord": "Discord",
+        "github": "GitHub",
+        "officialGame": "Game resmi",
+        "privacy": "Kebijakan privasi",
+        "terms": "Ketentuan layanan",
+        "disclaimerTitle": "Penafian",
+        "disclaimer": "Proyek ini tidak berafiliasi dengan, didukung oleh, atau terhubung dengan Supermarket Simulator atau pengembangnya. Semua merek dagang dan konten game adalah milik pemiliknya masing-masing.",
+        "framework": "Dibuat dengan framework Gamerdex, fondasi bersama untuk pelacak progres game gratis.",
+        "visitGamerdex": "Kunjungi Gamerdex"
+    },
+    "notFound": {
+        "title": "Halaman tidak ditemukan",
+        "body": "Tidak ada halaman di <code>{path}</code>.",
+        "didYouMean": "Maksudmu <link>{suggestion}</link>?",
+        "quickLinks": "Bagian",
+        "toOverview": "Ke Ringkasan",
+        "toHome": "Kembali ke beranda"
+    },
+    "saveFailed": {
+        "title": "Tidak tersimpan",
+        "message": "Browser tidak bisa menyimpan perubahanmu. Unduh cadangan agar tidak ada yang hilang.",
+        "exportBackup": "Unduh cadangan"
+    },
+    "nav": {
+        "groups": {
+            "store": "Tokomu",
+            "plan": "Rencana"
+        },
+        "items": {
+            "overview": "Ringkasan",
+            "market": "Pasar",
+            "management": "Manajemen",
+            "bank": "Bank",
+            "shoppingList": "Daftar belanja",
+            "settings": "Pengaturan",
+            "playthroughs": "Sesi main"
+        }
+    }
+}

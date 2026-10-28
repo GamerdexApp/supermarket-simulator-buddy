@@ -1,0 +1,149 @@
+{
+    "title": "Gestão",
+    "tabsLabel": "Gestão",
+    "tabs": {
+        "licenses": "Licenças",
+        "growth": "Expansão",
+        "storage": "Armazém",
+        "hiring": "Contratação",
+        "customizations": "Personalizações"
+    },
+    "sublines": {
+        "licenses": "{name} · Desbloquear licenças para vender mais produtos",
+        "growth": "{name} · Expandir a área de venda uma secção de cada vez",
+        "storage": "{name} · Expandir o armazém uma secção de cada vez",
+        "hiring": "{name} · Contratar pessoal para gerir a loja",
+        "customizations": "{name} · Alterações da loja compradas no jogo"
+    },
+    "emptyDescription": "Escolhe ou cria uma partida para acompanhar licenças, expansão da loja, armazém e pessoal.",
+    "storeLevel": "Nível da loja",
+    "storeLevelCaption": "Altera-o na barra lateral",
+    "free": "Grátis",
+    "requiresLevel": "Requer o nível da loja {level} (estás no nível {current})",
+    "locked": "Bloqueado",
+    "states": {
+        "unlocked": "Desbloqueado",
+        "canUnlock": "Desbloqueável",
+        "locked": "Bloqueado"
+    },
+    "licenses": {
+        "totalSpent": "Total gasto em licenças",
+        "unlockedOf": "Desbloqueadas {owned} de {count, plural, one {{amount} licença} other {{amount} licenças}}",
+        "canUnlockNow": "Desbloqueáveis agora",
+        "lockedByLevel": "Bloqueadas pelo nível",
+        "title": "Licença {number}",
+        "price": "Preço",
+        "level": "Nível da loja",
+        "unlocks": "Desbloqueia {count, plural, one {{amount} produto} other {{amount} produtos}}",
+        "unlock": "Desbloquear licença",
+        "undoUnlock": "Anular desbloqueio",
+        "unlocked": "Licença {number} desbloqueada",
+        "undone": "Licença {number} bloqueada de novo",
+        "filters": {
+            "search": "Pesquisar licenças ou produtos",
+            "title": "Filtrar licenças",
+            "show": "Mostrar",
+            "showOptions": {
+                "all": "Todas",
+                "unlocked": "Desbloqueadas",
+                "canUnlock": "Desbloqueáveis",
+                "locked": "Bloqueadas"
+            },
+            "sort": "Ordenar por",
+            "sortOptions": {
+                "number": "Número da licença",
+                "price": "Preço crescente",
+                "storeLevel": "Nível da loja crescente"
+            },
+            "summary": "A mostrar {shown} de {count, plural, one {{amount} licença} other {{amount} licenças}}",
+            "showButton": "Mostrar {count, plural, one {{amount} licença} other {{amount} licenças}}"
+        },
+        "noMatch": "Nenhuma licença corresponde a estes filtros",
+        "noMatchDescription": "Experimenta outra pesquisa ou mostra todas as licenças."
+    },
+    "sections": {
+        "growth": {
+            "totalSpent": "Total gasto em expansão",
+            "unlockedOf": "Desbloqueadas {owned} de {count, plural, one {{amount} secção} other {{amount} secções}}",
+            "title": "Secção de expansão {num}",
+            "pathLabel": "Secções de expansão",
+            "unlocked": "Secção de expansão {num} desbloqueada",
+            "undone": "{count, plural, one {Secção de expansão {range} bloqueada de novo} other {Secções de expansão {range} bloqueadas de novo}}",
+            "cascadeTitle": "Anular a secção de expansão {num}?"
+        },
+        "storage": {
+            "totalSpent": "Total gasto em armazém",
+            "unlockedOf": "Desbloqueadas {owned} de {count, plural, one {{amount} secção} other {{amount} secções}}",
+            "title": "Secção de armazém {num}",
+            "pathLabel": "Secções de armazém",
+            "firstSectionNote": "Nos dados do jogo, a secção de armazém 1 custa $800 no nível da loja 0, enquanto a secção de expansão 1 é grátis.",
+            "unlocked": "Secção de armazém {num} desbloqueada",
+            "undone": "{count, plural, one {Secção de armazém {range} bloqueada de novo} other {Secções de armazém {range} bloqueadas de novo}}",
+            "cascadeTitle": "Anular a secção de armazém {num}?"
+        },
+        "nextSection": "Secção seguinte",
+        "nextSectionValue": "Secção {num} · nível {level} · {price}",
+        "allUnlocked": "Tudo desbloqueado",
+        "level": "Nível {level}",
+        "size": "Tamanho {size}",
+        "nextToUnlock": "Próxima a desbloquear",
+        "unlock": "Desbloquear",
+        "unlockFirst": "Desbloqueia primeiro a secção {num}.",
+        "cascade": {
+            "body": "{count, plural, one {A secção {range} depende desta e fica bloqueada com ela} other {As secções {range} dependem desta e ficam bloqueadas com ela}}. O total gasto desce {price}.",
+            "confirm": "Anular {count, plural, one {secção {range}} other {secções {range}}}",
+            "keep": "Mantê-las desbloqueadas"
+        },
+        "range": "{first} a {last}"
+    },
+    "hiring": {
+        "dailyWages": "Salários diários totais",
+        "dailyWagesCaption": "Custo diário combinado de todos os funcionários contratados",
+        "hired": "Funcionários contratados",
+        "hiringCosts": "Custos de contratação pagos",
+        "hiringCostsCaption": "Pagamento único, fora dos salários diários",
+        "roles": {
+            "cashiers": {
+                "title": "Operadores de caixa",
+                "stat": "Caixas completas: <stat>{value}</stat>",
+                "employeeName": "Operador de caixa {number}"
+            },
+            "restockers": {
+                "title": "Repositores",
+                "stat": "Número de prateleiras: <stat>{value}</stat>",
+                "employeeName": "Repositor {number}"
+            },
+            "customerHelpers": {
+                "title": "Assistentes de clientes",
+                "stat": "Número de caixas: <stat>{value}</stat>",
+                "employeeName": "Assistente de clientes {number}"
+            },
+            "securityGuards": {
+                "title": "Seguranças",
+                "employeeName": "Segurança {number}"
+            },
+            "janitors": {
+                "title": "Empregados de limpeza",
+                "employeeName": "Empregado de limpeza {number}"
+            }
+        },
+        "hiredOf": "Contratados {count} de {total}",
+        "roleWages": "Salários diários: {amount}",
+        "hiredBadge": "Contratado",
+        "level": "Nível da loja",
+        "cost": "Custo de contratação",
+        "wage": "Salário diário",
+        "perDay": "{amount} / dia",
+        "hire": "Contratar",
+        "fire": "Despedir",
+        "hiredToast": "{name} contratado",
+        "firedToast": "{name} despedido"
+    },
+    "customizations": {
+        "total": "Preço das três",
+        "totalCaption": "Calculado a partir dos dados do jogo, não guardado",
+        "note": "Estas alterações compram-se no jogo. Nada fica guardado aqui.",
+        "price": "Preço"
+    },
+    "tabCount": "{owned} / {total}"
+}

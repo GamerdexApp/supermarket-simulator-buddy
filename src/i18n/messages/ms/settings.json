@@ -1,0 +1,156 @@
+{
+    "title": "Tetapan",
+    "subline": "Urus data dan tetapan aplikasi anda",
+    "tabsLabel": "Tetapan",
+    "tabs": {
+        "sync": "Penyegerakan awan",
+        "preferences": "Keutamaan",
+        "data": "Sandaran dan data",
+        "about": "Perihal"
+    },
+    "playthroughCount": "{count, plural, other {{amount} Sesi Permainan}}",
+    "storageNote": {
+        "title": "Storan data",
+        "body": "Data anda disimpan dalam pelayar ini. Mengosongkan data pelayar akan memadamnya melainkan Penyegerakan awan menyimpan salinan. Eksport sandaran dari semasa ke semasa."
+    },
+    "data": {
+        "title": "Pengurusan Data",
+        "export": {
+            "title": "Eksport Data",
+            "button": "Eksport Semua Sesi Permainan",
+            "description": "Muat turun fail sandaran bagi semua sesi permainan anda yang disimpan.",
+            "done": "Sandaran dimuat turun"
+        },
+        "import": {
+            "title": "Import Data",
+            "description": "Muat naik fail yang dieksport sebelum ini (.json)",
+            "fileLabel": "Fail sandaran",
+            "chooseFile": "Pilih fail",
+            "noFile": "Tiada fail dipilih",
+            "review": "Semak import",
+            "merged": "Import digabungkan",
+            "replaced": "Data diganti",
+            "undo": "Buat asal"
+        },
+        "reset": {
+            "title": "Tetapkan Semula Semua Data",
+            "warning": "Ini memadam setiap sesi permainan pada peranti ini. Anda boleh membuat asal selama 10 saat selepas itu.",
+            "button": "Tetapkan semula semua data",
+            "confirmTitle": "Tetapkan semula semua data?",
+            "confirmBody": "Ini memadam {names}.",
+            "cancel": "Batal",
+            "confirm": "Ya, tetapkan semula semua data",
+            "syncedCopy": "Padam juga salinan yang disegerakkan dalam {provider}",
+            "syncedOn": "Penyegerakan kekal hidup. Peranti anda yang lain akan kehilangan sesi permainan ini pada penyegerakan seterusnya. Eksport sandaran dahulu jika anda tidak pasti.",
+            "done": "Semua data ditetapkan semula",
+            "doneMessage": "{count, plural, other {{amount} sesi permainan}} dipadam.",
+            "undo": "Buat asal",
+            "doneMessageDisconnected": "{count, plural, other {{amount} sesi permainan}} dipadam. Penyegerakan diputuskan pada pelayar ini."
+        }
+    },
+    "appearance": {
+        "title": "Penampilan",
+        "description": "Pilih rupa aplikasi. Pilihan ini disimpan pada peranti ini sahaja dan bukan sebahagian daripada sandaran.",
+        "themeLabel": "Tema",
+        "themes": {
+            "light": "Cerah",
+            "dark": "Gelap",
+            "system": "Sistem"
+        },
+        "themeNote": "Sistem mengikut peranti anda, yang kini menggunakan tema {mode, select, dark {gelap} other {cerah}}."
+    },
+    "playthroughs": {
+        "title": "Sesi Permainan",
+        "description": "Cipta, tukar, edit dan padam sesi permainan di halaman Sesi Permainan.",
+        "manage": "Urus sesi permainan"
+    },
+    "about": {
+        "version": "Versi {version}",
+        "summary": "Alat penjejak kemajuan untuk Supermarket Simulator. Data anda disimpan dalam pelayar ini, atau dalam storan awan anda sendiri jika anda menghidupkan penyegerakan.",
+        "officialGame": "Permainan rasmi",
+        "disclaimer": "Tidak bergabung dengan, disokong oleh atau berkaitan dengan Supermarket Simulator atau pembangunnya. Semua tanda dagangan dan kandungan permainan adalah milik pemiliknya."
+    },
+    "importDialog": {
+        "title": "Import sandaran",
+        "fileInfo": "{name} · {size}",
+        "bytes": "{count} B",
+        "kilobytes": "{count} KB",
+        "failedTitle": "Import gagal",
+        "checksTitle": "Fail disemak",
+        "checks": "{count, plural, other {{amount} entri}} dibaca, {kept} mempunyai id dan nama.",
+        "howToApply": "Bagaimanakah fail ini patut digunakan?",
+        "modeLabel": "Mod import",
+        "modes": {
+            "merge": "Gabungkan ke dalam peranti ini (disyorkan)",
+            "replace": "Ganti semuanya"
+        },
+        "modeNotes": {
+            "merge": "Menambah sesi permainan yang baharu. Bagi sesi permainan yang ada pada kedua-duanya, salinan yang dikemas kini terakhir digunakan. Sesi permainan yang hanya ada pada peranti ini kekal. Sesi permainan aktif anda kekal aktif.",
+            "replace": "Memadam sesi permainan pada peranti ini dan hanya menyimpan kandungan fail. Sesi permainan aktif dalam fail menjadi aktif."
+        },
+        "whatChanges": "Apa yang berubah",
+        "columns": {
+            "playthrough": "Sesi permainan",
+            "inFile": "Dalam fail",
+            "onDevice": "Pada peranti",
+            "result": "Hasil"
+        },
+        "results": {
+            "added": "Ditambah",
+            "updated": "Dikemas kini daripada fail",
+            "kept": "Dikekalkan",
+            "replaced": "Daripada fail",
+            "removed": "Dibuang"
+        },
+        "notThere": "Tiada",
+        "noPlaythroughs": "Fail ini tiada sesi permainan.",
+        "undoNote": "Anda boleh membuat asal import selama 10 saat selepas itu.",
+        "cancel": "Batal",
+        "close": "Tutup",
+        "merge": "Gabung",
+        "replace": "Ganti semuanya",
+        "skipped": "{count, plural, other {{amount} entri}} dilangkau.",
+        "levelsFixed": "{count, plural, other {{amount} tahap kedai}} di bawah 0 akan disimpan sebagai 0.",
+        "errors": {
+            "notJson": "Fail ini bukan sandaran Supermarket Simulator Buddy: ia bukan JSON yang sah. Tiada apa-apa yang diubah.",
+            "playthroughsMissing": "Fail ini bukan sandaran Supermarket Simulator Buddy: senarai sesi permainan tiada. Tiada apa-apa yang diubah."
+        },
+        "summary": {
+            "added": "{amount} ditambah",
+            "updated": "{amount} dikemas kini",
+            "kept": "{amount} dikekalkan",
+            "replaced": "{amount} diganti",
+            "removed": "{amount} dibuang"
+        }
+    },
+    "region": {
+        "title": "Bahasa dan wilayah",
+        "description": "Cara teks, nombor dan tarikh dipaparkan pada peranti ini. Disimpan pada peranti ini sahaja.",
+        "language": {
+            "label": "Bahasa",
+            "hint": "Nama daripada permainan seperti produk, lesen dan alatan kekal dalam bahasa Inggeris."
+        },
+        "numberFormat": {
+            "label": "Format nombor",
+            "hint": "Contoh: {example}",
+            "options": {
+                "auto": "Automatik, mengikut bahasa",
+                "us": "1,234.56 (Amerika Syarikat)",
+                "european": "1.234,56 (Jerman)",
+                "french": "1 234,56 (Perancis)",
+                "swiss": "1’234.56 (Switzerland)",
+                "indian": "12,34,567.89 (India)"
+            }
+        },
+        "dateFormat": {
+            "label": "Format tarikh",
+            "hint": "Contoh: {example}",
+            "options": {
+                "auto": "Automatik, mengikut bahasa",
+                "mdy": "Bulan/Hari/Tahun",
+                "dmy": "Hari/Bulan/Tahun",
+                "ymd": "Tahun-Bulan-Hari"
+            }
+        }
+    }
+}

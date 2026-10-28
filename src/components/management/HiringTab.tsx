@@ -1,13 +1,13 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { useId } from "react";
 import type { Playthrough } from "@/types/playthrough";
-import { formatMoney } from "@/lib/format";
+import { formatMoney, formatNumber } from "@/lib/format";
 import { useListEdit } from "@/lib/hooks/useListEdit";
-import { managementText } from "@/lib/messages/management";
 import { readStoreLevel } from "@/service/appData";
-import type { Employee, RoleId } from "@/service/management";
-import { allEmployees, employeeNumber, hiringTotals, roles } from "@/service/management";
+import type { Employee, RoleId, StatRoleId } from "@/service/management";
+import { allEmployees, employeeNumber, hasStat, hiringTotals, roles } from "@/service/management";
 import { LockReason } from "@/comps/page/LockReason";
 import { Badge } from "@/comps/ui/Badge";
 import { Button } from "@/comps/ui/Button";
@@ -15,15 +15,24 @@ import { Card } from "@/comps/ui/Card";
 import { SummaryTile } from "@/comps/ui/SummaryTile";
 import { StoreLevelTile } from "./StoreLevelTile";
 
-const text = managementText;
-const hiringText = text.hiring;
-
 function Fact({ label, value }: { label: string; value: string }) {
 	return (
 		<div className="bg-bg flex flex-col rounded-md px-2.5 py-1.5">
 			<span className="text-muted text-xs">{label}</span>
 			<span className="font-mono font-medium">{value}</span>
 		</div>
+	);
+}
+
+function StatLine({ roleId, stat }: { roleId: StatRoleId; stat: number }) {
+	const t = useTranslations("management.hiring.roles");
+	return (
+		<p className="text-muted">
+			{t.rich(`${roleId}.stat`, {
+				value: formatNumber(stat),
+				stat: (chunks) => <span className="text-ink font-mono font-medium">{chunks}</span>,
+			})}
+		</p>
 	);
 }
 
@@ -36,9 +45,9 @@ interface EmployeeCardProps {
 }
 
 function EmployeeCard({ roleId, employee, playthrough, onHire, onFire }: EmployeeCardProps) {
+	const t = useTranslations("management");
 	const titleId = useId();
-	const role = hiringText.roles[roleId];
-	const name = `${role.one} ${employeeNumber(employee)}`;
+	const name = t(`hiring.roles.${roleId}.employeeName`, { number: employeeNumber(employee) });
 	const hired = (playthrough.hiredEmployees ?? []).includes(employee.id);
 	const level = readStoreLevel(playthrough);
 	const reachable = level >= employee.storeLevel;
@@ -56,34 +65,35 @@ function EmployeeCard({ roleId, employee, playthrough, onHire, onFire }: Employe
 					</h3>
 					<span className="text-muted font-mono text-xs">{employee.id}</span>
 				</div>
-				{hired && <Badge tone="kept">{hiringText.hiredBadge}</Badge>}
+				{hired && <Badge tone="kept">{t("hiring.hiredBadge")}</Badge>}
 			</div>
-			{role.stat && employee.stat !== undefined && (
-				<p>
-					<span className="text-muted">{role.stat}: </span>
-					<span className="font-mono font-medium">{employee.stat.toLocaleString()}</span>
-				</p>
+			{hasStat(roleId) && employee.stat !== undefined && (
+				<StatLine roleId={roleId} stat={employee.stat} />
 			)}
 			<div className="grid grid-cols-3 gap-2">
-				<Fact label={hiringText.level} value={String(employee.storeLevel)} />
-				<Fact label={hiringText.cost} value={formatMoney(employee.hiringCost)} />
+				<Fact label={t("hiring.level")} value={formatNumber(employee.storeLevel)} />
+				<Fact label={t("hiring.cost")} value={formatMoney(employee.hiringCost)} />
 				<Fact
-					label={hiringText.wage}
-					value={hiringText.perDay(formatMoney(employee.dailyWage))}
+					label={t("hiring.wage")}
+					value={t("hiring.perDay", { amount: formatMoney(employee.dailyWage) })}
 				/>
 			</div>
 			{hired ? (
 				<Button variant="danger" onClick={() => onFire(name)}>
-					{hiringText.fire}
+					{t("hiring.fire")}
 				</Button>
 			) : reachable ? (
 				<Button variant="primary" onClick={() => onHire(name)}>
-					{hiringText.hire}
+					{t("hiring.hire")}
 				</Button>
 			) : (
 				<>
-					<LockReason reasons={[text.requiresLevel(employee.storeLevel, level)]} />
-					<Button disabled>{text.locked}</Button>
+					<LockReason
+						reasons={[
+							t("requiresLevel", { level: employee.storeLevel, current: level }),
+						]}
+					/>
+					<Button disabled>{t("locked")}</Button>
 				</>
 			)}
 		</Card>
@@ -91,6 +101,7 @@ function EmployeeCard({ roleId, employee, playthrough, onHire, onFire }: Employe
 }
 
 export function HiringTab({ playthrough }: { playthrough: Playthrough }) {
+	const t = useTranslations("management.hiring");
 	const { add, remove } = useListEdit(playthrough.id, "hiredEmployees");
 	const totals = hiringTotals(allEmployees, playthrough);
 
@@ -99,17 +110,17 @@ export function HiringTab({ playthrough }: { playthrough: Playthrough }) {
 			<div className="grid grid-cols-2 gap-3 lg:grid-cols-4">
 				<div className="col-span-2 lg:col-span-1">
 					<SummaryTile
-						label={hiringText.dailyWages}
+						label={t("dailyWages")}
 						value={formatMoney(totals.dailyWages)}
-						caption={hiringText.dailyWagesCaption}
+						caption={t("dailyWagesCaption")}
 						emphasis
 					/>
 				</div>
-				<SummaryTile label={hiringText.hired} value={totals.hired} total={totals.total} />
+				<SummaryTile label={t("hired")} value={totals.hired} total={totals.total} />
 				<SummaryTile
-					label={hiringText.hiringCosts}
+					label={t("hiringCosts")}
 					value={formatMoney(totals.hiringCosts)}
-					caption={hiringText.hiringCostsCaption}
+					caption={t("hiringCostsCaption")}
 				/>
 				<StoreLevelTile playthrough={playthrough} />
 			</div>
@@ -119,14 +130,17 @@ export function HiringTab({ playthrough }: { playthrough: Playthrough }) {
 					<section key={role.id} className="flex flex-col gap-3">
 						<div className="flex flex-wrap items-baseline justify-between gap-2">
 							<h2 className="text-lg font-semibold">
-								{hiringText.roles[role.id].title}
+								{t(`roles.${role.id}.title`)}
 								<span className="text-muted ms-2 font-mono text-sm font-normal">
-									{hiringText.hiredOf(roleTotals.hired, roleTotals.total)}
+									{t("hiredOf", {
+										count: formatNumber(roleTotals.hired),
+										total: formatNumber(roleTotals.total),
+									})}
 								</span>
 							</h2>
 							{roleTotals.dailyWages > 0 && (
 								<span className="font-mono">
-									{hiringText.roleWages(formatMoney(roleTotals.dailyWages))}
+									{t("roleWages", { amount: formatMoney(roleTotals.dailyWages) })}
 								</span>
 							)}
 						</div>
@@ -137,11 +151,9 @@ export function HiringTab({ playthrough }: { playthrough: Playthrough }) {
 									roleId={role.id}
 									employee={employee}
 									playthrough={playthrough}
-									onHire={(name) =>
-										add([employee.id], hiringText.hiredToast(name))
-									}
+									onHire={(name) => add([employee.id], t("hiredToast", { name }))}
 									onFire={(name) =>
-										remove([employee.id], hiringText.firedToast(name))
+										remove([employee.id], t("firedToast", { name }))
 									}
 								/>
 							))}

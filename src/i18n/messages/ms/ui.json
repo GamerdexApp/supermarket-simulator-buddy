@@ -1,0 +1,43 @@
+{
+    "close": "Tutup",
+    "undo": "Buat asal",
+    "field": {
+        "optional": "Pilihan"
+    },
+    "stepper": {
+        "lower": "Turunkan {label}",
+        "raise": "Naikkan {label}",
+        "labelPrefix": "{label}, "
+    },
+    "switch": {
+        "on": "Hidup",
+        "off": "Mati"
+    },
+    "tabs": {
+        "locked": " (dikunci)"
+    },
+    "toast": {
+        "dismiss": "Ketepikan",
+        "variants": {
+            "success": "Berjaya",
+            "info": "Maklumat",
+            "warning": "Amaran",
+            "error": "Ralat"
+        }
+    },
+    "filters": {
+        "filters": "Penapis",
+        "activeCount": "{count, plural, other {{amount} aktif}}",
+        "clearFilters": "Kosongkan penapis",
+        "reset": "Tetapkan semula",
+        "description": "Perubahan digunakan serta-merta. Penapis tidak disimpan.",
+        "groupLabel": "Penapis: {label}"
+    },
+    "savedChip": {
+        "automatic": "Disimpan secara automatik",
+        "justNow": "Disimpan sebentar tadi",
+        "minutesAgo": "{count, plural, other {Disimpan {amount} minit lalu}}",
+        "at": "Disimpan {time}",
+        "failed": "Tidak disimpan, storan penuh"
+    }
+}

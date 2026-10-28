@@ -1,9 +1,9 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { useEffect, useId, useRef } from "react";
 import type { ReactNode } from "react";
 import { LuX } from "react-icons/lu";
-import { uiText } from "@/lib/messages/ui";
 import { IconButton } from "./IconButton";
 import { useToastHost } from "./Toast";
 
@@ -40,6 +40,7 @@ export function Dialog({
 	variant = "modal",
 	children,
 }: DialogProps) {
+	const t = useTranslations("ui");
 	const dialogRef = useRef<HTMLDialogElement>(null);
 	const titleId = useId();
 	const setToastHost = useToastHost();
@@ -85,7 +86,7 @@ export function Dialog({
 							{description && <p className="text-muted">{description}</p>}
 						</div>
 						<IconButton
-							label={uiText.close}
+							label={t("close")}
 							onClick={onClose}
 							className="text-muted hover:bg-tint -me-2 -mt-1"
 						>

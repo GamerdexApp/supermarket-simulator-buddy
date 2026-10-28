@@ -1,0 +1,56 @@
+{
+    "title": "Ringkasan",
+    "subline": "{name} · Semuanya dalam sekilas",
+    "emptyDescription": "Pilih atau buat sesi main untuk melihat progresnya dalam sekilas.",
+    "identity": {
+        "created": "Dibuat: {date}",
+        "lastModified": "Terakhir Diubah: {date}",
+        "manage": "Kelola sesi main"
+    },
+    "storeLevel": {
+        "title": "Level Toko",
+        "subtitle": "Level progres saat ini",
+        "hint": "Ubah dengan pengatur Level toko di bilah samping."
+    },
+    "financial": {
+        "title": "Ringkasan Keuangan",
+        "activeLoans": "Pinjaman Aktif",
+        "dailyPayments": "Cicilan Harian",
+        "totalDebt": "Total Utang Pinjaman",
+        "none": "Tidak ada pinjaman aktif. Buka bank untuk mengambil pinjaman.",
+        "formula": "Setiap pinjaman berbiaya pokok ditambah pokok dikali bunga harian dikali jangka waktu. Setiap pinjaman aktif dihitung sebagai dibayar setiap hari.",
+        "view": "Lihat Detail Bank"
+    },
+    "investment": {
+        "title": "Total Investasi",
+        "subtitle": "Gabungan pengeluaran di manajemen dan pasar",
+        "formula": "Manajemen {managementSpent} + Pasar {marketSpent} = {total}"
+    },
+    "management": {
+        "title": "Manajemen",
+        "licenses": "Lisensi",
+        "growth": "Peningkatan Perluasan",
+        "storage": "Peningkatan Gudang",
+        "employees": "Karyawan",
+        "unlocked": "{owned} dari {total} terbuka",
+        "hired": "{owned} dari {total} direkrut",
+        "perDay": "{amount}/hari",
+        "hiringNote": "Biaya rekrutmen yang sudah dibayar: {amount}. Tidak termasuk dalam Total Investasi.",
+        "total": "Total Investasi",
+        "view": "Lihat Manajemen"
+    },
+    "market": {
+        "title": "Pasar",
+        "products": "Produk",
+        "licensesUnlocked": "{count, plural, other {{amount} lisensi terbuka}}",
+        "available": "{amount} tersedia",
+        "tools": "Alat",
+        "vehicles": "Kendaraan",
+        "furniture": "Furnitur",
+        "furnitureItems": "{count, plural, other {{amount} item tersedia}}",
+        "unlocked": "{owned} dari {total} terbuka",
+        "note": "Furnitur dan cat tidak disimpan, jadi pengeluarannya tidak dihitung.",
+        "total": "Total Investasi",
+        "view": "Lihat Pasar"
+    }
+}

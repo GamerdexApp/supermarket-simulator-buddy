@@ -1,0 +1,102 @@
+{
+    "header": {
+        "label": "Startseite",
+        "features": "Funktionen",
+        "faq": "FAQ",
+        "github": "GitHub",
+        "discord": "Discord"
+    },
+    "cta": {
+        "create": "Ersten Spielstand erstellen",
+        "dashboard": "Zum Dashboard",
+        "newPlaythrough": "Neuer Spielstand",
+        "learn": "Mehr erfahren"
+    },
+    "hero": {
+        "title": "Verfolge dein Supermarkt-<accent>Imperium</accent>",
+        "body": "Die Begleit-App für Supermarket Simulator. Verwalte mehrere Spielstände, verfolge deinen Fortschritt und baue dein Supermarkt-Imperium mit Überblick aus.",
+        "preview": "Übersicht von Pezz's Market mit Gesamtausgaben, Ladenfortschritt und aktiven Krediten"
+    },
+    "continueCard": {
+        "label": "Weiterspielen",
+        "level": "Ladenlevel {level}",
+        "updated": "Zuletzt aktualisiert {date}"
+    },
+    "steps": {
+        "title": "In einer Minute startklar",
+        "items": {
+            "item1": {
+                "title": "Spielstand erstellen",
+                "body": "Gib ihm einen Namen. Alles wird in diesem Browser gespeichert, ohne Konto."
+            },
+            "item2": {
+                "title": "Mit den Grundlagen starten",
+                "body": "Jeder Spielstand beginnt mit Lizenz 0, Ladenabschnitt 1 und Paper Bag, Sponge und Mop."
+            },
+            "item3": {
+                "title": "Beim Spielen freischalten",
+                "body": "Erhöhe dein Ladenlevel und schalte dann Lizenzen, Abschnitte, Personal, Werkzeuge und Fahrzeuge frei, so wie im Spiel."
+            }
+        }
+    },
+    "features": {
+        "eyebrow": "Alles, was du brauchst",
+        "title": "Dein ganzer Fortschritt an einem Ort",
+        "body": "Supermarket Simulator Buddy verfolgt jeden Bereich deines Supermarkts. Von Lizenzen bis zum Lager ist alles dabei.",
+        "items": {
+            "item1": {
+                "title": "Mehrere Spielstände",
+                "body": "Erstelle und verwalte beliebig viele Spielstände. Verfolge verschiedene Strategien und Challenge-Runs getrennt."
+            },
+            "item2": {
+                "title": "Lizenzverwaltung",
+                "body": "Verfolge alle deine Produktlizenzen und sieh, welche Artikel jede Lizenz für deinen Laden freischaltet."
+            },
+            "item3": {
+                "title": "Ladenwachstum",
+                "body": "Behalte den Ausbau deines Ladens im Blick, mit genauer Übersicht über Lager- und Ladenabschnitte."
+            },
+            "item4": {
+                "title": "Budget im Blick",
+                "body": "Behalte deine Ausgaben in allen Kategorien im Blick, mit übersichtlichen Finanzzusammenfassungen."
+            },
+            "item5": {
+                "title": "Einkaufslisten",
+                "body": "Erstelle eigene Einkaufslisten und wisse, was du bei jedem Händler holen musst."
+            },
+            "item6": {
+                "title": "Datenexport und -import",
+                "body": "Exportiere deinen Fortschritt als JSON als Backup oder zum Teilen mit Freunden. Importiere Daten jederzeit."
+            }
+        }
+    },
+    "faq": {
+        "title": "Häufige Fragen",
+        "items": {
+            "item1": {
+                "question": "Was ist Supermarket Simulator Buddy?",
+                "answer": "Supermarket Simulator Buddy ist ein Fortschritts-Tracker für das Spiel Supermarket Simulator. Damit verwaltest du mehrere Spielstände, verfolgst das Wachstum deines Ladens, verwaltest Lizenzen und behältst deine Finanzen im Blick, alles an einem Ort."
+            },
+            "item2": {
+                "question": "Wie werden meine Daten gespeichert?",
+                "answer": "Alle deine Daten werden lokal in deinem Browser per localStorage gespeichert. Dein Fortschritt bleibt privat und braucht weder Server noch Konto. Du kannst deine Daten auch als JSON-Dateien exportieren und importieren, als Backup oder zum Teilen."
+            },
+            "item3": {
+                "question": "Kann ich mehrere Spielstände verfolgen?",
+                "answer": "Ja! Du kannst mehrere Spielstände erstellen und verwalten, jeder mit eigenem Fortschritt. Wechsle einfach über das Auswahlmenü in der Seitenleiste und verfolge verschiedene Strategien oder Challenge-Runs getrennt."
+            },
+            "item4": {
+                "question": "Was kann ich verfolgen?",
+                "answer": "Verfolge Ladenlevel, Lizenzen, Lagerabschnitte, Ladenabschnitte, Werkzeuge, Fahrzeuge und Einkaufslisten, und sieh dir Preise für Möbel und Farben an. Behalte deine Finanzen mit einer genauen Budgetübersicht über alle Kategorien im Blick."
+            },
+            "item5": {
+                "question": "Ist die App kostenlos?",
+                "answer": "Ja, Supermarket Simulator Buddy ist komplett kostenlos. Es gibt keine Abos, keine Werbung und keine versteckten Kosten. Alle Funktionen stehen allen zur Verfügung."
+            }
+        }
+    },
+    "closing": {
+        "title": "Bereit für deinen Laden?",
+        "body": "Kostenlos, privat und in deinem Browser gespeichert."
+    }
+}

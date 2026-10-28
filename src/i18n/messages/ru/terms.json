@@ -1,0 +1,22 @@
+{
+    "displayTypes": {
+        "shelf": "Полка",
+        "fridge": "Холодильник",
+        "freezer": "Морозильник",
+        "stall": "Прилавок",
+        "pegboard": "Перфопанель",
+        "garment_rack": "Вешалка для одежды"
+    },
+    "categories": {
+        "edible": "Продукты",
+        "produce": "Овощи и фрукты",
+        "drink": "Напитки",
+        "cleaning": "Уборка",
+        "books": "Книги",
+        "cloth": "Одежда",
+        "electronics": "Электроника",
+        "hardware": "Хозтовары",
+        "kitchen": "Кухня",
+        "pet": "Для животных"
+    }
+}

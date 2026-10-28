@@ -1,9 +1,9 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import type { ReactNode } from "react";
 import type { Playthrough } from "@/types/playthrough";
-import { formatDate, formatMoney } from "@/lib/format";
-import { overviewText } from "@/lib/messages/overview";
+import { formatCents, formatDate, formatMoney, formatNumber } from "@/lib/format";
 import { readStoreLevel } from "@/service/appData";
 import { overviewFigures } from "@/service/overview";
 import { PLAYTHROUGHS_HREF } from "@/data/nav";
@@ -13,10 +13,17 @@ import { ButtonLink } from "@/comps/ui/Button";
 import { Card } from "@/comps/ui/Card";
 import { ProgressBar } from "@/comps/ui/ProgressBar";
 
-const text = overviewText;
+interface Progress {
+	owned: number;
+	total: number;
+}
 
-const cents = (amount: number) =>
-	`$${amount.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+const share = ({ owned, total }: Progress) => owned / total;
+
+const progressCounts = ({ owned, total }: Progress) => ({
+	owned: formatNumber(owned),
+	total: formatNumber(total),
+});
 
 function OverviewCard({
 	title,
@@ -80,11 +87,17 @@ function TotalLine({ label, amount }: { label: string; amount: number }) {
 function OverviewContent({ playthrough }: { playthrough: Playthrough }) {
 	const figures = overviewFigures(playthrough);
 	const { spent, loans } = figures;
-	const share = ({ owned, total }: { owned: number; total: number }) => owned / total;
+	const t = useTranslations("overview");
+	const hasActiveLoans = loans.active > 0;
+	const financialRows = [
+		{ id: "activeLoans", value: formatNumber(loans.active), warn: false },
+		{ id: "dailyPayments", value: formatCents(loans.dailyPayment), warn: hasActiveLoans },
+		{ id: "totalDebt", value: formatCents(loans.totalDebt), warn: false },
+	] as const;
 
 	return (
 		<>
-			<PageHeader title={text.title} subline={text.subline(playthrough.name)} />
+			<PageHeader title={t("title")} subline={t("subline", { name: playthrough.name })} />
 			<Card className="flex flex-wrap items-start justify-between gap-3 p-4">
 				<div className="flex min-w-0 flex-col gap-1">
 					<h2 className="text-xl font-semibold">{playthrough.name}</h2>
@@ -92,36 +105,32 @@ function OverviewContent({ playthrough }: { playthrough: Playthrough }) {
 						<p className="text-muted">{playthrough.description}</p>
 					)}
 					<p className="text-muted text-xs">
-						{text.identity.created(formatDate(playthrough.createdAt))} ·{" "}
-						{text.identity.lastModified(formatDate(playthrough.lastModified))}
+						{t("identity.created", { date: formatDate(playthrough.createdAt) })} ·{" "}
+						{t("identity.lastModified", { date: formatDate(playthrough.lastModified) })}
 					</p>
 				</div>
-				<ButtonLink href={PLAYTHROUGHS_HREF}>{text.identity.manage}</ButtonLink>
+				<ButtonLink href={PLAYTHROUGHS_HREF}>{t("identity.manage")}</ButtonLink>
 			</Card>
 			<div className="grid items-stretch gap-4 lg:grid-cols-3">
-				<OverviewCard title={text.storeLevel.title} subtitle={text.storeLevel.subtitle}>
+				<OverviewCard title={t("storeLevel.title")} subtitle={t("storeLevel.subtitle")}>
 					<span className="text-primary font-mono text-4xl font-medium">
-						{readStoreLevel(playthrough)}
+						{formatNumber(readStoreLevel(playthrough))}
 					</span>
-					<p className="text-muted text-xs">{text.storeLevel.hint}</p>
+					<p className="text-muted text-xs">{t("storeLevel.hint")}</p>
 				</OverviewCard>
 				<OverviewCard
-					title={text.financial.title}
-					action={<ButtonLink href="/bank">{text.financial.view}</ButtonLink>}
+					title={t("financial.title")}
+					action={<ButtonLink href="/bank">{t("financial.view")}</ButtonLink>}
 				>
 					<dl className="flex flex-col">
-						{[
-							[text.financial.activeLoans, String(loans.active)],
-							[text.financial.dailyPayments, cents(loans.dailyPayment)],
-							[text.financial.totalDebt, cents(loans.totalDebt)],
-						].map(([label, value]) => (
+						{financialRows.map(({ id, value, warn }) => (
 							<div
-								key={label}
+								key={id}
 								className="border-line flex items-baseline justify-between gap-3 border-t-[1.5px] py-2 first:border-t-0 first:pt-0"
 							>
-								<dt className="text-muted">{label}</dt>
+								<dt className="text-muted">{t(`financial.${id}`)}</dt>
 								<dd
-									className={`font-mono text-lg font-medium ${label === text.financial.dailyPayments && loans.active > 0 ? "text-warn" : ""}`}
+									className={`font-mono text-lg font-medium ${warn ? "text-warn" : ""}`}
 								>
 									{value}
 								</dd>
@@ -129,100 +138,95 @@ function OverviewContent({ playthrough }: { playthrough: Playthrough }) {
 						))}
 					</dl>
 					<p className="text-muted text-xs">
-						{loans.active === 0 ? text.financial.none : text.financial.formula}
+						{hasActiveLoans ? t("financial.formula") : t("financial.none")}
 					</p>
 				</OverviewCard>
-				<OverviewCard title={text.investment.title} subtitle={text.investment.subtitle}>
+				<OverviewCard title={t("investment.title")} subtitle={t("investment.subtitle")}>
 					<span className="text-primary font-mono text-4xl font-medium">
 						{formatMoney(spent.total)}
 					</span>
 					<p className="text-muted text-xs">
-						{text.investment.formula(
-							formatMoney(spent.management),
-							formatMoney(spent.market),
-							formatMoney(spent.total)
-						)}
+						{t("investment.formula", {
+							managementSpent: formatMoney(spent.management),
+							marketSpent: formatMoney(spent.market),
+							total: formatMoney(spent.total),
+						})}
 					</p>
 				</OverviewCard>
 			</div>
 			<div className="grid items-stretch gap-4 lg:grid-cols-2">
 				<OverviewCard
-					title={text.management.title}
-					action={<ButtonLink href="/management">{text.management.view}</ButtonLink>}
+					title={t("management.title")}
+					action={<ButtonLink href="/management">{t("management.view")}</ButtonLink>}
 				>
 					<ul className="flex flex-col">
 						<FigureRow
-							label={text.management.licenses}
-							detail={text.management.unlocked(
-								figures.licenses.owned,
-								figures.licenses.total
-							)}
+							label={t("management.licenses")}
+							detail={t("management.unlocked", progressCounts(figures.licenses))}
 							badge={formatMoney(spent.licenses)}
 							progress={share(figures.licenses)}
 						/>
 						<FigureRow
-							label={text.management.growth}
-							detail={text.management.unlocked(
-								figures.growth.owned,
-								figures.growth.total
-							)}
+							label={t("management.growth")}
+							detail={t("management.unlocked", progressCounts(figures.growth))}
 							badge={formatMoney(spent.growth)}
 							progress={share(figures.growth)}
 						/>
 						<FigureRow
-							label={text.management.storage}
-							detail={text.management.unlocked(
-								figures.storage.owned,
-								figures.storage.total
-							)}
+							label={t("management.storage")}
+							detail={t("management.unlocked", progressCounts(figures.storage))}
 							badge={formatMoney(spent.storage)}
 							progress={share(figures.storage)}
 						/>
 						<FigureRow
-							label={text.management.employees}
-							detail={text.management.hired(
-								figures.employees.owned,
-								figures.employees.total
-							)}
-							badge={text.management.perDay(formatMoney(figures.dailyWages))}
+							label={t("management.employees")}
+							detail={t("management.hired", progressCounts(figures.employees))}
+							badge={t("management.perDay", {
+								amount: formatMoney(figures.dailyWages),
+							})}
 							progress={share(figures.employees)}
 						/>
 					</ul>
 					<p className="text-muted text-xs">
-						{text.management.hiringNote(formatMoney(figures.hiringCosts))}
+						{t("management.hiringNote", { amount: formatMoney(figures.hiringCosts) })}
 					</p>
-					<TotalLine label={text.management.total} amount={spent.management} />
+					<TotalLine label={t("management.total")} amount={spent.management} />
 				</OverviewCard>
 				<OverviewCard
-					title={text.market.title}
-					action={<ButtonLink href="/market">{text.market.view}</ButtonLink>}
+					title={t("market.title")}
+					action={<ButtonLink href="/market">{t("market.view")}</ButtonLink>}
 				>
 					<ul className="flex flex-col">
 						<FigureRow
-							label={text.market.products}
-							detail={text.market.licensesUnlocked(figures.licenses.owned)}
-							badge={text.market.available(figures.productsAvailable)}
+							label={t("market.products")}
+							detail={t("market.licensesUnlocked", {
+								count: figures.licenses.owned,
+								amount: formatNumber(figures.licenses.owned),
+							})}
+							badge={t("market.available", {
+								amount: formatNumber(figures.productsAvailable),
+							})}
 						/>
 						<FigureRow
-							label={text.market.tools}
-							detail={text.market.unlocked(figures.tools.owned, figures.tools.total)}
+							label={t("market.tools")}
+							detail={t("market.unlocked", progressCounts(figures.tools))}
 							badge={formatMoney(spent.tools)}
 						/>
 						<FigureRow
-							label={text.market.vehicles}
-							detail={text.market.unlocked(
-								figures.vehicles.owned,
-								figures.vehicles.total
-							)}
+							label={t("market.vehicles")}
+							detail={t("market.unlocked", progressCounts(figures.vehicles))}
 							badge={formatMoney(spent.vehicles)}
 						/>
 						<FigureRow
-							label={text.market.furniture}
-							detail={text.market.furnitureItems(figures.furniture)}
+							label={t("market.furniture")}
+							detail={t("market.furnitureItems", {
+								count: figures.furniture,
+								amount: formatNumber(figures.furniture),
+							})}
 						/>
 					</ul>
-					<p className="text-muted text-xs">{text.market.note}</p>
-					<TotalLine label={text.market.total} amount={spent.market} />
+					<p className="text-muted text-xs">{t("market.note")}</p>
+					<TotalLine label={t("market.total")} amount={spent.market} />
 				</OverviewCard>
 			</div>
 		</>
@@ -230,8 +234,9 @@ function OverviewContent({ playthrough }: { playthrough: Playthrough }) {
 }
 
 export function OverviewPage() {
+	const t = useTranslations("overview");
 	return (
-		<PlaythroughGate title={text.title} emptyDescription={text.emptyDescription}>
+		<PlaythroughGate title={t("title")} emptyDescription={t("emptyDescription")}>
 			{(playthrough) => <OverviewContent playthrough={playthrough} />}
 		</PlaythroughGate>
 	);

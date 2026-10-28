@@ -1,0 +1,22 @@
+{
+    "displayTypes": {
+        "shelf": "رف",
+        "fridge": "ثلاجة",
+        "freezer": "مجمّد",
+        "stall": "كشك",
+        "pegboard": "لوحة تعليق",
+        "garment_rack": "علّاقة ملابس"
+    },
+    "categories": {
+        "edible": "مأكولات",
+        "produce": "خضار وفواكه",
+        "drink": "مشروبات",
+        "cleaning": "تنظيف",
+        "books": "كتب",
+        "cloth": "ملابس",
+        "electronics": "إلكترونيات",
+        "hardware": "عُدد",
+        "kitchen": "مطبخ",
+        "pet": "حيوانات أليفة"
+    }
+}

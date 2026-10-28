@@ -1,18 +1,18 @@
-import { settingsText } from "@/lib/messages/settings";
+import { useTranslations } from "next-intl";
 import { APP_NAME } from "@/data/nav";
 import { OFFICIAL_GAME_URL } from "@/data/site";
 import { SettingsCard } from "./SettingsCard";
 
-const text = settingsText.about;
-
 export function AboutTab() {
+	const t = useTranslations("settings.about");
+
 	return (
 		<div className="max-w-2xl">
 			<SettingsCard
 				title={APP_NAME}
-				description={text.version(process.env.NEXT_PUBLIC_APP_VERSION ?? "")}
+				description={t("version", { version: process.env.NEXT_PUBLIC_APP_VERSION ?? "" })}
 			>
-				<p>{text.summary}</p>
+				<p>{t("summary")}</p>
 				<p>
 					<a
 						href={OFFICIAL_GAME_URL}
@@ -20,10 +20,10 @@ export function AboutTab() {
 						rel="noopener noreferrer"
 						className="text-link inline-flex min-h-11 items-center font-medium underline lg:min-h-9"
 					>
-						{text.officialGame}
+						{t("officialGame")}
 					</a>
 				</p>
-				<p className="text-muted">{text.disclaimer}</p>
+				<p className="text-muted">{t("disclaimer")}</p>
 			</SettingsCard>
 		</div>
 	);

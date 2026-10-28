@@ -1,0 +1,156 @@
+{
+    "title": "設定",
+    "subline": "管理你的資料和應用程式設定",
+    "tabsLabel": "設定",
+    "tabs": {
+        "sync": "雲端同步",
+        "preferences": "偏好設定",
+        "data": "備份與資料",
+        "about": "關於"
+    },
+    "playthroughCount": "{count, plural, other {{amount} 個存檔}}",
+    "storageNote": {
+        "title": "資料儲存",
+        "body": "你的資料儲存在這個瀏覽器中。清除瀏覽器資料會刪除這些資料，除非雲端同步保留了副本。請不時匯出一份備份。"
+    },
+    "data": {
+        "title": "資料管理",
+        "export": {
+            "title": "匯出資料",
+            "button": "匯出所有存檔",
+            "description": "下載包含所有已儲存存檔的備份檔案。",
+            "done": "備份已下載"
+        },
+        "import": {
+            "title": "匯入資料",
+            "description": "上傳先前匯出的檔案（.json）",
+            "fileLabel": "備份檔案",
+            "chooseFile": "選擇檔案",
+            "noFile": "未選擇檔案",
+            "review": "檢查匯入內容",
+            "merged": "匯入已合併",
+            "replaced": "資料已取代",
+            "undo": "復原"
+        },
+        "reset": {
+            "title": "重設所有資料",
+            "warning": "這會刪除此裝置上的所有存檔。之後 10 秒內可以復原。",
+            "button": "重設所有資料",
+            "confirmTitle": "要重設所有資料嗎？",
+            "confirmBody": "這會刪除 {names}。",
+            "cancel": "取消",
+            "confirm": "是，重設所有資料",
+            "syncedCopy": "同時刪除 {provider} 中的同步副本",
+            "syncedOn": "同步會保持開啟。你的其他裝置會在下次同步時失去這些存檔。如果不確定，請先匯出備份。",
+            "done": "所有資料已重設",
+            "doneMessage": "已刪除 {count, plural, other {{amount} 個存檔}}。",
+            "undo": "復原",
+            "doneMessageDisconnected": "已刪除 {count, plural, other {{amount} 個存檔}}。此瀏覽器上的同步已中斷連線。"
+        }
+    },
+    "appearance": {
+        "title": "外觀",
+        "description": "選擇應用程式的外觀。此設定只會儲存在這台裝置上，不包含在備份中。",
+        "themeLabel": "主題",
+        "themes": {
+            "light": "淺色",
+            "dark": "深色",
+            "system": "跟隨系統"
+        },
+        "themeNote": "「跟隨系統」會依照你的裝置設定，你的裝置目前使用{mode, select, dark {深色} other {淺色}}主題。"
+    },
+    "playthroughs": {
+        "title": "存檔",
+        "description": "在存檔頁面建立、切換、編輯和刪除存檔。",
+        "manage": "管理存檔"
+    },
+    "about": {
+        "version": "版本 {version}",
+        "summary": "Supermarket Simulator 的進度追蹤工具。你的資料儲存在這個瀏覽器中，開啟同步後則儲存在你自己的雲端儲存空間。",
+        "officialGame": "官方遊戲",
+        "disclaimer": "與 Supermarket Simulator 及其開發者無關，未獲其背書，也與其沒有任何關聯。所有商標與遊戲內容皆屬其所有者。"
+    },
+    "importDialog": {
+        "title": "匯入備份",
+        "fileInfo": "{name} · {size}",
+        "bytes": "{count} B",
+        "kilobytes": "{count} KB",
+        "failedTitle": "匯入失敗",
+        "checksTitle": "檔案已檢查",
+        "checks": "已讀取 {count, plural, other {{amount} 筆資料}}，其中 {kept} 筆有 ID 和名稱。",
+        "howToApply": "要如何套用這個檔案？",
+        "modeLabel": "匯入模式",
+        "modes": {
+            "merge": "合併到此裝置（建議）",
+            "replace": "全部取代"
+        },
+        "modeNotes": {
+            "merge": "加入新的存檔。兩邊都有的存檔，以最後更新的版本為準。只在此裝置上的存檔會保留。你目前的存檔維持不變。",
+            "replace": "刪除此裝置上的存檔，只保留檔案中的存檔。檔案中的目前存檔會成為目前的存檔。"
+        },
+        "whatChanges": "變更內容",
+        "columns": {
+            "playthrough": "存檔",
+            "inFile": "檔案中",
+            "onDevice": "裝置上",
+            "result": "結果"
+        },
+        "results": {
+            "added": "已加入",
+            "updated": "已從檔案更新",
+            "kept": "已保留",
+            "replaced": "來自檔案",
+            "removed": "已移除"
+        },
+        "notThere": "無",
+        "noPlaythroughs": "檔案中沒有存檔。",
+        "undoNote": "匯入後 10 秒內可以復原。",
+        "cancel": "取消",
+        "close": "關閉",
+        "merge": "合併",
+        "replace": "全部取代",
+        "skipped": "已略過 {count, plural, other {{amount} 筆資料}}。",
+        "levelsFixed": "{count, plural, other {{amount} 個低於 0 的商店等級}}將儲存為 0。",
+        "errors": {
+            "notJson": "這個檔案不是 Supermarket Simulator Buddy 的備份：它不是有效的 JSON。沒有做任何變更。",
+            "playthroughsMissing": "這個檔案不是 Supermarket Simulator Buddy 的備份：缺少存檔清單。沒有做任何變更。"
+        },
+        "summary": {
+            "added": "已加入 {amount} 個",
+            "updated": "已更新 {amount} 個",
+            "kept": "已保留 {amount} 個",
+            "replaced": "已取代 {amount} 個",
+            "removed": "已移除 {amount} 個"
+        }
+    },
+    "region": {
+        "title": "語言與地區",
+        "description": "文字、數字和日期在這台裝置上的顯示方式。只會儲存在這台裝置上。",
+        "language": {
+            "label": "語言",
+            "hint": "商品、執照和工具等遊戲名稱會維持英文。"
+        },
+        "numberFormat": {
+            "label": "數字格式",
+            "hint": "範例：{example}",
+            "options": {
+                "auto": "自動，依照語言",
+                "us": "1,234.56（美國）",
+                "european": "1.234,56（德國）",
+                "french": "1 234,56（法國）",
+                "swiss": "1’234.56（瑞士）",
+                "indian": "12,34,567.89（印度）"
+            }
+        },
+        "dateFormat": {
+            "label": "日期格式",
+            "hint": "範例：{example}",
+            "options": {
+                "auto": "自動，依照語言",
+                "mdy": "月/日/年",
+                "dmy": "日/月/年",
+                "ymd": "年-月-日"
+            }
+        }
+    }
+}

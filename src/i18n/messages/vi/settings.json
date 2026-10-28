@@ -1,0 +1,156 @@
+{
+    "title": "Cài đặt",
+    "subline": "Quản lý dữ liệu và cài đặt ứng dụng",
+    "tabsLabel": "Cài đặt",
+    "tabs": {
+        "sync": "Đồng bộ đám mây",
+        "preferences": "Tùy chọn",
+        "data": "Sao lưu và dữ liệu",
+        "about": "Giới thiệu"
+    },
+    "playthroughCount": "{count, plural, other {{amount} lượt chơi}}",
+    "storageNote": {
+        "title": "Lưu trữ dữ liệu",
+        "body": "Dữ liệu của bạn được lưu trong trình duyệt này. Xóa dữ liệu trình duyệt sẽ xóa luôn dữ liệu này, trừ khi Đồng bộ đám mây giữ một bản sao. Thỉnh thoảng hãy xuất một bản sao lưu."
+    },
+    "data": {
+        "title": "Quản lý dữ liệu",
+        "export": {
+            "title": "Xuất dữ liệu",
+            "button": "Xuất mọi lượt chơi",
+            "description": "Tải về tệp sao lưu của mọi lượt chơi đã lưu.",
+            "done": "Đã tải bản sao lưu"
+        },
+        "import": {
+            "title": "Nhập dữ liệu",
+            "description": "Tải lên tệp đã xuất trước đó (.json)",
+            "fileLabel": "Tệp sao lưu",
+            "chooseFile": "Chọn tệp",
+            "noFile": "Chưa chọn tệp",
+            "review": "Xem lại trước khi nhập",
+            "merged": "Đã gộp dữ liệu nhập",
+            "replaced": "Đã thay thế dữ liệu",
+            "undo": "Hoàn tác"
+        },
+        "reset": {
+            "title": "Đặt lại toàn bộ dữ liệu",
+            "warning": "Thao tác này xóa mọi lượt chơi trên thiết bị này. Bạn có 10 giây để hoàn tác.",
+            "button": "Đặt lại toàn bộ dữ liệu",
+            "confirmTitle": "Đặt lại toàn bộ dữ liệu?",
+            "confirmBody": "Thao tác này xóa {names}.",
+            "cancel": "Hủy",
+            "confirm": "Có, đặt lại toàn bộ",
+            "syncedCopy": "Xóa luôn bản đồng bộ trên {provider}",
+            "syncedOn": "Đồng bộ vẫn bật. Các thiết bị khác sẽ mất những lượt chơi này ở lần đồng bộ tiếp theo. Nếu chưa chắc, hãy xuất bản sao lưu trước.",
+            "done": "Đã đặt lại toàn bộ dữ liệu",
+            "doneMessage": "Đã xóa {count, plural, other {{amount} lượt chơi}}.",
+            "undo": "Hoàn tác",
+            "doneMessageDisconnected": "Đã xóa {count, plural, other {{amount} lượt chơi}}. Đồng bộ đã ngắt kết nối trên trình duyệt này."
+        }
+    },
+    "appearance": {
+        "title": "Giao diện",
+        "description": "Chọn giao diện của ứng dụng. Lựa chọn chỉ lưu trên thiết bị này và không nằm trong bản sao lưu.",
+        "themeLabel": "Chủ đề",
+        "themes": {
+            "light": "Sáng",
+            "dark": "Tối",
+            "system": "Hệ thống"
+        },
+        "themeNote": "Hệ thống làm theo thiết bị của bạn, hiện đang dùng chủ đề {mode, select, dark {tối} other {sáng}}."
+    },
+    "playthroughs": {
+        "title": "Lượt chơi",
+        "description": "Tạo, chuyển, sửa và xóa lượt chơi trên trang Lượt chơi.",
+        "manage": "Quản lý lượt chơi"
+    },
+    "about": {
+        "version": "Phiên bản {version}",
+        "summary": "Công cụ theo dõi tiến độ cho Supermarket Simulator. Dữ liệu của bạn được lưu trong trình duyệt này, hoặc trong bộ nhớ đám mây của riêng bạn nếu bạn bật đồng bộ.",
+        "officialGame": "Game chính thức",
+        "disclaimer": "Không liên kết, không được bảo trợ và không liên quan đến Supermarket Simulator hay nhà phát triển của game. Mọi nhãn hiệu và nội dung game thuộc về chủ sở hữu."
+    },
+    "importDialog": {
+        "title": "Nhập bản sao lưu",
+        "fileInfo": "{name} · {size}",
+        "bytes": "{count} B",
+        "kilobytes": "{count} KB",
+        "failedTitle": "Nhập thất bại",
+        "checksTitle": "Đã kiểm tra tệp",
+        "checks": "Đã đọc {count, plural, other {{amount} mục}}, {kept} mục có id và tên.",
+        "howToApply": "Áp dụng tệp như thế nào?",
+        "modeLabel": "Chế độ nhập",
+        "modes": {
+            "merge": "Gộp vào thiết bị này (khuyên dùng)",
+            "replace": "Thay thế tất cả"
+        },
+        "modeNotes": {
+            "merge": "Thêm các lượt chơi mới. Với lượt chơi có ở cả hai nơi, bản cập nhật sau cùng được giữ. Lượt chơi chỉ có trên thiết bị này vẫn còn. Lượt chơi đang dùng của bạn vẫn giữ nguyên.",
+            "replace": "Xóa các lượt chơi trên thiết bị này và chỉ giữ nội dung trong tệp. Lượt chơi đang dùng trong tệp sẽ trở thành lượt chơi đang dùng."
+        },
+        "whatChanges": "Những gì thay đổi",
+        "columns": {
+            "playthrough": "Lượt chơi",
+            "inFile": "Trong tệp",
+            "onDevice": "Trên thiết bị",
+            "result": "Kết quả"
+        },
+        "results": {
+            "added": "Thêm mới",
+            "updated": "Cập nhật từ tệp",
+            "kept": "Giữ nguyên",
+            "replaced": "Từ tệp",
+            "removed": "Đã xóa"
+        },
+        "notThere": "Không có",
+        "noPlaythroughs": "Tệp không có lượt chơi nào.",
+        "undoNote": "Bạn có 10 giây để hoàn tác việc nhập.",
+        "cancel": "Hủy",
+        "close": "Đóng",
+        "merge": "Gộp",
+        "replace": "Thay thế tất cả",
+        "skipped": "Đã bỏ qua {count, plural, other {{amount} mục}}.",
+        "levelsFixed": "{count, plural, other {{amount} cấp cửa hàng}} dưới 0 sẽ được lưu là 0.",
+        "errors": {
+            "notJson": "Tệp này không phải bản sao lưu của Supermarket Simulator Buddy: nó không phải JSON hợp lệ. Không có gì thay đổi.",
+            "playthroughsMissing": "Tệp này không phải bản sao lưu của Supermarket Simulator Buddy: thiếu danh sách lượt chơi. Không có gì thay đổi."
+        },
+        "summary": {
+            "added": "Thêm {amount}",
+            "updated": "Cập nhật {amount}",
+            "kept": "Giữ {amount}",
+            "replaced": "Thay thế {amount}",
+            "removed": "Xóa {amount}"
+        }
+    },
+    "region": {
+        "title": "Ngôn ngữ và khu vực",
+        "description": "Cách hiển thị chữ, số và ngày trên thiết bị này. Chỉ lưu trên thiết bị này.",
+        "language": {
+            "label": "Ngôn ngữ",
+            "hint": "Tên trong game như sản phẩm, giấy phép và dụng cụ vẫn giữ tiếng Anh."
+        },
+        "numberFormat": {
+            "label": "Định dạng số",
+            "hint": "Ví dụ: {example}",
+            "options": {
+                "auto": "Tự động, theo ngôn ngữ",
+                "us": "1,234.56 (Hoa Kỳ)",
+                "european": "1.234,56 (Đức)",
+                "french": "1 234,56 (Pháp)",
+                "swiss": "1’234.56 (Thụy Sĩ)",
+                "indian": "12,34,567.89 (Ấn Độ)"
+            }
+        },
+        "dateFormat": {
+            "label": "Định dạng ngày",
+            "hint": "Ví dụ: {example}",
+            "options": {
+                "auto": "Tự động, theo ngôn ngữ",
+                "mdy": "Tháng/Ngày/Năm",
+                "dmy": "Ngày/Tháng/Năm",
+                "ymd": "Năm-Tháng-Ngày"
+            }
+        }
+    }
+}

@@ -1,10 +1,10 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import React, { createContext, useContext, useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import type { IconType } from "react-icons";
 import { LuBan, LuCircleCheck, LuInfo, LuTriangleAlert, LuX } from "react-icons/lu";
-import { uiText } from "@/lib/messages/ui";
 import { Button } from "./Button";
 import { IconButton } from "./IconButton";
 
@@ -55,6 +55,7 @@ const ToastHostContext = createContext<(host: HTMLElement | null) => void>(() =>
 export const useToastHost = () => useContext(ToastHostContext);
 
 export function ToastProvider({ children }: { children: React.ReactNode }) {
+	const t = useTranslations("ui.toast");
 	const [toasts, setToasts] = useState<ToastItem[]>([]);
 	const [host, setHost] = useState<HTMLElement | null>(null);
 	const nextIdRef = useRef(0);
@@ -103,7 +104,7 @@ export function ToastProvider({ children }: { children: React.ReactNode }) {
 							className={`mt-2.5 shrink-0 ${className}`}
 						/>
 						<div className="flex min-w-0 flex-1 flex-col gap-0.5 py-1">
-							<span className="sr-only">{uiText.toast.variants[toast.variant]}</span>
+							<span className="sr-only">{t(`variants.${toast.variant}`)}</span>
 							<span className="font-medium">{toast.title}</span>
 							{toast.message && <span className="text-muted">{toast.message}</span>}
 						</div>
@@ -119,7 +120,7 @@ export function ToastProvider({ children }: { children: React.ReactNode }) {
 							</Button>
 						)}
 						<IconButton
-							label={uiText.toast.dismiss}
+							label={t("dismiss")}
 							className="text-muted hover:bg-tint"
 							onClick={() => dismiss(toast.id)}
 						>
@@ -144,7 +145,7 @@ export function ToastProvider({ children }: { children: React.ReactNode }) {
 export function useToast() {
 	const context = useContext(ToastContext);
 	if (context === undefined) {
-		throw new Error(uiText.toast.missingProvider);
+		throw new Error("useToast must be used within a ToastProvider"); // i18n-ignore
 	}
 	return context;
 }

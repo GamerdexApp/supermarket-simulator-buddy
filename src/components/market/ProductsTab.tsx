@@ -1,18 +1,19 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { useMemo, useState } from "react";
 import type { Product } from "@/types";
 import type { Playthrough } from "@/types/playthrough";
-import { marketText } from "@/lib/messages/market";
+import { formatNumber } from "@/lib/format";
+import { licenseIdNumber } from "@/service/management";
 import {
 	ALL,
 	categoryOptions,
 	displayTypeOptions,
 	filterProducts,
 	isProductUnlocked,
-	labelOf,
-	licenseLabel,
 	productKey,
+	productTags,
 } from "@/service/market";
 import { market } from "@/data/supermarket-simulator/market";
 import { FilterBlock } from "@/comps/page/FilterBlock";
@@ -20,33 +21,6 @@ import type { FilterFieldConfig } from "@/comps/page/FilterBlock";
 import { Card } from "@/comps/ui/Card";
 import { ItemImage } from "./ItemImage";
 import { ProductDetailDialog } from "./ProductDetailDialog";
-
-const text = marketText.products;
-
-const fields: FilterFieldConfig[] = [
-	{
-		id: "displayType",
-		label: text.displayType,
-		options: [
-			{ id: ALL, label: text.allDisplayTypes },
-			...displayTypeOptions.map((o) => ({
-				id: o.id,
-				label: text.option(labelOf(o.id), o.count),
-			})),
-		],
-	},
-	{
-		id: "category",
-		label: text.category,
-		options: [
-			{ id: ALL, label: text.allCategories },
-			...categoryOptions.map((o) => ({
-				id: o.id,
-				label: text.option(labelOf(o.id), o.count),
-			})),
-		],
-	},
-];
 
 const DEFAULT_FILTERS = { displayType: ALL, category: ALL };
 
@@ -78,6 +52,9 @@ function ProductCard({
 	unlocked: boolean;
 	onOpen: () => void;
 }) {
+	const t = useTranslations("market.products");
+	const terms = useTranslations("terms");
+	const tags = productTags(product);
 	return (
 		<Card className={`flex flex-col gap-3 p-4 ${unlocked ? "" : "border-dashed"}`}>
 			<div className="flex items-start gap-3">
@@ -86,29 +63,36 @@ function ProductCard({
 					<button
 						type="button"
 						onClick={onOpen}
-						aria-label={text.details(product.name)}
+						aria-label={t("details", { name: product.name })}
 						className="inline-flex min-h-11 w-fit items-center text-start font-semibold hover:underline lg:min-h-0"
 					>
 						{product.name}
 					</button>
 					{product.company && <span className="text-muted">{product.company}</span>}
 					<span className="flex flex-wrap gap-1.5">
-						<Chip tone="link">{labelOf(product.displayType)}</Chip>
-						{product.category && <Chip tone="muted">{labelOf(product.category)}</Chip>}
+						<Chip tone="link">{terms(`displayTypes.${tags.displayType}`)}</Chip>
+						{tags.category && (
+							<Chip tone="muted">{terms(`categories.${tags.category}`)}</Chip>
+						)}
 					</span>
 				</div>
 			</div>
 			<div className="grid grid-cols-3 gap-2">
 				{product.itemsPerBox ? (
-					<Fact label={text.itemsPerBox} value={String(product.itemsPerBox)} />
+					<Fact label={t("itemsPerBox")} value={formatNumber(product.itemsPerBox)} />
 				) : null}
 				{product.weightPerBox ? (
-					<Fact label={text.weightPerBox} value={text.kg(product.weightPerBox)} />
+					<Fact
+						label={t("weightPerBox")}
+						value={t("kg", { weight: formatNumber(product.weightPerBox) })}
+					/>
 				) : null}
-				<Fact label={text.boxesPerStorage} value={String(product.boxesPerStorage)} />
+				<Fact label={t("boxesPerStorage")} value={formatNumber(product.boxesPerStorage)} />
 			</div>
 			{!unlocked && (
-				<p className="text-warn">{text.requires(licenseLabel(product.licenseId))}</p>
+				<p className="text-warn">
+					{t("requires", { number: licenseIdNumber(product.licenseId) })}
+				</p>
 			)}
 		</Card>
 	);
@@ -154,6 +138,8 @@ function ProductSection({
 }
 
 export function ProductsTab({ playthrough }: { playthrough: Playthrough }) {
+	const t = useTranslations("market.products");
+	const terms = useTranslations("terms");
 	const [filters, setFilters] = useState<Record<string, string>>(DEFAULT_FILTERS);
 	const [search, setSearch] = useState("");
 	const [open, setOpen] = useState<Product | null>(null);
@@ -169,6 +155,36 @@ export function ProductsTab({ playthrough }: { playthrough: Playthrough }) {
 	);
 	const unlocked = visible.filter((product) => isProductUnlocked(product, playthrough));
 	const locked = visible.filter((product) => !isProductUnlocked(product, playthrough));
+	const fields: FilterFieldConfig[] = [
+		{
+			id: "displayType",
+			label: t("displayType"),
+			options: [
+				{ id: ALL, label: t("allDisplayTypes") },
+				...displayTypeOptions.map((option) => ({
+					id: option.id,
+					label: t("option", {
+						label: terms(`displayTypes.${option.id}`),
+						count: formatNumber(option.count),
+					}),
+				})),
+			],
+		},
+		{
+			id: "category",
+			label: t("category"),
+			options: [
+				{ id: ALL, label: t("allCategories") },
+				...categoryOptions.map((option) => ({
+					id: option.id,
+					label: t("option", {
+						label: terms(`categories.${option.id}`),
+						count: formatNumber(option.count),
+					}),
+				})),
+			],
+		},
+	];
 
 	return (
 		<div className="flex flex-col gap-6">
@@ -180,22 +196,29 @@ export function ProductsTab({ playthrough }: { playthrough: Playthrough }) {
 					setFilters(DEFAULT_FILTERS);
 					setSearch("");
 				}}
-				search={{ label: text.search, value: search, onChange: setSearch }}
-				summary={text.showing(visible.length, market.products.length)}
-				flyoutTitle={text.filtersTitle}
-				showLabel={text.showButton(visible.length)}
+				search={{ label: t("search"), value: search, onChange: setSearch }}
+				summary={t("showing", {
+					shown: formatNumber(visible.length),
+					count: market.products.length,
+					amount: formatNumber(market.products.length),
+				})}
+				flyoutTitle={t("filtersTitle")}
+				showLabel={t("showButton", {
+					count: visible.length,
+					amount: formatNumber(visible.length),
+				})}
 			/>
 			<ProductSection
-				title={text.unlocked(unlocked.length)}
-				empty={text.noUnlocked}
+				title={t("unlocked", { count: formatNumber(unlocked.length) })}
+				empty={t("noUnlocked")}
 				products={unlocked}
 				unlocked
 				onOpen={setOpen}
 			/>
 			<ProductSection
-				title={text.locked(locked.length)}
-				help={text.lockedHelp}
-				empty={text.noLocked}
+				title={t("locked", { count: formatNumber(locked.length) })}
+				help={t("lockedHelp")}
+				empty={t("noLocked")}
 				products={locked}
 				unlocked={false}
 				onOpen={setOpen}

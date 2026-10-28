@@ -1,0 +1,39 @@
+{
+    "title": "قروض البنك",
+    "subline": "إدارة القروض في {name}",
+    "emptyDescription": "اختر جولة لعب أو أنشئ واحدة لتتبع قروضها.",
+    "loanTitle": "القرض #{number}",
+    "states": {
+        "active": "نشط",
+        "available": "متاح",
+        "locked": "مقفل"
+    },
+    "principal": "المبلغ الأساسي",
+    "rate": "معدل الفائدة اليومي",
+    "level": "مستوى المتجر المطلوب",
+    "term": "المدة: {count, plural, zero {{amount} يوم} one {{amount} يوم} two {{amount} يومان} few {{amount} أيام} many {{amount} يومًا} other {{amount} يوم}}",
+    "days": "{count, plural, zero {{amount} يوم} one {{amount} يوم} two {{amount} يومان} few {{amount} أيام} many {{amount} يومًا} other {{amount} يوم}}",
+    "termFixed": "تبقى المدة ثابتة حتى إزالة القرض.",
+    "details": "تفاصيل القرض",
+    "totalInterest": "إجمالي الفائدة",
+    "totalPayment": "إجمالي الدفع",
+    "dailyPayment": "الدفعة اليومية",
+    "activate": "تفعيل القرض",
+    "activatedOn": "تاريخ التفعيل: {date}",
+    "remove": "إزالة القرض",
+    "requiresLevel": "يتطلب مستوى المتجر {level} (المستوى الحالي {current})",
+    "locked": "مقفل",
+    "activated": "تم تفعيل القرض #{number}",
+    "removed": "تمت إزالة القرض #{number}",
+    "undo": "تراجع",
+    "yourLoans": {
+        "title": "قروضك",
+        "activeLoans": "القروض النشطة",
+        "dailyPayment": "الدفعة اليومية",
+        "totalDebt": "إجمالي دين القروض",
+        "none": "لا توجد قروض نشطة. اختر مدة لأحد القروض أدناه ثم فعّله.",
+        "line": "{principal} بفائدة {rate} يوميًا لمدة {count, plural, zero {{amount} يوم} one {{amount} يوم} two {{amount} يومان} few {{amount} أيام} many {{amount} يومًا} other {{amount} يوم}}",
+        "payments": "{daily} يوميًا · {total} إجمالًا",
+        "formula": "الفائدة هي المبلغ الأساسي مضروبًا في المعدل اليومي مضروبًا في عدد أيام المدة."
+    }
+}

@@ -1,0 +1,39 @@
+{
+    "title": "Bank Loans",
+    "subline": "Manage your loans for {name}",
+    "emptyDescription": "Pick or create a playthrough to track its loans.",
+    "loanTitle": "Loan #{number}",
+    "states": {
+        "active": "Active",
+        "available": "Available",
+        "locked": "Locked"
+    },
+    "principal": "Principal Amount",
+    "rate": "Daily Interest Rate",
+    "level": "Store Level Required",
+    "term": "Term Length: {count, plural, one {{amount} day} other {{amount} days}}",
+    "days": "{count, plural, one {{amount} day} other {{amount} days}}",
+    "termFixed": "The term is fixed until the loan is removed.",
+    "details": "Loan Details",
+    "totalInterest": "Total Interest",
+    "totalPayment": "Total Payment",
+    "dailyPayment": "Daily Payment",
+    "activate": "Activate Loan",
+    "activatedOn": "Activated on: {date}",
+    "remove": "Remove loan",
+    "requiresLevel": "Requires store level {level} (you are level {current})",
+    "locked": "Locked",
+    "activated": "Loan #{number} activated",
+    "removed": "Loan #{number} removed",
+    "undo": "Undo",
+    "yourLoans": {
+        "title": "Your loans",
+        "activeLoans": "Active loans",
+        "dailyPayment": "Daily payment",
+        "totalDebt": "Total loan debt",
+        "none": "No active loans. Pick a term on a loan below and activate it.",
+        "line": "{principal} at {rate} a day for {count, plural, one {{amount} day} other {{amount} days}}",
+        "payments": "{daily} a day · {total} in total",
+        "formula": "Interest is the principal times the daily rate times the term in days."
+    }
+}

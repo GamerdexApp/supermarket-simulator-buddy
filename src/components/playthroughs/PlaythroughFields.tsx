@@ -1,11 +1,9 @@
 "use client";
 
-import { playthroughsText } from "@/lib/messages/playthroughs";
+import { useTranslations } from "next-intl";
 import { Field } from "@/comps/ui/Field";
 import { Input } from "@/comps/ui/Input";
 import { Textarea } from "@/comps/ui/Textarea";
-
-const text = playthroughsText.fields;
 
 interface PlaythroughFieldsProps {
 	name: string;
@@ -23,24 +21,25 @@ export function PlaythroughFields({
 	onNameChange,
 	onDescriptionChange,
 }: PlaythroughFieldsProps) {
+	const t = useTranslations("playthroughs.fields");
 	return (
 		<>
 			<Field
-				label={`${text.nameLabel} *`}
-				error={showNameError && name.trim() === "" ? text.nameError : undefined}
+				label={`${t("nameLabel")} *`}
+				error={showNameError && name.trim() === "" ? t("nameError") : undefined}
 			>
 				<Input
 					value={name}
-					placeholder={text.namePlaceholder}
+					placeholder={t("namePlaceholder")}
 					onChange={(event) => onNameChange(event.target.value)}
 					required
 					data-autofocus
 				/>
 			</Field>
-			<Field label={text.descriptionLabel} optional>
+			<Field label={t("descriptionLabel")} optional>
 				<Textarea
 					value={description}
-					placeholder={text.descriptionPlaceholder}
+					placeholder={t("descriptionPlaceholder")}
 					onChange={(event) => onDescriptionChange(event.target.value)}
 					rows={3}
 				/>

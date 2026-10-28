@@ -1,0 +1,22 @@
+{
+    "displayTypes": {
+        "shelf": "Scaffale",
+        "fridge": "Frigorifero",
+        "freezer": "Congelatore",
+        "stall": "Bancarella",
+        "pegboard": "Pannello forato",
+        "garment_rack": "Appendiabiti"
+    },
+    "categories": {
+        "edible": "Alimentari",
+        "produce": "Frutta e verdura",
+        "drink": "Bevande",
+        "cleaning": "Pulizia",
+        "books": "Libri",
+        "cloth": "Abbigliamento",
+        "electronics": "Elettronica",
+        "hardware": "Ferramenta",
+        "kitchen": "Cucina",
+        "pet": "Animali"
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "displayTypes": {
+        "shelf": "貨架",
+        "fridge": "冷藏櫃",
+        "freezer": "冷凍櫃",
+        "stall": "攤位",
+        "pegboard": "洞洞板",
+        "garment_rack": "吊衣架"
+    },
+    "categories": {
+        "edible": "食品",
+        "produce": "生鮮",
+        "drink": "飲料",
+        "cleaning": "清潔用品",
+        "books": "書籍",
+        "cloth": "服飾",
+        "electronics": "電子產品",
+        "hardware": "五金",
+        "kitchen": "廚房用品",
+        "pet": "寵物用品"
+    }
+}

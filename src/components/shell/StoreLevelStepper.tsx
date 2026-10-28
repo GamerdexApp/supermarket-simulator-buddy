@@ -1,20 +1,20 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { useState } from "react";
 import type { FormEvent } from "react";
 import { LuMinus, LuPlus } from "react-icons/lu";
 import type { Playthrough } from "@/types/playthrough";
 import { usePlaythrough } from "@/lib/contexts/PlaythroughContext";
-import { shellText } from "@/lib/messages/shell";
-import { uiText } from "@/lib/messages/ui";
+import { formatNumber } from "@/lib/format";
 import { readStoreLevel, setStoreLevel } from "@/service/appData";
 import { IconButton } from "@/comps/ui/IconButton";
 import { SectionLabel } from "@/comps/ui/SectionLabel";
 
-const text = shellText.storeLevel;
-
 /** The store level gates every unlock, so it sits in the sidebar instead of on a page. */
 export function StoreLevelStepper({ playthrough }: { playthrough: Playthrough }) {
+	const t = useTranslations("shell.storeLevel");
+	const tStepper = useTranslations("ui.stepper");
 	const { updateData } = usePlaythrough();
 	const [draft, setDraft] = useState<string | null>(null);
 	const level = readStoreLevel(playthrough);
@@ -34,15 +34,15 @@ export function StoreLevelStepper({ playthrough }: { playthrough: Playthrough })
 	return (
 		<div className="border-sb-line flex items-center justify-between gap-2 rounded-md border-[1.5px] py-1.5 ps-3 pe-1.5">
 			<span className="flex min-w-0 flex-col">
-				<SectionLabel className="text-sb-muted">{text.label}</SectionLabel>
+				<SectionLabel className="text-sb-muted">{t("label")}</SectionLabel>
 				{draft === null ? (
 					<button
 						type="button"
 						onClick={() => setDraft(String(level))}
-						aria-label={text.edit(level)}
+						aria-label={t("edit", { level: formatNumber(level) })}
 						className="text-sb-text w-fit font-mono text-xl leading-tight font-medium"
 					>
-						{level}
+						{formatNumber(level)}
 					</button>
 				) : (
 					<form onSubmit={commitDraft}>
@@ -52,7 +52,7 @@ export function StoreLevelStepper({ playthrough }: { playthrough: Playthrough })
 							min={0}
 							step={1}
 							value={draft}
-							aria-label={text.label}
+							aria-label={t("label")}
 							autoFocus
 							onChange={(event) => setDraft(event.target.value)}
 							onBlur={() => commitDraft()}
@@ -66,7 +66,7 @@ export function StoreLevelStepper({ playthrough }: { playthrough: Playthrough })
 			</span>
 			<span className="flex items-center gap-1.5">
 				<IconButton
-					label={level === 0 ? text.atZero : uiText.stepper.lower(text.label)}
+					label={level === 0 ? t("atZero") : tStepper("lower", { label: t("label") })}
 					aria-disabled={level === 0}
 					onClick={() => level > 0 && change(level - 1)}
 					className="border-sb-line text-sb-text hover:bg-sb-line border-[1.5px] aria-disabled:opacity-40"
@@ -74,7 +74,7 @@ export function StoreLevelStepper({ playthrough }: { playthrough: Playthrough })
 					<LuMinus size={16} aria-hidden="true" />
 				</IconButton>
 				<IconButton
-					label={uiText.stepper.raise(text.label)}
+					label={tStepper("raise", { label: t("label") })}
 					onClick={() => change(level + 1)}
 					className="bg-accent text-sb-bg hover:opacity-90"
 				>

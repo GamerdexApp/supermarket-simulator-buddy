@@ -1,0 +1,43 @@
+{
+    "close": "Закрыть",
+    "undo": "Отменить",
+    "field": {
+        "optional": "Необязательно"
+    },
+    "stepper": {
+        "lower": "Уменьшить: {label}",
+        "raise": "Увеличить: {label}",
+        "labelPrefix": "{label}, "
+    },
+    "switch": {
+        "on": "Вкл.",
+        "off": "Выкл."
+    },
+    "tabs": {
+        "locked": " (закрыто)"
+    },
+    "toast": {
+        "dismiss": "Скрыть",
+        "variants": {
+            "success": "Готово",
+            "info": "Инфо",
+            "warning": "Внимание",
+            "error": "Ошибка"
+        }
+    },
+    "filters": {
+        "filters": "Фильтры",
+        "activeCount": "{count, plural, one {Активно: {amount}} few {Активно: {amount}} many {Активно: {amount}} other {Активно: {amount}}}",
+        "clearFilters": "Сбросить фильтры",
+        "reset": "Сбросить",
+        "description": "Изменения применяются сразу. Фильтры не сохраняются.",
+        "groupLabel": "Фильтры: {label}"
+    },
+    "savedChip": {
+        "automatic": "Сохраняется автоматически",
+        "justNow": "Сохранено только что",
+        "minutesAgo": "{count, plural, one {Сохранено {amount} мин назад} few {Сохранено {amount} мин назад} many {Сохранено {amount} мин назад} other {Сохранено {amount} мин назад}}",
+        "at": "Сохранено {time}",
+        "failed": "Не сохранено, хранилище заполнено"
+    }
+}

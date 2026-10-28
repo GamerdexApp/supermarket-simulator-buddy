@@ -1,0 +1,156 @@
+{
+    "title": "設定",
+    "subline": "データとアプリの設定を管理",
+    "tabsLabel": "設定",
+    "tabs": {
+        "sync": "クラウド同期",
+        "preferences": "環境設定",
+        "data": "バックアップとデータ",
+        "about": "このアプリについて"
+    },
+    "playthroughCount": "{count, plural, other {{amount}件のプレイデータ}}",
+    "storageNote": {
+        "title": "データの保存について",
+        "body": "データはこのブラウザーに保存されます。ブラウザーのデータを消去すると、クラウド同期でコピーを保持していない限り削除されます。ときどきバックアップをエクスポートしてください。"
+    },
+    "data": {
+        "title": "データ管理",
+        "export": {
+            "title": "データのエクスポート",
+            "button": "すべてのプレイデータをエクスポート",
+            "description": "保存したすべてのプレイデータのバックアップファイルをダウンロードします。",
+            "done": "バックアップをダウンロードしました"
+        },
+        "import": {
+            "title": "データのインポート",
+            "description": "以前にエクスポートしたファイル（.json）をアップロード",
+            "fileLabel": "バックアップファイル",
+            "chooseFile": "ファイルを選択",
+            "noFile": "ファイルが選択されていません",
+            "review": "インポート内容を確認",
+            "merged": "インポートを統合しました",
+            "replaced": "データを置き換えました",
+            "undo": "元に戻す"
+        },
+        "reset": {
+            "title": "すべてのデータをリセット",
+            "warning": "この端末のプレイデータをすべて削除します。削除後10秒間は元に戻せます。",
+            "button": "すべてのデータをリセット",
+            "confirmTitle": "すべてのデータをリセットしますか？",
+            "confirmBody": "{names}を削除します。",
+            "cancel": "キャンセル",
+            "confirm": "はい、すべてリセットします",
+            "syncedCopy": "{provider}にある同期済みのコピーも削除する",
+            "syncedOn": "同期はオンのままです。ほかの端末でも次の同期でこれらのプレイデータが消えます。迷う場合は、先にバックアップをエクスポートしてください。",
+            "done": "すべてのデータをリセットしました",
+            "doneMessage": "{count, plural, other {{amount}件のプレイデータ}}を削除しました。",
+            "undo": "元に戻す",
+            "doneMessageDisconnected": "{count, plural, other {{amount}件のプレイデータ}}を削除しました。このブラウザーの同期は切断されています。"
+        }
+    },
+    "appearance": {
+        "title": "外観",
+        "description": "アプリの見た目を選びます。この設定はこの端末にのみ保存され、バックアップには含まれません。",
+        "themeLabel": "テーマ",
+        "themes": {
+            "light": "ライト",
+            "dark": "ダーク",
+            "system": "システム"
+        },
+        "themeNote": "「システム」は端末の設定に従います。現在、端末は{mode, select, dark {ダーク} other {ライト}}テーマを使用しています。"
+    },
+    "playthroughs": {
+        "title": "プレイデータ",
+        "description": "プレイデータの作成、切り替え、編集、削除はプレイデータのページで行います。",
+        "manage": "プレイデータを管理"
+    },
+    "about": {
+        "version": "バージョン{version}",
+        "summary": "Supermarket Simulator の進行状況を記録するツールです。データはこのブラウザー、または同期をオンにした場合はご自身のクラウドストレージに保存されます。",
+        "officialGame": "公式ゲーム",
+        "disclaimer": "Supermarket Simulator およびその開発者とは提携しておらず、承認や関係もありません。すべての商標とゲームコンテンツはそれぞれの所有者に帰属します。"
+    },
+    "importDialog": {
+        "title": "バックアップをインポート",
+        "fileInfo": "{name} · {size}",
+        "bytes": "{count} B",
+        "kilobytes": "{count} KB",
+        "failedTitle": "インポートに失敗しました",
+        "checksTitle": "ファイルを確認しました",
+        "checks": "{count, plural, other {{amount}件のエントリー}}を読み込み、そのうち{kept}件に ID と名前があります。",
+        "howToApply": "ファイルをどのように適用しますか？",
+        "modeLabel": "インポート方法",
+        "modes": {
+            "merge": "この端末に統合（おすすめ）",
+            "replace": "すべて置き換える"
+        },
+        "modeNotes": {
+            "merge": "新しいプレイデータを追加します。両方にあるプレイデータは、最後に更新された方が優先されます。この端末にだけあるプレイデータは残ります。使用中のプレイデータはそのままです。",
+            "replace": "この端末のプレイデータを削除し、ファイルの内容だけを残します。ファイルで使用中だったプレイデータが使用中になります。"
+        },
+        "whatChanges": "変更内容",
+        "columns": {
+            "playthrough": "プレイデータ",
+            "inFile": "ファイル",
+            "onDevice": "端末",
+            "result": "結果"
+        },
+        "results": {
+            "added": "追加",
+            "updated": "ファイルから更新",
+            "kept": "維持",
+            "replaced": "ファイルから",
+            "removed": "削除"
+        },
+        "notThere": "なし",
+        "noPlaythroughs": "ファイルにプレイデータがありません。",
+        "undoNote": "インポート後10秒間は元に戻せます。",
+        "cancel": "キャンセル",
+        "close": "閉じる",
+        "merge": "統合",
+        "replace": "すべて置き換える",
+        "skipped": "{count, plural, other {{amount}件のエントリー}}をスキップしました。",
+        "levelsFixed": "0未満の{count, plural, other {{amount}件のストアレベル}}は0として保存されます。",
+        "errors": {
+            "notJson": "このファイルは Supermarket Simulator Buddy のバックアップではありません。有効な JSON ではありません。何も変更されていません。",
+            "playthroughsMissing": "このファイルは Supermarket Simulator Buddy のバックアップではありません。プレイデータの一覧がありません。何も変更されていません。"
+        },
+        "summary": {
+            "added": "{amount}件追加",
+            "updated": "{amount}件更新",
+            "kept": "{amount}件維持",
+            "replaced": "{amount}件置き換え",
+            "removed": "{amount}件削除"
+        }
+    },
+    "region": {
+        "title": "言語と地域",
+        "description": "この端末での文字、数値、日付の表示方法です。この端末にのみ保存されます。",
+        "language": {
+            "label": "言語",
+            "hint": "商品、ライセンス、ツールなどのゲーム内の名前は英語のままです。"
+        },
+        "numberFormat": {
+            "label": "数値の形式",
+            "hint": "例: {example}",
+            "options": {
+                "auto": "自動（言語に合わせる）",
+                "us": "1,234.56（アメリカ）",
+                "european": "1.234,56（ドイツ）",
+                "french": "1 234,56（フランス）",
+                "swiss": "1’234.56（スイス）",
+                "indian": "12,34,567.89（インド）"
+            }
+        },
+        "dateFormat": {
+            "label": "日付の形式",
+            "hint": "例: {example}",
+            "options": {
+                "auto": "自動（言語に合わせる）",
+                "mdy": "月/日/年",
+                "dmy": "日/月/年",
+                "ymd": "年-月-日"
+            }
+        }
+    }
+}

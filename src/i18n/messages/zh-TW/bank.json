@@ -1,0 +1,39 @@
+{
+    "title": "銀行貸款",
+    "subline": "管理 {name} 的貸款",
+    "emptyDescription": "選擇或建立一個存檔來記錄貸款。",
+    "loanTitle": "貸款 #{number}",
+    "states": {
+        "active": "生效中",
+        "available": "可申請",
+        "locked": "已鎖定"
+    },
+    "principal": "本金",
+    "rate": "日利率",
+    "level": "所需商店等級",
+    "term": "期限：{count, plural, other {{amount} 天}}",
+    "days": "{count, plural, other {{amount} 天}}",
+    "termFixed": "移除貸款前無法變更期限。",
+    "details": "貸款詳情",
+    "totalInterest": "總利息",
+    "totalPayment": "還款總額",
+    "dailyPayment": "每日還款",
+    "activate": "啟用貸款",
+    "activatedOn": "啟用日期：{date}",
+    "remove": "移除貸款",
+    "requiresLevel": "需要商店等級 {level}（你目前是 {current} 級）",
+    "locked": "已鎖定",
+    "activated": "貸款 #{number} 已啟用",
+    "removed": "貸款 #{number} 已移除",
+    "undo": "復原",
+    "yourLoans": {
+        "title": "你的貸款",
+        "activeLoans": "生效中的貸款",
+        "dailyPayment": "每日還款",
+        "totalDebt": "貸款總額",
+        "none": "沒有生效中的貸款。在下方為一筆貸款選擇期限並啟用。",
+        "line": "{principal}，日利率 {rate}，期限 {count, plural, other {{amount} 天}}",
+        "payments": "每天 {daily} · 共 {total}",
+        "formula": "利息 = 本金 × 日利率 × 期限天數。"
+    }
+}

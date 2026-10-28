@@ -1,15 +1,13 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import type { ReactNode } from "react";
 import type { Playthrough } from "@/types/playthrough";
 import { usePlaythrough } from "@/lib/contexts/PlaythroughContext";
-import { shellText } from "@/lib/messages/shell";
 import { NEW_PLAYTHROUGH_HREF, PLAYTHROUGHS_HREF } from "@/data/nav";
 import { ButtonLink } from "@/comps/ui/Button";
 import { EmptyState } from "@/comps/ui/EmptyState";
 import { PageHeader } from "./PageHeader";
-
-const text = shellText.empty;
 
 interface PlaythroughGateProps {
 	title: string;
@@ -26,9 +24,10 @@ interface PlaythroughGateProps {
 export function PlaythroughGate({
 	title,
 	subline,
-	emptyDescription = text.description,
+	emptyDescription,
 	children,
 }: PlaythroughGateProps) {
+	const t = useTranslations("shell.empty");
 	const { activePlaythrough } = usePlaythrough();
 
 	if (!activePlaythrough) {
@@ -36,14 +35,14 @@ export function PlaythroughGate({
 			<>
 				<PageHeader title={title} subline={subline} />
 				<EmptyState
-					title={text.title}
-					description={emptyDescription}
+					title={t("title")}
+					description={emptyDescription ?? t("description")}
 					actions={
 						<>
 							<ButtonLink href={NEW_PLAYTHROUGH_HREF} variant="primary">
-								{text.create}
+								{t("create")}
 							</ButtonLink>
-							<ButtonLink href={PLAYTHROUGHS_HREF}>{text.all}</ButtonLink>
+							<ButtonLink href={PLAYTHROUGHS_HREF}>{t("all")}</ButtonLink>
 						</>
 					}
 				/>

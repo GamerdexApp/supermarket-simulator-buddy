@@ -1,10 +1,11 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { useState } from "react";
 import { LuPlus, LuShoppingCart, LuTrash2 } from "react-icons/lu";
 import type { AppData, Playthrough, ShoppingListItem } from "@/types/playthrough";
 import { usePlaythrough } from "@/lib/contexts/PlaythroughContext";
-import { shoppingText } from "@/lib/messages/shopping";
+import { formatNumber } from "@/lib/format";
 import { updatePlaythrough } from "@/service/appData";
 import { currentProductName } from "@/service/products";
 import type { PendingItem } from "@/service/shopping";
@@ -15,7 +16,6 @@ import {
 	removeItem,
 	resetList,
 	setBoxes,
-	shopName,
 	togglePurchased,
 } from "@/service/shopping";
 import { PageHeader } from "@/comps/shell/PageHeader";
@@ -28,13 +28,17 @@ import { Note } from "@/comps/ui/Note";
 import { useToast } from "@/comps/ui/Toast";
 import { ValueStepper } from "@/comps/ui/ValueStepper";
 import { AddProductsDialog } from "./AddProductsDialog";
+import { useShopName } from "./useShopName";
 
-const text = shoppingText;
+const EMPTY_STEPS = ["item1", "item2", "item3"] as const;
+
+const counted = (count: number) => ({ count, amount: formatNumber(count) });
 
 const itemLabel = (item: ShoppingListItem) =>
 	[item.company, currentProductName(item.productName)].filter(Boolean).join(" - ");
 
 function useListChange(playthrough: Playthrough) {
+	const t = useTranslations("shopping");
 	const { updateData } = usePlaythrough();
 	const showToast = useToast();
 
@@ -56,7 +60,7 @@ function useListChange(playthrough: Playthrough) {
 			variant: "success",
 			...toast,
 			action: {
-				label: text.undo,
+				label: t("undo"),
 				onAction: () =>
 					updateData((current) =>
 						updatePlaythrough(current, playthrough.id, { shoppingList: previousList })
@@ -81,6 +85,7 @@ function ItemRow({
 }) {
 	const name = currentProductName(item.productName);
 	const label = itemLabel(item);
+	const t = useTranslations("shopping");
 
 	return (
 		<li
@@ -91,7 +96,7 @@ function ItemRow({
 					type="checkbox"
 					checked={item.purchased}
 					onChange={onToggle}
-					aria-label={text.row.purchased(label)}
+					aria-label={t("row.purchased", { label })}
 					className="accent-primary size-5 shrink-0"
 				/>
 				<span className="flex min-w-0 flex-col">
@@ -103,15 +108,15 @@ function ItemRow({
 			</label>
 			<span className="flex items-center gap-1">
 				<ValueStepper
-					label={text.row.boxes}
+					label={t("row.boxes")}
 					value={item.boxes}
 					min={1}
 					max={Number.MAX_SAFE_INTEGER}
-					display={text.dialog.boxes(item.boxes)}
+					display={t("dialog.boxes", counted(item.boxes))}
 					onChange={onBoxes}
 				/>
 				<IconButton
-					label={text.row.remove(label)}
+					label={t("row.remove", { label })}
 					onClick={onRemove}
 					className="text-danger hover:bg-tint"
 				>
@@ -123,24 +128,25 @@ function ItemRow({
 }
 
 function EmptyList({ onAdd }: { onAdd: () => void }) {
+	const t = useTranslations("shopping");
 	return (
 		<Card className="flex flex-col items-center gap-3 border-dashed px-6 py-10 text-center">
 			<LuShoppingCart size={32} aria-hidden="true" className="text-primary" />
-			<h2 className="text-lg font-semibold">{text.empty.title}</h2>
-			<p className="text-muted max-w-md">{text.empty.body}</p>
+			<h2 className="text-lg font-semibold">{t("empty.title")}</h2>
+			<p className="text-muted max-w-md">{t("empty.body")}</p>
 			<Button variant="primary" onClick={onAdd}>
 				<LuPlus size={16} aria-hidden="true" />
-				{text.addProducts}
+				{t("addProducts")}
 			</Button>
 			<ol className="text-muted list-decimal ps-5 text-start">
-				{text.empty.steps.map((step) => (
-					<li key={step}>{step}</li>
+				{EMPTY_STEPS.map((step) => (
+					<li key={step}>{t(`empty.steps.${step}`)}</li>
 				))}
 			</ol>
 			<p className="text-muted">
-				{text.empty.missing}{" "}
+				{t("empty.missing")}{" "}
 				<ButtonLink href="/management?tab=licenses" variant="link">
-					{text.empty.toManagement}
+					{t("empty.toManagement")}
 				</ButtonLink>
 			</p>
 		</Card>
@@ -148,6 +154,8 @@ function EmptyList({ onAdd }: { onAdd: () => void }) {
 }
 
 function ShoppingContent({ playthrough }: { playthrough: Playthrough }) {
+	const t = useTranslations("shopping");
+	const shopLabel = useShopName();
 	const [adding, setAdding] = useState(false);
 	const [confirmingReset, setConfirmingReset] = useState(false);
 	const { change, changeWithUndo } = useListChange(playthrough);
@@ -158,19 +166,19 @@ function ShoppingContent({ playthrough }: { playthrough: Playthrough }) {
 	const submit = (pending: PendingItem[]) => {
 		setAdding(false);
 		changeWithUndo((current) => addItems(current, id, pending), {
-			title: text.dialog.added(pending.length),
+			title: t("dialog.added", counted(pending.length)),
 		});
 	};
 
 	return (
 		<>
 			<PageHeader
-				title={text.title}
-				subline={text.subline(playthrough.name)}
+				title={t("title")}
+				subline={t("subline", { name: playthrough.name })}
 				actions={
 					<Button variant="primary" onClick={() => setAdding(true)}>
 						<LuPlus size={16} aria-hidden="true" />
-						{text.addProducts}
+						{t("addProducts")}
 					</Button>
 				}
 			/>
@@ -181,34 +189,38 @@ function ShoppingContent({ playthrough }: { playthrough: Playthrough }) {
 					<Card className="flex flex-col gap-3 p-4">
 						<div className="flex flex-wrap items-center justify-between gap-3">
 							<div className="flex flex-col">
-								<h2 className="text-lg font-semibold">{text.summary.title}</h2>
+								<h2 className="text-lg font-semibold">{t("summary.title")}</h2>
 								<span className="text-muted">
-									{text.summary.purchased(summary.bought, summary.total)} ·{" "}
-									{text.summary.boxes(summary.boxes)}
+									{t("summary.purchased", {
+										bought: formatNumber(summary.bought),
+										...counted(summary.total),
+									})}{" "}
+									· {t("summary.boxes", counted(summary.boxes))}
 								</span>
 							</div>
 							{!confirmingReset && (
 								<Button variant="danger" onClick={() => setConfirmingReset(true)}>
-									{text.summary.reset}
+									{t("summary.reset")}
 								</Button>
 							)}
 						</div>
 						{confirmingReset && (
-							<Note tone="warning" title={text.reset.title}>
+							<Note tone="warning" title={t("reset.title")}>
 								<span className="flex flex-col gap-3">
 									<span>
-										{text.reset.body(
-											summary.total,
-											summary.bought,
-											summary.boxes
-										)}
+										{t("reset.body", {
+											...counted(summary.total),
+											bought: formatNumber(summary.bought),
+											boxCount: summary.boxes,
+											boxes: formatNumber(summary.boxes),
+										})}
 									</span>
 									<span className="flex flex-wrap gap-2">
 										<Button
 											data-autofocus
 											onClick={() => setConfirmingReset(false)}
 										>
-											{text.reset.cancel}
+											{t("reset.cancel")}
 										</Button>
 										<Button
 											variant="danger"
@@ -217,15 +229,16 @@ function ShoppingContent({ playthrough }: { playthrough: Playthrough }) {
 												changeWithUndo(
 													(current) => resetList(current, id),
 													{
-														title: text.reset.done,
-														message: text.reset.doneMessage(
-															summary.total
+														title: t("reset.done"),
+														message: t(
+															"reset.doneMessage",
+															counted(summary.total)
 														),
 													}
 												);
 											}}
 										>
-											{text.reset.confirm}
+											{t("reset.confirm")}
 										</Button>
 									</span>
 								</span>
@@ -238,18 +251,18 @@ function ShoppingContent({ playthrough }: { playthrough: Playthrough }) {
 								<div className="flex items-start justify-between gap-3">
 									<div className="flex flex-col">
 										<h2 className="text-lg font-semibold">
-											{shopName(group.store)}
+											{shopLabel(group.store)}
 										</h2>
 										<span className="text-muted text-xs">
-											{text.shop.progress(
-												group.bought,
-												group.items.length,
-												group.boxes
-											)}
+											{t("shop.progress", {
+												bought: formatNumber(group.bought),
+												total: formatNumber(group.items.length),
+												...counted(group.boxes),
+											})}
 										</span>
 									</div>
 									<Badge tone="added">
-										{text.shop.items(group.items.length)}
+										{t("shop.items", counted(group.items.length))}
 									</Badge>
 								</div>
 								<ul className="flex flex-col">
@@ -271,9 +284,11 @@ function ShoppingContent({ playthrough }: { playthrough: Playthrough }) {
 												changeWithUndo(
 													(current) => removeItem(current, id, item.id),
 													{
-														title: text.row.removed(
-															currentProductName(item.productName)
-														),
+														title: t("row.removed", {
+															name: currentProductName(
+																item.productName
+															),
+														}),
 													}
 												)
 											}
@@ -296,8 +311,9 @@ function ShoppingContent({ playthrough }: { playthrough: Playthrough }) {
 }
 
 export function ShoppingListPage() {
+	const t = useTranslations("shopping");
 	return (
-		<PlaythroughGate title={text.title} emptyDescription={text.emptyDescription}>
+		<PlaythroughGate title={t("title")} emptyDescription={t("emptyDescription")}>
 			{(playthrough) => <ShoppingContent playthrough={playthrough} />}
 		</PlaythroughGate>
 	);

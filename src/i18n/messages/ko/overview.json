@@ -1,0 +1,56 @@
+{
+    "title": "개요",
+    "subline": "{name} · 모든 것을 한눈에",
+    "emptyDescription": "회차를 선택하거나 만들어서 진행 상황을 한눈에 보세요.",
+    "identity": {
+        "created": "생성: {date}",
+        "lastModified": "마지막 수정: {date}",
+        "manage": "회차 관리"
+    },
+    "storeLevel": {
+        "title": "매장 레벨",
+        "subtitle": "현재 진행 레벨",
+        "hint": "사이드바의 매장 레벨 조절기로 바꿀 수 있어요."
+    },
+    "financial": {
+        "title": "재무 개요",
+        "activeLoans": "진행 중인 대출",
+        "dailyPayments": "일일 상환액",
+        "totalDebt": "총 대출 잔액",
+        "none": "진행 중인 대출이 없어요. 은행에서 대출을 받으세요.",
+        "formula": "각 대출 비용은 원금 + 원금 × 일일 이자율 × 기간이에요. 진행 중인 모든 대출은 매일 상환하는 것으로 계산해요.",
+        "view": "은행 상세 보기"
+    },
+    "investment": {
+        "title": "총 투자액",
+        "subtitle": "관리와 마켓 지출의 합계",
+        "formula": "관리 {managementSpent} + 마켓 {marketSpent} = {total}"
+    },
+    "management": {
+        "title": "관리",
+        "licenses": "라이선스",
+        "growth": "확장 업그레이드",
+        "storage": "창고 업그레이드",
+        "employees": "직원",
+        "unlocked": "{total}개 중 {owned}개 잠금 해제됨",
+        "hired": "{total}명 중 {owned}명 고용",
+        "perDay": "{amount}/일",
+        "hiringNote": "지금까지 지불한 고용 비용: {amount}. 총 투자액에는 포함되지 않아요.",
+        "total": "총 투자액",
+        "view": "관리 보기"
+    },
+    "market": {
+        "title": "마켓",
+        "products": "상품",
+        "licensesUnlocked": "{count, plural, other {라이선스 {amount}개 잠금 해제됨}}",
+        "available": "{amount}개 이용 가능",
+        "tools": "도구",
+        "vehicles": "차량",
+        "furniture": "가구",
+        "furnitureItems": "{count, plural, other {{amount}개 항목 이용 가능}}",
+        "unlocked": "{total}개 중 {owned}개 잠금 해제됨",
+        "note": "가구와 페인트는 저장되지 않으므로 지출에 포함되지 않아요.",
+        "total": "총 투자액",
+        "view": "마켓 보기"
+    }
+}

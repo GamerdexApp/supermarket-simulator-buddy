@@ -1,0 +1,63 @@
+{
+    "title": "買い物リスト",
+    "subline": "{name}の商品の仕入れを計画",
+    "emptyDescription": "仕入れを計画するには、プレイデータを作成してください。",
+    "addProducts": "商品を追加",
+    "summary": {
+        "title": "買い物の概要",
+        "purchased": "{count, plural, other {{amount}件}}中{bought}件を購入済み",
+        "boxes": "{count, plural, other {合計{amount}箱}}",
+        "reset": "リストをリセット"
+    },
+    "reset": {
+        "title": "買い物リストをリセットしますか？",
+        "body": "{count, plural, other {{amount}件}}を削除します（購入済み{bought}件、{boxCount, plural, other {{boxes}箱}}）。",
+        "cancel": "キャンセル",
+        "confirm": "リストをリセット",
+        "done": "買い物リストをリセットしました",
+        "doneMessage": "{count, plural, other {{amount}件}}を削除しました。"
+    },
+    "empty": {
+        "title": "買い物リストは空です",
+        "body": "次の仕入れの前に、買う商品を計画しましょう。",
+        "steps": {
+            "item1": "解放済みのライセンスから商品を追加します。",
+            "item2": "商品をもう一度タップすると1箱追加されます。",
+            "item3": "購入したらチェックを付けます。"
+        },
+        "missing": "商品が見つかりませんか？管理でそのライセンスを解放してください。",
+        "toManagement": "ライセンスを開く"
+    },
+    "shop": {
+        "noShop": "仕入れ先なし",
+        "items": "{count, plural, other {{amount}件}}",
+        "progress": "{total}件中{bought}件を購入済み · {count, plural, other {{amount}箱}}"
+    },
+    "row": {
+        "purchased": "購入済みにする: {label}",
+        "boxes": "箱数",
+        "remove": "{label}を削除",
+        "removed": "{name}を削除しました"
+    },
+    "undo": "元に戻す",
+    "dialog": {
+        "title": "買い物リストに商品を追加",
+        "search": "商品を検索",
+        "searchPlaceholder": "名前または会社で検索…",
+        "source": "解放済みのライセンスの商品だけが表示されます。",
+        "showing": "{total}件中{shown}件を表示",
+        "pick": "商品をタップして追加",
+        "noResults": "「{term}」に一致する商品はありません",
+        "noResultsHint": "見つからない商品は、まだ解放していないライセンスが必要かもしれません。",
+        "clearSearch": "検索をクリア",
+        "addOne": "{label}を1箱追加",
+        "pending": "追加する項目（{count}）",
+        "noPending": "まだ何も追加されていません。左の商品をタップすると1箱追加され、さらにタップすると追加されます。",
+        "merges": "すでにリストにある商品は、その行に箱数が加算されます。",
+        "boxes": "{count, plural, other {{amount}箱}}",
+        "removePending": "追加する項目から{label}を削除",
+        "cancel": "キャンセル",
+        "submit": "{count, plural, other {{amount}件をリストに追加}}",
+        "added": "{count, plural, other {{amount}件}}を追加しました"
+    }
+}

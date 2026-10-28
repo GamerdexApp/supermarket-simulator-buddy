@@ -1,0 +1,63 @@
+{
+    "title": "Senarai Beli-belah",
+    "subline": "Rancang pembelian produk untuk {name}",
+    "emptyDescription": "Cipta sesi permainan untuk merancang pembelian.",
+    "addProducts": "Tambah Produk",
+    "summary": {
+        "title": "Ringkasan Beli-belah",
+        "purchased": "{bought} / {count, plural, other {{amount} item dibeli}}",
+        "boxes": "{count, plural, other {{amount} kotak keseluruhan}}",
+        "reset": "Tetapkan Semula Senarai"
+    },
+    "reset": {
+        "title": "Tetapkan semula senarai beli-belah?",
+        "body": "Ini membuang {count, plural, other {{amount} item}} ({bought} dibeli, {boxCount, plural, other {{boxes} kotak}}).",
+        "cancel": "Batal",
+        "confirm": "Tetapkan semula senarai",
+        "done": "Senarai beli-belah ditetapkan semula",
+        "doneMessage": "{count, plural, other {{amount} item}} dibuang."
+    },
+    "empty": {
+        "title": "Senarai beli-belah anda kosong",
+        "body": "Rancang produk yang perlu dibeli sebelum anda ke kedai lagi.",
+        "steps": {
+            "item1": "Tambah produk daripada lesen yang telah anda buka.",
+            "item2": "Ketik produk sekali lagi untuk menambah satu kotak lagi.",
+            "item3": "Tandakan item apabila anda membelinya."
+        },
+        "missing": "Ada produk yang tiada? Buka kunci lesennya dalam Pengurusan.",
+        "toManagement": "Pergi ke Lesen"
+    },
+    "shop": {
+        "noShop": "Tiada Kedai",
+        "items": "{count, plural, other {{amount} item}}",
+        "progress": "{bought} daripada {total} dibeli · {count, plural, other {{amount} kotak}}"
+    },
+    "row": {
+        "purchased": "Tandakan sebagai dibeli: {label}",
+        "boxes": "Kotak",
+        "remove": "Buang {label}",
+        "removed": "{name} dibuang"
+    },
+    "undo": "Buat asal",
+    "dialog": {
+        "title": "Tambah Produk ke Senarai Beli-belah",
+        "search": "Cari Produk",
+        "searchPlaceholder": "Cari nama atau syarikat...",
+        "source": "Hanya produk daripada lesen yang dibuka disenaraikan.",
+        "showing": "Menunjukkan {shown} daripada {total}",
+        "pick": "Ketik produk untuk menambahnya",
+        "noResults": "Tiada produk yang sepadan dengan \"{term}\"",
+        "noResultsHint": "Produk yang tiada mungkin memerlukan lesen yang belum anda buka.",
+        "clearSearch": "Kosongkan carian",
+        "addOne": "Tambah satu kotak {label}",
+        "pending": "Item untuk Ditambah ({count})",
+        "noPending": "Belum ada item ditambah. Ketik produk di sebelah kiri untuk menambah satu kotak. Ketik sekali lagi untuk menambah lagi.",
+        "merges": "Produk yang sudah ada dalam senarai anda akan mendapat kotak ini pada barisnya.",
+        "boxes": "{count, plural, other {{amount} kotak}}",
+        "removePending": "Buang {label} daripada item untuk ditambah",
+        "cancel": "Batal",
+        "submit": "{count, plural, other {Tambah {amount} Item ke Senarai}}",
+        "added": "{count, plural, other {{amount} item}} ditambah"
+    }
+}

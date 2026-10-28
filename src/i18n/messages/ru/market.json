@@ -1,0 +1,93 @@
+{
+    "title": "Рынок",
+    "tabsLabel": "Рынок",
+    "tabs": {
+        "products": "Товары",
+        "furniture": "Мебель",
+        "paint": "Краска",
+        "tools": "Инструменты",
+        "vehicles": "Транспорт"
+    },
+    "sublines": {
+        "products": "{name} · Товары, которые открывают ваши лицензии",
+        "furniture": "{name} · Цены на мебель",
+        "paint": "{name} · Цены на краску",
+        "tools": "{name} · Ваши инструменты",
+        "vehicles": "{name} · Ваш транспорт"
+    },
+    "emptyDescription": "Выберите или создайте прохождение, чтобы увидеть ваши товары, инструменты и транспорт.",
+    "free": "Бесплатно",
+    "undoUnlock": "Отменить открытие",
+    "unlock": "Открыть",
+    "locked": "Закрыто",
+    "states": {
+        "unlocked": "Открыто",
+        "canUnlock": "Можно открыть",
+        "locked": "Закрыто"
+    },
+    "products": {
+        "search": "Поиск по названию или компании...",
+        "displayType": "Фильтр по типу витрины",
+        "allDisplayTypes": "Все типы витрин",
+        "category": "Фильтр по категории",
+        "allCategories": "Все категории",
+        "option": "{label} ({count})",
+        "filtersTitle": "Фильтр товаров",
+        "showing": "Показано {shown} из {count, plural, one {{amount} товара} few {{amount} товаров} many {{amount} товаров} other {{amount} товара}}",
+        "showButton": "Показать {count, plural, one {{amount} товар} few {{amount} товара} many {{amount} товаров} other {{amount} товара}}",
+        "unlocked": "Открытые товары ({count})",
+        "locked": "Закрытые товары ({count})",
+        "lockedHelp": "Откройте лицензию в разделе Управление, чтобы продавать эти товары.",
+        "noUnlocked": "Нет открытых товаров под ваши фильтры.",
+        "noLocked": "Нет закрытых товаров под ваши фильтры.",
+        "requires": "Нужна: лицензия {number}",
+        "itemsPerBox": "Штук в коробке",
+        "weightPerBox": "Вес коробки",
+        "kg": "{weight} кг",
+        "boxesPerStorage": "Коробок на стеллаж склада",
+        "details": "Подробности: {name}",
+        "detail": {
+            "company": "Компания",
+            "displayType": "Тип витрины",
+            "category": "Категория",
+            "boughtAt": "Где купить",
+            "license": "Лицензия",
+            "unlocked": "Лицензия {number}, открыта",
+            "locked": "Лицензия {number}, ещё не открыта",
+            "none": "Не указано",
+            "toLicenses": "Открыть лицензии",
+            "close": "Закрыть"
+        },
+        "stores": {
+            "liquor_store": "Liquor Store",
+            "janitorial_supply": "Janitorial Supply",
+            "deli_and_grocery": "Deli and Grocery",
+            "meat_and_dairy": "Meat and Dairy",
+            "green_market": "Green Market"
+        }
+    },
+    "furniture": {
+        "heading": "Вся мебель ({count})",
+        "note": "Цены из игры. Мебель не сохраняется."
+    },
+    "paint": {
+        "heading": "Вся краска ({count})",
+        "note": "Цены из игры. Краска не сохраняется."
+    },
+    "tools": {
+        "totalSpent": "Потрачено на инструменты",
+        "unlockedOf": "Открыто {owned} из {count, plural, one {{amount} инструмента} few {{amount} инструментов} many {{amount} инструментов} other {{amount} инструмента}}",
+        "requiresLicenses": "{count, plural, one {Нужна {amount} лицензия} few {Нужны {amount} лицензии} many {Нужно {amount} лицензий} other {Нужно {amount} лицензии}} · у вас {owned}",
+        "unlocked": "{name}: открыто",
+        "undone": "{name}: снова закрыто"
+    },
+    "vehicles": {
+        "totalSpent": "Потрачено на транспорт",
+        "unlockedOf": "Открыто {owned} из {count, plural, one {{amount} единицы транспорта} few {{amount} единиц транспорта} many {{amount} единиц транспорта} other {{amount} единицы транспорта}}",
+        "price": "Цена",
+        "storeLevel": "Уровень магазина",
+        "requiresLevel": "Нужен уровень магазина {level} · у вас уровень {current}",
+        "unlocked": "{name}: открыто",
+        "undone": "{name}: снова закрыто"
+    }
+}

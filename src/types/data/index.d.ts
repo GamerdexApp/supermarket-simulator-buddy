@@ -1,4 +1,4 @@
-import {
+import type {
   CATEGORIES,
   DISPLAY_TYPES,
   LOCATIONS,
@@ -114,9 +114,9 @@ export interface Product {
   itemsPerBox?: number;
   weightPerBox?: number;
   boxesPerStorage: number;
-  displayType: DISPLAY_TYPES;
-  category?: CATEGORIES;
-  bigBoxStore?: LOCATIONS | "";
+  displayType: (typeof DISPLAY_TYPES)[number];
+  category?: (typeof CATEGORIES)[number];
+  bigBoxStore?: (typeof LOCATIONS)[number] | "";
 }
 
 export interface Furniture {

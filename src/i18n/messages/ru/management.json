@@ -1,0 +1,149 @@
+{
+    "title": "Управление",
+    "tabsLabel": "Управление",
+    "tabs": {
+        "licenses": "Лицензии",
+        "growth": "Расширение",
+        "storage": "Склад",
+        "hiring": "Персонал",
+        "customizations": "Кастомизация"
+    },
+    "sublines": {
+        "licenses": "{name} · Открывайте лицензии, чтобы продавать больше товаров",
+        "growth": "{name} · Расширяйте торговый зал по одной секции",
+        "storage": "{name} · Расширяйте склад по одной секции",
+        "hiring": "{name} · Нанимайте персонал для работы магазина",
+        "customizations": "{name} · Изменения магазина, купленные в игре"
+    },
+    "emptyDescription": "Выберите или создайте прохождение, чтобы отслеживать лицензии, расширение, склад и персонал.",
+    "storeLevel": "Уровень магазина",
+    "storeLevelCaption": "Меняется на боковой панели",
+    "free": "Бесплатно",
+    "requiresLevel": "Нужен уровень магазина {level} (у вас уровень {current})",
+    "locked": "Закрыто",
+    "states": {
+        "unlocked": "Открыто",
+        "canUnlock": "Можно открыть",
+        "locked": "Закрыто"
+    },
+    "licenses": {
+        "totalSpent": "Потрачено на лицензии",
+        "unlockedOf": "Открыто {owned} из {count, plural, one {{amount} лицензии} few {{amount} лицензий} many {{amount} лицензий} other {{amount} лицензии}}",
+        "canUnlockNow": "Можно открыть сейчас",
+        "lockedByLevel": "Мал уровень",
+        "title": "Лицензия {number}",
+        "price": "Цена",
+        "level": "Уровень магазина",
+        "unlocks": "Открывает {count, plural, one {{amount} товар} few {{amount} товара} many {{amount} товаров} other {{amount} товара}}",
+        "unlock": "Открыть лицензию",
+        "undoUnlock": "Отменить открытие",
+        "unlocked": "Лицензия {number} открыта",
+        "undone": "Лицензия {number} снова закрыта",
+        "filters": {
+            "search": "Поиск лицензий или товаров",
+            "title": "Фильтр лицензий",
+            "show": "Показать",
+            "showOptions": {
+                "all": "Все",
+                "unlocked": "Открытые",
+                "canUnlock": "Можно открыть",
+                "locked": "Закрытые"
+            },
+            "sort": "Сортировка",
+            "sortOptions": {
+                "number": "Номер лицензии",
+                "price": "Цена по возрастанию",
+                "storeLevel": "Уровень магазина по возрастанию"
+            },
+            "summary": "Показано {shown} из {count, plural, one {{amount} лицензии} few {{amount} лицензий} many {{amount} лицензий} other {{amount} лицензии}}",
+            "showButton": "Показать {count, plural, one {{amount} лицензию} few {{amount} лицензии} many {{amount} лицензий} other {{amount} лицензии}}"
+        },
+        "noMatch": "Нет лицензий под эти фильтры",
+        "noMatchDescription": "Измените поиск или покажите все лицензии."
+    },
+    "sections": {
+        "growth": {
+            "totalSpent": "Потрачено на расширение",
+            "unlockedOf": "Открыто {owned} из {count, plural, one {{amount} секции} few {{amount} секций} many {{amount} секций} other {{amount} секции}}",
+            "title": "Секция зала {num}",
+            "pathLabel": "Секции зала",
+            "unlocked": "Секция зала {num} открыта",
+            "undone": "{count, plural, one {Секция зала {range} снова закрыта} few {Секции зала {range} снова закрыты} many {Секции зала {range} снова закрыты} other {Секции зала {range} снова закрыты}}",
+            "cascadeTitle": "Отменить секцию зала {num}?"
+        },
+        "storage": {
+            "totalSpent": "Потрачено на склад",
+            "unlockedOf": "Открыто {owned} из {count, plural, one {{amount} секции} few {{amount} секций} many {{amount} секций} other {{amount} секции}}",
+            "title": "Секция склада {num}",
+            "pathLabel": "Секции склада",
+            "firstSectionNote": "По данным игры секция склада 1 стоит $800 на уровне магазина 0, а секция зала 1 бесплатна.",
+            "unlocked": "Секция склада {num} открыта",
+            "undone": "{count, plural, one {Секция склада {range} снова закрыта} few {Секции склада {range} снова закрыты} many {Секции склада {range} снова закрыты} other {Секции склада {range} снова закрыты}}",
+            "cascadeTitle": "Отменить секцию склада {num}?"
+        },
+        "nextSection": "Следующая секция",
+        "nextSectionValue": "Секция {num} · уровень {level} · {price}",
+        "allUnlocked": "Всё открыто",
+        "level": "Уровень {level}",
+        "size": "Размер {size}",
+        "nextToUnlock": "Следующая",
+        "unlock": "Открыть",
+        "unlockFirst": "Сначала откройте секцию {num}.",
+        "cascade": {
+            "body": "{count, plural, one {Секция {range} зависит от неё и закроется вместе с ней} few {Секции {range} зависят от неё и закроются вместе с ней} many {Секции {range} зависят от неё и закроются вместе с ней} other {Секции {range} зависят от неё и закроются вместе с ней}}. Расходы уменьшатся на {price}.",
+            "confirm": "Отменить {count, plural, one {секцию {range}} few {секции {range}} many {секции {range}} other {секции {range}}}",
+            "keep": "Оставить открытыми"
+        },
+        "range": "{first}–{last}"
+    },
+    "hiring": {
+        "dailyWages": "Зарплаты в день",
+        "dailyWagesCaption": "Общие расходы в день на всех нанятых сотрудников",
+        "hired": "Нанято сотрудников",
+        "hiringCosts": "Оплачено за наём",
+        "hiringCostsCaption": "Разовый платёж, не входит в зарплаты",
+        "roles": {
+            "cashiers": {
+                "title": "Кассиры",
+                "stat": "Обслуживание на кассе: <stat>{value}</stat>",
+                "employeeName": "Кассир {number}"
+            },
+            "restockers": {
+                "title": "Раскладчики",
+                "stat": "Число стеллажей: <stat>{value}</stat>",
+                "employeeName": "Раскладчик {number}"
+            },
+            "customerHelpers": {
+                "title": "Помощники покупателей",
+                "stat": "Число касс: <stat>{value}</stat>",
+                "employeeName": "Помощник покупателей {number}"
+            },
+            "securityGuards": {
+                "title": "Охранники",
+                "employeeName": "Охранник {number}"
+            },
+            "janitors": {
+                "title": "Уборщики",
+                "employeeName": "Уборщик {number}"
+            }
+        },
+        "hiredOf": "Нанято {count} из {total}",
+        "roleWages": "Зарплаты в день: {amount}",
+        "hiredBadge": "Нанят",
+        "level": "Уровень магазина",
+        "cost": "Цена найма",
+        "wage": "Зарплата в день",
+        "perDay": "{amount} / день",
+        "hire": "Нанять",
+        "fire": "Уволить",
+        "hiredToast": "{name}: нанят",
+        "firedToast": "{name}: уволен"
+    },
+    "customizations": {
+        "total": "Цена всех трёх",
+        "totalCaption": "Из данных игры, не сохраняется",
+        "note": "Эти изменения покупаются в игре. Здесь ничего не сохраняется.",
+        "price": "Цена"
+    },
+    "tabCount": "{owned} / {total}"
+}

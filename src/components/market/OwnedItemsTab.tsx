@@ -1,10 +1,10 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { useId } from "react";
 import type { Playthrough } from "@/types/playthrough";
 import { formatMoney } from "@/lib/format";
 import { useListEdit } from "@/lib/hooks/useListEdit";
-import { marketText } from "@/lib/messages/market";
 import type { UnlockState } from "@/service/management";
 import { LockReason } from "@/comps/page/LockReason";
 import { SpendSummary } from "@/comps/page/SpendSummary";
@@ -12,8 +12,6 @@ import { Badge } from "@/comps/ui/Badge";
 import { Button } from "@/comps/ui/Button";
 import { Card } from "@/comps/ui/Card";
 import { ItemImage } from "./ItemImage";
-
-const text = marketText;
 
 export interface OwnedItem {
 	name: string;
@@ -32,12 +30,10 @@ interface OwnedItemsTabProps {
 	field: "unlockedTools" | "unlockedVehicles";
 	items: OwnedItem[];
 	totalSpentLabel: string;
-	unlockedOf: (count: number, total: number) => string;
+	unlockedOf: (owned: number, total: number) => string;
 	unlockedToast: (name: string) => string;
 	undoneToast: (name: string) => string;
 }
-
-const priceText = (price: number) => (price === 0 ? text.free : formatMoney(price));
 
 function OwnedItemCard({
 	item,
@@ -48,7 +44,14 @@ function OwnedItemCard({
 	onUnlock: () => void;
 	onUndo: () => void;
 }) {
+	const t = useTranslations("market");
 	const titleId = useId();
+	const facts = item.facts ?? [
+		{
+			label: t("vehicles.price"),
+			value: item.unitPrice === 0 ? t("free") : formatMoney(item.unitPrice),
+		},
+	];
 
 	return (
 		<Card
@@ -64,16 +67,14 @@ function OwnedItemCard({
 							{item.name}
 						</h2>
 						{item.state === "unlocked" && (
-							<Badge tone="kept">{text.states.unlocked}</Badge>
+							<Badge tone="kept">{t("states.unlocked")}</Badge>
 						)}
 					</div>
 					<p className="text-muted">{item.description}</p>
 				</div>
 			</div>
 			<div className="grid grid-cols-2 gap-2">
-				{(
-					item.facts ?? [{ label: text.vehicles.price, value: priceText(item.unitPrice) }]
-				).map((fact) => (
+				{facts.map((fact) => (
 					<div key={fact.label} className="bg-bg flex flex-col rounded-md px-2.5 py-1.5">
 						<span className="text-muted text-xs">{fact.label}</span>
 						<span className="font-mono font-medium">{fact.value}</span>
@@ -82,18 +83,18 @@ function OwnedItemCard({
 			</div>
 			{item.state === "unlocked" && (
 				<Button variant="danger" onClick={onUndo}>
-					{text.undoUnlock}
+					{t("undoUnlock")}
 				</Button>
 			)}
 			{item.state === "canUnlock" && (
 				<Button variant="primary" onClick={onUnlock}>
-					{text.unlock}
+					{t("unlock")}
 				</Button>
 			)}
 			{item.state === "locked" && (
 				<>
 					{item.lockReason && <LockReason reasons={[item.lockReason]} />}
-					<Button disabled>{text.locked}</Button>
+					<Button disabled>{t("locked")}</Button>
 				</>
 			)}
 		</Card>

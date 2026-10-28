@@ -1,0 +1,93 @@
+{
+    "title": "السوق",
+    "tabsLabel": "السوق",
+    "tabs": {
+        "products": "المنتجات",
+        "furniture": "الأثاث",
+        "paint": "الطلاء",
+        "tools": "الأدوات",
+        "vehicles": "المركبات"
+    },
+    "sublines": {
+        "products": "{name} · المنتجات التي تفتحها تراخيصك",
+        "furniture": "{name} · أسعار الأثاث",
+        "paint": "{name} · أسعار الطلاء",
+        "tools": "{name} · الأدوات التي تملكها",
+        "vehicles": "{name} · المركبات التي تملكها"
+    },
+    "emptyDescription": "اختر جولة لعب أو أنشئ واحدة لمعرفة المنتجات والأدوات والمركبات المتوفرة لديك.",
+    "free": "مجاني",
+    "undoUnlock": "تراجع عن الفتح",
+    "unlock": "فتح",
+    "locked": "مقفل",
+    "states": {
+        "unlocked": "مفتوح",
+        "canUnlock": "يمكن فتحه",
+        "locked": "مقفل"
+    },
+    "products": {
+        "search": "ابحث بالاسم أو الشركة...",
+        "displayType": "التصفية حسب نوع العرض",
+        "allDisplayTypes": "كل أنواع العرض",
+        "category": "التصفية حسب الفئة",
+        "allCategories": "كل الفئات",
+        "option": "{label} ({count})",
+        "filtersTitle": "تصفية المنتجات",
+        "showing": "عرض {shown} من {count, plural, zero {{amount} منتج} one {{amount} منتج} two {{amount} منتجان} few {{amount} منتجات} many {{amount} منتجًا} other {{amount} منتج}}",
+        "showButton": "عرض {count, plural, zero {{amount} منتج} one {{amount} منتج} two {{amount} منتجان} few {{amount} منتجات} many {{amount} منتجًا} other {{amount} منتج}}",
+        "unlocked": "المنتجات المفتوحة ({count})",
+        "locked": "المنتجات المقفلة ({count})",
+        "lockedHelp": "افتح الترخيص في الإدارة لبيع هذه المنتجات.",
+        "noUnlocked": "لا توجد منتجات مفتوحة تطابق عوامل التصفية.",
+        "noLocked": "لا توجد منتجات مقفلة تطابق عوامل التصفية.",
+        "requires": "يتطلب: الترخيص {number}",
+        "itemsPerBox": "العناصر في كل صندوق",
+        "weightPerBox": "الوزن لكل صندوق",
+        "kg": "{weight} كغ",
+        "boxesPerStorage": "الصناديق لكل رف تخزين",
+        "details": "تفاصيل {name}",
+        "detail": {
+            "company": "الشركة",
+            "displayType": "نوع العرض",
+            "category": "الفئة",
+            "boughtAt": "يُشترى من",
+            "license": "الترخيص",
+            "unlocked": "الترخيص {number}، مفتوح",
+            "locked": "الترخيص {number}، لم يُفتح بعد",
+            "none": "غير مدرج",
+            "toLicenses": "الانتقال إلى التراخيص",
+            "close": "إغلاق"
+        },
+        "stores": {
+            "liquor_store": "Liquor Store",
+            "janitorial_supply": "Janitorial Supply",
+            "deli_and_grocery": "Deli and Grocery",
+            "meat_and_dairy": "Meat and Dairy",
+            "green_market": "Green Market"
+        }
+    },
+    "furniture": {
+        "heading": "كل الأثاث ({count})",
+        "note": "الأسعار من اللعبة. لا تُحفظ أي حالة للأثاث."
+    },
+    "paint": {
+        "heading": "كل الطلاء ({count})",
+        "note": "الأسعار من اللعبة. لا تُحفظ أي حالة للطلاء."
+    },
+    "tools": {
+        "totalSpent": "إجمالي الإنفاق على الأدوات",
+        "unlockedOf": "تم فتح {owned} من {count, plural, zero {{amount} أداة} one {{amount} أداة} two {{amount} أداتان} few {{amount} أدوات} many {{amount} أداةً} other {{amount} أداة}}",
+        "requiresLicenses": "يتطلب {count, plural, zero {{amount} ترخيص} one {{amount} ترخيص} two {{amount} ترخيصان} few {{amount} تراخيص} many {{amount} ترخيصًا} other {{amount} ترخيص}} · تملك {owned}",
+        "unlocked": "تم فتح {name}",
+        "undone": "تمت إعادة قفل {name}"
+    },
+    "vehicles": {
+        "totalSpent": "إجمالي الإنفاق على المركبات",
+        "unlockedOf": "تم فتح {owned} من {count, plural, zero {{amount} مركبة} one {{amount} مركبة} two {{amount} مركبتان} few {{amount} مركبات} many {{amount} مركبةً} other {{amount} مركبة}}",
+        "price": "السعر",
+        "storeLevel": "مستوى المتجر",
+        "requiresLevel": "يتطلب مستوى المتجر {level} · المستوى الحالي {current}",
+        "unlocked": "تم فتح {name}",
+        "undone": "تمت إعادة قفل {name}"
+    }
+}

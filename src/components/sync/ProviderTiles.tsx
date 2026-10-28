@@ -1,11 +1,9 @@
 "use client";
 
-import { syncText } from "@/lib/messages/sync";
+import { useTranslations } from "next-intl";
 import type { SyncProviderId } from "@/lib/sync/providers";
 import { DATA_REPOSITORY_NAME } from "@/lib/sync/repository";
 import { ProviderIcon } from "./ProviderIcon";
-
-const text = syncText;
 
 interface ProviderTilesProps {
 	providers: SyncProviderId[];
@@ -14,15 +12,15 @@ interface ProviderTilesProps {
 }
 
 export function ProviderTiles({ providers, selected, onSelect }: ProviderTilesProps) {
+	const t = useTranslations("sync");
 	return (
 		<div
 			role="radiogroup"
-			aria-label={text.connect.pickerLabel}
+			aria-label={t("connect.pickerLabel")}
 			className="grid gap-3 sm:grid-cols-2"
 		>
 			{providers.map((provider) => {
 				const active = provider === selected;
-				const copy = text.provider[provider];
 				return (
 					<button
 						key={provider}
@@ -38,9 +36,15 @@ export function ProviderTiles({ providers, selected, onSelect }: ProviderTilesPr
 					>
 						<ProviderIcon provider={provider} />
 						<span className="flex min-w-0 flex-col gap-0.5">
-							<span className="font-semibold">{copy.name}</span>
-							<span className="text-muted">{copy.tile(DATA_REPOSITORY_NAME)}</span>
-							<span className="text-link text-xs font-semibold">{copy.badge}</span>
+							<span className="font-semibold">{t(`provider.${provider}.name`)}</span>
+							<span className="text-muted">
+								{t(`provider.${provider}.tile`, {
+									repository: DATA_REPOSITORY_NAME,
+								})}
+							</span>
+							<span className="text-link text-xs font-semibold">
+								{t(`provider.${provider}.badge`)}
+							</span>
 						</span>
 					</button>
 				);

@@ -1,8 +1,8 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { Suspense } from "react";
 import { useUrlTab } from "@/lib/hooks/useUrlTab";
-import { settingsText } from "@/lib/messages/settings";
 import { PageHeader } from "@/comps/shell/PageHeader";
 import { Tabs } from "@/comps/ui/Tabs";
 import { AboutTab } from "./AboutTab";
@@ -10,18 +10,18 @@ import { DataTab } from "./DataTab";
 import { PreferencesTab } from "./PreferencesTab";
 import { SyncTab } from "./SyncTab";
 
-const text = settingsText;
 const tabIds = ["sync", "preferences", "data", "about"] as const;
 
 function SettingsContent() {
+	const t = useTranslations("settings");
 	const [activeTab, setActiveTab] = useUrlTab(tabIds, "sync");
 
 	return (
 		<>
-			<PageHeader title={text.title} subline={text.subline} />
+			<PageHeader title={t("title")} subline={t("subline")} />
 			<Tabs
-				label={text.tabsLabel}
-				tabs={tabIds.map((id) => ({ id, label: text.tabs[id] }))}
+				label={t("tabsLabel")}
+				tabs={tabIds.map((id) => ({ id, label: t(`tabs.${id}`) }))}
 				activeId={activeTab}
 				onChange={setActiveTab}
 			>

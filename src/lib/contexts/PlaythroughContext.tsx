@@ -4,8 +4,6 @@ import React, { createContext, useContext, useState, useSyncExternalStore } from
 import type { AppData, PlaythroughContextType } from "@/types";
 import { useIsHydrated } from "@/lib/hooks/useIsHydrated";
 import * as appData from "@/service/appData";
-import { applyImport, backupText, parseBackup } from "@/service/backup";
-import type { ImportMode } from "@/service/backup";
 import { storageService } from "@/service/storage";
 
 const PlaythroughContext = createContext<PlaythroughContextType | undefined>(undefined);
@@ -51,24 +49,6 @@ export function PlaythroughProvider({ children }: { children: React.ReactNode })
 	const deletePlaythrough: PlaythroughContextType["deletePlaythrough"] = (id) =>
 		updateData((current) => appData.deletePlaythrough(current, id));
 
-	const importData = (jsonString: string, mode: ImportMode = "replace") => {
-		const parsed = parseBackup(jsonString);
-		if (!parsed.ok) return { success: false, error: parsed.error };
-
-		const saved = updateData((current) => applyImport(current, parsed.data, mode));
-		return saved
-			? { success: true }
-			: { success: false, error: "The browser could not save the data." };
-	};
-
-	const exportData = () => backupText(storageService.load());
-
-	const clearAllData = () => {
-		const previous = storageService.load();
-		storageService.clear();
-		return previous;
-	};
-
 	return (
 		<PlaythroughContext.Provider
 			value={{
@@ -83,9 +63,6 @@ export function PlaythroughProvider({ children }: { children: React.ReactNode })
 				addPlaythrough,
 				updatePlaythrough,
 				deletePlaythrough,
-				importData,
-				exportData,
-				clearAllData,
 			}}
 		>
 			{children}
@@ -96,7 +73,7 @@ export function PlaythroughProvider({ children }: { children: React.ReactNode })
 export function usePlaythrough() {
 	const context = useContext(PlaythroughContext);
 	if (context === undefined) {
-		throw new Error("usePlaythrough must be used within a PlaythroughProvider");
+		throw new Error("usePlaythrough must be used within a PlaythroughProvider"); // i18n-ignore
 	}
 	return context;
 }

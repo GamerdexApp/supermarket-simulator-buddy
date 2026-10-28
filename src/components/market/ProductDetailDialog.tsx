@@ -1,15 +1,14 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import type { Product } from "@/types";
 import type { Playthrough } from "@/types/playthrough";
-import { marketText } from "@/lib/messages/market";
-import { isProductUnlocked, labelOf, licenseLabel } from "@/service/market";
+import { formatNumber } from "@/lib/format";
+import { licenseIdNumber } from "@/service/management";
+import { isProductUnlocked, productTags } from "@/service/market";
 import { Button, ButtonLink } from "@/comps/ui/Button";
 import { Dialog } from "@/comps/ui/Dialog";
 import { ItemImage } from "./ItemImage";
-
-const text = marketText.products;
-const detail = text.detail;
 
 interface ProductDetailDialogProps {
 	product: Product | null;
@@ -18,22 +17,34 @@ interface ProductDetailDialogProps {
 }
 
 export function ProductDetailDialog({ product, playthrough, onClose }: ProductDetailDialogProps) {
+	const t = useTranslations("market.products");
+	const terms = useTranslations("terms");
 	if (!product) return null;
-	const license = licenseLabel(product.licenseId);
+	const number = licenseIdNumber(product.licenseId);
 	const unlocked = isProductUnlocked(product, playthrough);
+	const tags = productTags(product);
+	const none = t("detail.none");
 	const rows: [string, string][] = [
-		[detail.company, product.company ?? detail.none],
-		[detail.displayType, labelOf(product.displayType)],
-		[detail.category, product.category ? labelOf(product.category) : detail.none],
+		[t("detail.company"), product.company ?? none],
+		[t("detail.displayType"), terms(`displayTypes.${tags.displayType}`)],
+		[t("detail.category"), tags.category ? terms(`categories.${tags.category}`) : none],
 		...(product.itemsPerBox
-			? [[text.itemsPerBox, String(product.itemsPerBox)] as [string, string]]
+			? [[t("itemsPerBox"), formatNumber(product.itemsPerBox)] as [string, string]]
 			: []),
 		...(product.weightPerBox
-			? [[text.weightPerBox, text.kg(product.weightPerBox)] as [string, string]]
+			? [
+					[
+						t("weightPerBox"),
+						t("kg", { weight: formatNumber(product.weightPerBox) }),
+					] as [string, string],
+				]
 			: []),
-		[text.boxesPerStorage, String(product.boxesPerStorage)],
-		[detail.boughtAt, product.bigBoxStore ? labelOf(product.bigBoxStore) : detail.none],
-		[detail.license, unlocked ? detail.unlocked(license) : detail.locked(license)],
+		[t("boxesPerStorage"), formatNumber(product.boxesPerStorage)],
+		[t("detail.boughtAt"), tags.store ? t(`stores.${tags.store}`) : none],
+		[
+			t("detail.license"),
+			unlocked ? t("detail.unlocked", { number }) : t("detail.locked", { number }),
+		],
 	];
 
 	return (
@@ -44,9 +55,11 @@ export function ProductDetailDialog({ product, playthrough, onClose }: ProductDe
 			description={product.company}
 			footer={
 				<>
-					<ButtonLink href="/management?tab=licenses">{detail.toLicenses}</ButtonLink>
+					<ButtonLink href="/management?tab=licenses">
+						{t("detail.toLicenses")}
+					</ButtonLink>
 					<Button variant="primary" onClick={onClose}>
-						{detail.close}
+						{t("detail.close")}
 					</Button>
 				</>
 			}

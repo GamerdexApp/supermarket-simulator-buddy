@@ -1,0 +1,81 @@
+{
+    "skipToContent": "Saltar al contenido",
+    "closeMenu": "Cerrar menú",
+    "openMenu": "Abrir menú",
+    "menuLabel": "Menú del sitio",
+    "mainNav": "Principal",
+    "brandWords": {
+        "item1": "Supermarket",
+        "item2": "Simulator",
+        "item3": "Buddy"
+    },
+    "noPlaythroughHint": "Crea una partida para empezar a registrar tu progreso.",
+    "switcher": {
+        "sectionLabel": "Partida",
+        "loading": "Cargando",
+        "none": "Ninguna seleccionada",
+        "switch": "Cambiar de partida",
+        "playthroughs": "Partidas",
+        "active": "Activa",
+        "all": "Todas las partidas",
+        "create": "Nueva partida",
+        "level": "Nivel {level}",
+        "rowDetail": "Nivel {level} · {date}",
+        "switched": "Cambiaste a {name}",
+        "empty": "Aún no creaste ninguna partida"
+    },
+    "storeLevel": {
+        "label": "Nivel de tienda",
+        "edit": "Nivel de tienda {level}, selecciona para escribir un nivel",
+        "atZero": "Ya estás en el nivel 0"
+    },
+    "empty": {
+        "title": "No hay ninguna partida seleccionada",
+        "description": "Crea una partida o elige una de tu lista para ver esta página.",
+        "create": "Nueva partida",
+        "all": "Todas las partidas"
+    },
+    "footer": {
+        "tagline": "Un registro de progreso gratuito para Supermarket Simulator. Tus datos se quedan en tu navegador, o en tu propio almacenamiento en la nube si activas la sincronización.",
+        "support": "Ayuda",
+        "about": "Acerca de",
+        "settings": "Configuración",
+        "discord": "Discord",
+        "github": "GitHub",
+        "officialGame": "Juego oficial",
+        "privacy": "Política de privacidad",
+        "terms": "Términos del servicio",
+        "disclaimerTitle": "Aviso legal",
+        "disclaimer": "Este proyecto no está afiliado, respaldado ni vinculado a Supermarket Simulator ni a sus desarrolladores. Todas las marcas comerciales y el contenido del juego pertenecen a sus propietarios.",
+        "framework": "Creado con el framework Gamerdex, una base compartida para registros de progreso de juegos gratuitos.",
+        "visitGamerdex": "Visitar Gamerdex"
+    },
+    "notFound": {
+        "title": "Página no encontrada",
+        "body": "No hay ninguna página en <code>{path}</code>.",
+        "didYouMean": "¿Querías decir <link>{suggestion}</link>?",
+        "quickLinks": "Secciones",
+        "toOverview": "Ir al resumen",
+        "toHome": "Volver al inicio"
+    },
+    "saveFailed": {
+        "title": "No guardado",
+        "message": "El navegador no pudo guardar tus cambios. Descarga una copia de seguridad para no perder nada.",
+        "exportBackup": "Descargar copia"
+    },
+    "nav": {
+        "groups": {
+            "store": "Tu tienda",
+            "plan": "Planificar"
+        },
+        "items": {
+            "overview": "Resumen",
+            "market": "Mercado",
+            "management": "Gestión",
+            "bank": "Banco",
+            "shoppingList": "Lista de compras",
+            "settings": "Configuración",
+            "playthroughs": "Partidas"
+        }
+    }
+}

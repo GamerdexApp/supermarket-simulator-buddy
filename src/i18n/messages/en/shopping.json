@@ -1,0 +1,63 @@
+{
+    "title": "Shopping List",
+    "subline": "Plan your product purchases for {name}",
+    "emptyDescription": "Create a playthrough to plan purchases.",
+    "addProducts": "Add Products",
+    "summary": {
+        "title": "Shopping Summary",
+        "purchased": "{bought} / {count, plural, one {{amount} item purchased} other {{amount} items purchased}}",
+        "boxes": "{count, plural, one {{amount} total box} other {{amount} total boxes}}",
+        "reset": "Reset List"
+    },
+    "reset": {
+        "title": "Reset the shopping list?",
+        "body": "This removes {count, plural, one {{amount} item} other {{amount} items}} ({bought} purchased, {boxCount, plural, one {{boxes} box} other {{boxes} boxes}}).",
+        "cancel": "Cancel",
+        "confirm": "Reset list",
+        "done": "Shopping list reset",
+        "doneMessage": "{count, plural, one {{amount} item} other {{amount} items}} removed."
+    },
+    "empty": {
+        "title": "Your shopping list is empty",
+        "body": "Plan which products to buy before your next trip to the shops.",
+        "steps": {
+            "item1": "Add products from the licenses you have unlocked.",
+            "item2": "Tap a product again to add another box.",
+            "item3": "Tick items off as you buy them."
+        },
+        "missing": "Missing a product? Unlock its license in Management.",
+        "toManagement": "Open Licenses"
+    },
+    "shop": {
+        "noShop": "No Shop Available",
+        "items": "{count, plural, one {{amount} item} other {{amount} items}}",
+        "progress": "{bought} of {total} bought · {count, plural, one {{amount} box} other {{amount} boxes}}"
+    },
+    "row": {
+        "purchased": "Mark purchased: {label}",
+        "boxes": "Boxes",
+        "remove": "Remove {label}",
+        "removed": "Removed {name}"
+    },
+    "undo": "Undo",
+    "dialog": {
+        "title": "Add Products to Shopping List",
+        "search": "Search Products",
+        "searchPlaceholder": "Search by name or company...",
+        "source": "Only products from unlocked licenses are listed.",
+        "showing": "Showing {shown} of {total}",
+        "pick": "Tap a product to add it",
+        "noResults": "No products found matching \"{term}\"",
+        "noResultsHint": "A missing product may need a license you have not unlocked yet.",
+        "clearSearch": "Clear search",
+        "addOne": "Add one box of {label}",
+        "pending": "Items to Add ({count})",
+        "noPending": "No items added yet. Tap a product on the left to add one box. Tap it again for more.",
+        "merges": "A product already on your list gets these boxes added to its row.",
+        "boxes": "{count, plural, one {{amount} box} other {{amount} boxes}}",
+        "removePending": "Remove {label} from items to add",
+        "cancel": "Cancel",
+        "submit": "{count, plural, one {Add {amount} Item to List} other {Add {amount} Items to List}}",
+        "added": "{count, plural, one {{amount} item} other {{amount} items}} added"
+    }
+}

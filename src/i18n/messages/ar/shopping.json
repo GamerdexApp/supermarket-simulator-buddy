@@ -1,0 +1,63 @@
+{
+    "title": "قائمة التسوق",
+    "subline": "خطّط لمشتريات المنتجات في {name}",
+    "emptyDescription": "أنشئ جولة لعب للتخطيط للمشتريات.",
+    "addProducts": "إضافة منتجات",
+    "summary": {
+        "title": "ملخص التسوق",
+        "purchased": "{bought} / {count, plural, zero {{amount} عنصر} one {{amount} عنصر} two {{amount} عنصران} few {{amount} عناصر} many {{amount} عنصرًا} other {{amount} عنصر}} تم شراؤها",
+        "boxes": "إجمالي الصناديق: {count, plural, zero {{amount} صندوق} one {{amount} صندوق} two {{amount} صندوقان} few {{amount} صناديق} many {{amount} صندوقًا} other {{amount} صندوق}}",
+        "reset": "إعادة تعيين القائمة"
+    },
+    "reset": {
+        "title": "إعادة تعيين قائمة التسوق؟",
+        "body": "سيؤدي هذا إلى إزالة {count, plural, zero {{amount} عنصر} one {{amount} عنصر} two {{amount} عنصران} few {{amount} عناصر} many {{amount} عنصرًا} other {{amount} عنصر}} ({bought} تم شراؤها، {boxCount, plural, zero {{boxes} صندوق} one {{boxes} صندوق} two {{boxes} صندوقان} few {{boxes} صناديق} many {{boxes} صندوقًا} other {{boxes} صندوق}}).",
+        "cancel": "إلغاء",
+        "confirm": "إعادة تعيين القائمة",
+        "done": "تمت إعادة تعيين قائمة التسوق",
+        "doneMessage": "تمت إزالة {count, plural, zero {{amount} عنصر} one {{amount} عنصر} two {{amount} عنصران} few {{amount} عناصر} many {{amount} عنصرًا} other {{amount} عنصر}}."
+    },
+    "empty": {
+        "title": "قائمة التسوق فارغة",
+        "body": "خطّط للمنتجات التي ستشتريها قبل رحلتك التالية إلى المتاجر.",
+        "steps": {
+            "item1": "أضف منتجات من التراخيص التي فتحتها.",
+            "item2": "اضغط على المنتج مرة أخرى لإضافة صندوق آخر.",
+            "item3": "ضع علامة على العناصر عند شرائها."
+        },
+        "missing": "هل ينقص منتج؟ افتح ترخيصه في الإدارة.",
+        "toManagement": "الانتقال إلى التراخيص"
+    },
+    "shop": {
+        "noShop": "لا يوجد متجر",
+        "items": "{count, plural, zero {{amount} عنصر} one {{amount} عنصر} two {{amount} عنصران} few {{amount} عناصر} many {{amount} عنصرًا} other {{amount} عنصر}}",
+        "progress": "تم شراء {bought} من {total} · {count, plural, zero {{amount} صندوق} one {{amount} صندوق} two {{amount} صندوقان} few {{amount} صناديق} many {{amount} صندوقًا} other {{amount} صندوق}}"
+    },
+    "row": {
+        "purchased": "تحديد كمشترى: {label}",
+        "boxes": "الصناديق",
+        "remove": "إزالة {label}",
+        "removed": "تمت إزالة {name}"
+    },
+    "undo": "تراجع",
+    "dialog": {
+        "title": "إضافة منتجات إلى قائمة التسوق",
+        "search": "البحث في المنتجات",
+        "searchPlaceholder": "ابحث بالاسم أو الشركة...",
+        "source": "تظهر فقط منتجات التراخيص المفتوحة.",
+        "showing": "عرض {shown} من {total}",
+        "pick": "اضغط على منتج لإضافته",
+        "noResults": "لم يتم العثور على منتجات تطابق \"{term}\"",
+        "noResultsHint": "قد يحتاج المنتج الناقص إلى ترخيص لم تفتحه بعد.",
+        "clearSearch": "مسح البحث",
+        "addOne": "إضافة صندوق واحد من {label}",
+        "pending": "العناصر المراد إضافتها ({count})",
+        "noPending": "لم تتم إضافة عناصر بعد. اضغط على منتج في الجهة المقابلة لإضافة صندوق واحد. اضغط مرة أخرى لإضافة المزيد.",
+        "merges": "المنتج الموجود في قائمتك بالفعل تُضاف هذه الصناديق إلى صفه.",
+        "boxes": "{count, plural, zero {{amount} صندوق} one {{amount} صندوق} two {{amount} صندوقان} few {{amount} صناديق} many {{amount} صندوقًا} other {{amount} صندوق}}",
+        "removePending": "إزالة {label} من العناصر المراد إضافتها",
+        "cancel": "إلغاء",
+        "submit": "إضافة {count, plural, zero {{amount} عنصر} one {{amount} عنصر} two {{amount} عنصران} few {{amount} عناصر} many {{amount} عنصرًا} other {{amount} عنصر}} إلى القائمة",
+        "added": "تمت إضافة {count, plural, zero {{amount} عنصر} one {{amount} عنصر} two {{amount} عنصران} few {{amount} عناصر} many {{amount} عنصرًا} other {{amount} عنصر}}"
+    }
+}

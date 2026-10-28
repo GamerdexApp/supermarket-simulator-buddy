@@ -1,0 +1,43 @@
+{
+    "close": "Đóng",
+    "undo": "Hoàn tác",
+    "field": {
+        "optional": "Không bắt buộc"
+    },
+    "stepper": {
+        "lower": "Giảm {label}",
+        "raise": "Tăng {label}",
+        "labelPrefix": "{label}, "
+    },
+    "switch": {
+        "on": "Bật",
+        "off": "Tắt"
+    },
+    "tabs": {
+        "locked": " (đã khóa)"
+    },
+    "toast": {
+        "dismiss": "Bỏ qua",
+        "variants": {
+            "success": "Thành công",
+            "info": "Thông tin",
+            "warning": "Cảnh báo",
+            "error": "Lỗi"
+        }
+    },
+    "filters": {
+        "filters": "Bộ lọc",
+        "activeCount": "{count, plural, other {{amount} đang bật}}",
+        "clearFilters": "Xóa bộ lọc",
+        "reset": "Đặt lại",
+        "description": "Thay đổi áp dụng ngay. Bộ lọc không được lưu.",
+        "groupLabel": "Bộ lọc: {label}"
+    },
+    "savedChip": {
+        "automatic": "Tự động lưu",
+        "justNow": "Vừa lưu",
+        "minutesAgo": "{count, plural, other {Đã lưu {amount} phút trước}}",
+        "at": "Đã lưu lúc {time}",
+        "failed": "Chưa lưu, bộ nhớ đã đầy"
+    }
+}

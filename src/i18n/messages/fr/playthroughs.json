@@ -1,0 +1,85 @@
+{
+    "title": "Parties",
+    "subline": "{count, plural, one {{amount} partie} other {{amount} parties}}",
+    "newPlaythrough": "Nouvelle partie",
+    "loading": "Lecture des données enregistrées dans ce navigateur.",
+    "filters": {
+        "search": "Rechercher par nom",
+        "sortLabel": "Trier par",
+        "sort": {
+            "lastModified": "Dernière mise à jour",
+            "name": "Nom",
+            "createdAt": "Date de création",
+            "storeLevel": "Niveau du magasin"
+        },
+        "showing": "{shown} sur {count, plural, one {{amount} partie} other {{amount} parties}} affichées",
+        "clear": "Effacer la recherche"
+    },
+    "empty": {
+        "title": "Aucune partie pour l'instant",
+        "deletedTitle": "Partie supprimée",
+        "description": "Créez une partie pour commencer à suivre votre magasin. Tout reste dans ce navigateur, sauf si vous activez la synchronisation.",
+        "restore": "Restaurer une sauvegarde"
+    },
+    "noMatch": {
+        "title": "Aucune partie ne correspond à « {query} »",
+        "description": "Essayez un autre nom."
+    },
+    "card": {
+        "active": "Active",
+        "setActive": "Définir comme active",
+        "openOverview": "Ouvrir la vue d'ensemble",
+        "edit": "Modifier",
+        "delete": "Supprimer",
+        "created": "Créée le {date}",
+        "lastModified": "Mise à jour le {date}",
+        "storeLevel": "Niveau du magasin",
+        "spending": "Dépenses totales",
+        "licenses": "Licences",
+        "shopping": "Liste de courses",
+        "ofTotal": "{count} sur {total}",
+        "switched": "Partie active : {name}"
+    },
+    "fields": {
+        "nameLabel": "Nom de la partie",
+        "namePlaceholder": "ex. : Mon premier magasin",
+        "nameError": "Saisissez un nom pour cette partie.",
+        "descriptionLabel": "Description",
+        "descriptionPlaceholder": "Ajoutez une description pour cette partie...",
+        "cancel": "Annuler"
+    },
+    "create": {
+        "title": "Créer une partie",
+        "submit": "Créer",
+        "done": "{name} créée",
+        "starterTitle": "Chaque nouvelle partie commence avec",
+        "starter": {
+            "item1": "Niveau du magasin 0",
+            "item2": "La licence 0, la licence de départ gratuite",
+            "item3": "La section d'agrandissement 1",
+            "item4": "Les outils Paper Bag, Sponge et Mop"
+        }
+    },
+    "edit": {
+        "title": "Modifier la partie",
+        "description": "Les champs reprennent les valeurs enregistrées.",
+        "save": "Enregistrer",
+        "saved": "Enregistré",
+        "savedMessage": "{name} a été mise à jour.",
+        "dates": "Créée le {created} · Mise à jour le {updated}"
+    },
+    "delete": {
+        "title": "Supprimer la partie",
+        "question": "Voulez-vous vraiment supprimer « {name} » ?",
+        "description": "Cela supprime toute la progression enregistrée de cette partie sur cet appareil. Si la synchronisation est activée, elle est aussi supprimée de vos autres appareils à la prochaine synchronisation.",
+        "activeNext": "C'est votre partie active. {next} devient active à la place.",
+        "activeLast": "C'est votre partie active et la seule. Vous n'aurez plus de partie active ensuite.",
+        "exportFirst": "Exporter d'abord une sauvegarde",
+        "cancel": "Annuler",
+        "confirm": "Supprimer",
+        "done": "{name} supprimée",
+        "doneMessage": "Annulez dans les 10 secondes pour la récupérer.",
+        "undo": "Annuler"
+    },
+    "sublineActive": "{count, plural, one {{amount} partie} other {{amount} parties}} · {name} est active"
+}

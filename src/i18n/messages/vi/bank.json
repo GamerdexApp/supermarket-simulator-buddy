@@ -1,0 +1,39 @@
+{
+    "title": "Khoản vay ngân hàng",
+    "subline": "Quản lý khoản vay của {name}",
+    "emptyDescription": "Chọn hoặc tạo một lượt chơi để theo dõi khoản vay.",
+    "loanTitle": "Khoản vay #{number}",
+    "states": {
+        "active": "Đang vay",
+        "available": "Có thể vay",
+        "locked": "Đã khóa"
+    },
+    "principal": "Tiền gốc",
+    "rate": "Lãi suất mỗi ngày",
+    "level": "Cấp cửa hàng yêu cầu",
+    "term": "Kỳ hạn: {count, plural, other {{amount} ngày}}",
+    "days": "{count, plural, other {{amount} ngày}}",
+    "termFixed": "Kỳ hạn không đổi được cho đến khi xóa khoản vay.",
+    "details": "Chi tiết khoản vay",
+    "totalInterest": "Tổng tiền lãi",
+    "totalPayment": "Tổng phải trả",
+    "dailyPayment": "Trả mỗi ngày",
+    "activate": "Vay",
+    "activatedOn": "Ngày vay: {date}",
+    "remove": "Xóa khoản vay",
+    "requiresLevel": "Cần cấp cửa hàng {level} (bạn đang ở cấp {current})",
+    "locked": "Đã khóa",
+    "activated": "Đã vay khoản vay #{number}",
+    "removed": "Đã xóa khoản vay #{number}",
+    "undo": "Hoàn tác",
+    "yourLoans": {
+        "title": "Khoản vay của bạn",
+        "activeLoans": "Khoản vay đang có",
+        "dailyPayment": "Trả mỗi ngày",
+        "totalDebt": "Tổng nợ vay",
+        "none": "Chưa có khoản vay nào. Chọn kỳ hạn ở một khoản vay bên dưới rồi vay.",
+        "line": "{principal}, lãi {rate} mỗi ngày, trong {count, plural, other {{amount} ngày}}",
+        "payments": "{daily} mỗi ngày · tổng {total}",
+        "formula": "Tiền lãi bằng tiền gốc nhân lãi suất mỗi ngày nhân số ngày của kỳ hạn."
+    }
+}

@@ -1,0 +1,43 @@
+{
+    "close": "关闭",
+    "undo": "撤销",
+    "field": {
+        "optional": "可选"
+    },
+    "stepper": {
+        "lower": "降低{label}",
+        "raise": "提高{label}",
+        "labelPrefix": "{label}，"
+    },
+    "switch": {
+        "on": "开",
+        "off": "关"
+    },
+    "tabs": {
+        "locked": "（已锁定）"
+    },
+    "toast": {
+        "dismiss": "关闭",
+        "variants": {
+            "success": "成功",
+            "info": "提示",
+            "warning": "警告",
+            "error": "错误"
+        }
+    },
+    "filters": {
+        "filters": "筛选",
+        "activeCount": "{count, plural, other {{amount} 项生效}}",
+        "clearFilters": "清除筛选",
+        "reset": "重置",
+        "description": "更改会立即生效。筛选条件不会保存。",
+        "groupLabel": "筛选：{label}"
+    },
+    "savedChip": {
+        "automatic": "自动保存",
+        "justNow": "刚刚已保存",
+        "minutesAgo": "{count, plural, other {{amount} 分钟前已保存}}",
+        "at": "已于 {time} 保存",
+        "failed": "未保存，存储空间已满"
+    }
+}

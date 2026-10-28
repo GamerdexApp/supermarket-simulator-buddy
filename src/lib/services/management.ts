@@ -12,8 +12,10 @@ export const countKnown = (ids: string[] | undefined, known: string[]) => {
 
 export type UnlockState = "unlocked" | "canUnlock" | "locked";
 
-export const licenseNumber = (license: License) =>
-  Number(license.id.replace("license_", ""));
+export const licenseIdNumber = (licenseId: string) =>
+  Number(licenseId.replace("license_", ""));
+
+export const licenseNumber = (license: License) => licenseIdNumber(license.id);
 
 export const licenseState = (
   license: License,
@@ -155,6 +157,14 @@ export const priceOfSections = (kind: SectionKind, sectionNums: string[]) =>
 
 export type RoleId =
   "cashiers" | "restockers" | "customerHelpers" | "securityGuards" | "janitors";
+
+const STAT_ROLES = ["cashiers", "restockers", "customerHelpers"] as const;
+
+/** The roles whose employees carry a stat, such as checkouts for a cashier. */
+export type StatRoleId = (typeof STAT_ROLES)[number];
+
+export const hasStat = (roleId: RoleId): roleId is StatRoleId =>
+  (STAT_ROLES as readonly RoleId[]).includes(roleId);
 
 export interface Employee {
   id: string;

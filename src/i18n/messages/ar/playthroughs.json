@@ -1,0 +1,85 @@
+{
+    "title": "جولات اللعب",
+    "subline": "{count, plural, zero {{amount} جولة لعب} one {{amount} جولة لعب} two {{amount} جولتا لعب} few {{amount} جولات لعب} many {{amount} جولة لعب} other {{amount} جولة لعب}}",
+    "newPlaythrough": "جولة لعب جديدة",
+    "loading": "جارٍ قراءة البيانات المحفوظة من هذا المتصفح.",
+    "filters": {
+        "search": "البحث بالاسم",
+        "sortLabel": "الترتيب حسب",
+        "sort": {
+            "lastModified": "آخر تحديث",
+            "name": "الاسم",
+            "createdAt": "تاريخ الإنشاء",
+            "storeLevel": "مستوى المتجر"
+        },
+        "showing": "عرض {shown} من {count, plural, zero {{amount} جولة لعب} one {{amount} جولة لعب} two {{amount} جولتا لعب} few {{amount} جولات لعب} many {{amount} جولة لعب} other {{amount} جولة لعب}}",
+        "clear": "مسح البحث"
+    },
+    "empty": {
+        "title": "لا توجد جولات لعب بعد",
+        "deletedTitle": "تم حذف جولة اللعب",
+        "description": "أنشئ جولة لعب لبدء تتبع متجرك. يبقى كل شيء في هذا المتصفح ما لم تُفعَّل المزامنة.",
+        "restore": "الاستعادة من نسخة احتياطية"
+    },
+    "noMatch": {
+        "title": "لا توجد جولات لعب تطابق «{query}»",
+        "description": "جرّب اسمًا آخر."
+    },
+    "card": {
+        "active": "نشطة",
+        "setActive": "تعيين كنشطة",
+        "openOverview": "فتح النظرة العامة",
+        "edit": "تعديل",
+        "delete": "حذف",
+        "created": "أُنشئت {date}",
+        "lastModified": "آخر تحديث {date}",
+        "storeLevel": "مستوى المتجر",
+        "spending": "إجمالي الإنفاق",
+        "licenses": "التراخيص",
+        "shopping": "قائمة التسوق",
+        "ofTotal": "{count} من {total}",
+        "switched": "تم التبديل إلى {name}"
+    },
+    "fields": {
+        "nameLabel": "اسم جولة اللعب",
+        "namePlaceholder": "مثال: متجري الأول",
+        "nameError": "أدخل اسمًا لجولة اللعب هذه.",
+        "descriptionLabel": "الوصف",
+        "descriptionPlaceholder": "أضف وصفًا لجولة اللعب هذه...",
+        "cancel": "إلغاء"
+    },
+    "create": {
+        "title": "إنشاء جولة لعب جديدة",
+        "submit": "إنشاء",
+        "done": "تم إنشاء {name}",
+        "starterTitle": "تبدأ كل جولة لعب جديدة بما يلي",
+        "starter": {
+            "item1": "مستوى المتجر 0",
+            "item2": "الترخيص 0، ترخيص البداية المجاني",
+            "item3": "قسم التوسعة 1",
+            "item4": "أدوات Paper Bag وSponge وMop"
+        }
+    },
+    "edit": {
+        "title": "تعديل جولة اللعب",
+        "description": "تبدأ الحقول بالقيم المحفوظة.",
+        "save": "حفظ",
+        "saved": "تم الحفظ",
+        "savedMessage": "تم تحديث {name}.",
+        "dates": "أُنشئت {created} · آخر تحديث {updated}"
+    },
+    "delete": {
+        "title": "حذف جولة اللعب",
+        "question": "هل تريد بالتأكيد حذف «{name}»؟",
+        "description": "يزيل هذا كل التقدم المحفوظ لجولة اللعب هذه من هذا الجهاز. ويزيلها أيضًا من أجهزتك الأخرى عند المزامنة التالية إذا كانت المزامنة مفعّلة.",
+        "activeNext": "هذه جولة اللعب النشطة. ستصبح {next} نشطة بدلًا منها.",
+        "activeLast": "هذه جولة اللعب النشطة والوحيدة. لن تكون هناك جولة لعب نشطة بعد ذلك.",
+        "exportFirst": "صدّر نسخة احتياطية أولًا",
+        "cancel": "إلغاء",
+        "confirm": "حذف",
+        "done": "تم حذف {name}",
+        "doneMessage": "تراجع خلال 10 ثوانٍ لاستعادتها.",
+        "undo": "تراجع"
+    },
+    "sublineActive": "{count, plural, zero {{amount} جولة لعب} one {{amount} جولة لعب} two {{amount} جولتا لعب} few {{amount} جولات لعب} many {{amount} جولة لعب} other {{amount} جولة لعب}} · {name} نشطة"
+}

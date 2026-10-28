@@ -1,9 +1,9 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { useId } from "react";
 import type { Playthrough } from "@/types/playthrough";
-import { formatDate, formatMoney } from "@/lib/format";
-import { playthroughsText } from "@/lib/messages/playthroughs";
+import { formatDate, formatMoney, formatNumber } from "@/lib/format";
 import { readStoreLevel } from "@/service/appData";
 import { licensesUnlocked, shoppingItemsBought } from "@/service/playthroughList";
 import { spending } from "@/service/spending";
@@ -11,8 +11,6 @@ import { OVERVIEW_HREF } from "@/data/nav";
 import { Badge } from "@/comps/ui/Badge";
 import { Button, ButtonLink } from "@/comps/ui/Button";
 import { Card } from "@/comps/ui/Card";
-
-const text = playthroughsText.card;
 
 function Figure({ label, value }: { label: string; value: string }) {
 	return (
@@ -38,6 +36,7 @@ export function PlaythroughCard({
 	onEdit,
 	onDelete,
 }: PlaythroughCardProps) {
+	const t = useTranslations("playthroughs.card");
 	const titleId = useId();
 	const licenses = licensesUnlocked(playthrough);
 	const shopping = shoppingItemsBought(playthrough);
@@ -53,24 +52,30 @@ export function PlaythroughCard({
 				<h2 id={titleId} className="min-w-0 truncate text-lg font-semibold">
 					{playthrough.name}
 				</h2>
-				{isActive && <Badge tone="kept">{text.active}</Badge>}
+				{isActive && <Badge tone="kept">{t("active")}</Badge>}
 			</div>
 			{playthrough.description && <p className="text-muted">{playthrough.description}</p>}
 			<div className="bg-bg grid grid-cols-2 gap-3 rounded-md px-3 py-2.5">
-				<Figure label={text.storeLevel} value={String(readStoreLevel(playthrough))} />
-				<Figure label={text.spending} value={formatMoney(spending(playthrough).total)} />
+				<Figure label={t("storeLevel")} value={formatNumber(readStoreLevel(playthrough))} />
+				<Figure label={t("spending")} value={formatMoney(spending(playthrough).total)} />
 				<Figure
-					label={text.licenses}
-					value={text.ofTotal(licenses.owned, licenses.total)}
+					label={t("licenses")}
+					value={t("ofTotal", {
+						count: formatNumber(licenses.owned),
+						total: formatNumber(licenses.total),
+					})}
 				/>
 				<Figure
-					label={text.shopping}
-					value={text.ofTotal(shopping.bought, shopping.total)}
+					label={t("shopping")}
+					value={t("ofTotal", {
+						count: formatNumber(shopping.bought),
+						total: formatNumber(shopping.total),
+					})}
 				/>
 			</div>
 			<p className="text-muted flex flex-col text-xs">
-				<span>{text.created(formatDate(playthrough.createdAt))}</span>
-				<span>{text.lastModified(formatDate(playthrough.lastModified))}</span>
+				<span>{t("created", { date: formatDate(playthrough.createdAt) })}</span>
+				<span>{t("lastModified", { date: formatDate(playthrough.lastModified) })}</span>
 			</p>
 			<div className="flex flex-wrap gap-2">
 				{isActive ? (
@@ -79,7 +84,7 @@ export function PlaythroughCard({
 						variant="primary"
 						className="max-sm:basis-full sm:flex-1"
 					>
-						{text.openOverview}
+						{t("openOverview")}
 					</ButtonLink>
 				) : (
 					<Button
@@ -87,14 +92,14 @@ export function PlaythroughCard({
 						className="max-sm:basis-full sm:flex-1"
 						onClick={onSetActive}
 					>
-						{text.setActive}
+						{t("setActive")}
 					</Button>
 				)}
 				<Button className="max-sm:flex-1" onClick={onEdit}>
-					{text.edit}
+					{t("edit")}
 				</Button>
 				<Button variant="danger" className="max-sm:flex-1" onClick={onDelete}>
-					{text.delete}
+					{t("delete")}
 				</Button>
 			</div>
 		</Card>

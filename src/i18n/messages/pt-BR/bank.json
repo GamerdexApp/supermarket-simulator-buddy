@@ -1,0 +1,39 @@
+{
+    "title": "Empréstimos bancários",
+    "subline": "Gerencie seus empréstimos de {name}",
+    "emptyDescription": "Escolha ou crie uma partida para acompanhar os empréstimos dela.",
+    "loanTitle": "Empréstimo nº {number}",
+    "states": {
+        "active": "Ativo",
+        "available": "Disponível",
+        "locked": "Bloqueado"
+    },
+    "principal": "Valor principal",
+    "rate": "Taxa de juros diária",
+    "level": "Nível da loja necessário",
+    "term": "Prazo: {count, plural, one {{amount} dia} other {{amount} dias}}",
+    "days": "{count, plural, one {{amount} dia} other {{amount} dias}}",
+    "termFixed": "O prazo fica fixo até o empréstimo ser removido.",
+    "details": "Detalhes do empréstimo",
+    "totalInterest": "Juros totais",
+    "totalPayment": "Pagamento total",
+    "dailyPayment": "Pagamento diário",
+    "activate": "Ativar empréstimo",
+    "activatedOn": "Ativado em: {date}",
+    "remove": "Remover empréstimo",
+    "requiresLevel": "Requer nível da loja {level} (você está no nível {current})",
+    "locked": "Bloqueado",
+    "activated": "Empréstimo nº {number} ativado",
+    "removed": "Empréstimo nº {number} removido",
+    "undo": "Desfazer",
+    "yourLoans": {
+        "title": "Seus empréstimos",
+        "activeLoans": "Empréstimos ativos",
+        "dailyPayment": "Pagamento diário",
+        "totalDebt": "Dívida total de empréstimos",
+        "none": "Nenhum empréstimo ativo. Escolha um prazo em um empréstimo abaixo e ative.",
+        "line": "{principal} a {rate} ao dia por {count, plural, one {{amount} dia} other {{amount} dias}}",
+        "payments": "{daily} por dia · {total} no total",
+        "formula": "Os juros são o valor principal vezes a taxa diária vezes o prazo em dias."
+    }
+}

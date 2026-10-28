@@ -1,15 +1,16 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { useOptionalSync } from "@/lib/contexts/SyncContext";
-import { syncText } from "@/lib/messages/sync";
 import { SYNC_HREF } from "@/data/nav";
 
 /** The words for the state of sync, or null while sync is off or not signed in. */
 export function useSyncLabel(): string | null {
+	const t = useTranslations("sync.status");
 	const sync = useOptionalSync();
 	if (!sync?.available || sync.status === "signedOut") return null;
-	return sync.conflicts.length > 0 ? syncText.status.conflicts : syncText.status[sync.status];
+	return sync.conflicts.length > 0 ? t("conflicts") : t(sync.status);
 }
 
 export function SyncChip() {

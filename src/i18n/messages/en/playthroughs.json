@@ -1,0 +1,85 @@
+{
+    "title": "Playthroughs",
+    "subline": "{count, plural, one {{amount} playthrough} other {{amount} playthroughs}}",
+    "newPlaythrough": "New playthrough",
+    "loading": "Reading saved data from this browser.",
+    "filters": {
+        "search": "Search by name",
+        "sortLabel": "Sort by",
+        "sort": {
+            "lastModified": "Last updated",
+            "name": "Name",
+            "createdAt": "Date created",
+            "storeLevel": "Store level"
+        },
+        "showing": "Showing {shown} of {count, plural, one {{amount} playthrough} other {{amount} playthroughs}}",
+        "clear": "Clear search"
+    },
+    "empty": {
+        "title": "No playthroughs yet",
+        "deletedTitle": "Playthrough deleted",
+        "description": "Create a playthrough to start tracking your store. Everything stays in this browser unless you turn on sync.",
+        "restore": "Restore from a backup"
+    },
+    "noMatch": {
+        "title": "No playthroughs match “{query}”",
+        "description": "Try a different name."
+    },
+    "card": {
+        "active": "Active",
+        "setActive": "Set as active",
+        "openOverview": "Open overview",
+        "edit": "Edit",
+        "delete": "Delete",
+        "created": "Created {date}",
+        "lastModified": "Last updated {date}",
+        "storeLevel": "Store level",
+        "spending": "Total spending",
+        "licenses": "Licenses",
+        "shopping": "Shopping list",
+        "ofTotal": "{count} of {total}",
+        "switched": "Switched to {name}"
+    },
+    "fields": {
+        "nameLabel": "Playthrough Name",
+        "namePlaceholder": "e.g., My First Store",
+        "nameError": "Enter a name for this playthrough.",
+        "descriptionLabel": "Description",
+        "descriptionPlaceholder": "Add a description for this playthrough...",
+        "cancel": "Cancel"
+    },
+    "create": {
+        "title": "Create New Playthrough",
+        "submit": "Create",
+        "done": "{name} created",
+        "starterTitle": "Every new playthrough starts with",
+        "starter": {
+            "item1": "Store level 0",
+            "item2": "License 0, the free starter license",
+            "item3": "Growth section 1",
+            "item4": "The Paper Bag, Sponge and Mop tools"
+        }
+    },
+    "edit": {
+        "title": "Edit Playthrough",
+        "description": "The fields start from the saved values.",
+        "save": "Save",
+        "saved": "Saved",
+        "savedMessage": "{name} was updated.",
+        "dates": "Created {created} · Last updated {updated}"
+    },
+    "delete": {
+        "title": "Delete Playthrough",
+        "question": "Are you sure you want to delete “{name}”?",
+        "description": "This removes all saved progress for this playthrough from this device. It also removes it from your other devices at the next sync when sync is on.",
+        "activeNext": "This is your active playthrough. {next} becomes active instead.",
+        "activeLast": "This is your active playthrough and the only one. You will have no active playthrough afterwards.",
+        "exportFirst": "Export a backup first",
+        "cancel": "Cancel",
+        "confirm": "Delete",
+        "done": "{name} deleted",
+        "doneMessage": "Undo within 10 seconds to bring it back.",
+        "undo": "Undo"
+    },
+    "sublineActive": "{count, plural, one {{amount} playthrough} other {{amount} playthroughs}} · {name} is active"
+}

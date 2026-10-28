@@ -1,0 +1,156 @@
+{
+    "title": "Paramètres",
+    "subline": "Gérez vos données et les paramètres de l'application",
+    "tabsLabel": "Paramètres",
+    "tabs": {
+        "sync": "Synchronisation cloud",
+        "preferences": "Préférences",
+        "data": "Sauvegarde et données",
+        "about": "À propos"
+    },
+    "playthroughCount": "{count, plural, one {{amount} partie} other {{amount} parties}}",
+    "storageNote": {
+        "title": "Stockage des données",
+        "body": "Vos données sont enregistrées dans ce navigateur. Effacer les données du navigateur les supprime, sauf si la synchronisation cloud en garde une copie. Exportez une sauvegarde de temps en temps."
+    },
+    "data": {
+        "title": "Gestion des données",
+        "export": {
+            "title": "Exporter les données",
+            "button": "Exporter toutes les parties",
+            "description": "Téléchargez un fichier de sauvegarde de toutes vos parties enregistrées.",
+            "done": "Sauvegarde téléchargée"
+        },
+        "import": {
+            "title": "Importer des données",
+            "description": "Envoyez un fichier exporté auparavant (.json)",
+            "fileLabel": "Fichier de sauvegarde",
+            "chooseFile": "Choisir un fichier",
+            "noFile": "Aucun fichier choisi",
+            "review": "Vérifier l'import",
+            "merged": "Import fusionné",
+            "replaced": "Données remplacées",
+            "undo": "Annuler"
+        },
+        "reset": {
+            "title": "Réinitialiser toutes les données",
+            "warning": "Cela supprime toutes les parties de cet appareil. Vous pouvez annuler pendant 10 secondes ensuite.",
+            "button": "Tout réinitialiser",
+            "confirmTitle": "Réinitialiser toutes les données ?",
+            "confirmBody": "Cela supprime {names}.",
+            "cancel": "Annuler",
+            "confirm": "Oui, tout réinitialiser",
+            "syncedCopy": "Supprimer aussi la copie synchronisée dans {provider}",
+            "syncedOn": "La synchronisation reste activée. Vos autres appareils perdront ces parties à leur prochaine synchronisation. En cas de doute, exportez d'abord une sauvegarde.",
+            "done": "Toutes les données réinitialisées",
+            "doneMessage": "{count, plural, one {{amount} partie supprimée} other {{amount} parties supprimées}}.",
+            "undo": "Annuler",
+            "doneMessageDisconnected": "{count, plural, one {{amount} partie supprimée} other {{amount} parties supprimées}}. La synchronisation est déconnectée sur ce navigateur."
+        }
+    },
+    "appearance": {
+        "title": "Apparence",
+        "description": "Choisissez l'apparence de l'application. Ce choix est enregistré sur cet appareil uniquement et ne fait pas partie d'une sauvegarde.",
+        "themeLabel": "Thème",
+        "themes": {
+            "light": "Clair",
+            "dark": "Sombre",
+            "system": "Système"
+        },
+        "themeNote": "Système suit votre appareil, qui utilise actuellement le thème {mode, select, dark {sombre} other {clair}}."
+    },
+    "playthroughs": {
+        "title": "Parties",
+        "description": "Créez, changez, modifiez et supprimez des parties sur la page Parties.",
+        "manage": "Gérer les parties"
+    },
+    "about": {
+        "version": "Version {version}",
+        "summary": "Un outil de suivi de progression pour Supermarket Simulator. Vos données sont enregistrées dans ce navigateur, ou dans votre propre stockage cloud si vous activez la synchronisation.",
+        "officialGame": "Jeu officiel",
+        "disclaimer": "Non affilié à Supermarket Simulator ni à ses développeurs, ni approuvé par eux. Toutes les marques et tous les contenus du jeu appartiennent à leurs propriétaires."
+    },
+    "importDialog": {
+        "title": "Importer une sauvegarde",
+        "fileInfo": "{name} · {size}",
+        "bytes": "{count} o",
+        "kilobytes": "{count} KB",
+        "failedTitle": "Échec de l'import",
+        "checksTitle": "Fichier vérifié",
+        "checks": "{count, plural, one {{amount} entrée lue} other {{amount} entrées lues}}, dont {kept} avec un identifiant et un nom.",
+        "howToApply": "Comment appliquer le fichier ?",
+        "modeLabel": "Mode d'import",
+        "modes": {
+            "merge": "Fusionner avec cet appareil (recommandé)",
+            "replace": "Tout remplacer"
+        },
+        "modeNotes": {
+            "merge": "Ajoute les nouvelles parties. Pour une partie présente des deux côtés, la copie modifiée en dernier l'emporte. Les parties présentes uniquement sur cet appareil restent. Votre partie active reste active.",
+            "replace": "Supprime les parties de cet appareil et garde uniquement le fichier. La partie active du fichier devient active."
+        },
+        "whatChanges": "Ce qui change",
+        "columns": {
+            "playthrough": "Partie",
+            "inFile": "Dans le fichier",
+            "onDevice": "Sur l'appareil",
+            "result": "Résultat"
+        },
+        "results": {
+            "added": "Ajoutée",
+            "updated": "Mise à jour depuis le fichier",
+            "kept": "Conservée",
+            "replaced": "Depuis le fichier",
+            "removed": "Supprimée"
+        },
+        "notThere": "Absente",
+        "noPlaythroughs": "Le fichier ne contient aucune partie.",
+        "undoNote": "Vous pouvez annuler l'import pendant 10 secondes ensuite.",
+        "cancel": "Annuler",
+        "close": "Fermer",
+        "merge": "Fusionner",
+        "replace": "Tout remplacer",
+        "skipped": "{count, plural, one {{amount} entrée ignorée} other {{amount} entrées ignorées}}.",
+        "levelsFixed": "{count, plural, one {{amount} niveau du magasin inférieur à 0 sera enregistré} other {{amount} niveaux du magasin inférieurs à 0 seront enregistrés}} comme 0.",
+        "errors": {
+            "notJson": "Ce fichier n'est pas une sauvegarde Supermarket Simulator Buddy : ce n'est pas du JSON valide. Rien n'a été modifié.",
+            "playthroughsMissing": "Ce fichier n'est pas une sauvegarde Supermarket Simulator Buddy : la liste des parties est absente. Rien n'a été modifié."
+        },
+        "summary": {
+            "added": "{amount} ajoutées",
+            "updated": "{amount} mises à jour",
+            "kept": "{amount} conservées",
+            "replaced": "{amount} remplacées",
+            "removed": "{amount} supprimées"
+        }
+    },
+    "region": {
+        "title": "Langue et région",
+        "description": "Affichage des textes, des nombres et des dates sur cet appareil. Enregistré sur cet appareil uniquement.",
+        "language": {
+            "label": "Langue",
+            "hint": "Les noms du jeu comme les produits, les licences et les outils restent en anglais."
+        },
+        "numberFormat": {
+            "label": "Format des nombres",
+            "hint": "Exemple : {example}",
+            "options": {
+                "auto": "Automatique, selon la langue",
+                "us": "1,234.56 (États-Unis)",
+                "european": "1.234,56 (Allemagne)",
+                "french": "1 234,56 (France)",
+                "swiss": "1’234.56 (Suisse)",
+                "indian": "12,34,567.89 (Inde)"
+            }
+        },
+        "dateFormat": {
+            "label": "Format des dates",
+            "hint": "Exemple : {example}",
+            "options": {
+                "auto": "Automatique, selon la langue",
+                "mdy": "Mois/Jour/Année",
+                "dmy": "Jour/Mois/Année",
+                "ymd": "Année-Mois-Jour"
+            }
+        }
+    }
+}

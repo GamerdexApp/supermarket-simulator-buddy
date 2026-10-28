@@ -1,0 +1,56 @@
+{
+    "title": "Resumen",
+    "subline": "{name} · Todo de un vistazo",
+    "emptyDescription": "Elige o crea una partida para ver su progreso de un vistazo.",
+    "identity": {
+        "created": "Creada: {date}",
+        "lastModified": "Última modificación: {date}",
+        "manage": "Gestionar partidas"
+    },
+    "storeLevel": {
+        "title": "Nivel de tienda",
+        "subtitle": "Nivel de progreso actual",
+        "hint": "Cámbialo con el selector de nivel de tienda de la barra lateral."
+    },
+    "financial": {
+        "title": "Resumen financiero",
+        "activeLoans": "Préstamos activos",
+        "dailyPayments": "Pagos diarios",
+        "totalDebt": "Deuda total de préstamos",
+        "none": "No hay préstamos activos. Abre el banco para pedir uno.",
+        "formula": "Cada préstamo cuesta su importe más el importe por el interés diario por el plazo. Cada préstamo activo se cuenta como pagado cada día.",
+        "view": "Ver detalles del banco"
+    },
+    "investment": {
+        "title": "Inversión total",
+        "subtitle": "Gasto combinado de gestión y mercado",
+        "formula": "Gestión {managementSpent} + Mercado {marketSpent} = {total}"
+    },
+    "management": {
+        "title": "Gestión",
+        "licenses": "Licencias",
+        "growth": "Mejoras de crecimiento",
+        "storage": "Mejoras de almacén",
+        "employees": "Empleados",
+        "unlocked": "{owned} de {total} desbloqueadas",
+        "hired": "{owned} de {total} contratados",
+        "perDay": "{amount}/día",
+        "hiringNote": "Costes de contratación pagados hasta ahora: {amount}. No forman parte del total invertido.",
+        "total": "Total invertido",
+        "view": "Ver gestión"
+    },
+    "market": {
+        "title": "Mercado",
+        "products": "Productos",
+        "licensesUnlocked": "{count, plural, one {{amount} licencia desbloqueada} other {{amount} licencias desbloqueadas}}",
+        "available": "{amount} disponibles",
+        "tools": "Herramientas",
+        "vehicles": "Vehículos",
+        "furniture": "Muebles",
+        "furnitureItems": "{count, plural, one {{amount} artículo disponible} other {{amount} artículos disponibles}}",
+        "unlocked": "{owned} de {total} desbloqueados",
+        "note": "Los muebles y la pintura no se guardan, así que su gasto no se cuenta.",
+        "total": "Total invertido",
+        "view": "Ver mercado"
+    }
+}

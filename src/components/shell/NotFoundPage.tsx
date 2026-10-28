@@ -1,18 +1,18 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { usePlaythrough } from "@/lib/contexts/PlaythroughContext";
-import { shellText } from "@/lib/messages/shell";
 import { closestPath } from "@/lib/utils/closestPath";
 import { HOME_HREF, navGroups, OVERVIEW_HREF, settingsNavItem } from "@/data/nav";
 import { ButtonLink } from "@/comps/ui/Button";
 import { AppShell } from "./AppShell";
 
-const text = shellText.notFound;
 const sections = [...navGroups.flatMap((group) => group.items), settingsNavItem];
 
 export function NotFoundPage() {
+	const t = useTranslations("shell");
 	const { activePlaythrough } = usePlaythrough();
 	const pathname = usePathname();
 	const suggestion = closestPath(
@@ -26,30 +26,37 @@ export function NotFoundPage() {
 				<p className="font-brand text-primary text-8xl leading-none font-extrabold italic">
 					404
 				</p>
-				<h1 className="text-2xl font-semibold">{text.title}</h1>
+				<h1 className="text-2xl font-semibold">{t("notFound.title")}</h1>
 				<p className="text-muted">
-					{text.body} <code className="font-mono break-all">{pathname}</code>
+					{t.rich("notFound.body", {
+						path: pathname,
+						code: (chunks) => <code className="font-mono break-all">{chunks}</code>,
+					})}
 				</p>
 				{suggestion && (
 					<p>
-						{text.didYouMean}{" "}
-						<Link href={suggestion} className="text-link font-mono underline">
-							{suggestion}
-						</Link>
+						{t.rich("notFound.didYouMean", {
+							suggestion,
+							link: (chunks) => (
+								<Link href={suggestion} className="text-link font-mono underline">
+									{chunks}
+								</Link>
+							),
+						})}
 					</p>
 				)}
 				<div className="mt-4 flex flex-wrap justify-center gap-3">
 					{activePlaythrough && (
 						<ButtonLink href={OVERVIEW_HREF} variant="primary">
-							{text.toOverview}
+							{t("notFound.toOverview")}
 						</ButtonLink>
 					)}
 					<ButtonLink href={HOME_HREF} variant="secondary">
-						{text.toHome}
+						{t("notFound.toHome")}
 					</ButtonLink>
 				</div>
 				<nav
-					aria-label={text.quickLinks}
+					aria-label={t("notFound.quickLinks")}
 					className="mt-6 flex flex-wrap justify-center gap-x-4 gap-y-2"
 				>
 					{sections.map((item) => (
@@ -58,7 +65,7 @@ export function NotFoundPage() {
 							href={item.href}
 							className="text-link inline-flex min-h-11 items-center underline lg:min-h-0"
 						>
-							{item.label}
+							{t(`nav.items.${item.id}`)}
 						</Link>
 					))}
 				</nav>

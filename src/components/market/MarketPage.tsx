@@ -1,10 +1,10 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { Suspense } from "react";
 import type { Playthrough } from "@/types/playthrough";
-import { formatMoney } from "@/lib/format";
+import { formatMoney, formatNumber } from "@/lib/format";
 import { useUrlTab } from "@/lib/hooks/useUrlTab";
-import { marketText } from "@/lib/messages/market";
 import { readStoreLevel } from "@/service/appData";
 import { ownedLicenseCount, toolState, vehicleState } from "@/service/market";
 import { market } from "@/data/supermarket-simulator/market";
@@ -15,7 +15,6 @@ import { OwnedItemsTab } from "./OwnedItemsTab";
 import { PriceListTab } from "./PriceListTab";
 import { ProductsTab } from "./ProductsTab";
 
-const text = marketText;
 const tabIds = ["products", "furniture", "paint", "tools", "vehicles"] as const;
 
 const counts = {
@@ -26,9 +25,8 @@ const counts = {
 	vehicles: market.vehicles.length,
 };
 
-const priceText = (price: number) => (price === 0 ? text.free : formatMoney(price));
-
 function ToolsTab({ playthrough }: { playthrough: Playthrough }) {
+	const t = useTranslations("market.tools");
 	const owned = ownedLicenseCount(playthrough);
 	return (
 		<OwnedItemsTab
@@ -38,18 +36,29 @@ function ToolsTab({ playthrough }: { playthrough: Playthrough }) {
 				...tool,
 				state: toolState(tool, playthrough),
 				lockReason: tool.requiredLicenses
-					? text.tools.requiresLicenses(tool.requiredLicenses, owned)
+					? t("requiresLicenses", {
+							count: tool.requiredLicenses,
+							amount: formatNumber(tool.requiredLicenses),
+							owned: formatNumber(owned),
+						})
 					: undefined,
 			}))}
-			totalSpentLabel={text.tools.totalSpent}
-			unlockedOf={text.tools.unlockedOf}
-			unlockedToast={text.tools.unlocked}
-			undoneToast={text.tools.undone}
+			totalSpentLabel={t("totalSpent")}
+			unlockedOf={(ownedTools, total) =>
+				t("unlockedOf", {
+					owned: formatNumber(ownedTools),
+					count: total,
+					amount: formatNumber(total),
+				})
+			}
+			unlockedToast={(name) => t("unlocked", { name })}
+			undoneToast={(name) => t("undone", { name })}
 		/>
 	);
 }
 
 function VehiclesTab({ playthrough }: { playthrough: Playthrough }) {
+	const t = useTranslations("market");
 	const level = readStoreLevel(playthrough);
 	return (
 		<OwnedItemsTab
@@ -59,43 +68,65 @@ function VehiclesTab({ playthrough }: { playthrough: Playthrough }) {
 				...vehicle,
 				state: vehicleState(vehicle, playthrough),
 				facts: [
-					{ label: text.vehicles.price, value: priceText(vehicle.unitPrice) },
-					{ label: text.vehicles.storeLevel, value: String(vehicle.storeLevel) },
+					{
+						label: t("vehicles.price"),
+						value: vehicle.unitPrice === 0 ? t("free") : formatMoney(vehicle.unitPrice),
+					},
+					{ label: t("vehicles.storeLevel"), value: formatNumber(vehicle.storeLevel) },
 				],
-				lockReason: text.vehicles.requiresLevel(vehicle.storeLevel, level),
+				lockReason: t("vehicles.requiresLevel", {
+					level: vehicle.storeLevel,
+					current: level,
+				}),
 			}))}
-			totalSpentLabel={text.vehicles.totalSpent}
-			unlockedOf={text.vehicles.unlockedOf}
-			unlockedToast={text.vehicles.unlocked}
-			undoneToast={text.vehicles.undone}
+			totalSpentLabel={t("vehicles.totalSpent")}
+			unlockedOf={(owned, total) =>
+				t("vehicles.unlockedOf", {
+					owned: formatNumber(owned),
+					count: total,
+					amount: formatNumber(total),
+				})
+			}
+			unlockedToast={(name) => t("vehicles.unlocked", { name })}
+			undoneToast={(name) => t("vehicles.undone", { name })}
 		/>
 	);
 }
 
 function MarketContent({ playthrough }: { playthrough: Playthrough }) {
+	const t = useTranslations("market");
 	const [activeTab, setActiveTab] = useUrlTab(tabIds, "products");
 
 	return (
 		<>
-			<PageHeader title={text.title} subline={text.sublines[activeTab](playthrough.name)} />
+			<PageHeader
+				title={t("title")}
+				subline={t(`sublines.${activeTab}`, { name: playthrough.name })}
+			/>
 			<Tabs
-				label={text.tabsLabel}
-				tabs={tabIds.map((id) => ({ id, label: text.tabs[id], count: counts[id] }))}
+				label={t("tabsLabel")}
+				tabs={tabIds.map((id) => ({
+					id,
+					label: t(`tabs.${id}`),
+					count: formatNumber(counts[id]),
+				}))}
 				activeId={activeTab}
 				onChange={setActiveTab}
 			>
 				{activeTab === "products" && <ProductsTab playthrough={playthrough} />}
 				{activeTab === "furniture" && (
 					<PriceListTab
-						heading={text.furniture.heading(market.furnitures.length)}
-						note={text.furniture.note}
+						heading={t("furniture.heading", {
+							count: formatNumber(market.furnitures.length),
+						})}
+						note={t("furniture.note")}
 						items={market.furnitures}
 					/>
 				)}
 				{activeTab === "paint" && (
 					<PriceListTab
-						heading={text.paint.heading(market.paints.length)}
-						note={text.paint.note}
+						heading={t("paint.heading", { count: formatNumber(market.paints.length) })}
+						note={t("paint.note")}
 						items={market.paints}
 					/>
 				)}
@@ -107,8 +138,9 @@ function MarketContent({ playthrough }: { playthrough: Playthrough }) {
 }
 
 export function MarketPage() {
+	const t = useTranslations("market");
 	return (
-		<PlaythroughGate title={text.title} emptyDescription={text.emptyDescription}>
+		<PlaythroughGate title={t("title")} emptyDescription={t("emptyDescription")}>
 			{(playthrough) => (
 				<Suspense fallback={null}>
 					<MarketContent playthrough={playthrough} />

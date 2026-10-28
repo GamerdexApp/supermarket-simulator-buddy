@@ -1,0 +1,22 @@
+{
+    "displayTypes": {
+        "shelf": "棚",
+        "fridge": "冷蔵庫",
+        "freezer": "冷凍庫",
+        "stall": "陳列台",
+        "pegboard": "ペグボード",
+        "garment_rack": "ハンガーラック"
+    },
+    "categories": {
+        "edible": "食品",
+        "produce": "青果",
+        "drink": "飲料",
+        "cleaning": "清掃用品",
+        "books": "書籍",
+        "cloth": "衣料品",
+        "electronics": "家電",
+        "hardware": "工具・金物",
+        "kitchen": "キッチン用品",
+        "pet": "ペット用品"
+    }
+}

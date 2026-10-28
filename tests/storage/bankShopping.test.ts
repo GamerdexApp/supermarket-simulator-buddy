@@ -94,7 +94,7 @@ describe("shopping list", () => {
       "mystery",
       "",
     ]);
-    expect(shopName("")).toBe("No Shop Available");
+    expect(shopName("deli_and_grocery")).toBe("Deli and Grocery");
     expect(shopName("mystery")).toBe("mystery");
     expect(listSummary(items)).toEqual({ total: 4, bought: 1, boxes: 4 });
   });

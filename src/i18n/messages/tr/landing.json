@@ -1,0 +1,102 @@
+{
+    "header": {
+        "label": "Giriş sayfası",
+        "features": "Özellikler",
+        "faq": "SSS",
+        "github": "GitHub",
+        "discord": "Discord"
+    },
+    "cta": {
+        "create": "İlk oynanışını oluştur",
+        "dashboard": "Panele git",
+        "newPlaythrough": "Yeni oynanış",
+        "learn": "Daha fazla bilgi"
+    },
+    "hero": {
+        "title": "Süpermarket <accent>İmparatorluğunu</accent> Takip Et",
+        "body": "Supermarket Simulator için yardımcı uygulama. Birden fazla oynanışı yönet, ilerlemeni takip et ve süpermarket imparatorluğunu güvenle büyüt.",
+        "preview": "Pezz's Market genel bakışı: toplam harcama, mağaza ilerlemesi ve aktif krediler"
+    },
+    "continueCard": {
+        "label": "Devam et",
+        "level": "Mağaza seviyesi {level}",
+        "updated": "Son güncelleme: {date}"
+    },
+    "steps": {
+        "title": "Bir dakikada başla",
+        "items": {
+            "item1": {
+                "title": "Oynanış oluştur",
+                "body": "Bir ad ver. Her şey bu tarayıcıda kaydedilir, hesap gerekmez."
+            },
+            "item2": {
+                "title": "Temel şeylerle başla",
+                "body": "Her oynanış Lisans 0, genişletme bölümü 1 ve Paper Bag, Sponge ve Mop ile başlar."
+            },
+            "item3": {
+                "title": "Oynadıkça kilit aç",
+                "body": "Mağaza seviyeni yükselt, sonra oyundaki gibi lisansların, bölümlerin, personelin, aletlerin ve araçların kilidini aç."
+            }
+        }
+    },
+    "features": {
+        "eyebrow": "İhtiyacın olan her şey",
+        "title": "Tüm ilerlemen tek yerde",
+        "body": "Supermarket Simulator Buddy, süpermarket işinin her yönünü takip eder. Lisanslardan depoya kadar her şey burada.",
+        "items": {
+            "item1": {
+                "title": "Birden Fazla Oynanış",
+                "body": "Sınırsız oynanış oluştur ve yönet. Farklı stratejileri ve challenge oyunlarını ayrı ayrı takip et."
+            },
+            "item2": {
+                "title": "Lisans Yönetimi",
+                "body": "Tüm ürün lisanslarını takip et ve her lisansın mağazan için hangi ürünlerin kilidini açtığını gör."
+            },
+            "item3": {
+                "title": "Mağaza Büyümesi",
+                "body": "Depo ve genişletme bölümlerini ayrıntılı takip ederek mağazanın büyümesini izle."
+            },
+            "item4": {
+                "title": "Bütçe Takibi",
+                "body": "Kapsamlı finans özetleriyle tüm kategorilerdeki harcamalarını takip et."
+            },
+            "item5": {
+                "title": "Alışveriş Listeleri",
+                "body": "Her dükkândan ne alacağını bilmek için kendi alışveriş listelerini oluştur."
+            },
+            "item6": {
+                "title": "Veri Dışa/İçe Aktarma",
+                "body": "İlerlemeni yedek almak veya arkadaşlarınla paylaşmak için JSON olarak dışa aktar. Verileri istediğin zaman içe aktar."
+            }
+        }
+    },
+    "faq": {
+        "title": "Sık sorulan sorular",
+        "items": {
+            "item1": {
+                "question": "Supermarket Simulator Buddy nedir?",
+                "answer": "Supermarket Simulator Buddy, Supermarket Simulator oyunu için kapsamlı bir ilerleme takip aracıdır. Birden fazla oynanışı yönetmene, mağazanın büyümesini takip etmene, lisansları yönetmene ve finansal ilerlemeni tek yerden izlemene yardım eder."
+            },
+            "item2": {
+                "question": "Verilerimi nasıl saklıyor?",
+                "answer": "Tüm verilerin localStorage ile tarayıcında yerel olarak saklanır. Yani ilerlemen gizli kalır, sunucu veya hesap gerekmez. Yedek almak veya paylaşmak için verilerini JSON dosyası olarak dışa ve içe de aktarabilirsin."
+            },
+            "item3": {
+                "question": "Birden fazla oynanışı takip edebilir miyim?",
+                "answer": "Evet! Her biri kendi ilerlemesine sahip birden fazla oynanış oluşturup yönetebilirsin. Kenar çubuğundaki açılır menüyle aralarında kolayca geçiş yap ve farklı stratejileri veya challenge oyunlarını ayrı ayrı takip et."
+            },
+            "item4": {
+                "question": "Neleri takip edebilirim?",
+                "answer": "Mağaza seviyeni, lisanslarını, depo bölümlerini, genişletme alanlarını, aletlerini, araçlarını ve alışveriş listelerini takip et, mobilya ve boya fiyatlarına göz at. Tüm kategorilerde ayrıntılı bütçe takibiyle finansal ilerlemeni izle."
+            },
+            "item5": {
+                "question": "Bu uygulama ücretsiz mi?",
+                "answer": "Evet, Supermarket Simulator Buddy tamamen ücretsizdir. Abonelik, reklam veya gizli ücret yok. Tüm özellikler herkese açık."
+            }
+        }
+    },
+    "closing": {
+        "title": "Mağazanı yönetmeye hazır mısın?",
+        "body": "Ücretsiz, gizli ve tarayıcında kayıtlı."
+    }
+}

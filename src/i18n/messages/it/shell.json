@@ -1,0 +1,81 @@
+{
+    "skipToContent": "Vai al contenuto",
+    "closeMenu": "Chiudi menu",
+    "openMenu": "Apri menu",
+    "menuLabel": "Menu del sito",
+    "mainNav": "Principale",
+    "brandWords": {
+        "item1": "Supermarket",
+        "item2": "Simulator",
+        "item3": "Buddy"
+    },
+    "noPlaythroughHint": "Crea una partita per iniziare a tenere traccia.",
+    "switcher": {
+        "sectionLabel": "Partita",
+        "loading": "Caricamento",
+        "none": "Nessuna selezionata",
+        "switch": "Cambia partita",
+        "playthroughs": "Partite",
+        "active": "Attiva",
+        "all": "Tutte le partite",
+        "create": "Nuova partita",
+        "level": "Livello {level}",
+        "rowDetail": "Livello {level} · {date}",
+        "switched": "Partita attiva: {name}",
+        "empty": "Ancora nessuna partita creata"
+    },
+    "storeLevel": {
+        "label": "Livello del negozio",
+        "edit": "Livello del negozio {level}, seleziona per inserire un livello",
+        "atZero": "Già al livello 0"
+    },
+    "empty": {
+        "title": "Nessuna partita selezionata",
+        "description": "Crea una partita o scegline una dal tuo elenco per vedere questa pagina.",
+        "create": "Nuova partita",
+        "all": "Tutte le partite"
+    },
+    "footer": {
+        "tagline": "Uno strumento gratuito per tenere traccia dei progressi in Supermarket Simulator. I tuoi dati restano nel browser, o nel tuo spazio cloud se attivi la sincronizzazione.",
+        "support": "Supporto",
+        "about": "Informazioni",
+        "settings": "Impostazioni",
+        "discord": "Discord",
+        "github": "GitHub",
+        "officialGame": "Gioco ufficiale",
+        "privacy": "Informativa sulla privacy",
+        "terms": "Termini di servizio",
+        "disclaimerTitle": "Avvertenza",
+        "disclaimer": "Questo progetto non è affiliato, approvato o collegato a Supermarket Simulator o ai suoi sviluppatori. Tutti i marchi e i contenuti del gioco appartengono ai rispettivi proprietari.",
+        "framework": "Realizzato con il framework Gamerdex, una base comune per strumenti gratuiti di monitoraggio dei progressi nei giochi.",
+        "visitGamerdex": "Visita Gamerdex"
+    },
+    "notFound": {
+        "title": "Pagina non trovata",
+        "body": "Non esiste alcuna pagina all'indirizzo <code>{path}</code>.",
+        "didYouMean": "Forse cercavi <link>{suggestion}</link>?",
+        "quickLinks": "Sezioni",
+        "toOverview": "Vai alla panoramica",
+        "toHome": "Torna alla home"
+    },
+    "saveFailed": {
+        "title": "Non salvato",
+        "message": "Il browser non è riuscito a salvare le modifiche. Scarica un backup per non perdere nulla.",
+        "exportBackup": "Scarica backup"
+    },
+    "nav": {
+        "groups": {
+            "store": "Il tuo negozio",
+            "plan": "Pianifica"
+        },
+        "items": {
+            "overview": "Panoramica",
+            "market": "Mercato",
+            "management": "Gestione",
+            "bank": "Banca",
+            "shoppingList": "Lista della spesa",
+            "settings": "Impostazioni",
+            "playthroughs": "Partite"
+        }
+    }
+}

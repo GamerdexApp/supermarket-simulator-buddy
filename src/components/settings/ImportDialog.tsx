@@ -1,18 +1,16 @@
 "use client";
 
+import { useLocale, useTranslations } from "next-intl";
 import { useMemo } from "react";
 import type { AppData } from "@/types/playthrough";
-import { formatShortDate } from "@/lib/format";
-import { settingsText } from "@/lib/messages/settings";
-import type { ImportMode } from "@/service/backup";
+import { formatNumber, formatShortDate } from "@/lib/format";
+import type { ImportMode, ParseStats } from "@/service/backup";
 import { applyImport, parseBackup, planImport, summarizeImport } from "@/service/backup";
 import { Button } from "@/comps/ui/Button";
 import { Dialog } from "@/comps/ui/Dialog";
 import { Note } from "@/comps/ui/Note";
 import { RadioGroup } from "@/comps/ui/RadioGroup";
 import { ScrollRegion } from "@/comps/ui/ScrollRegion";
-
-const text = settingsText.importDialog;
 
 export interface ImportFile {
 	name: string;
@@ -29,15 +27,8 @@ interface ImportDialogProps {
 	onConfirm: (next: AppData, summary: string, mode: ImportMode) => void;
 }
 
-const modeOptions = (["merge", "replace"] as const).map((id) => ({
-	id,
-	label: text.modes[id],
-}));
-
-const formatSize = (bytes: number) =>
-	bytes < 1024 ? text.bytes(bytes) : text.kilobytes(Math.max(1, Math.round(bytes / 1024)));
-
-const formatDate = (iso?: string) => (iso ? formatShortDate(iso) : text.notThere);
+const IMPORT_MODES = ["merge", "replace"] as const;
+const KILOBYTE = 1024;
 
 export function ImportDialog({
 	file,
@@ -47,80 +38,108 @@ export function ImportDialog({
 	onClose,
 	onConfirm,
 }: ImportDialogProps) {
+	const t = useTranslations("settings.importDialog");
+	const locale = useLocale();
 	const parsed = useMemo(() => (file ? parseBackup(file.text) : null), [file]);
 	const incoming = parsed?.ok ? parsed.data : null;
 	const rows = useMemo(
 		() => (incoming ? planImport(current, incoming, mode) : []),
 		[current, incoming, mode]
 	);
-	const summary = summarizeImport(rows);
+	const summary = new Intl.ListFormat(locale, { type: "unit" }).format(
+		summarizeImport(rows).map(({ result, count }) =>
+			t(`summary.${result}`, { amount: formatNumber(count) })
+		)
+	);
+	const modeOptions = IMPORT_MODES.map((id) => ({ id, label: t(`modes.${id}`) }));
+
+	const formatSize = (bytes: number) =>
+		bytes < KILOBYTE
+			? t("bytes", { count: formatNumber(bytes) })
+			: t("kilobytes", { count: formatNumber(Math.max(1, Math.round(bytes / KILOBYTE))) });
+	const formatDate = (iso?: string) => (iso ? formatShortDate(iso) : t("notThere"));
+
+	const checksText = (stats: ParseStats, kept: number) =>
+		[
+			t("checks", {
+				count: stats.read,
+				amount: formatNumber(stats.read),
+				kept: formatNumber(kept),
+			}),
+			stats.skipped > 0 &&
+				t("skipped", { count: stats.skipped, amount: formatNumber(stats.skipped) }),
+			stats.levelsFixed > 0 &&
+				t("levelsFixed", {
+					count: stats.levelsFixed,
+					amount: formatNumber(stats.levelsFixed),
+				}),
+		]
+			.filter(Boolean)
+			.join(" ");
 
 	return (
 		<Dialog
 			open={file !== null}
 			onClose={onClose}
 			variant="wide"
-			title={text.title}
-			description={file ? text.fileInfo(file.name, formatSize(file.size)) : undefined}
+			title={t("title")}
+			description={
+				file ? t("fileInfo", { name: file.name, size: formatSize(file.size) }) : undefined
+			}
 			footer={
 				incoming ? (
 					<>
-						<Button onClick={onClose}>{text.cancel}</Button>
+						<Button onClick={onClose}>{t("cancel")}</Button>
 						<Button
 							variant={mode === "replace" ? "danger" : "primary"}
 							onClick={() =>
 								onConfirm(applyImport(current, incoming, mode), summary, mode)
 							}
 						>
-							{text[mode]}
+							{t(mode)}
 						</Button>
 					</>
 				) : (
-					<Button onClick={onClose}>{text.close}</Button>
+					<Button onClick={onClose}>{t("close")}</Button>
 				)
 			}
 		>
 			{parsed && !parsed.ok && (
-				<Note tone="warning" title={text.failedTitle}>
-					{parsed.error}
+				<Note tone="warning" title={t("failedTitle")}>
+					{t(`errors.${parsed.error}`)}
 				</Note>
 			)}
 			{parsed?.ok && (
 				<>
-					<Note title={text.checksTitle}>
-						{text.checks(
-							parsed.stats.read,
-							parsed.data.playthroughs.length,
-							parsed.stats.skipped,
-							parsed.stats.levelsFixed
-						)}
+					<Note title={t("checksTitle")}>
+						{checksText(parsed.stats, parsed.data.playthroughs.length)}
 					</Note>
 					<div className="flex flex-col gap-2">
-						<h3 className="font-medium">{text.howToApply}</h3>
+						<h3 className="font-medium">{t("howToApply")}</h3>
 						<RadioGroup
-							label={text.modeLabel}
+							label={t("modeLabel")}
 							options={modeOptions}
 							value={mode}
 							onChange={onModeChange}
 						/>
-						<p className="text-muted">{text.modeNotes[mode]}</p>
+						<p className="text-muted">{t(`modeNotes.${mode}`)}</p>
 					</div>
 					<div className="flex flex-col gap-2">
-						<h3 className="font-medium">{text.whatChanges}</h3>
-						<ScrollRegion label={text.whatChanges}>
+						<h3 className="font-medium">{t("whatChanges")}</h3>
+						<ScrollRegion label={t("whatChanges")}>
 							<table className="w-full text-start">
 								<thead className="text-muted text-xs">
 									<tr>
 										<th className="py-1 pe-3 font-medium">
-											{text.columns.playthrough}
+											{t("columns.playthrough")}
 										</th>
 										<th className="py-1 pe-3 font-medium">
-											{text.columns.inFile}
+											{t("columns.inFile")}
 										</th>
 										<th className="py-1 pe-3 font-medium">
-											{text.columns.onDevice}
+											{t("columns.onDevice")}
 										</th>
-										<th className="py-1 font-medium">{text.columns.result}</th>
+										<th className="py-1 font-medium">{t("columns.result")}</th>
 									</tr>
 								</thead>
 								<tbody>
@@ -136,14 +155,14 @@ export function ImportDialog({
 											<td className="py-2 pe-3">
 												{formatDate(row.deviceModified)}
 											</td>
-											<td className="py-2">{text.results[row.result]}</td>
+											<td className="py-2">{t(`results.${row.result}`)}</td>
 										</tr>
 									))}
 								</tbody>
 							</table>
 						</ScrollRegion>
-						<p className="text-muted">{summary || text.noPlaythroughs}</p>
-						<p className="text-muted">{text.undoNote}</p>
+						<p className="text-muted">{summary || t("noPlaythroughs")}</p>
+						<p className="text-muted">{t("undoNote")}</p>
 					</div>
 				</>
 			)}

@@ -1,0 +1,81 @@
+{
+    "skipToContent": "İçeriğe geç",
+    "closeMenu": "Menüyü kapat",
+    "openMenu": "Menüyü aç",
+    "menuLabel": "Site menüsü",
+    "mainNav": "Ana menü",
+    "brandWords": {
+        "item1": "Supermarket",
+        "item2": "Simulator",
+        "item3": "Buddy"
+    },
+    "noPlaythroughHint": "Takibe başlamak için bir oynanış oluştur.",
+    "switcher": {
+        "sectionLabel": "Oynanış",
+        "loading": "Yükleniyor",
+        "none": "Seçili değil",
+        "switch": "Oynanış değiştir",
+        "playthroughs": "Oynanışlar",
+        "active": "Aktif",
+        "all": "Tüm oynanışlar",
+        "create": "Yeni oynanış",
+        "level": "Seviye {level}",
+        "rowDetail": "Seviye {level} · {date}",
+        "switched": "Aktif oynanış: {name}",
+        "empty": "Henüz oynanış oluşturulmadı"
+    },
+    "storeLevel": {
+        "label": "Mağaza seviyesi",
+        "edit": "Mağaza seviyesi {level}, seviye yazmak için seç",
+        "atZero": "Zaten seviye 0"
+    },
+    "empty": {
+        "title": "Oynanış seçili değil",
+        "description": "Bu sayfayı görmek için bir oynanış oluştur veya listenden birini seç.",
+        "create": "Yeni oynanış",
+        "all": "Tüm oynanışlar"
+    },
+    "footer": {
+        "tagline": "Supermarket Simulator için ücretsiz bir ilerleme takipçisi. Verilerin tarayıcında kalır, eşitlemeyi açarsan kendi bulut depolamanda durur.",
+        "support": "Destek",
+        "about": "Hakkında",
+        "settings": "Ayarlar",
+        "discord": "Discord",
+        "github": "GitHub",
+        "officialGame": "Resmi oyun",
+        "privacy": "Gizlilik politikası",
+        "terms": "Kullanım koşulları",
+        "disclaimerTitle": "Sorumluluk reddi",
+        "disclaimer": "Bu proje Supermarket Simulator veya geliştiricileriyle bağlantılı değildir, onlar tarafından desteklenmez. Tüm ticari markalar ve oyun içeriği sahiplerine aittir.",
+        "framework": "Ücretsiz oyun ilerleme takipçileri için ortak bir temel olan Gamerdex çatısıyla yapıldı.",
+        "visitGamerdex": "Gamerdex'i ziyaret et"
+    },
+    "notFound": {
+        "title": "Sayfa bulunamadı",
+        "body": "<code>{path}</code> adresinde sayfa yok.",
+        "didYouMean": "Şunu mu demek istedin: <link>{suggestion}</link>?",
+        "quickLinks": "Bölümler",
+        "toOverview": "Genel Bakış'a git",
+        "toHome": "Ana sayfaya dön"
+    },
+    "saveFailed": {
+        "title": "Kaydedilmedi",
+        "message": "Tarayıcı değişikliklerini saklayamadı. Hiçbir şey kaybolmasın diye bir yedek indir.",
+        "exportBackup": "Yedeği indir"
+    },
+    "nav": {
+        "groups": {
+            "store": "Mağazan",
+            "plan": "Plan"
+        },
+        "items": {
+            "overview": "Genel Bakış",
+            "market": "Market",
+            "management": "Yönetim",
+            "bank": "Banka",
+            "shoppingList": "Alışveriş listesi",
+            "settings": "Ayarlar",
+            "playthroughs": "Oynanışlar"
+        }
+    }
+}

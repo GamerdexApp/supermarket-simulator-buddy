@@ -1,0 +1,149 @@
+{
+    "title": "Gestione",
+    "tabsLabel": "Gestione",
+    "tabs": {
+        "licenses": "Licenze",
+        "growth": "Espansione",
+        "storage": "Magazzino",
+        "hiring": "Assunzioni",
+        "customizations": "Personalizzazioni"
+    },
+    "sublines": {
+        "licenses": "{name} · Sblocca licenze per vendere più prodotti",
+        "growth": "{name} · Espandi l'area vendita una sezione alla volta",
+        "storage": "{name} · Espandi il magazzino una sezione alla volta",
+        "hiring": "{name} · Assumi personale per gestire il negozio",
+        "customizations": "{name} · Modifiche al negozio acquistate nel gioco"
+    },
+    "emptyDescription": "Scegli o crea una partita per tenere traccia di licenze, espansione del negozio, magazzino e personale.",
+    "storeLevel": "Livello del negozio",
+    "storeLevelCaption": "Modificalo nella barra laterale",
+    "free": "Gratis",
+    "requiresLevel": "Richiede il livello del negozio {level} (sei al livello {current})",
+    "locked": "Bloccato",
+    "states": {
+        "unlocked": "Sbloccato",
+        "canUnlock": "Sbloccabile",
+        "locked": "Bloccato"
+    },
+    "licenses": {
+        "totalSpent": "Totale speso in licenze",
+        "unlockedOf": "Sbloccate {owned} di {count, plural, one {{amount} licenza} other {{amount} licenze}}",
+        "canUnlockNow": "Sbloccabili ora",
+        "lockedByLevel": "Bloccate dal livello",
+        "title": "Licenza {number}",
+        "price": "Prezzo",
+        "level": "Livello del negozio",
+        "unlocks": "Sblocca {count, plural, one {{amount} prodotto} other {{amount} prodotti}}",
+        "unlock": "Sblocca licenza",
+        "undoUnlock": "Annulla sblocco",
+        "unlocked": "Licenza {number} sbloccata",
+        "undone": "Licenza {number} di nuovo bloccata",
+        "filters": {
+            "search": "Cerca licenze o prodotti",
+            "title": "Filtra licenze",
+            "show": "Mostra",
+            "showOptions": {
+                "all": "Tutte",
+                "unlocked": "Sbloccate",
+                "canUnlock": "Sbloccabili",
+                "locked": "Bloccate"
+            },
+            "sort": "Ordina per",
+            "sortOptions": {
+                "number": "Numero di licenza",
+                "price": "Prezzo crescente",
+                "storeLevel": "Livello del negozio crescente"
+            },
+            "summary": "{shown} di {count, plural, one {{amount} licenza} other {{amount} licenze}} mostrate",
+            "showButton": "Mostra {count, plural, one {{amount} licenza} other {{amount} licenze}}"
+        },
+        "noMatch": "Nessuna licenza corrisponde a questi filtri",
+        "noMatchDescription": "Prova un'altra ricerca o mostra tutte le licenze."
+    },
+    "sections": {
+        "growth": {
+            "totalSpent": "Totale speso in espansione",
+            "unlockedOf": "Sbloccate {owned} di {count, plural, one {{amount} sezione} other {{amount} sezioni}}",
+            "title": "Sezione di espansione {num}",
+            "pathLabel": "Sezioni di espansione",
+            "unlocked": "Sezione di espansione {num} sbloccata",
+            "undone": "{count, plural, one {Sezione di espansione {range} di nuovo bloccata} other {Sezioni di espansione {range} di nuovo bloccate}}",
+            "cascadeTitle": "Annullare la sezione di espansione {num}?"
+        },
+        "storage": {
+            "totalSpent": "Totale speso in magazzino",
+            "unlockedOf": "Sbloccate {owned} di {count, plural, one {{amount} sezione} other {{amount} sezioni}}",
+            "title": "Sezione di magazzino {num}",
+            "pathLabel": "Sezioni di magazzino",
+            "firstSectionNote": "Nei dati del gioco la sezione di magazzino 1 costa $800 al livello del negozio 0, mentre la sezione di espansione 1 è gratuita.",
+            "unlocked": "Sezione di magazzino {num} sbloccata",
+            "undone": "{count, plural, one {Sezione di magazzino {range} di nuovo bloccata} other {Sezioni di magazzino {range} di nuovo bloccate}}",
+            "cascadeTitle": "Annullare la sezione di magazzino {num}?"
+        },
+        "nextSection": "Sezione successiva",
+        "nextSectionValue": "Sezione {num} · livello {level} · {price}",
+        "allUnlocked": "Tutto sbloccato",
+        "level": "Livello {level}",
+        "size": "Dimensione {size}",
+        "nextToUnlock": "Prossima da sbloccare",
+        "unlock": "Sblocca",
+        "unlockFirst": "Sblocca prima la sezione {num}.",
+        "cascade": {
+            "body": "{count, plural, one {La sezione {range} dipende da questa e si blocca insieme a lei} other {Le sezioni {range} dipendono da questa e si bloccano insieme a lei}}. Il totale speso scende di {price}.",
+            "confirm": "Annulla {count, plural, one {sezione {range}} other {sezioni {range}}}",
+            "keep": "Lasciale sbloccate"
+        },
+        "range": "da {first} a {last}"
+    },
+    "hiring": {
+        "dailyWages": "Paghe giornaliere totali",
+        "dailyWagesCaption": "Costo giornaliero complessivo di tutti i dipendenti assunti",
+        "hired": "Dipendenti assunti",
+        "hiringCosts": "Costi di assunzione pagati",
+        "hiringCostsCaption": "Una tantum, esclusi dalle paghe giornaliere",
+        "roles": {
+            "cashiers": {
+                "title": "Cassieri",
+                "stat": "Casse complete: <stat>{value}</stat>",
+                "employeeName": "Cassiere {number}"
+            },
+            "restockers": {
+                "title": "Addetti al rifornimento",
+                "stat": "Numero di scaffali: <stat>{value}</stat>",
+                "employeeName": "Addetto al rifornimento {number}"
+            },
+            "customerHelpers": {
+                "title": "Assistenti clienti",
+                "stat": "Numero di casse: <stat>{value}</stat>",
+                "employeeName": "Assistente clienti {number}"
+            },
+            "securityGuards": {
+                "title": "Guardie giurate",
+                "employeeName": "Guardia giurata {number}"
+            },
+            "janitors": {
+                "title": "Addetti alle pulizie",
+                "employeeName": "Addetto alle pulizie {number}"
+            }
+        },
+        "hiredOf": "Assunti {count} su {total}",
+        "roleWages": "Paghe giornaliere: {amount}",
+        "hiredBadge": "Assunto",
+        "level": "Livello del negozio",
+        "cost": "Costo di assunzione",
+        "wage": "Paga giornaliera",
+        "perDay": "{amount} / giorno",
+        "hire": "Assumi",
+        "fire": "Licenzia",
+        "hiredToast": "{name} assunto",
+        "firedToast": "{name} licenziato"
+    },
+    "customizations": {
+        "total": "Prezzo di tutte e tre",
+        "totalCaption": "Ricavato dai dati del gioco, non salvato",
+        "note": "Queste modifiche si acquistano nel gioco. Qui non viene salvato nulla.",
+        "price": "Prezzo"
+    },
+    "tabCount": "{owned} / {total}"
+}

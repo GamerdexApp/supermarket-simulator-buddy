@@ -1,0 +1,22 @@
+{
+    "displayTypes": {
+        "shelf": "Shelf",
+        "fridge": "Fridge",
+        "freezer": "Freezer",
+        "stall": "Stall",
+        "pegboard": "Pegboard",
+        "garment_rack": "Garment Rack"
+    },
+    "categories": {
+        "edible": "Edible",
+        "produce": "Produce",
+        "drink": "Drink",
+        "cleaning": "Cleaning",
+        "books": "Books",
+        "cloth": "Cloth",
+        "electronics": "Electronics",
+        "hardware": "Hardware",
+        "kitchen": "Kitchen",
+        "pet": "Pet"
+    }
+}

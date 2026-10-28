@@ -3,18 +3,19 @@ import type { Playthrough } from "@/types/playthrough";
 import {
   CATEGORIES,
   DISPLAY_TYPES,
+  LOCATIONS,
 } from "@/data/constants/supermarket-simulator";
 import { management } from "@/data/supermarket-simulator/management";
 import { market } from "@/data/supermarket-simulator/market";
 import { readStoreLevel } from "./appData";
 import { countKnown, type UnlockState } from "./management";
 
-/** "garment_rack" reads as "Garment Rack", as the old cards showed it. */
-export const labelOf = (value: string) =>
-  value
-    .split("_")
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(" ");
+/** The ids a product is tagged with. A product with no shop stores an empty string. */
+export const productTags = (product: Product) => ({
+  displayType: product.displayType,
+  category: product.category,
+  store: product.bigBoxStore || undefined,
+});
 
 export const isProductUnlocked = (product: Product, playthrough: Playthrough) =>
   (playthrough.unlockedLicenses ?? []).includes(product.licenseId);
@@ -46,8 +47,8 @@ export const filterProducts = (
  * Options with their product counts. A value no product uses is left out, so a filter never
  * returns nothing for a reason the list does not show.
  */
-const optionsWithCounts = (
-  values: readonly string[],
+const optionsWithCounts = <Value extends string>(
+  values: readonly Value[],
   valueOf: (product: Product) => string | undefined,
 ) =>
   values
@@ -70,9 +71,6 @@ export const categoryOptions = optionsWithCounts(
 /** Products share names across companies, so the key needs all three. */
 export const productKey = (product: Product) =>
   [product.licenseId, product.name, product.company ?? ""].join("|");
-
-export const licenseLabel = (licenseId: string) =>
-  `License ${licenseId.replace("license_", "")}`;
 
 const licenseIds = management.licenses.map((license) => license.id);
 

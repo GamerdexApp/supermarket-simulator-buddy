@@ -1,0 +1,81 @@
+{
+    "skipToContent": "Langkau ke kandungan",
+    "closeMenu": "Tutup menu",
+    "openMenu": "Buka menu",
+    "menuLabel": "Menu laman",
+    "mainNav": "Utama",
+    "brandWords": {
+        "item1": "Supermarket",
+        "item2": "Simulator",
+        "item3": "Buddy"
+    },
+    "noPlaythroughHint": "Cipta sesi permainan untuk mula menjejak.",
+    "switcher": {
+        "sectionLabel": "Sesi permainan",
+        "loading": "Memuatkan",
+        "none": "Tiada dipilih",
+        "switch": "Tukar sesi permainan",
+        "playthroughs": "Sesi permainan",
+        "active": "Aktif",
+        "all": "Semua sesi permainan",
+        "create": "Sesi permainan baharu",
+        "level": "Tahap {level}",
+        "rowDetail": "Tahap {level} · {date}",
+        "switched": "Bertukar ke {name}",
+        "empty": "Belum ada sesi permainan dicipta"
+    },
+    "storeLevel": {
+        "label": "Tahap kedai",
+        "edit": "Tahap kedai {level}, pilih untuk menaip tahap",
+        "atZero": "Sudah di tahap 0"
+    },
+    "empty": {
+        "title": "Tiada sesi permainan dipilih",
+        "description": "Cipta sesi permainan atau pilih satu daripada senarai anda untuk melihat halaman ini.",
+        "create": "Sesi permainan baharu",
+        "all": "Semua sesi permainan"
+    },
+    "footer": {
+        "tagline": "Penjejak kemajuan percuma untuk Supermarket Simulator. Data anda kekal dalam pelayar anda, atau dalam storan awan anda sendiri jika anda menghidupkan penyegerakan.",
+        "support": "Sokongan",
+        "about": "Perihal",
+        "settings": "Tetapan",
+        "discord": "Discord",
+        "github": "GitHub",
+        "officialGame": "Permainan rasmi",
+        "privacy": "Dasar privasi",
+        "terms": "Terma perkhidmatan",
+        "disclaimerTitle": "Penafian",
+        "disclaimer": "Projek ini tidak bergabung dengan, disokong oleh atau berkaitan dengan Supermarket Simulator atau pembangunnya. Semua tanda dagangan dan kandungan permainan adalah milik pemiliknya.",
+        "framework": "Dibina dengan rangka kerja Gamerdex, asas bersama untuk penjejak kemajuan permainan percuma.",
+        "visitGamerdex": "Lawati Gamerdex"
+    },
+    "notFound": {
+        "title": "Halaman tidak ditemui",
+        "body": "Tiada halaman di <code>{path}</code>.",
+        "didYouMean": "Adakah maksud anda <link>{suggestion}</link>?",
+        "quickLinks": "Bahagian",
+        "toOverview": "Pergi ke Ringkasan",
+        "toHome": "Kembali ke laman utama"
+    },
+    "saveFailed": {
+        "title": "Tidak disimpan",
+        "message": "Pelayar tidak dapat menyimpan perubahan anda. Muat turun sandaran supaya tiada apa-apa yang hilang.",
+        "exportBackup": "Muat turun sandaran"
+    },
+    "nav": {
+        "groups": {
+            "store": "Kedai anda",
+            "plan": "Rancang"
+        },
+        "items": {
+            "overview": "Ringkasan",
+            "market": "Pasar",
+            "management": "Pengurusan",
+            "bank": "Bank",
+            "shoppingList": "Senarai beli-belah",
+            "settings": "Tetapan",
+            "playthroughs": "Sesi permainan"
+        }
+    }
+}

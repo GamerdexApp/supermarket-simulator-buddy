@@ -1,3 +1,4 @@
+import { I18nProvider } from "@/i18n/I18nProvider";
 import type { Metadata } from "next";
 import { IBM_Plex_Mono, IBM_Plex_Sans, Poppins } from "next/font/google";
 import Script from "next/script";
@@ -100,14 +101,16 @@ export default function RootLayout({
 				<script dangerouslySetInnerHTML={{ __html: applyThemeBeforePaint }} />
 			</head>
 			<body className="bg-bg min-h-dvh antialiased">
-				<UIProvider>
-					<ToastProvider>
-						<PlaythroughProvider>
-							<ThemeSync />
-							{children}
-						</PlaythroughProvider>
-					</ToastProvider>
-				</UIProvider>
+				<I18nProvider>
+					<UIProvider>
+						<ToastProvider>
+							<PlaythroughProvider>
+								<ThemeSync />
+								{children}
+							</PlaythroughProvider>
+						</ToastProvider>
+					</UIProvider>
+				</I18nProvider>
 
 				<Script
 					defer

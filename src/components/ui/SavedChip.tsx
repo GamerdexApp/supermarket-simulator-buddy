@@ -1,27 +1,15 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
 import { usePlaythrough } from "@/lib/contexts/PlaythroughContext";
-import { uiText } from "@/lib/messages/ui";
+import { formatNumber, formatTime } from "@/lib/format";
 
 const REFRESH_MS = 30_000;
 const MINUTE_MS = 60_000;
 
-const formatTime = (date: Date) =>
-	new Intl.DateTimeFormat(undefined, { timeStyle: "short" }).format(date);
-
-const formatSaved = (savedAt: Date | null, now: number) => {
-	if (!savedAt) return uiText.savedChip.automatic;
-
-	const elapsed = now - savedAt.getTime();
-	if (elapsed < MINUTE_MS) return uiText.savedChip.justNow;
-	if (elapsed < 60 * MINUTE_MS) {
-		return uiText.savedChip.minutesAgo(Math.floor(elapsed / MINUTE_MS));
-	}
-	return uiText.savedChip.at(formatTime(savedAt));
-};
-
 export function useSavedLabel() {
+	const t = useTranslations("ui.savedChip");
 	const { lastSavedAt, saveFailed } = usePlaythrough();
 	const [now, setNow] = useState(() => Date.now());
 
@@ -30,8 +18,16 @@ export function useSavedLabel() {
 		return () => clearInterval(timer);
 	}, []);
 
-	if (saveFailed) return uiText.savedChip.failed;
-	return formatSaved(lastSavedAt, Math.max(now, lastSavedAt?.getTime() ?? 0));
+	if (saveFailed) return t("failed");
+	if (!lastSavedAt) return t("automatic");
+
+	const elapsed = Math.max(now, lastSavedAt.getTime()) - lastSavedAt.getTime();
+	if (elapsed < MINUTE_MS) return t("justNow");
+	if (elapsed < 60 * MINUTE_MS) {
+		const minutes = Math.floor(elapsed / MINUTE_MS);
+		return t("minutesAgo", { count: minutes, amount: formatNumber(minutes) });
+	}
+	return t("at", { time: formatTime(lastSavedAt) });
 }
 
 export function SavedChip() {

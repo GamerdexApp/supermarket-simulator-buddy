@@ -1,0 +1,149 @@
+{
+    "title": "管理",
+    "tabsLabel": "管理",
+    "tabs": {
+        "licenses": "執照",
+        "growth": "擴建",
+        "storage": "倉庫",
+        "hiring": "僱用",
+        "customizations": "自訂"
+    },
+    "sublines": {
+        "licenses": "{name} · 解鎖執照以販售更多商品",
+        "growth": "{name} · 一次一個區域擴建賣場",
+        "storage": "{name} · 一次一個區域擴建倉庫",
+        "hiring": "{name} · 僱用員工經營商店",
+        "customizations": "{name} · 在遊戲中購買的商店改裝"
+    },
+    "emptyDescription": "選擇或建立一個存檔，記錄執照、商店擴建、倉庫和員工。",
+    "storeLevel": "商店等級",
+    "storeLevelCaption": "在側邊欄中修改",
+    "free": "免費",
+    "requiresLevel": "需要商店等級 {level}（你目前是 {current} 級）",
+    "locked": "已鎖定",
+    "states": {
+        "unlocked": "已解鎖",
+        "canUnlock": "可解鎖",
+        "locked": "已鎖定"
+    },
+    "licenses": {
+        "totalSpent": "執照總花費",
+        "unlockedOf": "已解鎖 {owned}/{count, plural, other {{amount} 張執照}}",
+        "canUnlockNow": "現在可解鎖",
+        "lockedByLevel": "等級不足",
+        "title": "執照 {number}",
+        "price": "價格",
+        "level": "商店等級",
+        "unlocks": "解鎖 {count, plural, other {{amount} 項商品}}",
+        "unlock": "解鎖執照",
+        "undoUnlock": "復原解鎖",
+        "unlocked": "執照 {number} 已解鎖",
+        "undone": "執照 {number} 已重新鎖定",
+        "filters": {
+            "search": "搜尋執照或商品",
+            "title": "篩選執照",
+            "show": "顯示",
+            "showOptions": {
+                "all": "全部",
+                "unlocked": "已解鎖",
+                "canUnlock": "可解鎖",
+                "locked": "已鎖定"
+            },
+            "sort": "排序方式",
+            "sortOptions": {
+                "number": "執照編號",
+                "price": "價格由低到高",
+                "storeLevel": "商店等級由低到高"
+            },
+            "summary": "顯示 {shown}/{count, plural, other {{amount} 張執照}}",
+            "showButton": "顯示 {count, plural, other {{amount} 張執照}}"
+        },
+        "noMatch": "沒有符合篩選條件的執照",
+        "noMatchDescription": "換個搜尋字詞，或顯示所有執照。"
+    },
+    "sections": {
+        "growth": {
+            "totalSpent": "擴建總花費",
+            "unlockedOf": "已解鎖 {owned}/{count, plural, other {{amount} 個區域}}",
+            "title": "擴建區域 {num}",
+            "pathLabel": "擴建區域",
+            "unlocked": "擴建區域 {num} 已解鎖",
+            "undone": "擴建{count, plural, other {區域 {range}}}已重新鎖定",
+            "cascadeTitle": "要復原擴建區域 {num} 嗎？"
+        },
+        "storage": {
+            "totalSpent": "倉庫總花費",
+            "unlockedOf": "已解鎖 {owned}/{count, plural, other {{amount} 個區域}}",
+            "title": "倉庫區域 {num}",
+            "pathLabel": "倉庫區域",
+            "firstSectionNote": "依遊戲資料，倉庫區域 1 在商店等級 0 時需要 $800，而擴建區域 1 是免費的。",
+            "unlocked": "倉庫區域 {num} 已解鎖",
+            "undone": "倉庫{count, plural, other {區域 {range}}}已重新鎖定",
+            "cascadeTitle": "要復原倉庫區域 {num} 嗎？"
+        },
+        "nextSection": "下一個區域",
+        "nextSectionValue": "區域 {num} · 等級 {level} · {price}",
+        "allUnlocked": "已全部解鎖",
+        "level": "等級 {level}",
+        "size": "大小 {size}",
+        "nextToUnlock": "下一個可解鎖",
+        "unlock": "解鎖",
+        "unlockFirst": "請先解鎖區域 {num}。",
+        "cascade": {
+            "body": "{count, plural, other {區域 {range} 需要它，會一起鎖定}}。總花費將減少 {price}。",
+            "confirm": "復原{count, plural, other {區域 {range}}}",
+            "keep": "保持解鎖"
+        },
+        "range": "{first} 到 {last}"
+    },
+    "hiring": {
+        "dailyWages": "每日薪資總額",
+        "dailyWagesCaption": "所有已僱用員工的每日費用合計",
+        "hired": "已僱用員工",
+        "hiringCosts": "已付僱用費用",
+        "hiringCostsCaption": "一次性費用，不計入每日薪資",
+        "roles": {
+            "cashiers": {
+                "title": "收銀員",
+                "stat": "完成結帳：<stat>{value}</stat>",
+                "employeeName": "收銀員 {number}"
+            },
+            "restockers": {
+                "title": "補貨員",
+                "stat": "貨架數量：<stat>{value}</stat>",
+                "employeeName": "補貨員 {number}"
+            },
+            "customerHelpers": {
+                "title": "顧客助理",
+                "stat": "結帳櫃台數量：<stat>{value}</stat>",
+                "employeeName": "顧客助理 {number}"
+            },
+            "securityGuards": {
+                "title": "警衛",
+                "employeeName": "警衛 {number}"
+            },
+            "janitors": {
+                "title": "清潔人員",
+                "employeeName": "清潔人員 {number}"
+            }
+        },
+        "hiredOf": "已僱用 {count}/{total}",
+        "roleWages": "每日薪資：{amount}",
+        "hiredBadge": "已僱用",
+        "level": "商店等級",
+        "cost": "僱用費用",
+        "wage": "每日薪資",
+        "perDay": "{amount}/天",
+        "hire": "僱用",
+        "fire": "解僱",
+        "hiredToast": "已僱用 {name}",
+        "firedToast": "已解僱 {name}"
+    },
+    "customizations": {
+        "total": "三項總價",
+        "totalCaption": "依遊戲資料計算，不會儲存",
+        "note": "這些改裝在遊戲中購買。這裡不會儲存任何內容。",
+        "price": "價格"
+    },
+    "tabCount": "{owned}/{total}"
+}

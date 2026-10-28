@@ -1,0 +1,22 @@
+{
+    "displayTypes": {
+        "shelf": "Estante",
+        "fridge": "Refrigerador",
+        "freezer": "Congelador",
+        "stall": "Puesto",
+        "pegboard": "Panel de ganchos",
+        "garment_rack": "Perchero"
+    },
+    "categories": {
+        "edible": "Alimentos",
+        "produce": "Frutas y verduras",
+        "drink": "Bebidas",
+        "cleaning": "Limpieza",
+        "books": "Libros",
+        "cloth": "Ropa",
+        "electronics": "Electrónica",
+        "hardware": "Ferretería",
+        "kitchen": "Cocina",
+        "pet": "Mascotas"
+    }
+}

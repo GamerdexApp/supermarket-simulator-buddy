@@ -1,9 +1,10 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { useState } from "react";
 import type { ReactNode } from "react";
 import { LuListFilter, LuSearch } from "react-icons/lu";
-import { uiText } from "@/lib/messages/ui";
+import { formatNumber } from "@/lib/format";
 import { Button } from "@/comps/ui/Button";
 import { Flyout } from "@/comps/ui/Flyout";
 import { Input } from "@/comps/ui/Input";
@@ -35,8 +36,6 @@ interface FilterBlockProps {
 	/** Buttons that sit to the right of the Filters button, such as an Add button. */
 	actions?: ReactNode;
 }
-
-const text = uiText.filters;
 
 /** A choice with more options than this is a select, because a radio list would run too long. */
 const MAX_RADIO_OPTIONS = 8;
@@ -146,6 +145,7 @@ export function FilterBlock({
 	showLabel,
 	actions,
 }: FilterBlockProps) {
+	const t = useTranslations("ui.filters");
 	const [open, setOpen] = useState(false);
 	const activeCount = fields.filter((field) => isFiltering(field, values)).length;
 	const hasFilters = activeCount > 0 || search.value !== "";
@@ -153,7 +153,7 @@ export function FilterBlock({
 	return (
 		<div
 			role="group"
-			aria-label={`${text.filters}: ${search.label}`}
+			aria-label={t("groupLabel", { label: search.label })}
 			className="flex flex-col gap-3"
 		>
 			<div className="flex flex-wrap items-center gap-3">
@@ -173,11 +173,17 @@ export function FilterBlock({
 					aria-haspopup="dialog"
 				>
 					<LuListFilter size={16} aria-hidden="true" />
-					{text.filters}
+					{t("filters")}
 					{activeCount > 0 && (
 						<span className="bg-primary text-on-primary rounded-full px-1.5 font-mono text-xs">
-							{activeCount}
-							<span className="sr-only"> {text.activeCount(activeCount)}</span>
+							{formatNumber(activeCount)}
+							<span className="sr-only">
+								{" "}
+								{t("activeCount", {
+									count: activeCount,
+									amount: formatNumber(activeCount),
+								})}
+							</span>
 						</span>
 					)}
 				</Button>
@@ -187,7 +193,7 @@ export function FilterBlock({
 				<span className="text-muted">{summary}</span>
 				{hasFilters && (
 					<Button variant="link" onClick={onClear}>
-						{text.clearFilters}
+						{t("clearFilters")}
 					</Button>
 				)}
 			</div>
@@ -195,11 +201,11 @@ export function FilterBlock({
 				open={open}
 				onClose={() => setOpen(false)}
 				title={flyoutTitle}
-				description={text.description}
+				description={t("description")}
 				footer={
 					<>
 						<Button variant="link" onClick={onClear} className="me-auto">
-							{text.reset}
+							{t("reset")}
 						</Button>
 						<Button variant="primary" onClick={() => setOpen(false)}>
 							{showLabel}

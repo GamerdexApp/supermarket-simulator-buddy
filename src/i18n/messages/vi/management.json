@@ -1,0 +1,149 @@
+{
+    "title": "Quản lý",
+    "tabsLabel": "Quản lý",
+    "tabs": {
+        "licenses": "Giấy phép",
+        "growth": "Mở rộng",
+        "storage": "Kho",
+        "hiring": "Tuyển dụng",
+        "customizations": "Tùy chỉnh"
+    },
+    "sublines": {
+        "licenses": "{name} · Mở khóa giấy phép để bán thêm sản phẩm",
+        "growth": "{name} · Mở rộng mặt bằng cửa hàng từng khu một",
+        "storage": "{name} · Mở rộng kho từng khu một",
+        "hiring": "{name} · Thuê nhân viên vận hành cửa hàng",
+        "customizations": "{name} · Thay đổi cửa hàng mua trong game"
+    },
+    "emptyDescription": "Chọn hoặc tạo một lượt chơi để theo dõi giấy phép, mở rộng cửa hàng, kho và nhân viên.",
+    "storeLevel": "Cấp cửa hàng",
+    "storeLevelCaption": "Đổi ở thanh bên",
+    "free": "Miễn phí",
+    "requiresLevel": "Cần cấp cửa hàng {level} (bạn đang ở cấp {current})",
+    "locked": "Đã khóa",
+    "states": {
+        "unlocked": "Đã mở khóa",
+        "canUnlock": "Có thể mở khóa",
+        "locked": "Đã khóa"
+    },
+    "licenses": {
+        "totalSpent": "Tổng chi cho giấy phép",
+        "unlockedOf": "Đã mở khóa {owned} / {count, plural, other {{amount} giấy phép}}",
+        "canUnlockNow": "Mở khóa được ngay",
+        "lockedByLevel": "Khóa do cấp",
+        "title": "Giấy phép {number}",
+        "price": "Giá",
+        "level": "Cấp cửa hàng",
+        "unlocks": "Mở khóa {count, plural, other {{amount} sản phẩm}}",
+        "unlock": "Mở khóa giấy phép",
+        "undoUnlock": "Hoàn tác mở khóa",
+        "unlocked": "Đã mở khóa Giấy phép {number}",
+        "undone": "Giấy phép {number} đã khóa lại",
+        "filters": {
+            "search": "Tìm giấy phép hoặc sản phẩm",
+            "title": "Lọc giấy phép",
+            "show": "Hiển thị",
+            "showOptions": {
+                "all": "Tất cả",
+                "unlocked": "Đã mở khóa",
+                "canUnlock": "Có thể mở khóa",
+                "locked": "Đã khóa"
+            },
+            "sort": "Sắp xếp theo",
+            "sortOptions": {
+                "number": "Số giấy phép",
+                "price": "Giá thấp đến cao",
+                "storeLevel": "Cấp cửa hàng thấp đến cao"
+            },
+            "summary": "Đang hiển thị {shown} / {count, plural, other {{amount} giấy phép}}",
+            "showButton": "Xem {count, plural, other {{amount} giấy phép}}"
+        },
+        "noMatch": "Không có giấy phép nào khớp bộ lọc",
+        "noMatchDescription": "Thử tìm từ khác hoặc hiển thị tất cả giấy phép."
+    },
+    "sections": {
+        "growth": {
+            "totalSpent": "Tổng chi cho mở rộng",
+            "unlockedOf": "Đã mở khóa {owned} / {count, plural, other {{amount} khu}}",
+            "title": "Khu mở rộng {num}",
+            "pathLabel": "Các khu mở rộng",
+            "unlocked": "Đã mở khóa khu mở rộng {num}",
+            "undone": "{count, plural, other {Khu mở rộng {range}}} đã khóa lại",
+            "cascadeTitle": "Hoàn tác khu mở rộng {num}?"
+        },
+        "storage": {
+            "totalSpent": "Tổng chi cho kho",
+            "unlockedOf": "Đã mở khóa {owned} / {count, plural, other {{amount} khu}}",
+            "title": "Khu kho {num}",
+            "pathLabel": "Các khu kho",
+            "firstSectionNote": "Theo dữ liệu game, khu kho 1 có giá $800 ở cấp cửa hàng 0, còn khu mở rộng 1 miễn phí.",
+            "unlocked": "Đã mở khóa khu kho {num}",
+            "undone": "{count, plural, other {Khu kho {range}}} đã khóa lại",
+            "cascadeTitle": "Hoàn tác khu kho {num}?"
+        },
+        "nextSection": "Khu tiếp theo",
+        "nextSectionValue": "Khu {num} · cấp {level} · {price}",
+        "allUnlocked": "Đã mở khóa hết",
+        "level": "Cấp {level}",
+        "size": "Kích thước {size}",
+        "nextToUnlock": "Mở khóa tiếp theo",
+        "unlock": "Mở khóa",
+        "unlockFirst": "Hãy mở khóa khu {num} trước.",
+        "cascade": {
+            "body": "{count, plural, other {Khu {range} cần khu này và sẽ bị khóa theo}}. Tổng chi giảm {price}.",
+            "confirm": "{count, plural, other {Hoàn tác khu {range}}}",
+            "keep": "Giữ mở khóa"
+        },
+        "range": "{first} đến {last}"
+    },
+    "hiring": {
+        "dailyWages": "Tổng lương mỗi ngày",
+        "dailyWagesCaption": "Tổng chi phí mỗi ngày cho mọi nhân viên đã thuê",
+        "hired": "Nhân viên đã thuê",
+        "hiringCosts": "Phí tuyển dụng đã trả",
+        "hiringCostsCaption": "Trả một lần, không tính vào lương mỗi ngày",
+        "roles": {
+            "cashiers": {
+                "title": "Thu ngân",
+                "stat": "Thanh toán hoàn tất: <stat>{value}</stat>",
+                "employeeName": "Thu ngân {number}"
+            },
+            "restockers": {
+                "title": "Nhân viên bổ sung hàng",
+                "stat": "Số kệ: <stat>{value}</stat>",
+                "employeeName": "Nhân viên bổ sung hàng {number}"
+            },
+            "customerHelpers": {
+                "title": "Nhân viên hỗ trợ khách",
+                "stat": "Số quầy thanh toán: <stat>{value}</stat>",
+                "employeeName": "Nhân viên hỗ trợ khách {number}"
+            },
+            "securityGuards": {
+                "title": "Bảo vệ",
+                "employeeName": "Bảo vệ {number}"
+            },
+            "janitors": {
+                "title": "Lao công",
+                "employeeName": "Lao công {number}"
+            }
+        },
+        "hiredOf": "Đã thuê {count} / {total}",
+        "roleWages": "Lương mỗi ngày: {amount}",
+        "hiredBadge": "Đã thuê",
+        "level": "Cấp cửa hàng",
+        "cost": "Phí tuyển dụng",
+        "wage": "Lương mỗi ngày",
+        "perDay": "{amount} / ngày",
+        "hire": "Thuê",
+        "fire": "Sa thải",
+        "hiredToast": "Đã thuê {name}",
+        "firedToast": "Đã sa thải {name}"
+    },
+    "customizations": {
+        "total": "Giá của cả ba",
+        "totalCaption": "Lấy từ dữ liệu game, không lưu",
+        "note": "Những thay đổi này được mua trong game. Không có gì được lưu ở đây.",
+        "price": "Giá"
+    },
+    "tabCount": "{owned} / {total}"
+}

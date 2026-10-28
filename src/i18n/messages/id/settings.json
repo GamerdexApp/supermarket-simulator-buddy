@@ -1,0 +1,156 @@
+{
+    "title": "Pengaturan",
+    "subline": "Kelola data dan pengaturan aplikasi",
+    "tabsLabel": "Pengaturan",
+    "tabs": {
+        "sync": "Sinkronisasi cloud",
+        "preferences": "Preferensi",
+        "data": "Cadangan dan data",
+        "about": "Tentang"
+    },
+    "playthroughCount": "{count, plural, other {{amount} Sesi Main}}",
+    "storageNote": {
+        "title": "Penyimpanan data",
+        "body": "Datamu disimpan di browser ini. Menghapus data browser akan menghapusnya, kecuali Sinkronisasi cloud menyimpan salinannya. Ekspor cadangan sesekali."
+    },
+    "data": {
+        "title": "Manajemen Data",
+        "export": {
+            "title": "Ekspor Data",
+            "button": "Ekspor Semua Sesi Main",
+            "description": "Unduh file cadangan berisi semua sesi main tersimpanmu.",
+            "done": "Cadangan diunduh"
+        },
+        "import": {
+            "title": "Impor Data",
+            "description": "Unggah file yang sebelumnya diekspor (.json)",
+            "fileLabel": "File cadangan",
+            "chooseFile": "Pilih file",
+            "noFile": "Belum ada file dipilih",
+            "review": "Tinjau impor",
+            "merged": "Impor digabungkan",
+            "replaced": "Data diganti",
+            "undo": "Urungkan"
+        },
+        "reset": {
+            "title": "Reset Semua Data",
+            "warning": "Ini menghapus semua sesi main di perangkat ini. Kamu bisa mengurungkannya selama 10 detik setelahnya.",
+            "button": "Reset semua data",
+            "confirmTitle": "Reset semua data?",
+            "confirmBody": "Ini menghapus {names}.",
+            "cancel": "Batal",
+            "confirm": "Ya, reset semua data",
+            "syncedCopy": "Hapus juga salinan tersinkron di {provider}",
+            "syncedOn": "Sinkronisasi tetap aktif. Perangkatmu yang lain kehilangan sesi main ini pada sinkronisasi berikutnya. Ekspor cadangan dulu jika kamu ragu.",
+            "done": "Semua data direset",
+            "doneMessage": "{count, plural, other {{amount} sesi main}} dihapus.",
+            "undo": "Urungkan",
+            "doneMessageDisconnected": "{count, plural, other {{amount} sesi main}} dihapus. Sinkronisasi terputus di browser ini."
+        }
+    },
+    "appearance": {
+        "title": "Tampilan",
+        "description": "Pilih tampilan aplikasi. Pilihan ini hanya disimpan di perangkat ini dan tidak termasuk dalam cadangan.",
+        "themeLabel": "Tema",
+        "themes": {
+            "light": "Terang",
+            "dark": "Gelap",
+            "system": "Sistem"
+        },
+        "themeNote": "Sistem mengikuti perangkatmu, yang saat ini memakai tema {mode, select, dark {gelap} other {terang}}."
+    },
+    "playthroughs": {
+        "title": "Sesi Main",
+        "description": "Buat, ganti, edit, dan hapus sesi main di halaman Sesi Main.",
+        "manage": "Kelola sesi main"
+    },
+    "about": {
+        "version": "Versi {version}",
+        "summary": "Alat pelacak progres untuk Supermarket Simulator. Datamu disimpan di browser ini, atau di penyimpanan cloud milikmu jika kamu menyalakan sinkronisasi.",
+        "officialGame": "Game resmi",
+        "disclaimer": "Tidak berafiliasi dengan, didukung oleh, atau terhubung dengan Supermarket Simulator atau pengembangnya. Semua merek dagang dan konten game adalah milik pemiliknya masing-masing."
+    },
+    "importDialog": {
+        "title": "Impor cadangan",
+        "fileInfo": "{name} · {size}",
+        "bytes": "{count} B",
+        "kilobytes": "{count} KB",
+        "failedTitle": "Impor gagal",
+        "checksTitle": "File diperiksa",
+        "checks": "{count, plural, other {{amount} entri}} dibaca, {kept} memiliki id dan nama.",
+        "howToApply": "Bagaimana file ini diterapkan?",
+        "modeLabel": "Mode impor",
+        "modes": {
+            "merge": "Gabungkan ke perangkat ini (disarankan)",
+            "replace": "Ganti semuanya"
+        },
+        "modeNotes": {
+            "merge": "Menambahkan sesi main yang baru. Untuk sesi main yang ada di keduanya, salinan yang terakhir diperbarui yang dipakai. Sesi main yang hanya ada di perangkat ini tetap ada. Sesi main aktifmu tetap aktif.",
+            "replace": "Menghapus sesi main di perangkat ini dan hanya menyimpan isi file. Sesi main aktif dari file menjadi aktif."
+        },
+        "whatChanges": "Yang berubah",
+        "columns": {
+            "playthrough": "Sesi main",
+            "inFile": "Di file",
+            "onDevice": "Di perangkat",
+            "result": "Hasil"
+        },
+        "results": {
+            "added": "Ditambahkan",
+            "updated": "Diperbarui dari file",
+            "kept": "Dipertahankan",
+            "replaced": "Dari file",
+            "removed": "Dihapus"
+        },
+        "notThere": "Tidak ada",
+        "noPlaythroughs": "File ini tidak berisi sesi main.",
+        "undoNote": "Kamu bisa mengurungkan impor selama 10 detik setelahnya.",
+        "cancel": "Batal",
+        "close": "Tutup",
+        "merge": "Gabungkan",
+        "replace": "Ganti semuanya",
+        "skipped": "{count, plural, other {{amount} entri}} dilewati.",
+        "levelsFixed": "{count, plural, other {{amount} level toko}} di bawah 0 akan disimpan sebagai 0.",
+        "errors": {
+            "notJson": "File ini bukan cadangan Supermarket Simulator Buddy: isinya bukan JSON yang valid. Tidak ada yang diubah.",
+            "playthroughsMissing": "File ini bukan cadangan Supermarket Simulator Buddy: daftar sesi main tidak ada. Tidak ada yang diubah."
+        },
+        "summary": {
+            "added": "{amount} ditambahkan",
+            "updated": "{amount} diperbarui",
+            "kept": "{amount} dipertahankan",
+            "replaced": "{amount} diganti",
+            "removed": "{amount} dihapus"
+        }
+    },
+    "region": {
+        "title": "Bahasa dan wilayah",
+        "description": "Cara teks, angka, dan tanggal ditampilkan di perangkat ini. Hanya disimpan di perangkat ini.",
+        "language": {
+            "label": "Bahasa",
+            "hint": "Nama dari game seperti produk, lisensi, dan alat tetap dalam bahasa Inggris."
+        },
+        "numberFormat": {
+            "label": "Format angka",
+            "hint": "Contoh: {example}",
+            "options": {
+                "auto": "Otomatis, mengikuti bahasa",
+                "us": "1,234.56 (Amerika Serikat)",
+                "european": "1.234,56 (Jerman)",
+                "french": "1 234,56 (Prancis)",
+                "swiss": "1’234.56 (Swiss)",
+                "indian": "12,34,567.89 (India)"
+            }
+        },
+        "dateFormat": {
+            "label": "Format tanggal",
+            "hint": "Contoh: {example}",
+            "options": {
+                "auto": "Otomatis, mengikuti bahasa",
+                "mdy": "Bulan/Hari/Tahun",
+                "dmy": "Hari/Bulan/Tahun",
+                "ymd": "Tahun-Bulan-Hari"
+            }
+        }
+    }
+}

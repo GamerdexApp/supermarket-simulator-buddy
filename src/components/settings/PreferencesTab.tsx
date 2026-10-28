@@ -1,33 +1,31 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { useMediaQuery } from "@/lib/hooks/useMediaQuery";
-import { settingsText } from "@/lib/messages/settings";
 import type { Theme } from "@/lib/theme";
 import { setTheme, useTheme } from "@/lib/theme";
 import { RadioGroup } from "@/comps/ui/RadioGroup";
+import { RegionCard } from "./RegionCard";
 import { SettingsCard } from "./SettingsCard";
 
-const text = settingsText.appearance;
-
-const themeOptions = (["light", "dark", "system"] as const).map((id) => ({
-	id,
-	label: text.themes[id],
-}));
+const THEMES: Theme[] = ["light", "dark", "system"];
 
 function Appearance() {
+	const t = useTranslations("settings.appearance");
 	const theme = useTheme();
+	const themeOptions = THEMES.map((id) => ({ id, label: t(`themes.${id}`) }));
 	const systemIsDark = useMediaQuery("(prefers-color-scheme: dark)");
 
 	return (
-		<SettingsCard title={text.title} description={text.description}>
+		<SettingsCard title={t("title")} description={t("description")}>
 			<RadioGroup<Theme>
-				label={text.themeLabel}
+				label={t("themeLabel")}
 				options={themeOptions}
 				value={theme}
 				onChange={setTheme}
 			/>
 			<p className="text-muted">
-				{text.themeNote(systemIsDark ? text.themes.dark : text.themes.light)}
+				{t("themeNote", { mode: systemIsDark ? "dark" : "light" })}
 			</p>
 		</SettingsCard>
 	);
@@ -37,6 +35,7 @@ export function PreferencesTab() {
 	return (
 		<div className="grid items-start gap-4 lg:grid-cols-2">
 			<Appearance />
+			<RegionCard />
 		</div>
 	);
 }

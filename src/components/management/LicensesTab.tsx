@@ -1,11 +1,11 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { useId, useMemo, useState } from "react";
 import type { License } from "@/types";
 import type { Playthrough } from "@/types/playthrough";
-import { formatMoney } from "@/lib/format";
+import { formatMoney, formatNumber } from "@/lib/format";
 import { useListEdit } from "@/lib/hooks/useListEdit";
-import { managementText } from "@/lib/messages/management";
 import { readStoreLevel } from "@/service/appData";
 import type { LicenseShow, LicenseSort, UnlockState } from "@/service/management";
 import {
@@ -29,9 +29,6 @@ import { EmptyState } from "@/comps/ui/EmptyState";
 import { SummaryTile } from "@/comps/ui/SummaryTile";
 import { StoreLevelTile } from "./StoreLevelTile";
 
-const text = managementText;
-const licenseText = text.licenses;
-const filterText = licenseText.filters;
 const licenseIds = management.licenses.map((license) => license.id);
 
 const STATE_TONE: Record<UnlockState, "kept" | "added" | "locked"> = {
@@ -40,28 +37,10 @@ const STATE_TONE: Record<UnlockState, "kept" | "added" | "locked"> = {
 	locked: "locked",
 };
 
-const fields: FilterFieldConfig[] = [
-	{
-		id: "show",
-		label: filterText.show,
-		options: (["all", "unlocked", "canUnlock", "locked"] as const).map((id) => ({
-			id,
-			label: filterText.showOptions[id],
-		})),
-	},
-	{
-		id: "sort",
-		label: filterText.sort,
-		options: (["number", "price", "storeLevel"] as const).map((id) => ({
-			id,
-			label: filterText.sortOptions[id],
-		})),
-	},
-];
+const SHOW_IDS = ["all", "unlocked", "canUnlock", "locked"] as const;
+const SORT_IDS = ["number", "price", "storeLevel"] as const;
 
 const DEFAULT_FILTERS = { show: "all", sort: "number" };
-
-const priceText = (price: number) => (price === 0 ? text.free : formatMoney(price));
 
 function Fact({ label, value }: { label: string; value: string }) {
 	return (
@@ -80,10 +59,15 @@ interface LicenseCardProps {
 }
 
 function LicenseCard({ license, playthrough, onUnlock, onUndo }: LicenseCardProps) {
+	const t = useTranslations("management");
 	const titleId = useId();
 	const state = licenseState(license, playthrough);
 	const products = licenseProducts(license);
 	const number = licenseNumber(license);
+	const unlocksText = t("licenses.unlocks", {
+		count: products.length,
+		amount: formatNumber(products.length),
+	});
 
 	return (
 		<Card
@@ -93,20 +77,23 @@ function LicenseCard({ license, playthrough, onUnlock, onUndo }: LicenseCardProp
 		>
 			<div className="flex items-start justify-between gap-3">
 				<h2 id={titleId} className="text-lg font-semibold">
-					{licenseText.title(number)}
+					{t("licenses.title", { number })}
 				</h2>
-				<Badge tone={STATE_TONE[state]}>{text.states[state]}</Badge>
+				<Badge tone={STATE_TONE[state]}>{t(`states.${state}`)}</Badge>
 			</div>
 			<div className="grid grid-cols-2 gap-2">
-				<Fact label={licenseText.price} value={priceText(license.price)} />
-				<Fact label={licenseText.level} value={String(license.storeLevel)} />
+				<Fact
+					label={t("licenses.price")}
+					value={license.price === 0 ? t("free") : formatMoney(license.price)}
+				/>
+				<Fact label={t("licenses.level")} value={formatNumber(license.storeLevel)} />
 			</div>
 			<div className="flex flex-col gap-1.5">
-				<span className="font-medium">{licenseText.unlocks(products.length)}</span>
+				<span className="font-medium">{unlocksText}</span>
 				<ul
 					data-focus-inset
 					tabIndex={0}
-					aria-label={licenseText.unlocks(products.length)}
+					aria-label={unlocksText}
 					className="border-line text-muted max-h-48 overflow-y-auto rounded-md border-[1.5px] px-3 py-2"
 				>
 					{products.map((product) => (
@@ -116,22 +103,25 @@ function LicenseCard({ license, playthrough, onUnlock, onUndo }: LicenseCardProp
 			</div>
 			{state === "unlocked" && (
 				<Button variant="danger" onClick={onUndo}>
-					{licenseText.undoUnlock}
+					{t("licenses.undoUnlock")}
 				</Button>
 			)}
 			{state === "canUnlock" && (
 				<Button variant="primary" onClick={onUnlock}>
-					{licenseText.unlock}
+					{t("licenses.unlock")}
 				</Button>
 			)}
 			{state === "locked" && (
 				<>
 					<LockReason
 						reasons={[
-							text.requiresLevel(license.storeLevel, readStoreLevel(playthrough)),
+							t("requiresLevel", {
+								level: license.storeLevel,
+								current: readStoreLevel(playthrough),
+							}),
 						]}
 					/>
-					<Button disabled>{text.locked}</Button>
+					<Button disabled>{t("locked")}</Button>
 				</>
 			)}
 		</Card>
@@ -139,6 +129,7 @@ function LicenseCard({ license, playthrough, onUnlock, onUndo }: LicenseCardProp
 }
 
 export function LicensesTab({ playthrough }: { playthrough: Playthrough }) {
+	const t = useTranslations("management.licenses");
 	const [filters, setFilters] = useState<Record<string, string>>(DEFAULT_FILTERS);
 	const [search, setSearch] = useState("");
 	const { add, remove } = useListEdit(playthrough.id, "unlockedLicenses");
@@ -154,22 +145,38 @@ export function LicensesTab({ playthrough }: { playthrough: Playthrough }) {
 	);
 	const unlocked = countKnown(playthrough.unlockedLicenses, licenseIds);
 	const states = management.licenses.map((license) => licenseState(license, playthrough));
+	const fields: FilterFieldConfig[] = [
+		{
+			id: "show",
+			label: t("filters.show"),
+			options: SHOW_IDS.map((id) => ({ id, label: t(`filters.showOptions.${id}`) })),
+		},
+		{
+			id: "sort",
+			label: t("filters.sort"),
+			options: SORT_IDS.map((id) => ({ id, label: t(`filters.sortOptions.${id}`) })),
+		},
+	];
 
 	return (
 		<div className="flex flex-col gap-4">
 			<SpendSummary
-				label={licenseText.totalSpent}
+				label={t("totalSpent")}
 				amount={spending(playthrough).licenses}
 				progress={unlocked / licenseIds.length}
-				progressText={licenseText.unlockedOf(unlocked, licenseIds.length)}
+				progressText={t("unlockedOf", {
+					owned: formatNumber(unlocked),
+					count: licenseIds.length,
+					amount: formatNumber(licenseIds.length),
+				})}
 				tiles={
 					<>
 						<SummaryTile
-							label={licenseText.canUnlockNow}
+							label={t("canUnlockNow")}
 							value={states.filter((state) => state === "canUnlock").length}
 						/>
 						<SummaryTile
-							label={licenseText.lockedByLevel}
+							label={t("lockedByLevel")}
 							value={states.filter((state) => state === "locked").length}
 						/>
 						<StoreLevelTile playthrough={playthrough} />
@@ -184,16 +191,20 @@ export function LicensesTab({ playthrough }: { playthrough: Playthrough }) {
 					setFilters(DEFAULT_FILTERS);
 					setSearch("");
 				}}
-				search={{ label: filterText.search, value: search, onChange: setSearch }}
-				summary={filterText.summary(visible.length, licenseIds.length)}
-				flyoutTitle={filterText.title}
-				showLabel={filterText.showButton(visible.length)}
+				search={{ label: t("filters.search"), value: search, onChange: setSearch }}
+				summary={t("filters.summary", {
+					shown: formatNumber(visible.length),
+					count: licenseIds.length,
+					amount: formatNumber(licenseIds.length),
+				})}
+				flyoutTitle={t("filters.title")}
+				showLabel={t("filters.showButton", {
+					count: visible.length,
+					amount: formatNumber(visible.length),
+				})}
 			/>
 			{visible.length === 0 ? (
-				<EmptyState
-					title={licenseText.noMatch}
-					description={licenseText.noMatchDescription}
-				/>
+				<EmptyState title={t("noMatch")} description={t("noMatchDescription")} />
 			) : (
 				<div className="grid items-start gap-4 md:grid-cols-2 2xl:grid-cols-3">
 					{visible.map((license) => {
@@ -203,8 +214,8 @@ export function LicensesTab({ playthrough }: { playthrough: Playthrough }) {
 								key={license.id}
 								license={license}
 								playthrough={playthrough}
-								onUnlock={() => add([license.id], licenseText.unlocked(number))}
-								onUndo={() => remove([license.id], licenseText.undone(number))}
+								onUnlock={() => add([license.id], t("unlocked", { number }))}
+								onUndo={() => remove([license.id], t("undone", { number }))}
 							/>
 						);
 					})}

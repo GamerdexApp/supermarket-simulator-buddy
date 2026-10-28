@@ -1,10 +1,10 @@
 "use client";
 
 import { ROOT_FOLDER } from "@gamerdexapp/gamerdex-sync";
+import { useTranslations } from "next-intl";
 import { useState } from "react";
 import { type SyncErrorKind, useSync } from "@/lib/contexts/SyncContext";
-import { formatDateTime } from "@/lib/format";
-import { syncText } from "@/lib/messages/sync";
+import { formatDateTime, formatNumber } from "@/lib/format";
 import { type SyncProviderId, usesRepository } from "@/lib/sync/providers";
 import { ActivityCard } from "@/comps/sync/ActivityCard";
 import { ConflictsCard } from "@/comps/sync/ConflictsCard";
@@ -25,8 +25,6 @@ import { Card } from "@/comps/ui/Card";
 import { Note } from "@/comps/ui/Note";
 import { SettingsCard } from "./SettingsCard";
 
-const text = syncText;
-
 function Layout({ main, side }: { main: React.ReactNode; side: React.ReactNode }) {
 	return (
 		<div className="grid items-start gap-4 lg:grid-cols-[minmax(0,3fr)_minmax(0,2fr)]">
@@ -37,15 +35,17 @@ function Layout({ main, side }: { main: React.ReactNode; side: React.ReactNode }
 }
 
 function NotConnectedPill() {
+	const t = useTranslations("sync.connect");
 	return (
 		<span className="border-line bg-surface text-muted inline-flex h-8 items-center gap-2 rounded-full border-[1.5px] px-3 text-xs">
 			<span aria-hidden="true" className="bg-muted size-1.5 rounded-full" />
-			{text.connect.pill}
+			{t("pill")}
 		</span>
 	);
 }
 
 function SignedOutView() {
+	const t = useTranslations("sync.connect");
 	const sync = useSync();
 	const [selected, setSelected] = useState<SyncProviderId>(
 		sync.providers.includes("google") ? "google" : "github"
@@ -56,10 +56,10 @@ function SignedOutView() {
 			main={
 				<Card className="flex flex-col gap-4 p-4">
 					<div className="flex items-center justify-between gap-3">
-						<h2 className="text-lg font-semibold">{text.connect.title}</h2>
+						<h2 className="text-lg font-semibold">{t("title")}</h2>
 						<NotConnectedPill />
 					</div>
-					<p className="text-muted">{text.connect.intro}</p>
+					<p className="text-muted">{t("intro")}</p>
 					<ProviderTiles
 						providers={sync.providers}
 						selected={selected}
@@ -78,6 +78,7 @@ function SignedOutView() {
 }
 
 function NeedsRepositoryView() {
+	const t = useTranslations("sync.connected");
 	const sync = useSync();
 
 	return (
@@ -87,7 +88,7 @@ function NeedsRepositoryView() {
 					<RepositoryPicker />
 					<div>
 						<Button variant="ghost" onClick={sync.signOut}>
-							{text.connected.signOut}
+							{t("signOut")}
 						</Button>
 					</div>
 				</>
@@ -97,30 +98,47 @@ function NeedsRepositoryView() {
 	);
 }
 
-const failureText = (
-	kind: SyncErrorKind | "reauth",
-	providerName: string,
-	inRepository: boolean
-) => {
-	const error = text.error;
+interface FailureNoteProps {
+	kind: SyncErrorKind | "reauth";
+	httpStatus: number | null;
+	providerName: string;
+	inRepository: boolean;
+}
+
+function FailureNote({ kind, httpStatus, providerName, inRepository }: FailureNoteProps) {
+	const t = useTranslations("sync.error");
 	const messages: Record<SyncErrorKind | "reauth", string> = {
-		rateLimit: error.rateLimit,
-		notFound: inRepository ? error.notFound : error.notFoundFolder(providerName),
-		forbidden: inRepository ? error.forbidden : error.forbiddenFolder(providerName),
-		server: error.server,
-		data: error.data,
-		busy: error.busy,
-		other: error.other,
-		reauth: error.reauth,
+		rateLimit: t("rateLimit"),
+		notFound: inRepository ? t("notFound") : t("notFoundFolder", { provider: providerName }),
+		forbidden: inRepository ? t("forbidden") : t("forbiddenFolder", { provider: providerName }),
+		server: t("server"),
+		data: t("data"),
+		busy: t("busy"),
+		other: t("other"),
+		reauth: t("reauth"),
 	};
-	return messages[kind];
-};
+	const status = httpStatus === null ? null : String(httpStatus);
+
+	return (
+		<Note tone="warning">
+			{messages[kind]}
+			{status !== null && (
+				<span className="block">
+					{inRepository
+						? t("httpStatus", { status })
+						: t("httpStatusFolder", { provider: providerName, status })}
+				</span>
+			)}
+		</Note>
+	);
+}
 
 function ConnectedView() {
+	const t = useTranslations("sync");
 	const sync = useSync();
 	const [dismissedFor, setDismissedFor] = useState<object | null>(null);
 	const provider = sync.provider ?? "github";
-	const providerName = text.provider[provider].name;
+	const providerName = t(`provider.${provider}.name`);
 	const inRepository = usesRepository(provider);
 
 	const failure = sync.status === "reauth" ? "reauth" : sync.errorKind;
@@ -143,7 +161,7 @@ function ConnectedView() {
 										<span className="text-muted font-mono text-xs break-all">
 											{inRepository
 												? sync.repository
-												: text.connected.folder(ROOT_FOLDER)}
+												: t("connected.folder", { name: ROOT_FOLDER })}
 										</span>
 									</div>
 								</div>
@@ -157,63 +175,59 @@ function ConnectedView() {
 									}
 								>
 									{conflictCount > 0
-										? text.status.conflicts
-										: text.status[sync.status]}
+										? t("status.conflicts")
+										: t(`status.${sync.status}`)}
 								</Badge>
 							</div>
 							{failure && (
-								<Note tone="warning">
-									{failureText(failure, providerName, inRepository)}
-									{sync.errorStatus !== null && (
-										<span className="block">
-											{inRepository
-												? text.error.httpStatus(String(sync.errorStatus))
-												: text.error.httpStatusFolder(
-														providerName,
-														String(sync.errorStatus)
-													)}
-										</span>
-									)}
-								</Note>
+								<FailureNote
+									kind={failure}
+									httpStatus={sync.errorStatus}
+									providerName={providerName}
+									inRepository={inRepository}
+								/>
 							)}
 							{conflictCount > 0 && (
 								<div className="border-primary bg-tint flex flex-col gap-2 rounded-md border-[1.5px] p-3">
 									<p className="font-semibold">
-										{text.banner.title(conflictCount)}
+										{t("banner.title", {
+											count: conflictCount,
+											amount: formatNumber(conflictCount),
+										})}
 									</p>
-									<p className="text-muted">{text.banner.body}</p>
+									<p className="text-muted">{t("banner.body")}</p>
 									<div>
 										<Button variant="secondary" onClick={review}>
-											{text.banner.review}
+											{t("banner.review")}
 										</Button>
 									</div>
 								</div>
 							)}
 							{sync.pendingChoice && !choiceOpen && (
 								<div className="border-primary bg-tint flex flex-col gap-2 rounded-md border-[1.5px] p-3">
-									<p className="font-semibold">{text.banner.waiting}</p>
+									<p className="font-semibold">{t("banner.waiting")}</p>
 									<div>
 										<Button
 											variant="secondary"
 											onClick={() => setDismissedFor(null)}
 										>
-											{text.banner.choose}
+											{t("banner.choose")}
 										</Button>
 									</div>
 								</div>
 							)}
 							<div className="flex flex-wrap items-center justify-between gap-3">
 								<span className="text-muted">
-									{text.connected.lastSync}{" "}
+									{t("connected.lastSync")}{" "}
 									<span className="text-ink">
 										{sync.lastSyncAt
 											? formatDateTime(sync.lastSyncAt)
-											: text.connected.never}
+											: t("connected.never")}
 									</span>
 								</span>
 								{sync.status === "reauth" ? (
 									<Button variant="primary" onClick={() => sync.signIn(provider)}>
-										{text.connected.signInWith(providerName)}
+										{t("connected.signInWith", { provider: providerName })}
 									</Button>
 								) : (
 									<Button
@@ -224,7 +238,7 @@ function ConnectedView() {
 										}
 										onClick={() => void sync.syncNow()}
 									>
-										{text.connected.syncNow}
+										{t("connected.syncNow")}
 									</Button>
 								)}
 							</div>
@@ -259,12 +273,13 @@ function ConnectedView() {
 }
 
 export function SyncTab() {
+	const t = useTranslations("sync");
 	const sync = useSync();
 
 	if (!sync.available) {
 		return (
-			<SettingsCard title={text.tab.title}>
-				<Note>{text.unavailable}</Note>
+			<SettingsCard title={t("tab.title")}>
+				<Note>{t("unavailable")}</Note>
 			</SettingsCard>
 		);
 	}

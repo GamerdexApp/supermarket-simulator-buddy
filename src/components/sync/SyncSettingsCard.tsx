@@ -1,20 +1,19 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { useId } from "react";
 import { type SyncSettingKey, useSync } from "@/lib/contexts/SyncContext";
-import { syncText } from "@/lib/messages/sync";
 import { Card } from "@/comps/ui/Card";
 import { Switch } from "@/comps/ui/Switch";
 
-const text = syncText.settings;
+const rows = [
+	{ setting: "autoSync", textKey: "auto" },
+	{ setting: "syncOnReturn", textKey: "focus" },
+	{ setting: "waitOnMetered", textKey: "metered" },
+] as const satisfies readonly { setting: SyncSettingKey; textKey: string }[];
 
-const rows: { setting: SyncSettingKey; label: string; hint: string }[] = [
-	{ setting: "autoSync", label: text.auto, hint: text.autoHint },
-	{ setting: "syncOnReturn", label: text.focus, hint: text.focusHint },
-	{ setting: "waitOnMetered", label: text.metered, hint: text.meteredHint },
-];
-
-function SettingRow({ setting, label, hint }: (typeof rows)[number]) {
+function SettingRow({ setting, textKey }: (typeof rows)[number]) {
+	const t = useTranslations("sync.settings");
 	const { settings, setSyncSetting } = useSync();
 	const base = useId();
 
@@ -22,10 +21,10 @@ function SettingRow({ setting, label, hint }: (typeof rows)[number]) {
 		<div className="flex items-start justify-between gap-4">
 			<div className="flex flex-col gap-0.5">
 				<span id={`${base}-label`} className="font-semibold">
-					{label}
+					{t(textKey)}
 				</span>
 				<span id={`${base}-hint`} className="text-muted">
-					{hint}
+					{t(`${textKey}Hint`)}
 				</span>
 			</div>
 			<Switch
@@ -39,9 +38,10 @@ function SettingRow({ setting, label, hint }: (typeof rows)[number]) {
 }
 
 export function SyncSettingsCard() {
+	const t = useTranslations("sync.settings");
 	return (
 		<Card className="flex flex-col gap-4 p-4">
-			<h2 className="text-base font-semibold">{text.title}</h2>
+			<h2 className="text-base font-semibold">{t("title")}</h2>
 			{rows.map((row) => (
 				<SettingRow key={row.setting} {...row} />
 			))}

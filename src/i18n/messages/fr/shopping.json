@@ -1,0 +1,63 @@
+{
+    "title": "Liste de courses",
+    "subline": "Planifiez vos achats de produits pour {name}",
+    "emptyDescription": "Créez une partie pour planifier vos achats.",
+    "addProducts": "Ajouter des produits",
+    "summary": {
+        "title": "Récapitulatif des courses",
+        "purchased": "{bought} / {count, plural, one {{amount} article acheté} other {{amount} articles achetés}}",
+        "boxes": "{count, plural, one {{amount} carton au total} other {{amount} cartons au total}}",
+        "reset": "Réinitialiser la liste"
+    },
+    "reset": {
+        "title": "Réinitialiser la liste de courses ?",
+        "body": "Cela retire {count, plural, one {{amount} article} other {{amount} articles}} ({bought} achetés, {boxCount, plural, one {{boxes} carton} other {{boxes} cartons}}).",
+        "cancel": "Annuler",
+        "confirm": "Réinitialiser la liste",
+        "done": "Liste de courses réinitialisée",
+        "doneMessage": "{count, plural, one {{amount} article retiré} other {{amount} articles retirés}}."
+    },
+    "empty": {
+        "title": "Votre liste de courses est vide",
+        "body": "Prévoyez les produits à acheter avant votre prochain passage dans les boutiques.",
+        "steps": {
+            "item1": "Ajoutez des produits des licences que vous avez débloquées.",
+            "item2": "Touchez de nouveau un produit pour ajouter un autre carton.",
+            "item3": "Cochez les articles au fur et à mesure de vos achats."
+        },
+        "missing": "Un produit manque ? Débloquez sa licence dans Gestion.",
+        "toManagement": "Ouvrir les licences"
+    },
+    "shop": {
+        "noShop": "Aucune boutique disponible",
+        "items": "{count, plural, one {{amount} article} other {{amount} articles}}",
+        "progress": "{bought} sur {total} achetés · {count, plural, one {{amount} carton} other {{amount} cartons}}"
+    },
+    "row": {
+        "purchased": "Marquer comme acheté : {label}",
+        "boxes": "Cartons",
+        "remove": "Retirer {label}",
+        "removed": "{name} retiré"
+    },
+    "undo": "Annuler",
+    "dialog": {
+        "title": "Ajouter des produits à la liste de courses",
+        "search": "Rechercher des produits",
+        "searchPlaceholder": "Rechercher par nom ou entreprise...",
+        "source": "Seuls les produits des licences débloquées sont listés.",
+        "showing": "{shown} sur {total} affichés",
+        "pick": "Touchez un produit pour l'ajouter",
+        "noResults": "Aucun produit trouvé pour « {term} »",
+        "noResultsHint": "Un produit manquant nécessite peut-être une licence que vous n'avez pas encore débloquée.",
+        "clearSearch": "Effacer la recherche",
+        "addOne": "Ajouter un carton de {label}",
+        "pending": "Articles à ajouter ({count})",
+        "noPending": "Aucun article ajouté pour l'instant. Touchez un produit à gauche pour ajouter un carton. Touchez-le de nouveau pour en ajouter plus.",
+        "merges": "Si un produit est déjà dans votre liste, ces cartons s'ajoutent à sa ligne.",
+        "boxes": "{count, plural, one {{amount} carton} other {{amount} cartons}}",
+        "removePending": "Retirer {label} des articles à ajouter",
+        "cancel": "Annuler",
+        "submit": "{count, plural, one {Ajouter {amount} article à la liste} other {Ajouter {amount} articles à la liste}}",
+        "added": "{count, plural, one {{amount} article ajouté} other {{amount} articles ajoutés}}"
+    }
+}

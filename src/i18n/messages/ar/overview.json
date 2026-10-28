@@ -1,0 +1,56 @@
+{
+    "title": "نظرة عامة",
+    "subline": "{name} · كل شيء في لمحة",
+    "emptyDescription": "اختر جولة لعب أو أنشئ واحدة لرؤية تقدمها في لمحة.",
+    "identity": {
+        "created": "تاريخ الإنشاء: {date}",
+        "lastModified": "آخر تعديل: {date}",
+        "manage": "إدارة جولات اللعب"
+    },
+    "storeLevel": {
+        "title": "مستوى المتجر",
+        "subtitle": "مستوى التقدم الحالي",
+        "hint": "غيّره بأداة مستوى المتجر في الشريط الجانبي."
+    },
+    "financial": {
+        "title": "نظرة مالية عامة",
+        "activeLoans": "القروض النشطة",
+        "dailyPayments": "الدفعات اليومية",
+        "totalDebt": "إجمالي دين القروض",
+        "none": "لا توجد قروض نشطة. افتح البنك لأخذ قرض.",
+        "formula": "تكلفة كل قرض هي مبلغه الأساسي مضافًا إليه المبلغ الأساسي مضروبًا في المعدل اليومي مضروبًا في المدة. يُحتسب كل قرض نشط مدفوعًا كل يوم.",
+        "view": "عرض تفاصيل البنك"
+    },
+    "investment": {
+        "title": "إجمالي الاستثمار",
+        "subtitle": "مجموع الإنفاق على الإدارة والسوق",
+        "formula": "الإدارة {managementSpent} + السوق {marketSpent} = {total}"
+    },
+    "management": {
+        "title": "الإدارة",
+        "licenses": "التراخيص",
+        "growth": "ترقيات التوسعة",
+        "storage": "ترقيات المخزن",
+        "employees": "الموظفون",
+        "unlocked": "تم فتح {owned} من {total}",
+        "hired": "تم توظيف {owned} من {total}",
+        "perDay": "{amount}/يوم",
+        "hiringNote": "رسوم التوظيف المدفوعة حتى الآن: {amount}. لا تدخل في إجمالي الاستثمار.",
+        "total": "إجمالي الاستثمار",
+        "view": "عرض الإدارة"
+    },
+    "market": {
+        "title": "السوق",
+        "products": "المنتجات",
+        "licensesUnlocked": "التراخيص المفتوحة: {count, plural, zero {{amount} ترخيص} one {{amount} ترخيص} two {{amount} ترخيصان} few {{amount} تراخيص} many {{amount} ترخيصًا} other {{amount} ترخيص}}",
+        "available": "{amount} متاح",
+        "tools": "الأدوات",
+        "vehicles": "المركبات",
+        "furniture": "الأثاث",
+        "furnitureItems": "العناصر المتاحة: {count, plural, zero {{amount} عنصر} one {{amount} عنصر} two {{amount} عنصران} few {{amount} عناصر} many {{amount} عنصرًا} other {{amount} عنصر}}",
+        "unlocked": "تم فتح {owned} من {total}",
+        "note": "لا يُحفظ الأثاث والطلاء، لذا لا يُحتسب الإنفاق عليهما.",
+        "total": "إجمالي الاستثمار",
+        "view": "عرض السوق"
+    }
+}

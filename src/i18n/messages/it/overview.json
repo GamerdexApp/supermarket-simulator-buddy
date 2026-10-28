@@ -1,0 +1,56 @@
+{
+    "title": "Panoramica",
+    "subline": "{name} · Tutto a colpo d'occhio",
+    "emptyDescription": "Scegli o crea una partita per vederne i progressi a colpo d'occhio.",
+    "identity": {
+        "created": "Creata il: {date}",
+        "lastModified": "Ultima modifica: {date}",
+        "manage": "Gestisci partite"
+    },
+    "storeLevel": {
+        "title": "Livello del negozio",
+        "subtitle": "Livello di progressione attuale",
+        "hint": "Modificalo con il selettore Livello del negozio nella barra laterale."
+    },
+    "financial": {
+        "title": "Panoramica finanziaria",
+        "activeLoans": "Prestiti attivi",
+        "dailyPayments": "Pagamenti giornalieri",
+        "totalDebt": "Debito totale dei prestiti",
+        "none": "Nessun prestito attivo. Apri la banca per richiederne uno.",
+        "formula": "Ogni prestito costa il capitale più il capitale moltiplicato per il tasso giornaliero e per la durata. Ogni prestito attivo viene conteggiato come pagato ogni giorno.",
+        "view": "Vedi la banca"
+    },
+    "investment": {
+        "title": "Investimento totale",
+        "subtitle": "Spese complessive di gestione e mercato",
+        "formula": "Gestione {managementSpent} + Mercato {marketSpent} = {total}"
+    },
+    "management": {
+        "title": "Gestione",
+        "licenses": "Licenze",
+        "growth": "Espansioni",
+        "storage": "Espansioni del magazzino",
+        "employees": "Dipendenti",
+        "unlocked": "{owned} di {total} sbloccati",
+        "hired": "{owned} di {total} assunti",
+        "perDay": "{amount}/giorno",
+        "hiringNote": "Costi di assunzione pagati finora: {amount}. Non fanno parte del totale investito.",
+        "total": "Totale investito",
+        "view": "Vedi la gestione"
+    },
+    "market": {
+        "title": "Mercato",
+        "products": "Prodotti",
+        "licensesUnlocked": "{count, plural, one {{amount} licenza sbloccata} other {{amount} licenze sbloccate}}",
+        "available": "{amount} disponibili",
+        "tools": "Strumenti",
+        "vehicles": "Veicoli",
+        "furniture": "Mobili",
+        "furnitureItems": "{count, plural, one {{amount} articolo disponibile} other {{amount} articoli disponibili}}",
+        "unlocked": "{owned} di {total} sbloccati",
+        "note": "Mobili e vernici non vengono salvati, quindi le loro spese non sono conteggiate.",
+        "total": "Totale investito",
+        "view": "Vedi il mercato"
+    }
+}

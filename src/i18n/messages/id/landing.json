@@ -1,0 +1,102 @@
+{
+    "header": {
+        "label": "Halaman utama",
+        "features": "Fitur",
+        "faq": "FAQ",
+        "github": "GitHub",
+        "discord": "Discord"
+    },
+    "cta": {
+        "create": "Buat sesi main pertamamu",
+        "dashboard": "Ke dasbor",
+        "newPlaythrough": "Sesi main baru",
+        "learn": "Pelajari lebih lanjut"
+    },
+    "hero": {
+        "title": "Lacak <accent>Kerajaan</accent> Supermarketmu",
+        "body": "Aplikasi pendamping untuk Supermarket Simulator. Kelola beberapa sesi main, lacak progresmu, dan bangun kerajaan supermarketmu dengan percaya diri.",
+        "preview": "Ringkasan Pezz's Market yang menampilkan total pengeluaran, progres toko, dan pinjaman aktif"
+    },
+    "continueCard": {
+        "label": "Lanjutkan",
+        "level": "Level toko {level}",
+        "updated": "Terakhir diperbarui {date}"
+    },
+    "steps": {
+        "title": "Mulai dalam semenit",
+        "items": {
+            "item1": {
+                "title": "Buat sesi main",
+                "body": "Beri nama. Semuanya disimpan di browser ini, tanpa akun."
+            },
+            "item2": {
+                "title": "Mulai dari dasar",
+                "body": "Setiap sesi main dimulai dengan Lisensi 0, bagian perluasan 1, serta Paper Bag, Sponge, dan Mop."
+            },
+            "item3": {
+                "title": "Buka sambil bermain",
+                "body": "Naikkan level toko, lalu buka lisensi, bagian, staf, alat, dan kendaraan seperti di dalam game."
+            }
+        }
+    },
+    "features": {
+        "eyebrow": "Semua yang kamu butuhkan",
+        "title": "Semua progresmu di satu tempat",
+        "body": "Supermarket Simulator Buddy melacak setiap aspek bisnis supermarketmu. Dari lisensi sampai gudang, semuanya ada di sini.",
+        "items": {
+            "item1": {
+                "title": "Banyak Sesi Main",
+                "body": "Buat dan kelola sesi main tanpa batas. Lacak strategi dan tantangan yang berbeda secara terpisah."
+            },
+            "item2": {
+                "title": "Kelola Lisensi",
+                "body": "Lacak semua lisensi produkmu dan lihat item apa saja yang dibuka setiap lisensi untuk tokomu."
+            },
+            "item3": {
+                "title": "Perluasan Toko",
+                "body": "Pantau perluasan tokomu dengan pelacakan detail untuk bagian gudang dan perluasan."
+            },
+            "item4": {
+                "title": "Lacak Anggaran",
+                "body": "Pantau pengeluaranmu di semua kategori dengan ringkasan keuangan yang lengkap."
+            },
+            "item5": {
+                "title": "Daftar Belanja",
+                "body": "Buat daftar belanja sendiri agar tahu apa yang harus dibeli di setiap toko."
+            },
+            "item6": {
+                "title": "Ekspor/Impor Data",
+                "body": "Ekspor progresmu sebagai JSON untuk cadangan atau untuk dibagikan ke teman. Impor data kapan saja."
+            }
+        }
+    },
+    "faq": {
+        "title": "Pertanyaan yang sering diajukan",
+        "items": {
+            "item1": {
+                "question": "Apa itu Supermarket Simulator Buddy?",
+                "answer": "Supermarket Simulator Buddy adalah alat pelacak progres untuk game Supermarket Simulator. Alat ini membantumu mengelola beberapa sesi main, melacak perluasan toko, mengelola lisensi, dan memantau progres keuangan di satu tempat."
+            },
+            "item2": {
+                "question": "Bagaimana dataku disimpan?",
+                "answer": "Semua datamu disimpan secara lokal di browser dengan localStorage. Artinya progresmu bersifat pribadi dan tidak butuh server atau akun. Kamu juga bisa mengekspor dan mengimpor data sebagai file JSON untuk cadangan atau untuk dibagikan."
+            },
+            "item3": {
+                "question": "Bisakah aku melacak beberapa sesi main?",
+                "answer": "Bisa! Kamu bisa membuat dan mengelola beberapa sesi main, masing-masing dengan progresnya sendiri. Berpindah di antaranya dengan mudah lewat menu tarik-turun di bilah samping, dan lacak strategi atau tantangan yang berbeda secara terpisah."
+            },
+            "item4": {
+                "question": "Fitur apa saja yang bisa dilacak?",
+                "answer": "Lacak level toko, lisensi, bagian gudang, area perluasan, alat, kendaraan, dan daftar belanja, serta lihat harga furnitur dan cat. Pantau progres keuanganmu dengan pelacakan anggaran yang detail di semua kategori."
+            },
+            "item5": {
+                "question": "Apakah aplikasi ini gratis?",
+                "answer": "Ya, Supermarket Simulator Buddy sepenuhnya gratis. Tidak ada langganan, iklan, atau biaya tersembunyi. Semua fitur tersedia untuk semua orang."
+            }
+        }
+    },
+    "closing": {
+        "title": "Siap menjalankan tokomu?",
+        "body": "Gratis, pribadi, dan tersimpan di browsermu."
+    }
+}

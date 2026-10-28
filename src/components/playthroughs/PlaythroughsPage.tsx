@@ -1,11 +1,12 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { useMemo, useState } from "react";
 import { LuPlus, LuSearch } from "react-icons/lu";
 import type { Playthrough } from "@/types/playthrough";
 import { usePlaythrough } from "@/lib/contexts/PlaythroughContext";
+import { formatNumber } from "@/lib/format";
 import { useUrlParams } from "@/lib/hooks/useUrlParams";
-import { playthroughsText } from "@/lib/messages/playthroughs";
 import { filterAndSort, nextActiveAfterDelete } from "@/service/playthroughList";
 import type { PlaythroughSort } from "@/service/playthroughList";
 import { BACKUP_HREF } from "@/data/nav";
@@ -22,13 +23,12 @@ import { DeletePlaythroughDialog } from "./DeletePlaythroughDialog";
 import { EditPlaythroughDialog } from "./EditPlaythroughDialog";
 import { PlaythroughCard } from "./PlaythroughCard";
 
-const text = playthroughsText;
-
 const SORTS: PlaythroughSort[] = ["lastModified", "name", "createdAt", "storeLevel"];
 
 export function PlaythroughsPage() {
 	const { playthroughs, activePlaythrough, setActivePlaythrough, deletePlaythrough, updateData } =
 		usePlaythrough();
+	const t = useTranslations("playthroughs");
 	const showToast = useToast();
 	const params = useUrlParams();
 	const [search, setSearch] = useState("");
@@ -48,7 +48,7 @@ export function PlaythroughsPage() {
 
 	const setActive = (playthrough: Playthrough) => {
 		setActivePlaythrough(playthrough.id);
-		showToast({ variant: "success", title: text.card.switched(playthrough.name) });
+		showToast({ variant: "success", title: t("card.switched", { name: playthrough.name }) });
 	};
 
 	const confirmDelete = (playthrough: Playthrough) => {
@@ -57,10 +57,10 @@ export function PlaythroughsPage() {
 		setDeletedLast(previous.playthroughs.length === 1);
 		showToast({
 			variant: "success",
-			title: text.delete.done(playthrough.name),
-			message: text.delete.doneMessage,
+			title: t("delete.done", { name: playthrough.name }),
+			message: t("delete.doneMessage"),
 			action: {
-				label: text.delete.undo,
+				label: t("delete.undo"),
 				onAction: () => {
 					updateData(() => previous);
 					setDeletedLast(false);
@@ -69,33 +69,41 @@ export function PlaythroughsPage() {
 		});
 	};
 
+	const playthroughCount = {
+		count: playthroughs.length,
+		amount: formatNumber(playthroughs.length),
+	};
+	const subline = activePlaythrough
+		? t("sublineActive", { ...playthroughCount, name: activePlaythrough.name })
+		: t("subline", playthroughCount);
+
 	const deletingIsActive = deleting !== null && deleting.id === activePlaythrough?.id;
 	const nextActive = deleting ? nextActiveAfterDelete(playthroughs, deleting.id) : null;
 
 	return (
 		<>
 			<PageHeader
-				title={text.title}
-				subline={text.subline(playthroughs.length, activePlaythrough?.name ?? null)}
+				title={t("title")}
+				subline={subline}
 				actions={
 					<Button variant="primary" onClick={openCreate}>
 						<LuPlus size={16} aria-hidden="true" />
-						{text.newPlaythrough}
+						{t("newPlaythrough")}
 					</Button>
 				}
 			/>
 			{playthroughs.length === 0 ? (
 				<EmptyState
-					title={deletedLast ? text.empty.deletedTitle : text.empty.title}
-					description={text.empty.description}
+					title={deletedLast ? t("empty.deletedTitle") : t("empty.title")}
+					description={t("empty.description")}
 					actions={
 						<>
 							<Button variant="primary" onClick={openCreate}>
 								<LuPlus size={16} aria-hidden="true" />
-								{text.newPlaythrough}
+								{t("newPlaythrough")}
 							</Button>
 							<ButtonLink href={BACKUP_HREF} variant="link">
-								{text.empty.restore}
+								{t("empty.restore")}
 							</ButtonLink>
 						</>
 					}
@@ -107,12 +115,12 @@ export function PlaythroughsPage() {
 							<Input
 								type="search"
 								value={search}
-								aria-label={text.filters.search}
-								placeholder={text.filters.search}
+								aria-label={t("filters.search")}
+								placeholder={t("filters.search")}
 								leadingIcon={<LuSearch size={16} aria-hidden="true" />}
 								onChange={(event) => setSearch(event.target.value)}
 							/>
-							<Field label={text.filters.sortLabel}>
+							<Field label={t("filters.sortLabel")}>
 								<Select
 									value={sort}
 									onChange={(event) =>
@@ -121,7 +129,7 @@ export function PlaythroughsPage() {
 								>
 									{SORTS.map((id) => (
 										<option key={id} value={id}>
-											{text.filters.sort[id]}
+											{t(`filters.sort.${id}`)}
 										</option>
 									))}
 								</Select>
@@ -129,21 +137,24 @@ export function PlaythroughsPage() {
 						</div>
 						<div className="text-muted flex flex-wrap items-center justify-between gap-x-4 gap-y-1">
 							<span className="font-mono text-xs">
-								{text.filters.showing(visible.length, playthroughs.length)}
+								{t("filters.showing", {
+									shown: formatNumber(visible.length),
+									...playthroughCount,
+								})}
 							</span>
 							{search.trim() !== "" && (
 								<Button variant="link" onClick={() => setSearch("")}>
-									{text.filters.clear}
+									{t("filters.clear")}
 								</Button>
 							)}
 						</div>
 					</Card>
 					{visible.length === 0 ? (
 						<EmptyState
-							title={text.noMatch.title(search)}
-							description={text.noMatch.description}
+							title={t("noMatch.title", { query: search.trim() })}
+							description={t("noMatch.description")}
 							actions={
-								<Button onClick={() => setSearch("")}>{text.filters.clear}</Button>
+								<Button onClick={() => setSearch("")}>{t("filters.clear")}</Button>
 							}
 						/>
 					) : (

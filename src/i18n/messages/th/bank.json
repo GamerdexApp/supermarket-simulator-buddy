@@ -1,0 +1,39 @@
+{
+    "title": "เงินกู้ธนาคาร",
+    "subline": "จัดการเงินกู้ของ {name}",
+    "emptyDescription": "เลือกหรือสร้างรอบการเล่นเพื่อติดตามเงินกู้",
+    "loanTitle": "เงินกู้ #{number}",
+    "states": {
+        "active": "กำลังกู้",
+        "available": "กู้ได้",
+        "locked": "ล็อกอยู่"
+    },
+    "principal": "เงินต้น",
+    "rate": "อัตราดอกเบี้ยรายวัน",
+    "level": "เลเวลร้านที่ต้องใช้",
+    "term": "ระยะเวลากู้: {count, plural, other {{amount} วัน}}",
+    "days": "{count, plural, other {{amount} วัน}}",
+    "termFixed": "ระยะเวลากู้เปลี่ยนไม่ได้จนกว่าจะลบเงินกู้นี้",
+    "details": "รายละเอียดเงินกู้",
+    "totalInterest": "ดอกเบี้ยรวม",
+    "totalPayment": "ยอดชำระรวม",
+    "dailyPayment": "ยอดชำระรายวัน",
+    "activate": "กู้เงิน",
+    "activatedOn": "วันที่กู้: {date}",
+    "remove": "ลบเงินกู้",
+    "requiresLevel": "ต้องใช้เลเวลร้าน {level} (ตอนนี้เลเวล {current})",
+    "locked": "ล็อกอยู่",
+    "activated": "กู้เงินกู้ #{number} แล้ว",
+    "removed": "ลบเงินกู้ #{number} แล้ว",
+    "undo": "เลิกทำ",
+    "yourLoans": {
+        "title": "เงินกู้ของคุณ",
+        "activeLoans": "เงินกู้ที่กำลังกู้",
+        "dailyPayment": "ยอดชำระรายวัน",
+        "totalDebt": "หนี้เงินกู้รวม",
+        "none": "ยังไม่มีเงินกู้ เลือกระยะเวลากู้ในเงินกู้ด้านล่าง แล้วกดกู้เงิน",
+        "line": "{principal} ดอกเบี้ย {rate} ต่อวัน เป็นเวลา {count, plural, other {{amount} วัน}}",
+        "payments": "{daily} ต่อวัน · รวม {total}",
+        "formula": "ดอกเบี้ยคือเงินต้นคูณอัตราดอกเบี้ยรายวันคูณจำนวนวันของระยะเวลากู้"
+    }
+}

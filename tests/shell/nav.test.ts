@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { navCount, unlockedProductCount } from "@/service/navCounts";
-import { getPageTitle } from "@/data/nav";
+import { getPageRouteId } from "@/data/nav";
 import { market } from "@/data/supermarket-simulator/market";
 import { barePlaythrough, progressedPlaythrough } from "../storage/fixtures";
 
@@ -28,15 +28,15 @@ describe("sidebar counts", () => {
   });
 });
 
-describe("page titles", () => {
+describe("page routes", () => {
   it.each([
-    ["/overview", "Overview"],
-    ["/market", "Market"],
-    ["/shopping-list", "Shopping list"],
-    ["/settings", "Settings"],
-    ["/playthroughs", "Playthroughs"],
-    ["/unknown", "Supermarket Simulator Buddy"],
-  ])("%s is titled %s", (path, title) => {
-    expect(getPageTitle(path)).toBe(title);
+    ["/overview", "overview"],
+    ["/market", "market"],
+    ["/shopping-list", "shoppingList"],
+    ["/settings", "settings"],
+    ["/playthroughs", "playthroughs"],
+    ["/unknown", null],
+  ])("%s belongs to %s", (path, routeId) => {
+    expect(getPageRouteId(path)).toBe(routeId);
   });
 });

@@ -1,9 +1,9 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { useId } from "react";
 import type { KeyboardEvent, ReactNode } from "react";
 import { LuLock } from "react-icons/lu";
-import { uiText } from "@/lib/messages/ui";
 import { tabIndexAfterKey } from "@/lib/utils/tabKeys";
 
 interface TabsProps<TabId extends string> {
@@ -21,6 +21,7 @@ export function Tabs<TabId extends string>({
 	onChange,
 	children,
 }: TabsProps<TabId>) {
+	const t = useTranslations("ui.tabs");
 	const baseId = useId();
 
 	const handleKeyDown = (event: KeyboardEvent<HTMLDivElement>) => {
@@ -74,7 +75,7 @@ export function Tabs<TabId extends string>({
 										aria-hidden="true"
 										className="text-muted ms-1.5 inline"
 									/>
-									<span className="sr-only">{uiText.tabs.locked}</span>
+									<span className="sr-only">{t("locked")}</span>
 								</>
 							)}
 						</button>

@@ -1,13 +1,11 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { LuTriangleAlert } from "react-icons/lu";
 import type { Playthrough } from "@/types/playthrough";
-import { playthroughsText } from "@/lib/messages/playthroughs";
 import { BACKUP_HREF } from "@/data/nav";
 import { Button, ButtonLink } from "@/comps/ui/Button";
 import { Dialog } from "@/comps/ui/Dialog";
-
-const text = playthroughsText.delete;
 
 interface DeletePlaythroughDialogProps {
 	playthrough: Playthrough | null;
@@ -24,16 +22,17 @@ export function DeletePlaythroughDialog({
 	onConfirm,
 	onClose,
 }: DeletePlaythroughDialogProps) {
+	const t = useTranslations("playthroughs.delete");
 	return (
 		<Dialog
 			open={playthrough !== null}
 			onClose={onClose}
-			title={text.title}
-			description={text.description}
+			title={t("title")}
+			description={t("description")}
 			footer={
 				<>
 					<Button data-autofocus onClick={onClose}>
-						{text.cancel}
+						{t("cancel")}
 					</Button>
 					<Button
 						variant="danger"
@@ -42,7 +41,7 @@ export function DeletePlaythroughDialog({
 							onClose();
 						}}
 					>
-						{text.confirm}
+						{t("confirm")}
 					</Button>
 				</>
 			}
@@ -56,17 +55,19 @@ export function DeletePlaythroughDialog({
 								aria-hidden="true"
 								className="text-danger mt-0.5 shrink-0"
 							/>
-							<span>{text.question(playthrough.name)}</span>
+							<span>{t("question", { name: playthrough.name })}</span>
 						</p>
 						{isActive && (
 							<p className="text-muted">
-								{nextActiveName ? text.activeNext(nextActiveName) : text.activeLast}
+								{nextActiveName
+									? t("activeNext", { next: nextActiveName })
+									: t("activeLast")}
 							</p>
 						)}
 					</div>
 					<div>
 						<ButtonLink href={BACKUP_HREF} variant="link">
-							{text.exportFirst}
+							{t("exportFirst")}
 						</ButtonLink>
 					</div>
 				</>

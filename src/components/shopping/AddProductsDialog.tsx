@@ -1,14 +1,15 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { useMemo, useState } from "react";
 import { LuSearch, LuTrash2 } from "react-icons/lu";
 import type { Product } from "@/types";
 import type { Playthrough } from "@/types/playthrough";
-import { shoppingText } from "@/lib/messages/shopping";
+import { formatNumber } from "@/lib/format";
 import { productLabel } from "@/service/management";
 import { ALL, filterProducts, productKey } from "@/service/market";
 import type { PendingItem } from "@/service/shopping";
-import { addableProducts, pendingKey, shopName, toPending } from "@/service/shopping";
+import { addableProducts, pendingKey, toPending } from "@/service/shopping";
 import { ItemImage } from "@/comps/market/ItemImage";
 import { Button } from "@/comps/ui/Button";
 import { Dialog } from "@/comps/ui/Dialog";
@@ -16,8 +17,7 @@ import { IconButton } from "@/comps/ui/IconButton";
 import { Input } from "@/comps/ui/Input";
 import { SectionLabel } from "@/comps/ui/SectionLabel";
 import { ValueStepper } from "@/comps/ui/ValueStepper";
-
-const text = shoppingText.dialog;
+import { useShopName } from "./useShopName";
 
 interface DialogContentProps {
 	playthrough: Playthrough;
@@ -27,6 +27,8 @@ interface DialogContentProps {
 
 /** Mounted only while open, so the search and the pending items start empty every time. */
 function AddProductsContent({ playthrough, onClose, onSubmit }: DialogContentProps) {
+	const t = useTranslations("shopping");
+	const shopLabel = useShopName();
 	const [search, setSearch] = useState("");
 	const [pending, setPending] = useState<PendingItem[]>([]);
 	const products = useMemo(() => addableProducts(playthrough), [playthrough]);
@@ -61,17 +63,20 @@ function AddProductsContent({ playthrough, onClose, onSubmit }: DialogContentPro
 			open
 			onClose={onClose}
 			variant="widest"
-			title={shoppingText.dialog.title}
-			description={text.source}
+			title={t("dialog.title")}
+			description={t("dialog.source")}
 			footer={
 				<>
-					<Button onClick={onClose}>{text.cancel}</Button>
+					<Button onClick={onClose}>{t("dialog.cancel")}</Button>
 					<Button
 						variant="primary"
 						disabled={pending.length === 0}
 						onClick={() => onSubmit(pending)}
 					>
-						{text.submit(pending.length)}
+						{t("dialog.submit", {
+							count: pending.length,
+							amount: formatNumber(pending.length),
+						})}
 					</Button>
 				</>
 			}
@@ -81,25 +86,28 @@ function AddProductsContent({ playthrough, onClose, onSubmit }: DialogContentPro
 					<Input
 						type="search"
 						value={search}
-						aria-label={text.search}
-						placeholder={text.searchPlaceholder}
+						aria-label={t("dialog.search")}
+						placeholder={t("dialog.searchPlaceholder")}
 						leadingIcon={<LuSearch size={16} aria-hidden="true" />}
 						onChange={(event) => setSearch(event.target.value)}
 						data-autofocus
 					/>
 					<div className="flex items-center justify-between gap-2">
-						<SectionLabel className="text-muted">{text.pick}</SectionLabel>
+						<SectionLabel className="text-muted">{t("dialog.pick")}</SectionLabel>
 						<span className="text-muted font-mono text-xs">
-							{text.showing(visible.length, products.length)}
+							{t("dialog.showing", {
+								shown: formatNumber(visible.length),
+								total: formatNumber(products.length),
+							})}
 						</span>
 					</div>
 					{visible.length === 0 ? (
 						<div className="flex flex-col items-start gap-1">
-							<p>{text.noResults(search)}</p>
-							<p className="text-muted">{text.noResultsHint}</p>
+							<p>{t("dialog.noResults", { term: search })}</p>
+							<p className="text-muted">{t("dialog.noResultsHint")}</p>
 							{search && (
 								<Button variant="link" onClick={() => setSearch("")}>
-									{text.clearSearch}
+									{t("dialog.clearSearch")}
 								</Button>
 							)}
 						</div>
@@ -112,7 +120,9 @@ function AddProductsContent({ playthrough, onClose, onSubmit }: DialogContentPro
 										key={productKey(product)}
 										type="button"
 										onClick={() => addOne(product)}
-										aria-label={text.addOne(productLabel(product))}
+										aria-label={t("dialog.addOne", {
+											label: productLabel(product),
+										})}
 										className={`relative flex min-h-11 flex-col items-center gap-1 rounded-md border-[1.5px] p-2 text-center ${
 											boxes > 0
 												? "border-primary bg-tint"
@@ -121,7 +131,7 @@ function AddProductsContent({ playthrough, onClose, onSubmit }: DialogContentPro
 									>
 										{boxes > 0 && (
 											<span className="bg-primary text-on-primary absolute end-1.5 top-1.5 rounded-full px-1.5 font-mono text-xs">
-												+{boxes}
+												+{formatNumber(boxes)}
 											</span>
 										)}
 										<ItemImage src={product.imageUrl} />
@@ -139,10 +149,10 @@ function AddProductsContent({ playthrough, onClose, onSubmit }: DialogContentPro
 				</section>
 				<section className="flex min-w-0 flex-col gap-3">
 					<SectionLabel className="text-muted">
-						{text.pending(pending.length)}
+						{t("dialog.pending", { count: formatNumber(pending.length) })}
 					</SectionLabel>
 					{pending.length === 0 ? (
-						<p className="text-muted">{text.noPending}</p>
+						<p className="text-muted">{t("dialog.noPending")}</p>
 					) : (
 						<>
 							<ul className="flex flex-col gap-2">
@@ -168,7 +178,7 @@ function AddProductsContent({ playthrough, onClose, onSubmit }: DialogContentPro
 													)}
 												</span>
 												<IconButton
-													label={text.removePending(label)}
+													label={t("dialog.removePending", { label })}
 													onClick={() => removePending(key)}
 													className="text-danger hover:bg-tint"
 												>
@@ -177,22 +187,25 @@ function AddProductsContent({ playthrough, onClose, onSubmit }: DialogContentPro
 											</div>
 											<div className="flex flex-wrap items-center justify-between gap-2">
 												<ValueStepper
-													label={shoppingText.row.boxes}
+													label={t("row.boxes")}
 													value={item.boxes}
 													min={1}
 													max={Number.MAX_SAFE_INTEGER}
-													display={text.boxes(item.boxes)}
+													display={t("dialog.boxes", {
+														count: item.boxes,
+														amount: formatNumber(item.boxes),
+													})}
 													onChange={(boxes) => setBoxes(key, boxes)}
 												/>
 												<span className="text-muted text-xs">
-													{shopName(item.store)}
+													{shopLabel(item.store)}
 												</span>
 											</div>
 										</li>
 									);
 								})}
 							</ul>
-							<p className="text-muted text-xs">{text.merges}</p>
+							<p className="text-muted text-xs">{t("dialog.merges")}</p>
 						</>
 					)}
 				</section>

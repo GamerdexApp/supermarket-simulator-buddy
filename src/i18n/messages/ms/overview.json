@@ -1,0 +1,56 @@
+{
+    "title": "Ringkasan",
+    "subline": "{name} · Semuanya sepintas lalu",
+    "emptyDescription": "Pilih atau cipta sesi permainan untuk melihat kemajuannya sepintas lalu.",
+    "identity": {
+        "created": "Dicipta: {date}",
+        "lastModified": "Terakhir Diubah: {date}",
+        "manage": "Urus sesi permainan"
+    },
+    "storeLevel": {
+        "title": "Tahap Kedai",
+        "subtitle": "Tahap kemajuan semasa",
+        "hint": "Tukar dengan pelaras Tahap kedai di bar sisi."
+    },
+    "financial": {
+        "title": "Ringkasan Kewangan",
+        "activeLoans": "Pinjaman Aktif",
+        "dailyPayments": "Bayaran Harian",
+        "totalDebt": "Jumlah Hutang Pinjaman",
+        "none": "Tiada pinjaman aktif. Buka bank untuk mengambil pinjaman.",
+        "formula": "Setiap pinjaman berharga jumlah pokoknya ditambah jumlah pokok didarab kadar harian didarab tempoh. Setiap pinjaman aktif dikira sebagai dibayar setiap hari.",
+        "view": "Lihat Butiran Bank"
+    },
+    "investment": {
+        "title": "Jumlah Pelaburan",
+        "subtitle": "Gabungan perbelanjaan dalam pengurusan dan pasar",
+        "formula": "Pengurusan {managementSpent} + Pasar {marketSpent} = {total}"
+    },
+    "management": {
+        "title": "Pengurusan",
+        "licenses": "Lesen",
+        "growth": "Naik Taraf Pembesaran",
+        "storage": "Naik Taraf Stor",
+        "employees": "Pekerja",
+        "unlocked": "{owned} daripada {total} dibuka",
+        "hired": "{owned} daripada {total} diambil",
+        "perDay": "{amount}/hari",
+        "hiringNote": "Yuran pengambilan yang telah dibayar: {amount}. Yuran ini tidak termasuk dalam Jumlah Pelaburan.",
+        "total": "Jumlah Pelaburan",
+        "view": "Lihat Pengurusan"
+    },
+    "market": {
+        "title": "Pasar",
+        "products": "Produk",
+        "licensesUnlocked": "{count, plural, other {{amount} lesen dibuka}}",
+        "available": "{amount} tersedia",
+        "tools": "Alatan",
+        "vehicles": "Kenderaan",
+        "furniture": "Perabot",
+        "furnitureItems": "{count, plural, other {{amount} item tersedia}}",
+        "unlocked": "{owned} daripada {total} dibuka",
+        "note": "Perabot dan cat tidak disimpan, jadi perbelanjaannya tidak dikira.",
+        "total": "Jumlah Pelaburan",
+        "view": "Lihat Pasar"
+    }
+}

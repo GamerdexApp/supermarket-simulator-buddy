@@ -1,18 +1,17 @@
 "use client";
 
 import type { Conflict } from "@gamerdexapp/gamerdex-sync";
+import { useTranslations } from "next-intl";
 import { usePlaythrough } from "@/lib/contexts/PlaythroughContext";
 import { useSync } from "@/lib/contexts/SyncContext";
-import { syncText } from "@/lib/messages/sync";
 import { SettingsCard } from "@/comps/settings/SettingsCard";
 import { Button } from "@/comps/ui/Button";
-
-const text = syncText.conflicts;
 
 const valueText = (value: unknown) =>
 	value === undefined ? null : typeof value === "string" ? value : JSON.stringify(value);
 
 function ConflictRow({ conflict }: { conflict: Conflict }) {
+	const t = useTranslations("sync.conflicts");
 	const { playthroughs } = usePlaythrough();
 	const { keepLocalValue } = useSync();
 	const [section, playthroughId, ...rest] = conflict.path;
@@ -28,31 +27,32 @@ function ConflictRow({ conflict }: { conflict: Conflict }) {
 	return (
 		<li className="border-line flex flex-col gap-2 border-t pt-3 first:border-t-0 first:pt-0">
 			<p className="font-mono">{where}</p>
-			{conflict.kind === "delete-edit" && <p className="text-muted">{text.deletedEdited}</p>}
+			{conflict.kind === "delete-edit" && <p className="text-muted">{t("deletedEdited")}</p>}
 			<dl className="grid grid-cols-[auto_1fr] gap-x-3 gap-y-1">
-				<dt className="text-muted">{text.cloudValue}</dt>
-				<dd className="font-mono break-all">{valueText(conflict.remote) ?? text.empty}</dd>
-				<dt className="text-muted">{text.deviceValue}</dt>
-				<dd className="font-mono break-all">{valueText(conflict.local) ?? text.empty}</dd>
+				<dt className="text-muted">{t("cloudValue")}</dt>
+				<dd className="font-mono break-all">{valueText(conflict.remote) ?? t("empty")}</dd>
+				<dt className="text-muted">{t("deviceValue")}</dt>
+				<dd className="font-mono break-all">{valueText(conflict.local) ?? t("empty")}</dd>
 			</dl>
 			<div>
-				<Button onClick={() => keepLocalValue(conflict)}>{text.keepDevice}</Button>
+				<Button onClick={() => keepLocalValue(conflict)}>{t("keepDevice")}</Button>
 			</div>
 		</li>
 	);
 }
 
 export function ConflictsCard() {
+	const t = useTranslations("sync.conflicts");
 	const { conflicts, dismissConflicts } = useSync();
 	if (conflicts.length === 0) return null;
 
 	return (
 		<SettingsCard
-			title={text.title}
-			description={text.body}
+			title={t("title")}
+			description={t("body")}
 			aside={
 				<Button variant="ghost" onClick={dismissConflicts}>
-					{text.dismiss}
+					{t("dismiss")}
 				</Button>
 			}
 		>

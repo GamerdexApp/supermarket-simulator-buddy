@@ -1,0 +1,229 @@
+{
+    "tab": {
+        "title": "Sincronizzazione cloud"
+    },
+    "unavailable": "La sincronizzazione non è disponibile in questa versione.",
+    "provider": {
+        "github": {
+            "name": "GitHub",
+            "tile": "Un repository privato di tua proprietà, chiamato {repository}.",
+            "badge": "Per sviluppatori"
+        },
+        "google": {
+            "name": "Google Drive",
+            "tile": "Una cartella Gamerdex visibile nel tuo Drive. Gamerdex vede solo i file che crea.",
+            "badge": "Consigliato"
+        },
+        "dropbox": {
+            "name": "Dropbox",
+            "tile": "Una cartella Gamerdex dentro la cartella Apps del tuo Dropbox. Gamerdex vede solo quella cartella.",
+            "badge": "Solo cartella dell'app"
+        },
+        "microsoft": {
+            "name": "OneDrive",
+            "tile": "Una cartella Gamerdex dentro la cartella Apps del tuo OneDrive. Gamerdex vede solo quella cartella.",
+            "badge": "Account personali"
+        }
+    },
+    "connect": {
+        "title": "Sincronizza tra dispositivi",
+        "pill": "Non connesso",
+        "intro": "Mantieni le stesse partite sul computer e sul telefono. La sincronizzazione è facoltativa e gratuita. Scegli dove tenere la copia.",
+        "pickerLabel": "Dove tenere la copia",
+        "panelTitle": "Connetti {provider}",
+        "another": "Puoi scegliere un altro servizio prima di accedere.",
+        "firstSync": "Se entrambe le parti hanno già dei dati, scegli cosa tenere alla prima sincronizzazione. Nulla viene sostituito prima della tua decisione.",
+        "google": {
+            "step1": "Accedi con Google in questa finestra.",
+            "step2": "Consenti l'accesso ai file creati da Gamerdex. L'app non può vedere gli altri tuoi file.",
+            "button": "Connetti Google Drive"
+        },
+        "github": {
+            "step1": "Crea un repository privato vuoto chiamato {repository}. Spunta Add a README file.",
+            "step2": "Accedi con GitHub, poi dai a Gamerdex Sync l'accesso solo a quel repository.",
+            "button": "Connetti GitHub"
+        },
+        "dropbox": {
+            "step1": "Accedi con Dropbox in questa finestra.",
+            "step2": "Consenti l'accesso alla cartella dell'app Gamerdex. L'app non può vedere gli altri tuoi file.",
+            "button": "Connetti Dropbox"
+        },
+        "microsoft": {
+            "step1": "Accedi con il tuo account Microsoft personale in questa finestra.",
+            "step2": "Consenti l'accesso alla cartella dell'app Gamerdex. L'app non può vedere gli altri tuoi file.",
+            "button": "Connetti OneDrive"
+        }
+    },
+    "how": {
+        "title": "Come funziona la sincronizzazione",
+        "points": {
+            "item1": "Le tue partite vengono salvate in un unico file nel tuo spazio di archiviazione, nello stesso formato del file di backup, più un piccolo file con l'elenco dei dispositivi.",
+            "item2": "Gamerdex non ha alcun server che conserva i tuoi dati. Il browser comunica direttamente con il tuo spazio di archiviazione.",
+            "item3": "Per sblocchi, personale, prestiti e articoli della lista della spesa vengono mantenute le modifiche di entrambi i dispositivi, e vince il livello del negozio più alto. Se entrambi i dispositivi cambiano un nome, una descrizione o lo stesso articolo della lista della spesa, scegli tu quale tenere.",
+            "item4": "Ogni dispositivo mantiene la propria partita attiva e il proprio tema. La sincronizzazione non li cambia mai.",
+            "item5": "Puoi disconnetterti in qualsiasi momento. Le tue partite restano su ogni dispositivo."
+        }
+    },
+    "repository": {
+        "title": "Configura il repository dei dati",
+        "body": "I tuoi dati sono conservati in un repository privato chiamato {name} nel tuo account GitHub. Gamerdex Sync può accedere solo a quel repository.",
+        "checking": "Ricerca di {name}",
+        "checkFailed": "Impossibile caricare i tuoi repository. Controlla la connessione e verifica di nuovo.",
+        "public": "Il repository {fullName} è pubblico. Rendilo privato nelle sue impostazioni GitHub, poi verifica di nuovo. Un repository pubblico non può essere usato, perché chiunque potrebbe leggere i tuoi dati.",
+        "missing": "Il repository {name} non è stato trovato",
+        "steps": {
+            "create": "Crea un repository privato chiamato {name}. Spunta Add a README file.",
+            "install": "Dai a Gamerdex Sync l'accesso solo a quel repository. Scegli Only select repositories, poi seleziona {name}.",
+            "recheck": "Torna qui e verifica di nuovo."
+        },
+        "createButton": "Crea repository",
+        "installButton": "Scegli i repository su GitHub",
+        "recheckButton": "Verifica di nuovo"
+    },
+    "connected": {
+        "repository": "Repository",
+        "lastSync": "Ultima sincronizzazione",
+        "never": "Non ancora sincronizzato",
+        "syncNow": "Sincronizza ora",
+        "signOut": "Esci",
+        "folder": "Cartella {name}",
+        "signInWith": "Accedi con {provider}"
+    },
+    "status": {
+        "idle": "Sincronizzato",
+        "syncing": "Sincronizzazione",
+        "offline": "Offline",
+        "reauth": "Accedi di nuovo",
+        "needsChoice": "Serve una tua scelta",
+        "error": "Sincronizzazione non riuscita",
+        "signedOut": "Accesso non effettuato",
+        "needsRepository": "Scegli un repository",
+        "conflicts": "Controlla le modifiche"
+    },
+    "error": {
+        "rateLimit": "GitHub sta limitando le richieste. La sincronizzazione tornerà a funzionare tra qualche minuto.",
+        "notFound": "Il repository non è stato trovato. Sceglilo di nuovo.",
+        "server": "GitHub non ha risposto correttamente. Riprova più tardi.",
+        "data": "I dati sincronizzati non sono validi, quindi non è stato modificato nulla.",
+        "busy": "Un altro dispositivo continua a modificare i dati. Riprova tra un momento.",
+        "other": "Qualcosa è andato storto. Non è stato modificato nulla.",
+        "reauth": "La tua sessione è scaduta. Accedi di nuovo per continuare a sincronizzare.",
+        "forbidden": "GitHub ha negato l'accesso al repository. Verifica che Gamerdex Sync abbia l'accesso Read and write a Contents, poi sincronizza di nuovo.",
+        "httpStatus": "GitHub ha risposto {status}.",
+        "notFoundFolder": "Un file o una cartella in {provider} non è stato trovato. Sincronizza di nuovo.",
+        "forbiddenFolder": "{provider} ha negato l'accesso. Accedi di nuovo e consenti l'accesso ai file creati da Gamerdex.",
+        "httpStatusFolder": "{provider} ha risposto {status}."
+    },
+    "choice": {
+        "title": "Questo dispositivo e il cloud hanno entrambi dei dati",
+        "body": "Questa è la prima sincronizzazione da questo dispositivo. Scegli cosa fare. Nulla viene eliminato dal cloud finché non scegli.",
+        "merge": "Unisci entrambi",
+        "mergeHint": "Tieni tutto da entrambe le parti. Vince il valore più alto.",
+        "keepLocal": "Tieni questo dispositivo",
+        "keepLocalHint": "Sostituisci i dati del cloud con quelli di questo dispositivo.",
+        "keepCloud": "Tieni il cloud",
+        "keepCloudHint": "Sostituisci i dati di questo dispositivo con quelli del cloud."
+    },
+    "first": {
+        "thisDevice": "Questo dispositivo",
+        "cloud": "Cloud",
+        "recommended": "Consigliato",
+        "later": "Decidi dopo",
+        "apply": "Applica scelta",
+        "optionsLabel": "Cosa tenere"
+    },
+    "playthroughCount": "{count, plural, one {{amount} partita} other {{amount} partite}}",
+    "conflicts": {
+        "title": "Modifiche che non è stato possibile unire",
+        "body": "Due dispositivi hanno modificato lo stesso valore. È stato mantenuto il valore del cloud. Scegli il valore di questo dispositivo per usarlo al suo posto.",
+        "cloudValue": "Cloud",
+        "deviceValue": "Questo dispositivo",
+        "keepDevice": "Usa il valore di questo dispositivo",
+        "dismiss": "Ignora",
+        "empty": "Niente",
+        "deletedEdited": "Un dispositivo ha rimosso questo elemento e un altro l'ha modificato. È stata mantenuta la versione modificata."
+    },
+    "banner": {
+        "title": "{count, plural, one {{amount} modifica richiede una decisione} other {{amount} modifiche richiedono una decisione}}",
+        "body": "Due dispositivi hanno modificato lo stesso valore. Il valore del cloud resta finché non decidi.",
+        "review": "Controlla",
+        "waiting": "La prima sincronizzazione attende la tua scelta.",
+        "choose": "Scegli"
+    },
+    "playthroughs": {
+        "title": "Partite",
+        "thisDevice": "Questo dispositivo",
+        "cloud": "Cloud, ultima sincronizzazione",
+        "notInCloud": "Non ancora nel cloud",
+        "review": "Controlla",
+        "note": "Eliminare una partita la rimuove dal file di sincronizzazione alla sincronizzazione successiva.",
+        "status": {
+            "synced": "Sincronizzata",
+            "changedHere": "Modificata qui",
+            "conflict": "Conflitto",
+            "newHere": "Nuova qui"
+        },
+        "describe": "Livello del negozio {level}"
+    },
+    "activity": {
+        "title": "Attività di sincronizzazione recente",
+        "empty": "Non è ancora stato sincronizzato nulla.",
+        "connected": "{provider} connesso su questo browser.",
+        "uploaded": "Modifiche di questo dispositivo caricate.",
+        "downloaded": "Modifiche del cloud scaricate.",
+        "merged": "Modifiche di entrambe le parti unite.",
+        "conflicts": "{count, plural, one {{amount} modifica richiede una decisione.} other {{amount} modifiche richiedono una decisione.}}",
+        "failed": "La sincronizzazione non è riuscita."
+    },
+    "settings": {
+        "title": "Impostazioni di sincronizzazione",
+        "auto": "Sincronizza automaticamente",
+        "autoHint": "Sincronizza all'apertura dello strumento e pochi secondi dopo ogni modifica.",
+        "focus": "Controlla le modifiche quando torno sulla scheda",
+        "focusHint": "Recupera i dati più recenti dal cloud quando torni allo strumento.",
+        "metered": "Aspetta su una connessione a consumo",
+        "meteredHint": "Salta le sincronizzazioni automatiche quando il browser segnala una connessione con risparmio dati. Sincronizza ora funziona comunque."
+    },
+    "lives": {
+        "title": "Dove si trovano i tuoi dati",
+        "storage": "Archiviazione",
+        "folder": "Cartella",
+        "dataFile": "File dei dati",
+        "metaFile": "File meta",
+        "size": "Dimensione",
+        "kb": "{amount} KB",
+        "note": "Il file dei dati usa lo stesso formato del file di backup. Il file meta contiene l'elenco dei dispositivi e nessun dato di gioco. Il tuo accesso non si trova mai in nessuno dei due file.",
+        "googleNote": "La cartella Gamerdex è visibile nel tuo Drive. Gamerdex può aprire solo i file che ha creato.",
+        "githubNote": "Mantieni privato il repository. Chiunque possa aprirlo può leggere i tuoi dati.",
+        "dropboxNote": "La cartella Gamerdex si trova dentro la cartella Apps del tuo Dropbox. Gamerdex può aprire solo quella cartella.",
+        "microsoftNote": "La cartella Gamerdex si trova dentro la cartella Apps del tuo OneDrive. Gamerdex può aprire solo quella cartella."
+    },
+    "device": {
+        "title": "Questo dispositivo",
+        "name": "Nome del dispositivo",
+        "nameHint": "I file di sincronizzazione mostrano questo nome per questo dispositivo. Rinominarlo aggiorna il file meta alla sincronizzazione successiva.",
+        "activePlaythrough": "Partita attiva",
+        "noPlaythrough": "Nessuna",
+        "login": "Accesso per la sincronizzazione",
+        "loginValue": "Solo su questo dispositivo",
+        "loginHint": "La partita attiva e il tema si scelgono su ogni dispositivo, e la sincronizzazione non li cambia mai. Il tuo accesso resta su questo dispositivo. Non si trova mai nei dati salvati, nel file di backup o nei file di sincronizzazione."
+    },
+    "disconnect": {
+        "title": "Disconnetti",
+        "body": "Interrompe la sincronizzazione su questo browser. Le tue partite restano su questo dispositivo e nel cloud. Gli altri dispositivi continuano a sincronizzarsi.",
+        "button": "Disconnetti {provider}",
+        "googleHint": "Per eliminare tu stesso la copia nel cloud, disconnetti, poi elimina la cartella Gamerdex nel tuo Google Drive.",
+        "githubHint": "Per eliminare tu stesso la copia nel cloud, disconnetti, poi elimina la cartella Gamerdex nel tuo repository.",
+        "dropboxHint": "Per eliminare tu stesso la copia nel cloud, disconnetti, poi elimina la cartella dell'app in Apps nel tuo Dropbox.",
+        "microsoftHint": "Per eliminare tu stesso la copia nel cloud, disconnetti, poi elimina la cartella dell'app in Apps nel tuo OneDrive."
+    },
+    "callback": {
+        "title": "Accesso in corso",
+        "working": "Completamento dell'accesso",
+        "back": "Torna alle impostazioni",
+        "denied": "L'accesso è stato annullato.",
+        "state": "Impossibile verificare l'accesso. Ricomincia dalle impostazioni.",
+        "missing": "L'accesso non ha inviato alcun codice. Ricomincia dalle impostazioni.",
+        "failed": "Impossibile completare l'accesso. Riprova più tardi."
+    }
+}

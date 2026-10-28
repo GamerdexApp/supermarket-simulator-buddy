@@ -1,11 +1,11 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { useId, useState } from "react";
 import type { Loan } from "@/types";
 import type { Playthrough } from "@/types/playthrough";
 import { usePlaythrough } from "@/lib/contexts/PlaythroughContext";
-import { formatDate, formatMoney } from "@/lib/format";
-import { bankText } from "@/lib/messages/bank";
+import { formatCents, formatDate, formatMoney, formatNumber, formatPercent } from "@/lib/format";
 import { readStoreLevel, updatePlaythrough } from "@/service/appData";
 import {
 	activateLoan,
@@ -24,11 +24,9 @@ import { Card } from "@/comps/ui/Card";
 import { SummaryTile } from "@/comps/ui/SummaryTile";
 import { useToast } from "@/comps/ui/Toast";
 
-const text = bankText;
+const loanNumber = (index: number) => ({ number: formatNumber(index + 1) });
 
-const cents = (amount: number) =>
-	`$${amount.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
-const percent = (rate: number) => `${(rate * 100).toFixed(1)}%`;
+const dayCount = (days: number) => ({ count: days, amount: formatNumber(days) });
 
 function Row({ label, value }: { label: string; value: string }) {
 	return (
@@ -40,6 +38,7 @@ function Row({ label, value }: { label: string; value: string }) {
 }
 
 function useLoanEdit(playthrough: Playthrough) {
+	const t = useTranslations("bank");
 	const { updateData } = usePlaythrough();
 	const showToast = useToast();
 
@@ -54,7 +53,7 @@ function useLoanEdit(playthrough: Playthrough) {
 			variant: "success",
 			title,
 			action: {
-				label: text.undo,
+				label: t("undo"),
 				onAction: () =>
 					updateData((current) =>
 						updatePlaythrough(current, playthrough.id, { activeLoans: previousLoans })
@@ -67,10 +66,13 @@ function useLoanEdit(playthrough: Playthrough) {
 		activate: (index: number, term: number) =>
 			save(
 				(current) => activateLoan(current, playthrough.id, index, term),
-				text.activated(index + 1)
+				t("activated", loanNumber(index))
 			),
 		remove: (index: number) =>
-			save((current) => removeLoan(current, playthrough.id, index), text.removed(index + 1)),
+			save(
+				(current) => removeLoan(current, playthrough.id, index),
+				t("removed", loanNumber(index))
+			),
 	};
 }
 
@@ -83,6 +85,7 @@ interface LoanCardProps {
 }
 
 function LoanCard({ loan, index, playthrough, onActivate, onRemove }: LoanCardProps) {
+	const t = useTranslations("bank");
 	const sliderId = useId();
 	const titleId = useId();
 	const active = (playthrough.activeLoans ?? []).find((entry) => entry.loanIndex === index);
@@ -101,22 +104,22 @@ function LoanCard({ loan, index, playthrough, onActivate, onRemove }: LoanCardPr
 		>
 			<div className="flex items-start justify-between gap-3">
 				<h2 id={titleId} className="text-xl font-semibold">
-					{text.loanTitle(index + 1)}
+					{t("loanTitle", loanNumber(index))}
 				</h2>
 				<Badge
 					tone={state === "active" ? "kept" : state === "available" ? "added" : "locked"}
 				>
-					{text.states[state]}
+					{t(`states.${state}`)}
 				</Badge>
 			</div>
 			<div className="flex flex-col gap-1">
-				<Row label={text.principal} value={formatMoney(loan.originalAmount)} />
-				<Row label={text.rate} value={percent(loan.dailyInterest)} />
-				<Row label={text.level} value={String(loan.storeLevel)} />
+				<Row label={t("principal")} value={formatMoney(loan.originalAmount)} />
+				<Row label={t("rate")} value={formatPercent(loan.dailyInterest)} />
+				<Row label={t("level")} value={formatNumber(loan.storeLevel)} />
 			</div>
 			<div className="flex flex-col gap-1.5">
 				<label htmlFor={sliderId} className="font-medium">
-					{text.term(term)}
+					{t("term", dayCount(term))}
 				</label>
 				<input
 					id={sliderId}
@@ -129,34 +132,41 @@ function LoanCard({ loan, index, playthrough, onActivate, onRemove }: LoanCardPr
 					className="accent-primary h-11 w-full disabled:opacity-50 lg:h-6"
 				/>
 				<div className="text-muted flex justify-between text-xs">
-					<span>{text.days(loan.minTermLength)}</span>
-					<span>{text.days(loan.maxTermLength)}</span>
+					<span>{t("days", dayCount(loan.minTermLength))}</span>
+					<span>{t("days", dayCount(loan.maxTermLength))}</span>
 				</div>
-				{active && <p className="text-muted text-xs">{text.termFixed}</p>}
+				{active && <p className="text-muted text-xs">{t("termFixed")}</p>}
 			</div>
 			<div className="bg-bg flex flex-col gap-1 rounded-md p-3">
-				<h3 className="font-semibold">{text.details}</h3>
-				<Row label={text.totalInterest} value={cents(details.totalInterest)} />
-				<Row label={text.totalPayment} value={cents(details.totalPayment)} />
-				<Row label={text.dailyPayment} value={cents(details.dailyPayment)} />
+				<h3 className="font-semibold">{t("details")}</h3>
+				<Row label={t("totalInterest")} value={formatCents(details.totalInterest)} />
+				<Row label={t("totalPayment")} value={formatCents(details.totalPayment)} />
+				<Row label={t("dailyPayment")} value={formatCents(details.dailyPayment)} />
 			</div>
 			{active ? (
 				<>
 					<p className="text-muted">
-						{text.activatedOn(formatDate(active.activatedDate))}
+						{t("activatedOn", { date: formatDate(active.activatedDate) })}
 					</p>
 					<Button variant="danger" onClick={onRemove}>
-						{text.remove}
+						{t("remove")}
 					</Button>
 				</>
 			) : reachable ? (
 				<Button variant="primary" onClick={() => onActivate(term)}>
-					{text.activate}
+					{t("activate")}
 				</Button>
 			) : (
 				<>
-					<LockReason reasons={[text.requiresLevel(loan.storeLevel, level)]} />
-					<Button disabled>{text.locked}</Button>
+					<LockReason
+						reasons={[
+							t("requiresLevel", {
+								level: formatNumber(loan.storeLevel),
+								current: formatNumber(level),
+							}),
+						]}
+					/>
+					<Button disabled>{t("locked")}</Button>
 				</>
 			)}
 		</Card>
@@ -172,25 +182,32 @@ function YourLoans({
 }) {
 	const entries = activeLoanEntries(playthrough);
 	const totals = loanTotals(playthrough);
-	const copy = text.yourLoans;
+	const t = useTranslations("bank");
 
 	return (
 		<div className="flex flex-col gap-3">
 			<div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
 				<SummaryTile
-					label={copy.activeLoans}
+					label={t("yourLoans.activeLoans")}
 					value={totals.active}
 					total={bank.loans.length}
 				/>
-				<SummaryTile label={copy.dailyPayment} value={cents(totals.dailyPayment)} />
+				<SummaryTile
+					label={t("yourLoans.dailyPayment")}
+					value={formatCents(totals.dailyPayment)}
+				/>
 				<div className="col-span-2 sm:col-span-1">
-					<SummaryTile label={copy.totalDebt} value={cents(totals.totalDebt)} emphasis />
+					<SummaryTile
+						label={t("yourLoans.totalDebt")}
+						value={formatCents(totals.totalDebt)}
+						emphasis
+					/>
 				</div>
 			</div>
 			<Card className="flex flex-col gap-3 p-4">
-				<h2 className="text-lg font-semibold">{copy.title}</h2>
+				<h2 className="text-lg font-semibold">{t("yourLoans.title")}</h2>
 				{entries.length === 0 ? (
-					<p className="text-muted">{copy.none}</p>
+					<p className="text-muted">{t("yourLoans.none")}</p>
 				) : (
 					<ul className="flex flex-col">
 						{entries.map(({ entry, loan, details }) => (
@@ -200,42 +217,46 @@ function YourLoans({
 							>
 								<span className="flex min-w-0 flex-col">
 									<span className="font-semibold">
-										{text.loanTitle(entry.loanIndex + 1)}
+										{t("loanTitle", loanNumber(entry.loanIndex))}
 									</span>
 									<span className="text-muted">
-										{copy.line(
-											formatMoney(loan.originalAmount),
-											percent(loan.dailyInterest),
-											entry.termLength
-										)}
+										{t("yourLoans.line", {
+											principal: formatMoney(loan.originalAmount),
+											rate: formatPercent(loan.dailyInterest),
+											...dayCount(entry.termLength),
+										})}
 									</span>
 									<span className="text-muted">
-										{text.activatedOn(formatDate(entry.activatedDate))} ·{" "}
-										{copy.payments(
-											cents(details.dailyPayment),
-											cents(details.totalPayment)
-										)}
+										{t("activatedOn", {
+											date: formatDate(entry.activatedDate),
+										})}{" "}
+										·{" "}
+										{t("yourLoans.payments", {
+											daily: formatCents(details.dailyPayment),
+											total: formatCents(details.totalPayment),
+										})}
 									</span>
 								</span>
 								<Button variant="danger" onClick={() => onRemove(entry.loanIndex)}>
-									{text.remove}
+									{t("remove")}
 								</Button>
 							</li>
 						))}
 					</ul>
 				)}
-				<p className="text-muted text-xs">{copy.formula}</p>
+				<p className="text-muted text-xs">{t("yourLoans.formula")}</p>
 			</Card>
 		</div>
 	);
 }
 
 function BankContent({ playthrough }: { playthrough: Playthrough }) {
+	const t = useTranslations("bank");
 	const { activate, remove } = useLoanEdit(playthrough);
 
 	return (
 		<>
-			<PageHeader title={text.title} subline={text.subline(playthrough.name)} />
+			<PageHeader title={t("title")} subline={t("subline", { name: playthrough.name })} />
 			<YourLoans playthrough={playthrough} onRemove={remove} />
 			<div className="grid items-start gap-4 lg:grid-cols-2">
 				{bank.loans.map((loan, index) => (
@@ -254,8 +275,9 @@ function BankContent({ playthrough }: { playthrough: Playthrough }) {
 }
 
 export function BankPage() {
+	const t = useTranslations("bank");
 	return (
-		<PlaythroughGate title={text.title} emptyDescription={text.emptyDescription}>
+		<PlaythroughGate title={t("title")} emptyDescription={t("emptyDescription")}>
 			{(playthrough) => <BankContent playthrough={playthrough} />}
 		</PlaythroughGate>
 	);

@@ -1,0 +1,85 @@
+{
+    "title": "Partidas",
+    "subline": "{count, plural, one {{amount} partida} other {{amount} partidas}}",
+    "newPlaythrough": "Nova partida",
+    "loading": "Lendo os dados salvos neste navegador.",
+    "filters": {
+        "search": "Buscar por nome",
+        "sortLabel": "Ordenar por",
+        "sort": {
+            "lastModified": "Última atualização",
+            "name": "Nome",
+            "createdAt": "Data de criação",
+            "storeLevel": "Nível da loja"
+        },
+        "showing": "Mostrando {shown} de {count, plural, one {{amount} partida} other {{amount} partidas}}",
+        "clear": "Limpar busca"
+    },
+    "empty": {
+        "title": "Nenhuma partida ainda",
+        "deletedTitle": "Partida excluída",
+        "description": "Crie uma partida para começar a acompanhar sua loja. Tudo fica neste navegador, a menos que você ative a sincronização.",
+        "restore": "Restaurar de um backup"
+    },
+    "noMatch": {
+        "title": "Nenhuma partida corresponde a “{query}”",
+        "description": "Tente outro nome."
+    },
+    "card": {
+        "active": "Ativa",
+        "setActive": "Definir como ativa",
+        "openOverview": "Abrir visão geral",
+        "edit": "Editar",
+        "delete": "Excluir",
+        "created": "Criada em {date}",
+        "lastModified": "Atualizada em {date}",
+        "storeLevel": "Nível da loja",
+        "spending": "Gasto total",
+        "licenses": "Licenças",
+        "shopping": "Lista de compras",
+        "ofTotal": "{count} de {total}",
+        "switched": "Você mudou para {name}"
+    },
+    "fields": {
+        "nameLabel": "Nome da partida",
+        "namePlaceholder": "ex.: Minha primeira loja",
+        "nameError": "Digite um nome para esta partida.",
+        "descriptionLabel": "Descrição",
+        "descriptionPlaceholder": "Adicione uma descrição para esta partida...",
+        "cancel": "Cancelar"
+    },
+    "create": {
+        "title": "Criar nova partida",
+        "submit": "Criar",
+        "done": "{name} criada",
+        "starterTitle": "Toda partida nova começa com",
+        "starter": {
+            "item1": "Nível da loja 0",
+            "item2": "Licença 0, a licença inicial grátis",
+            "item3": "Seção de crescimento 1",
+            "item4": "As ferramentas Paper Bag, Sponge e Mop"
+        }
+    },
+    "edit": {
+        "title": "Editar partida",
+        "description": "Os campos começam com os valores salvos.",
+        "save": "Salvar",
+        "saved": "Salvo",
+        "savedMessage": "{name} foi atualizada.",
+        "dates": "Criada em {created} · Atualizada em {updated}"
+    },
+    "delete": {
+        "title": "Excluir partida",
+        "question": "Tem certeza de que quer excluir “{name}”?",
+        "description": "Isso remove todo o progresso salvo desta partida neste dispositivo. Com a sincronização ativada, ela também é removida dos seus outros dispositivos na próxima sincronização.",
+        "activeNext": "Esta é sua partida ativa. {next} passa a ser a ativa.",
+        "activeLast": "Esta é sua partida ativa e a única que você tem. Depois disso você não terá nenhuma partida ativa.",
+        "exportFirst": "Exportar um backup antes",
+        "cancel": "Cancelar",
+        "confirm": "Excluir",
+        "done": "{name} excluída",
+        "doneMessage": "Desfaça em até 10 segundos para recuperá-la.",
+        "undo": "Desfazer"
+    },
+    "sublineActive": "{count, plural, one {{amount} partida} other {{amount} partidas}} · {name} está ativa"
+}

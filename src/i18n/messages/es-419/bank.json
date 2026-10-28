@@ -1,0 +1,39 @@
+{
+    "title": "Préstamos bancarios",
+    "subline": "Gestiona tus préstamos de {name}",
+    "emptyDescription": "Elige o crea una partida para registrar sus préstamos.",
+    "loanTitle": "Préstamo n.º {number}",
+    "states": {
+        "active": "Activo",
+        "available": "Disponible",
+        "locked": "Bloqueado"
+    },
+    "principal": "Monto del préstamo",
+    "rate": "Tasa de interés diaria",
+    "level": "Nivel de tienda necesario",
+    "term": "Plazo: {count, plural, one {{amount} día} other {{amount} días}}",
+    "days": "{count, plural, one {{amount} día} other {{amount} días}}",
+    "termFixed": "El plazo es fijo hasta que se quite el préstamo.",
+    "details": "Detalles del préstamo",
+    "totalInterest": "Intereses totales",
+    "totalPayment": "Pago total",
+    "dailyPayment": "Pago diario",
+    "activate": "Activar préstamo",
+    "activatedOn": "Activado el: {date}",
+    "remove": "Quitar préstamo",
+    "requiresLevel": "Necesita nivel de tienda {level} (tienes nivel {current})",
+    "locked": "Bloqueado",
+    "activated": "Préstamo n.º {number} activado",
+    "removed": "Préstamo n.º {number} quitado",
+    "undo": "Deshacer",
+    "yourLoans": {
+        "title": "Tus préstamos",
+        "activeLoans": "Préstamos activos",
+        "dailyPayment": "Pago diario",
+        "totalDebt": "Deuda total de préstamos",
+        "none": "No hay préstamos activos. Elige un plazo en uno de los préstamos de abajo y actívalo.",
+        "line": "{principal} al {rate} diario durante {count, plural, one {{amount} día} other {{amount} días}}",
+        "payments": "{daily} al día · {total} en total",
+        "formula": "Los intereses son el monto por el interés diario por el plazo en días."
+    }
+}

@@ -1,0 +1,39 @@
+{
+    "title": "은행 대출",
+    "subline": "{name}의 대출을 관리해요",
+    "emptyDescription": "회차를 선택하거나 만들어서 대출을 기록하세요.",
+    "loanTitle": "대출 #{number}",
+    "states": {
+        "active": "진행 중",
+        "available": "이용 가능",
+        "locked": "잠김"
+    },
+    "principal": "원금",
+    "rate": "일일 이자율",
+    "level": "필요 매장 레벨",
+    "term": "대출 기간: {count, plural, other {{amount}일}}",
+    "days": "{count, plural, other {{amount}일}}",
+    "termFixed": "대출을 삭제하기 전까지 기간은 바꿀 수 없어요.",
+    "details": "대출 상세",
+    "totalInterest": "총 이자",
+    "totalPayment": "총 상환액",
+    "dailyPayment": "일일 상환액",
+    "activate": "대출 받기",
+    "activatedOn": "대출일: {date}",
+    "remove": "대출 삭제",
+    "requiresLevel": "매장 레벨 {level} 필요 (현재 레벨 {current})",
+    "locked": "잠김",
+    "activated": "대출 #{number}을(를) 받았어요",
+    "removed": "대출 #{number}을(를) 삭제했어요",
+    "undo": "실행 취소",
+    "yourLoans": {
+        "title": "내 대출",
+        "activeLoans": "진행 중인 대출",
+        "dailyPayment": "일일 상환액",
+        "totalDebt": "총 대출 잔액",
+        "none": "진행 중인 대출이 없어요. 아래 대출에서 기간을 고르고 대출을 받으세요.",
+        "line": "{principal}, 하루 {rate}, {count, plural, other {{amount}일}}",
+        "payments": "하루 {daily} · 총 {total}",
+        "formula": "이자는 원금 × 일일 이자율 × 기간(일)이에요."
+    }
+}

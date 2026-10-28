@@ -3,8 +3,8 @@ import { Suspense } from "react";
 import { PlaythroughsPage } from "@/comps/playthroughs/PlaythroughsPage";
 
 export const metadata: Metadata = {
-	title: "Playthroughs",
-	description: "Create, switch, edit and delete your Supermarket Simulator playthroughs.",
+	title: "Playthroughs", // i18n-ignore
+	description: "Create, switch, edit and delete your Supermarket Simulator playthroughs.", // i18n-ignore
 	alternates: { canonical: "/playthroughs" },
 };
 

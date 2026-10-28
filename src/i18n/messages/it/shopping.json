@@ -1,0 +1,63 @@
+{
+    "title": "Lista della spesa",
+    "subline": "Pianifica gli acquisti di prodotti per {name}",
+    "emptyDescription": "Crea una partita per pianificare gli acquisti.",
+    "addProducts": "Aggiungi prodotti",
+    "summary": {
+        "title": "Riepilogo della spesa",
+        "purchased": "{bought} / {count, plural, one {{amount} articolo acquistato} other {{amount} articoli acquistati}}",
+        "boxes": "{count, plural, one {{amount} scatola in totale} other {{amount} scatole in totale}}",
+        "reset": "Reimposta lista"
+    },
+    "reset": {
+        "title": "Reimpostare la lista della spesa?",
+        "body": "Verranno rimossi {count, plural, one {{amount} articolo} other {{amount} articoli}} ({bought} acquistati, {boxCount, plural, one {{boxes} scatola} other {{boxes} scatole}}).",
+        "cancel": "Annulla",
+        "confirm": "Reimposta lista",
+        "done": "Lista della spesa reimpostata",
+        "doneMessage": "{count, plural, one {{amount} articolo rimosso} other {{amount} articoli rimossi}}."
+    },
+    "empty": {
+        "title": "La tua lista della spesa è vuota",
+        "body": "Pianifica quali prodotti comprare prima del prossimo giro nei negozi.",
+        "steps": {
+            "item1": "Aggiungi prodotti dalle licenze che hai sbloccato.",
+            "item2": "Tocca di nuovo un prodotto per aggiungere un'altra scatola.",
+            "item3": "Spunta gli articoli man mano che li compri."
+        },
+        "missing": "Manca un prodotto? Sblocca la sua licenza in Gestione.",
+        "toManagement": "Apri licenze"
+    },
+    "shop": {
+        "noShop": "Nessun negozio disponibile",
+        "items": "{count, plural, one {{amount} articolo} other {{amount} articoli}}",
+        "progress": "{bought} di {total} acquistati · {count, plural, one {{amount} scatola} other {{amount} scatole}}"
+    },
+    "row": {
+        "purchased": "Segna come acquistato: {label}",
+        "boxes": "Scatole",
+        "remove": "Rimuovi {label}",
+        "removed": "{name} rimosso"
+    },
+    "undo": "Annulla",
+    "dialog": {
+        "title": "Aggiungi prodotti alla lista della spesa",
+        "search": "Cerca prodotti",
+        "searchPlaceholder": "Cerca per nome o azienda...",
+        "source": "Sono elencati solo i prodotti delle licenze sbloccate.",
+        "showing": "{shown} di {total} mostrati",
+        "pick": "Tocca un prodotto per aggiungerlo",
+        "noResults": "Nessun prodotto trovato per “{term}”",
+        "noResultsHint": "Un prodotto mancante potrebbe richiedere una licenza che non hai ancora sbloccato.",
+        "clearSearch": "Cancella ricerca",
+        "addOne": "Aggiungi una scatola di {label}",
+        "pending": "Articoli da aggiungere ({count})",
+        "noPending": "Ancora nessun articolo aggiunto. Tocca un prodotto a sinistra per aggiungere una scatola. Toccalo di nuovo per aggiungerne altre.",
+        "merges": "Se un prodotto è già nella lista, queste scatole vengono aggiunte alla sua riga.",
+        "boxes": "{count, plural, one {{amount} scatola} other {{amount} scatole}}",
+        "removePending": "Rimuovi {label} dagli articoli da aggiungere",
+        "cancel": "Annulla",
+        "submit": "{count, plural, one {Aggiungi {amount} articolo alla lista} other {Aggiungi {amount} articoli alla lista}}",
+        "added": "{count, plural, one {{amount} articolo aggiunto} other {{amount} articoli aggiunti}}"
+    }
+}

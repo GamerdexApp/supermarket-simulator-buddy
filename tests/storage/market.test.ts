@@ -4,7 +4,6 @@ import {
   categoryOptions,
   displayTypeOptions,
   filterProducts,
-  labelOf,
   productKey,
   toolState,
   vehicleState,
@@ -48,10 +47,6 @@ describe("products", () => {
 
   it("keys every product uniquely", () => {
     expect(new Set(market.products.map(productKey)).size).toBe(186);
-  });
-
-  it("labels stored values as the old cards did", () => {
-    expect(labelOf("garment_rack")).toBe("Garment Rack");
   });
 });
 

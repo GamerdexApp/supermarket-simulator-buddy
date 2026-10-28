@@ -1,10 +1,10 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import type { Playthrough } from "@/types/playthrough";
 import { usePlaythrough } from "@/lib/contexts/PlaythroughContext";
-import { shellText } from "@/lib/messages/shell";
 import { navCount } from "@/service/navCounts";
 import type { NavItem } from "@/data/nav";
 import { isNavItemActive, navGroups, settingsNavItem } from "@/data/nav";
@@ -20,6 +20,7 @@ interface SidebarLinkProps {
 }
 
 function SidebarLink({ item, playthrough, onNavigate }: SidebarLinkProps) {
+	const t = useTranslations("shell.nav.items");
 	const active = isNavItemActive(item, usePathname());
 	const count = playthrough ? navCount(item.id, playthrough) : null;
 	const muted = !playthrough && item.id !== "settings";
@@ -37,13 +38,14 @@ function SidebarLink({ item, playthrough, onNavigate }: SidebarLinkProps) {
 			}`}
 		>
 			<Icon size={16} aria-hidden="true" className="shrink-0" />
-			<span className="flex-1">{item.label}</span>
+			<span className="flex-1">{t(item.id)}</span>
 			{count !== null && <span className="font-mono text-xs">{count}</span>}
 		</Link>
 	);
 }
 
 export function SidebarContent({ onNavigate }: { onNavigate?: () => void }) {
+	const t = useTranslations("shell");
 	const { activePlaythrough, isLoaded } = usePlaythrough();
 
 	return (
@@ -54,20 +56,20 @@ export function SidebarContent({ onNavigate }: { onNavigate?: () => void }) {
 				{activePlaythrough && <StoreLevelStepper playthrough={activePlaythrough} />}
 			</div>
 			<nav
-				aria-label={shellText.mainNav}
+				aria-label={t("mainNav")}
 				data-focus-inset
 				className="flex min-h-0 flex-1 flex-col gap-0.5 overflow-y-auto"
 			>
 				{isLoaded && !activePlaythrough && (
 					<p className="text-sb-muted px-2.5 pb-1 text-[13px]">
-						{shellText.noPlaythroughHint}
+						{t("noPlaythroughHint")}
 					</p>
 				)}
 				{navGroups.map((group) => (
 					<div key={group.id ?? "top"} className="flex flex-col gap-0.5">
-						{group.label && (
+						{group.id && (
 							<SectionLabel className="text-sb-muted mt-2 px-2.5 pb-0.5">
-								{group.label}
+								{t(`nav.groups.${group.id}`)}
 							</SectionLabel>
 						)}
 						{group.items.map((item) => (

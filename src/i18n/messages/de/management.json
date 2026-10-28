@@ -1,0 +1,149 @@
+{
+    "title": "Verwaltung",
+    "tabsLabel": "Verwaltung",
+    "tabs": {
+        "licenses": "Lizenzen",
+        "growth": "Ausbau",
+        "storage": "Lager",
+        "hiring": "Personal",
+        "customizations": "Anpassungen"
+    },
+    "sublines": {
+        "licenses": "{name} · Schalte Lizenzen frei, um mehr Produkte zu verkaufen",
+        "growth": "{name} · Vergrößere die Ladenfläche Abschnitt für Abschnitt",
+        "storage": "{name} · Vergrößere das Lager Abschnitt für Abschnitt",
+        "hiring": "{name} · Stelle Personal für deinen Laden ein",
+        "customizations": "{name} · Im Spiel gekaufte Ladenänderungen"
+    },
+    "emptyDescription": "Wähle oder erstelle einen Spielstand, um Lizenzen, Ausbau, Lager und Personal zu verfolgen.",
+    "storeLevel": "Ladenlevel",
+    "storeLevelCaption": "In der Seitenleiste ändern",
+    "free": "Kostenlos",
+    "requiresLevel": "Benötigt Ladenlevel {level} (du hast Level {current})",
+    "locked": "Gesperrt",
+    "states": {
+        "unlocked": "Freigeschaltet",
+        "canUnlock": "Verfügbar",
+        "locked": "Gesperrt"
+    },
+    "licenses": {
+        "totalSpent": "Ausgaben für Lizenzen",
+        "unlockedOf": "{owned} von {count, plural, one {{amount} Lizenz freigeschaltet} other {{amount} Lizenzen freigeschaltet}}",
+        "canUnlockNow": "Jetzt verfügbar",
+        "lockedByLevel": "Level zu niedrig",
+        "title": "Lizenz {number}",
+        "price": "Preis",
+        "level": "Ladenlevel",
+        "unlocks": "Schaltet {count, plural, one {{amount} Produkt} other {{amount} Produkte}} frei",
+        "unlock": "Lizenz freischalten",
+        "undoUnlock": "Freischalten rückgängig",
+        "unlocked": "Lizenz {number} freigeschaltet",
+        "undone": "Lizenz {number} wieder gesperrt",
+        "filters": {
+            "search": "Lizenzen oder Produkte suchen",
+            "title": "Lizenzen filtern",
+            "show": "Anzeigen",
+            "showOptions": {
+                "all": "Alle",
+                "unlocked": "Freigeschaltet",
+                "canUnlock": "Verfügbar",
+                "locked": "Gesperrt"
+            },
+            "sort": "Sortieren nach",
+            "sortOptions": {
+                "number": "Lizenznummer",
+                "price": "Preis aufsteigend",
+                "storeLevel": "Ladenlevel aufsteigend"
+            },
+            "summary": "{shown} von {count, plural, one {{amount} Lizenz} other {{amount} Lizenzen}} angezeigt",
+            "showButton": "{count, plural, one {{amount} Lizenz} other {{amount} Lizenzen}} anzeigen"
+        },
+        "noMatch": "Keine Lizenzen passen zu diesen Filtern",
+        "noMatchDescription": "Versuche eine andere Suche oder zeige alle Lizenzen an."
+    },
+    "sections": {
+        "growth": {
+            "totalSpent": "Ausgaben für Ausbau",
+            "unlockedOf": "{owned} von {count, plural, one {{amount} Abschnitt freigeschaltet} other {{amount} Abschnitten freigeschaltet}}",
+            "title": "Ladenabschnitt {num}",
+            "pathLabel": "Ladenabschnitte",
+            "unlocked": "Ladenabschnitt {num} freigeschaltet",
+            "undone": "{count, plural, one {Ladenabschnitt {range}} other {Ladenabschnitte {range}}} wieder gesperrt",
+            "cascadeTitle": "Ladenabschnitt {num} rückgängig machen?"
+        },
+        "storage": {
+            "totalSpent": "Ausgaben für Lager",
+            "unlockedOf": "{owned} von {count, plural, one {{amount} Abschnitt freigeschaltet} other {{amount} Abschnitten freigeschaltet}}",
+            "title": "Lagerabschnitt {num}",
+            "pathLabel": "Lagerabschnitte",
+            "firstSectionNote": "Laut Spieldaten kostet Lagerabschnitt 1 auf Ladenlevel 0 $800, Ladenabschnitt 1 ist dagegen kostenlos.",
+            "unlocked": "Lagerabschnitt {num} freigeschaltet",
+            "undone": "{count, plural, one {Lagerabschnitt {range}} other {Lagerabschnitte {range}}} wieder gesperrt",
+            "cascadeTitle": "Lagerabschnitt {num} rückgängig machen?"
+        },
+        "nextSection": "Nächster Abschnitt",
+        "nextSectionValue": "Abschnitt {num} · Level {level} · {price}",
+        "allUnlocked": "Alles freigeschaltet",
+        "level": "Level {level}",
+        "size": "Größe {size}",
+        "nextToUnlock": "Als Nächstes",
+        "unlock": "Freischalten",
+        "unlockFirst": "Schalte zuerst Abschnitt {num} frei.",
+        "cascade": {
+            "body": "{count, plural, one {Abschnitt {range} braucht ihn und wird mit ihm gesperrt} other {Abschnitte {range} brauchen ihn und werden mit ihm gesperrt}}. Die Ausgaben sinken um {price}.",
+            "confirm": "{count, plural, one {Abschnitt {range}} other {Abschnitte {range}}} rückgängig",
+            "keep": "Freigeschaltet lassen"
+        },
+        "range": "{first} bis {last}"
+    },
+    "hiring": {
+        "dailyWages": "Tageslöhne gesamt",
+        "dailyWagesCaption": "Tägliche Kosten aller eingestellten Mitarbeiter",
+        "hired": "Eingestellte Mitarbeiter",
+        "hiringCosts": "Gezahlte Einstellungskosten",
+        "hiringCostsCaption": "Einmalig, nicht Teil der Tageslöhne",
+        "roles": {
+            "cashiers": {
+                "title": "Kassierer",
+                "stat": "Kassiervorgänge: <stat>{value}</stat>",
+                "employeeName": "Kassierer {number}"
+            },
+            "restockers": {
+                "title": "Auffüller",
+                "stat": "Anzahl Regale: <stat>{value}</stat>",
+                "employeeName": "Auffüller {number}"
+            },
+            "customerHelpers": {
+                "title": "Kundenhelfer",
+                "stat": "Anzahl Kassen: <stat>{value}</stat>",
+                "employeeName": "Kundenhelfer {number}"
+            },
+            "securityGuards": {
+                "title": "Wachleute",
+                "employeeName": "Wachmann {number}"
+            },
+            "janitors": {
+                "title": "Hausmeister",
+                "employeeName": "Hausmeister {number}"
+            }
+        },
+        "hiredOf": "{count} von {total} eingestellt",
+        "roleWages": "Tageslöhne: {amount}",
+        "hiredBadge": "Eingestellt",
+        "level": "Ladenlevel",
+        "cost": "Einstellungskosten",
+        "wage": "Tageslohn",
+        "perDay": "{amount} / Tag",
+        "hire": "Einstellen",
+        "fire": "Entlassen",
+        "hiredToast": "{name} eingestellt",
+        "firedToast": "{name} entlassen"
+    },
+    "customizations": {
+        "total": "Preis für alle drei",
+        "totalCaption": "Aus den Spieldaten, nicht gespeichert",
+        "note": "Diese Änderungen kaufst du im Spiel. Hier wird nichts gespeichert.",
+        "price": "Preis"
+    },
+    "tabCount": "{owned} / {total}"
+}

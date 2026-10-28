@@ -1,22 +1,25 @@
-export const formatShortDate = (iso: string) =>
-  new Intl.DateTimeFormat(undefined, { month: "short", day: "numeric" }).format(
-    new Date(iso),
-  );
+import {
+  formatDateTime as formatDateTimeI18n,
+  formatFixed,
+  formatNumber,
+  formatShortDate,
+  formatTime,
+} from "@/i18n/formatter";
 
-export const formatDate = (iso: string) =>
-  new Intl.DateTimeFormat(undefined, {
-    year: "numeric",
-    month: "short",
-    day: "numeric",
-  }).format(new Date(iso));
+/** A calendar date in the chosen date format, such as Oct 28, 2026. */
+export const formatDate = formatShortDate;
 
-export const formatDateTime = (iso: string) =>
-  new Intl.DateTimeFormat(undefined, {
-    year: "numeric",
-    month: "short",
-    day: "numeric",
-    hour: "numeric",
-    minute: "2-digit",
-  }).format(new Date(iso));
+export { formatShortDate, formatTime };
 
-export const formatMoney = (amount: number) => `$${amount.toLocaleString()}`;
+export const formatDateTime = formatDateTimeI18n;
+
+/** Whole dollars in the chosen number format. The game shows prices in dollars in every language. */
+export const formatMoney = (amount: number) => `$${formatNumber(amount)}`;
+
+/** Dollars and cents, for loan amounts. */
+export const formatCents = (amount: number) => `$${formatFixed(amount, 2)}`;
+
+/** A daily rate such as 0.025 as 2.5%. */
+export const formatPercent = (rate: number) => `${formatFixed(rate * 100, 1)}%`;
+
+export { formatNumber };

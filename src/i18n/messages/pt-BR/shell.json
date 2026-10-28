@@ -1,0 +1,81 @@
+{
+    "skipToContent": "Pular para o conteúdo",
+    "closeMenu": "Fechar menu",
+    "openMenu": "Abrir menu",
+    "menuLabel": "Menu do site",
+    "mainNav": "Principal",
+    "brandWords": {
+        "item1": "Supermarket",
+        "item2": "Simulator",
+        "item3": "Buddy"
+    },
+    "noPlaythroughHint": "Crie uma partida para começar a acompanhar seu progresso.",
+    "switcher": {
+        "sectionLabel": "Partida",
+        "loading": "Carregando",
+        "none": "Nenhuma selecionada",
+        "switch": "Trocar de partida",
+        "playthroughs": "Partidas",
+        "active": "Ativa",
+        "all": "Todas as partidas",
+        "create": "Nova partida",
+        "level": "Nível {level}",
+        "rowDetail": "Nível {level} · {date}",
+        "switched": "Você mudou para {name}",
+        "empty": "Nenhuma partida criada ainda"
+    },
+    "storeLevel": {
+        "label": "Nível da loja",
+        "edit": "Nível da loja {level}, selecione para digitar um nível",
+        "atZero": "Já está no nível 0"
+    },
+    "empty": {
+        "title": "Nenhuma partida selecionada",
+        "description": "Crie uma partida ou escolha uma da sua lista para ver esta página.",
+        "create": "Nova partida",
+        "all": "Todas as partidas"
+    },
+    "footer": {
+        "tagline": "Um rastreador de progresso gratuito para Supermarket Simulator. Seus dados ficam no seu navegador, ou no seu próprio armazenamento em nuvem se você ativar a sincronização.",
+        "support": "Suporte",
+        "about": "Sobre",
+        "settings": "Configurações",
+        "discord": "Discord",
+        "github": "GitHub",
+        "officialGame": "Jogo oficial",
+        "privacy": "Política de privacidade",
+        "terms": "Termos de serviço",
+        "disclaimerTitle": "Aviso legal",
+        "disclaimer": "Este projeto não é afiliado, endossado nem ligado a Supermarket Simulator ou aos seus desenvolvedores. Todas as marcas registradas e o conteúdo do jogo pertencem aos seus donos.",
+        "framework": "Feito com o framework Gamerdex, uma base compartilhada para rastreadores de progresso de jogos gratuitos.",
+        "visitGamerdex": "Visitar Gamerdex"
+    },
+    "notFound": {
+        "title": "Página não encontrada",
+        "body": "Não há nenhuma página em <code>{path}</code>.",
+        "didYouMean": "Você quis dizer <link>{suggestion}</link>?",
+        "quickLinks": "Seções",
+        "toOverview": "Ir para a visão geral",
+        "toHome": "Voltar ao início"
+    },
+    "saveFailed": {
+        "title": "Não salvo",
+        "message": "O navegador não conseguiu salvar suas mudanças. Baixe um backup para não perder nada.",
+        "exportBackup": "Baixar backup"
+    },
+    "nav": {
+        "groups": {
+            "store": "Sua loja",
+            "plan": "Planejar"
+        },
+        "items": {
+            "overview": "Visão geral",
+            "market": "Mercado",
+            "management": "Gerenciamento",
+            "bank": "Banco",
+            "shoppingList": "Lista de compras",
+            "settings": "Configurações",
+            "playthroughs": "Partidas"
+        }
+    }
+}

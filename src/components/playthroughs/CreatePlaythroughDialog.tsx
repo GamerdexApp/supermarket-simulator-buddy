@@ -1,15 +1,15 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { useId, useState } from "react";
 import type { FormEvent } from "react";
 import { usePlaythrough } from "@/lib/contexts/PlaythroughContext";
-import { playthroughsText } from "@/lib/messages/playthroughs";
 import { Button } from "@/comps/ui/Button";
 import { Dialog } from "@/comps/ui/Dialog";
 import { useToast } from "@/comps/ui/Toast";
 import { PlaythroughFields } from "./PlaythroughFields";
 
-const text = playthroughsText.create;
+const STARTER_ITEMS = ["item1", "item2", "item3", "item4"] as const;
 
 /** Mounted only while open, so every open starts empty. */
 interface CreateDialogProps {
@@ -19,6 +19,7 @@ interface CreateDialogProps {
 }
 
 function CreateDialogContent({ onClose, onCreated }: CreateDialogProps) {
+	const t = useTranslations("playthroughs");
 	const formId = useId();
 	const { addPlaythrough } = usePlaythrough();
 	const showToast = useToast();
@@ -39,7 +40,7 @@ function CreateDialogContent({ onClose, onCreated }: CreateDialogProps) {
 			description: description.trim() || undefined,
 		});
 		if (!id) return;
-		showToast({ variant: "success", title: text.done(trimmedName) });
+		showToast({ variant: "success", title: t("create.done", { name: trimmedName }) });
 		onClose();
 		onCreated?.();
 	};
@@ -48,17 +49,17 @@ function CreateDialogContent({ onClose, onCreated }: CreateDialogProps) {
 		<Dialog
 			open
 			onClose={onClose}
-			title={text.title}
+			title={t("create.title")}
 			footer={
 				<>
-					<Button onClick={onClose}>{playthroughsText.fields.cancel}</Button>
+					<Button onClick={onClose}>{t("fields.cancel")}</Button>
 					<Button
 						type="submit"
 						form={formId}
 						variant="primary"
 						aria-disabled={trimmedName === ""}
 					>
-						{text.submit}
+						{t("create.submit")}
 					</Button>
 				</>
 			}
@@ -72,10 +73,10 @@ function CreateDialogContent({ onClose, onCreated }: CreateDialogProps) {
 					onDescriptionChange={setDescription}
 				/>
 				<div className="bg-bg flex flex-col gap-1.5 rounded-md p-3">
-					<span className="font-semibold">{text.starterTitle}</span>
+					<span className="font-semibold">{t("create.starterTitle")}</span>
 					<ul className="text-muted list-disc ps-5">
-						{text.starter.map((line) => (
-							<li key={line}>{line}</li>
+						{STARTER_ITEMS.map((item) => (
+							<li key={item}>{t(`create.starter.${item}`)}</li>
 						))}
 					</ul>
 				</div>

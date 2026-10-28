@@ -1,11 +1,11 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { useState } from "react";
 import { LuCheck } from "react-icons/lu";
 import type { Playthrough } from "@/types/playthrough";
-import { formatMoney } from "@/lib/format";
+import { formatMoney, formatNumber } from "@/lib/format";
 import { useListEdit } from "@/lib/hooks/useListEdit";
-import { managementText } from "@/lib/messages/management";
 import { readStoreLevel } from "@/service/appData";
 import type { SectionKind, SectionStep } from "@/service/management";
 import {
@@ -26,12 +26,17 @@ import { Note } from "@/comps/ui/Note";
 import { SummaryTile } from "@/comps/ui/SummaryTile";
 import { StoreLevelTile } from "./StoreLevelTile";
 
-const text = managementText;
-const sectionText = text.sections;
+/** Section numbers as "5" or "5 to 10", for the sentences that name a run of sections. */
+function useSectionRange() {
+	const t = useTranslations("management.sections");
+	return (nums: string[]) =>
+		nums.length === 1 ? nums[0] : t("range", { first: nums[0], last: nums[nums.length - 1] });
+}
 
-const priceText = (price: number) => (price === 0 ? text.free : formatMoney(price));
-
-const capitalize = (word: string) => word.charAt(0).toUpperCase() + word.slice(1);
+function usePriceText() {
+	const t = useTranslations("management");
+	return (price: number) => (price === 0 ? t("free") : formatMoney(price));
+}
 
 function Chip({ children }: { children: string }) {
 	return (
@@ -66,13 +71,18 @@ function StepRow({
 	onConfirmCascade,
 	onCancelCascade,
 }: StepRowProps) {
+	const t = useTranslations("management");
+	const tUi = useTranslations("ui");
+	const rangeText = useSectionRange();
+	const priceText = usePriceText();
 	const { section, unlocked, isNext, needsSection, needsLevel } = step;
-	const kindText = sectionText[kind];
 	const reasons = [
-		needsSection && sectionText.unlockFirst(needsSection),
-		needsLevel !== null && text.requiresLevel(needsLevel, readStoreLevel(playthrough)),
+		needsSection && t("sections.unlockFirst", { num: needsSection }),
+		needsLevel !== null &&
+			t("requiresLevel", { level: needsLevel, current: readStoreLevel(playthrough) }),
 	].filter((reason): reason is string => Boolean(reason));
 	const cascade = confirming ? sectionsToLock(kind, playthrough, section.sectionNum) : [];
+	const cascadeFollowers = cascade.slice(1);
 
 	return (
 		<li className="flex gap-3">
@@ -106,48 +116,54 @@ function StepRow({
 				}`}
 			>
 				<div className="flex flex-wrap items-center justify-between gap-2">
-					<span className="font-semibold">{kindText.title(section.sectionNum)}</span>
-					{unlocked && <Badge tone="kept">{text.states.unlocked}</Badge>}
-					{isNext && <Badge tone="added">{sectionText.nextToUnlock}</Badge>}
+					<span className="font-semibold">
+						{t(`sections.${kind}.title`, { num: section.sectionNum })}
+					</span>
+					{unlocked && <Badge tone="kept">{t("states.unlocked")}</Badge>}
+					{isNext && <Badge tone="added">{t("sections.nextToUnlock")}</Badge>}
 				</div>
 				<div className="flex flex-wrap gap-1.5">
-					<Chip>{sectionText.level(section.storeLevel)}</Chip>
+					<Chip>{t("sections.level", { level: section.storeLevel })}</Chip>
 					<Chip>{priceText(section.price)}</Chip>
-					<Chip>{sectionText.size(section.size)}</Chip>
+					<Chip>{t("sections.size", { size: section.size })}</Chip>
 				</div>
 				{!unlocked && !isNext && reasons.length > 0 && <LockReason reasons={reasons} />}
 				{isNext && (
 					<div>
 						<Button variant="primary" onClick={onUnlock}>
-							{sectionText.unlock}
+							{t("sections.unlock")}
 						</Button>
 					</div>
 				)}
 				{unlocked && !confirming && (
 					<div>
 						<Button variant="danger" onClick={onUndo}>
-							{sectionText.undo}
+							{tUi("undo")}
 						</Button>
 					</div>
 				)}
 				{confirming && (
 					<Note
 						tone="warning"
-						title={sectionText.cascade.title(kindText.name, section.sectionNum)}
+						title={t(`sections.${kind}.cascadeTitle`, { num: section.sectionNum })}
 					>
 						<span className="flex flex-col gap-3">
 							<span>
-								{sectionText.cascade.body(
-									cascade,
-									formatMoney(priceOfSections(kind, cascade))
-								)}
+								{t("sections.cascade.body", {
+									count: cascadeFollowers.length,
+									range: rangeText(cascadeFollowers),
+									price: formatMoney(priceOfSections(kind, cascade)),
+								})}
 							</span>
 							<span className="flex flex-wrap gap-2">
 								<Button data-autofocus onClick={onCancelCascade}>
-									{sectionText.cascade.keep}
+									{t("sections.cascade.keep")}
 								</Button>
 								<Button variant="danger" onClick={() => onConfirmCascade(cascade)}>
-									{sectionText.cascade.confirm(cascade)}
+									{t("sections.cascade.confirm", {
+										count: cascade.length,
+										range: rangeText(cascade),
+									})}
 								</Button>
 							</span>
 						</span>
@@ -165,10 +181,13 @@ export function SectionPathTab({
 	kind: SectionKind;
 	playthrough: Playthrough;
 }) {
+	const t = useTranslations("management.sections");
+	const rangeText = useSectionRange();
+	const priceText = usePriceText();
 	const [confirmingNum, setConfirmingNum] = useState<string | null>(null);
 	const { add, remove } = useListEdit(playthrough.id, sectionField(kind));
-	const kindText = sectionText[kind];
-	const kindLabel = capitalize(kindText.name);
+	const undoneText = (nums: string[]) =>
+		t(`${kind}.undone`, { count: nums.length, range: rangeText(nums) });
 
 	const steps = sectionPath(kind, playthrough);
 	const sections = sectionsOf(kind);
@@ -180,30 +199,34 @@ export function SectionPathTab({
 
 	const undo = (sectionNum: string) => {
 		const nums = sectionsToLock(kind, playthrough, sectionNum);
-		if (nums.length === 1) remove(nums, sectionText.undone(kindLabel, nums));
+		if (nums.length === 1) remove(nums, undoneText(nums));
 		else setConfirmingNum(sectionNum);
 	};
 
 	return (
 		<div className="flex flex-col gap-4">
 			<SpendSummary
-				label={kindText.totalSpent}
+				label={t(`${kind}.totalSpent`)}
 				amount={spending(playthrough)[kind]}
 				progress={unlocked / sections.length}
-				progressText={kindText.unlockedOf(unlocked, sections.length)}
+				progressText={t(`${kind}.unlockedOf`, {
+					owned: formatNumber(unlocked),
+					count: sections.length,
+					amount: formatNumber(sections.length),
+				})}
 				tiles={
 					<>
 						<div className="col-span-2">
 							<SummaryTile
-								label={sectionText.nextSection}
-								value={next ? next.section.sectionNum : sectionText.allUnlocked}
+								label={t("nextSection")}
+								value={next ? next.section.sectionNum : t("allUnlocked")}
 								caption={
 									next
-										? sectionText.nextSectionValue(
-												next.section.sectionNum,
-												next.section.storeLevel,
-												priceText(next.section.price)
-											)
+										? t("nextSectionValue", {
+												num: next.section.sectionNum,
+												level: next.section.storeLevel,
+												price: priceText(next.section.price),
+											})
 										: undefined
 								}
 							/>
@@ -212,8 +235,8 @@ export function SectionPathTab({
 					</>
 				}
 			/>
-			{kind === "storage" && <Note>{sectionText.storage.firstSectionNote}</Note>}
-			<ol aria-label={kindText.pathLabel} className="flex flex-col">
+			{kind === "storage" && <Note>{t("storage.firstSectionNote")}</Note>}
+			<ol aria-label={t(`${kind}.pathLabel`)} className="flex flex-col">
 				{steps.map((step, index) => (
 					<StepRow
 						key={step.section.sectionNum}
@@ -226,13 +249,13 @@ export function SectionPathTab({
 						onUnlock={() =>
 							add(
 								[step.section.sectionNum],
-								sectionText.unlocked(kindLabel, step.section.sectionNum)
+								t(`${kind}.unlocked`, { num: step.section.sectionNum })
 							)
 						}
 						onUndo={() => undo(step.section.sectionNum)}
 						onConfirmCascade={(nums) => {
 							setConfirmingNum(null);
-							remove(nums, sectionText.undone(kindLabel, nums));
+							remove(nums, undoneText(nums));
 						}}
 						onCancelCascade={() => setConfirmingNum(null)}
 					/>

@@ -1,8 +1,8 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { createContext, useContext, useId } from "react";
 import type { ReactNode } from "react";
-import { uiText } from "@/lib/messages/ui";
 
 interface FieldControl {
 	id: string;
@@ -24,6 +24,7 @@ interface FieldProps {
 }
 
 export function Field({ label, optional, hint, error, labelAction, children }: FieldProps) {
+	const t = useTranslations("ui.field");
 	const id = useId();
 	const hintId = `${id}-hint`;
 	const errorId = `${id}-error`;
@@ -37,9 +38,7 @@ export function Field({ label, optional, hint, error, labelAction, children }: F
 					<label htmlFor={id} className="font-medium">
 						{label}
 					</label>
-					{optional && (
-						<span className="text-muted text-xs">{uiText.field.optional}</span>
-					)}
+					{optional && <span className="text-muted text-xs">{t("optional")}</span>}
 					{labelAction}
 				</div>
 				{children}

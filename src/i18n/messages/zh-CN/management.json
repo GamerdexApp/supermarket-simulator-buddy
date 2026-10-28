@@ -1,0 +1,149 @@
+{
+    "title": "管理",
+    "tabsLabel": "管理",
+    "tabs": {
+        "licenses": "许可证",
+        "growth": "扩建",
+        "storage": "仓库",
+        "hiring": "雇用",
+        "customizations": "自定义"
+    },
+    "sublines": {
+        "licenses": "{name} · 解锁许可证以销售更多商品",
+        "growth": "{name} · 逐个区域扩建店面",
+        "storage": "{name} · 逐个区域扩建仓库",
+        "hiring": "{name} · 雇用员工经营商店",
+        "customizations": "{name} · 在游戏中购买的商店改造"
+    },
+    "emptyDescription": "选择或创建一个存档，记录许可证、商店扩建、仓库和员工。",
+    "storeLevel": "商店等级",
+    "storeLevelCaption": "在侧边栏中修改",
+    "free": "免费",
+    "requiresLevel": "需要商店等级 {level}（你当前为 {current} 级）",
+    "locked": "已锁定",
+    "states": {
+        "unlocked": "已解锁",
+        "canUnlock": "可解锁",
+        "locked": "已锁定"
+    },
+    "licenses": {
+        "totalSpent": "许可证总花费",
+        "unlockedOf": "已解锁 {owned}/{count, plural, other {{amount} 个许可证}}",
+        "canUnlockNow": "现在可解锁",
+        "lockedByLevel": "等级不足",
+        "title": "许可证 {number}",
+        "price": "价格",
+        "level": "商店等级",
+        "unlocks": "解锁 {count, plural, other {{amount} 个商品}}",
+        "unlock": "解锁许可证",
+        "undoUnlock": "撤销解锁",
+        "unlocked": "许可证 {number} 已解锁",
+        "undone": "许可证 {number} 已重新锁定",
+        "filters": {
+            "search": "搜索许可证或商品",
+            "title": "筛选许可证",
+            "show": "显示",
+            "showOptions": {
+                "all": "全部",
+                "unlocked": "已解锁",
+                "canUnlock": "可解锁",
+                "locked": "已锁定"
+            },
+            "sort": "排序方式",
+            "sortOptions": {
+                "number": "许可证编号",
+                "price": "价格从低到高",
+                "storeLevel": "商店等级从低到高"
+            },
+            "summary": "显示 {shown}/{count, plural, other {{amount} 个许可证}}",
+            "showButton": "显示 {count, plural, other {{amount} 个许可证}}"
+        },
+        "noMatch": "没有符合筛选条件的许可证",
+        "noMatchDescription": "换个搜索词，或显示所有许可证。"
+    },
+    "sections": {
+        "growth": {
+            "totalSpent": "扩建总花费",
+            "unlockedOf": "已解锁 {owned}/{count, plural, other {{amount} 个区域}}",
+            "title": "扩建区域 {num}",
+            "pathLabel": "扩建区域",
+            "unlocked": "扩建区域 {num} 已解锁",
+            "undone": "扩建{count, plural, other {区域 {range}}}已重新锁定",
+            "cascadeTitle": "撤销扩建区域 {num}？"
+        },
+        "storage": {
+            "totalSpent": "仓库总花费",
+            "unlockedOf": "已解锁 {owned}/{count, plural, other {{amount} 个区域}}",
+            "title": "仓库区域 {num}",
+            "pathLabel": "仓库区域",
+            "firstSectionNote": "根据游戏数据，仓库区域 1 在商店等级 0 时需要 $800，而扩建区域 1 是免费的。",
+            "unlocked": "仓库区域 {num} 已解锁",
+            "undone": "仓库{count, plural, other {区域 {range}}}已重新锁定",
+            "cascadeTitle": "撤销仓库区域 {num}？"
+        },
+        "nextSection": "下一个区域",
+        "nextSectionValue": "区域 {num} · 等级 {level} · {price}",
+        "allUnlocked": "已全部解锁",
+        "level": "等级 {level}",
+        "size": "大小 {size}",
+        "nextToUnlock": "下一个可解锁",
+        "unlock": "解锁",
+        "unlockFirst": "请先解锁区域 {num}。",
+        "cascade": {
+            "body": "{count, plural, other {区域 {range} 依赖它，会一起锁定}}。总花费将减少 {price}。",
+            "confirm": "撤销{count, plural, other {区域 {range}}}",
+            "keep": "保持解锁"
+        },
+        "range": "{first} 至 {last}"
+    },
+    "hiring": {
+        "dailyWages": "每日工资总额",
+        "dailyWagesCaption": "所有已雇用员工的每日费用合计",
+        "hired": "已雇用员工",
+        "hiringCosts": "已付雇用费用",
+        "hiringCostsCaption": "一次性费用，不计入每日工资",
+        "roles": {
+            "cashiers": {
+                "title": "收银员",
+                "stat": "完成结账：<stat>{value}</stat>",
+                "employeeName": "收银员 {number}"
+            },
+            "restockers": {
+                "title": "补货员",
+                "stat": "货架数量：<stat>{value}</stat>",
+                "employeeName": "补货员 {number}"
+            },
+            "customerHelpers": {
+                "title": "顾客助手",
+                "stat": "收银台数量：<stat>{value}</stat>",
+                "employeeName": "顾客助手 {number}"
+            },
+            "securityGuards": {
+                "title": "保安",
+                "employeeName": "保安 {number}"
+            },
+            "janitors": {
+                "title": "清洁工",
+                "employeeName": "清洁工 {number}"
+            }
+        },
+        "hiredOf": "已雇用 {count}/{total}",
+        "roleWages": "每日工资：{amount}",
+        "hiredBadge": "已雇用",
+        "level": "商店等级",
+        "cost": "雇用费用",
+        "wage": "每日工资",
+        "perDay": "{amount}/天",
+        "hire": "雇用",
+        "fire": "解雇",
+        "hiredToast": "已雇用 {name}",
+        "firedToast": "已解雇 {name}"
+    },
+    "customizations": {
+        "total": "三项总价",
+        "totalCaption": "根据游戏数据计算，不保存",
+        "note": "这些改造在游戏中购买。这里不会保存任何内容。",
+        "price": "价格"
+    },
+    "tabCount": "{owned}/{total}"
+}

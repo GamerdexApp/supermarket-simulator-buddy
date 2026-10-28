@@ -1,17 +1,16 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { type CallbackOutcome, useSync } from "@/lib/contexts/SyncContext";
-import { syncText } from "@/lib/messages/sync";
 import { SYNC_HREF } from "@/data/nav";
 import { PageHeader } from "@/comps/shell/PageHeader";
 import { ButtonLink } from "@/comps/ui/Button";
 import { Note } from "@/comps/ui/Note";
 
-const text = syncText.callback;
-
 export default function SyncCallbackPage() {
+	const t = useTranslations("sync.callback");
 	const router = useRouter();
 	const { completeSignIn } = useSync();
 	const started = useRef(false);
@@ -28,16 +27,16 @@ export default function SyncCallbackPage() {
 
 	return (
 		<>
-			<PageHeader title={text.title} />
+			<PageHeader title={t("title")} />
 			{problem ? (
 				<div className="flex flex-col gap-3">
-					<Note tone="warning">{text[problem]}</Note>
+					<Note tone="warning">{t(problem)}</Note>
 					<div>
-						<ButtonLink href={SYNC_HREF}>{text.back}</ButtonLink>
+						<ButtonLink href={SYNC_HREF}>{t("back")}</ButtonLink>
 					</div>
 				</div>
 			) : (
-				<p className="text-muted">{text.working}</p>
+				<p className="text-muted">{t("working")}</p>
 			)}
 		</>
 	);

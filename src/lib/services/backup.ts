@@ -9,8 +9,12 @@ export interface ParseStats {
   levelsFixed: number;
 }
 
+/** Why a file is not a backup. The screen that shows the error turns the code into text. */
+export type BackupError = "notJson" | "playthroughsMissing";
+
 type ParseResult =
-  { ok: true; data: AppData; stats: ParseStats } | { ok: false; error: string };
+  | { ok: true; data: AppData; stats: ParseStats }
+  | { ok: false; error: BackupError };
 
 const isRecord = (value: unknown): value is Record<string, unknown> =>
   typeof value === "object" && value !== null && !Array.isArray(value);
@@ -28,10 +32,7 @@ const withValidStoreLevel = (playthrough: Playthrough): Playthrough =>
     ? { ...playthrough, storeLevel: 0 }
     : playthrough;
 
-const rejected = (reason: string): ParseResult => ({
-  ok: false,
-  error: `This file is not a Supermarket Simulator Buddy backup: ${reason} Nothing was changed.`,
-});
+const rejected = (error: BackupError): ParseResult => ({ ok: false, error });
 
 /**
  * Checks the content of a backup file. Nothing is saved by this function. Entries without an id or
@@ -41,7 +42,7 @@ const rejected = (reason: string): ParseResult => ({
  */
 export const parseBackupData = (raw: unknown): ParseResult => {
   if (!isRecord(raw) || !Array.isArray(raw.playthroughs)) {
-    return rejected("the playthroughs list is missing.");
+    return rejected("playthroughsMissing");
   }
 
   const seen = new Set<string>();
@@ -80,7 +81,7 @@ export const parseBackup = (text: string): ParseResult => {
   try {
     raw = JSON.parse(text);
   } catch {
-    return rejected("it is not valid JSON.");
+    return rejected("notJson");
   }
   return parseBackupData(raw);
 };
@@ -175,15 +176,19 @@ export const applyImport = (
   };
 };
 
-export const summarizeImport = (rows: ImportRow[]): string =>
+export interface ImportResultCount {
+  result: ImportRowResult;
+  count: number;
+}
+
+/** How many rows end with each result, in a fixed order, without the results that no row has. */
+export const summarizeImport = (rows: ImportRow[]): ImportResultCount[] =>
   (["added", "updated", "kept", "replaced", "removed"] as ImportRowResult[])
     .map((result) => ({
       result,
-      amount: rows.filter((row) => row.result === result).length,
+      count: rows.filter((row) => row.result === result).length,
     }))
-    .filter(({ amount }) => amount > 0)
-    .map(({ result, amount }) => `${amount} ${result}`)
-    .join(", ");
+    .filter(({ count }) => count > 0);
 
 /** The old app named backups by the UTC date. */
 export const backupFileName = (date = new Date()) =>

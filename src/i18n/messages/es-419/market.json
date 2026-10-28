@@ -1,0 +1,93 @@
+{
+    "title": "Mercado",
+    "tabsLabel": "Mercado",
+    "tabs": {
+        "products": "Productos",
+        "furniture": "Muebles",
+        "paint": "Pintura",
+        "tools": "Herramientas",
+        "vehicles": "Vehículos"
+    },
+    "sublines": {
+        "products": "{name} · Productos que desbloquean tus licencias",
+        "furniture": "{name} · Precios de los muebles",
+        "paint": "{name} · Precios de la pintura",
+        "tools": "{name} · Herramientas que tienes",
+        "vehicles": "{name} · Vehículos que tienes"
+    },
+    "emptyDescription": "Elige o crea una partida para ver qué productos, herramientas y vehículos tienes.",
+    "free": "Gratis",
+    "undoUnlock": "Deshacer desbloqueo",
+    "unlock": "Desbloquear",
+    "locked": "Bloqueado",
+    "states": {
+        "unlocked": "Desbloqueado",
+        "canUnlock": "Se puede desbloquear",
+        "locked": "Bloqueado"
+    },
+    "products": {
+        "search": "Buscar por nombre o empresa...",
+        "displayType": "Filtrar por tipo de expositor",
+        "allDisplayTypes": "Todos los tipos de expositor",
+        "category": "Filtrar por categoría",
+        "allCategories": "Todas las categorías",
+        "option": "{label} ({count})",
+        "filtersTitle": "Filtrar productos",
+        "showing": "Mostrando {shown} de {count, plural, one {{amount} producto} other {{amount} productos}}",
+        "showButton": "Mostrar {count, plural, one {{amount} producto} other {{amount} productos}}",
+        "unlocked": "Productos desbloqueados ({count})",
+        "locked": "Productos bloqueados ({count})",
+        "lockedHelp": "Desbloquea la licencia en Gestión para vender estos productos.",
+        "noUnlocked": "Ningún producto desbloqueado coincide con tus filtros.",
+        "noLocked": "Ningún producto bloqueado coincide con tus filtros.",
+        "requires": "Necesita: licencia {number}",
+        "itemsPerBox": "Unidades por caja",
+        "weightPerBox": "Peso por caja",
+        "kg": "{weight} kg",
+        "boxesPerStorage": "Cajas por almacén",
+        "details": "Detalles de {name}",
+        "detail": {
+            "company": "Empresa",
+            "displayType": "Tipo de expositor",
+            "category": "Categoría",
+            "boughtAt": "Se compra en",
+            "license": "Licencia",
+            "unlocked": "Licencia {number}, desbloqueada",
+            "locked": "Licencia {number}, aún sin desbloquear",
+            "none": "Sin datos",
+            "toLicenses": "Abrir licencias",
+            "close": "Cerrar"
+        },
+        "stores": {
+            "liquor_store": "Liquor Store",
+            "janitorial_supply": "Janitorial Supply",
+            "deli_and_grocery": "Deli and Grocery",
+            "meat_and_dairy": "Meat and Dairy",
+            "green_market": "Green Market"
+        }
+    },
+    "furniture": {
+        "heading": "Todos los muebles ({count})",
+        "note": "Precios del juego. Los muebles no tienen estado guardado."
+    },
+    "paint": {
+        "heading": "Toda la pintura ({count})",
+        "note": "Precios del juego. La pintura no tiene estado guardado."
+    },
+    "tools": {
+        "totalSpent": "Total gastado en herramientas",
+        "unlockedOf": "{owned} de {count, plural, one {{amount} herramienta desbloqueada} other {{amount} herramientas desbloqueadas}}",
+        "requiresLicenses": "Necesita {count, plural, one {{amount} licencia} other {{amount} licencias}} · tienes {owned}",
+        "unlocked": "{name} desbloqueado",
+        "undone": "{name} bloqueado de nuevo"
+    },
+    "vehicles": {
+        "totalSpent": "Total gastado en vehículos",
+        "unlockedOf": "{owned} de {count, plural, one {{amount} vehículo desbloqueado} other {{amount} vehículos desbloqueados}}",
+        "price": "Precio",
+        "storeLevel": "Nivel de tienda",
+        "requiresLevel": "Necesita nivel de tienda {level} · tienes nivel {current}",
+        "unlocked": "{name} desbloqueado",
+        "undone": "{name} bloqueado de nuevo"
+    }
+}

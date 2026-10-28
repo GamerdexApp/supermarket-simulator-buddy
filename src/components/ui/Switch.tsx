@@ -1,8 +1,8 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { useId } from "react";
 import type { ReactNode } from "react";
-import { uiText } from "@/lib/messages/ui";
 
 interface SwitchProps {
 	checked: boolean;
@@ -21,6 +21,8 @@ export function Switch({
 	describedBy,
 	label,
 }: SwitchProps) {
+	const t = useTranslations("ui.switch");
+
 	return (
 		<button
 			type="button"
@@ -41,7 +43,7 @@ export function Switch({
 					checked ? "bg-on-primary inset-s-5.5" : "bg-muted inset-s-0.5"
 				}`}
 			/>
-			<span className="sr-only">{checked ? uiText.switch.on : uiText.switch.off}</span>
+			<span className="sr-only">{checked ? t("on") : t("off")}</span>
 		</button>
 	);
 }

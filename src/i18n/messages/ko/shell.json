@@ -1,0 +1,81 @@
+{
+    "skipToContent": "본문으로 건너뛰기",
+    "closeMenu": "메뉴 닫기",
+    "openMenu": "메뉴 열기",
+    "menuLabel": "사이트 메뉴",
+    "mainNav": "주 메뉴",
+    "brandWords": {
+        "item1": "Supermarket",
+        "item2": "Simulator",
+        "item3": "Buddy"
+    },
+    "noPlaythroughHint": "회차를 만들어 기록을 시작하세요.",
+    "switcher": {
+        "sectionLabel": "회차",
+        "loading": "불러오는 중",
+        "none": "선택 안 됨",
+        "switch": "회차 전환",
+        "playthroughs": "회차",
+        "active": "활성",
+        "all": "모든 회차",
+        "create": "새 회차",
+        "level": "레벨 {level}",
+        "rowDetail": "레벨 {level} · {date}",
+        "switched": "{name}(으)로 전환했어요",
+        "empty": "아직 만든 회차가 없어요"
+    },
+    "storeLevel": {
+        "label": "매장 레벨",
+        "edit": "매장 레벨 {level}, 선택해서 레벨 입력",
+        "atZero": "이미 레벨 0이에요"
+    },
+    "empty": {
+        "title": "선택한 회차가 없어요",
+        "description": "이 페이지를 보려면 회차를 만들거나 목록에서 선택하세요.",
+        "create": "새 회차",
+        "all": "모든 회차"
+    },
+    "footer": {
+        "tagline": "Supermarket Simulator용 무료 진행 상황 기록 도구예요. 데이터는 브라우저에 저장되고, 동기화를 켜면 내 클라우드 저장 공간에 저장돼요.",
+        "support": "지원",
+        "about": "정보",
+        "settings": "설정",
+        "discord": "Discord",
+        "github": "GitHub",
+        "officialGame": "공식 게임",
+        "privacy": "개인정보 처리방침",
+        "terms": "서비스 약관",
+        "disclaimerTitle": "면책 조항",
+        "disclaimer": "이 프로젝트는 Supermarket Simulator 또는 그 개발사와 제휴, 보증, 관련이 없어요. 모든 상표와 게임 콘텐츠는 각 소유자에게 있어요.",
+        "framework": "무료 게임 진행 기록 도구의 공통 기반인 Gamerdex 프레임워크로 만들었어요.",
+        "visitGamerdex": "Gamerdex 방문"
+    },
+    "notFound": {
+        "title": "페이지를 찾을 수 없어요",
+        "body": "<code>{path}</code> 주소에 페이지가 없어요.",
+        "didYouMean": "혹시 <link>{suggestion}</link> 페이지인가요?",
+        "quickLinks": "섹션",
+        "toOverview": "개요로 이동",
+        "toHome": "홈으로 돌아가기"
+    },
+    "saveFailed": {
+        "title": "저장 안 됨",
+        "message": "브라우저가 변경 사항을 저장하지 못했어요. 데이터를 잃지 않도록 백업을 다운로드하세요.",
+        "exportBackup": "백업 다운로드"
+    },
+    "nav": {
+        "groups": {
+            "store": "내 매장",
+            "plan": "계획"
+        },
+        "items": {
+            "overview": "개요",
+            "market": "마켓",
+            "management": "관리",
+            "bank": "은행",
+            "shoppingList": "쇼핑 목록",
+            "settings": "설정",
+            "playthroughs": "회차"
+        }
+    }
+}

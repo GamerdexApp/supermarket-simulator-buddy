@@ -23,75 +23,51 @@ export type NavItemId =
 
 export interface NavItem {
   id: NavItemId;
-  label: string;
   href: string;
   icon: IconType;
 }
 
 export interface NavGroup {
   id: "store" | "plan" | null;
-  label?: string;
   items: NavItem[];
 }
 
 export const navGroups: NavGroup[] = [
   {
     id: null,
-    items: [
-      {
-        id: "overview",
-        label: "Overview",
-        href: OVERVIEW_HREF,
-        icon: LuLayoutDashboard,
-      },
-    ],
+    items: [{ id: "overview", href: OVERVIEW_HREF, icon: LuLayoutDashboard }],
   },
   {
     id: "store",
-    label: "Your store",
     items: [
-      { id: "market", label: "Market", href: "/market", icon: LuStore },
-      {
-        id: "management",
-        label: "Management",
-        href: "/management",
-        icon: LuBriefcase,
-      },
-      { id: "bank", label: "Bank", href: "/bank", icon: LuLandmark },
+      { id: "market", href: "/market", icon: LuStore },
+      { id: "management", href: "/management", icon: LuBriefcase },
+      { id: "bank", href: "/bank", icon: LuLandmark },
     ],
   },
   {
     id: "plan",
-    label: "Plan",
-    items: [
-      {
-        id: "shoppingList",
-        label: "Shopping list",
-        href: "/shopping-list",
-        icon: LuListChecks,
-      },
-    ],
+    items: [{ id: "shoppingList", href: "/shopping-list", icon: LuListChecks }],
   },
 ];
 
 export const settingsNavItem: NavItem = {
   id: "settings",
-  label: "Settings",
   href: SETTINGS_HREF,
   icon: LuSettings,
-};
-
-const pageTitles: Record<string, string> = {
-  [PLAYTHROUGHS_HREF]: "Playthroughs",
 };
 
 export const isNavItemActive = (item: NavItem, pathname: string) =>
   pathname === item.href || pathname.startsWith(`${item.href}/`);
 
-export const getPageTitle = (pathname: string): string => {
+export type PageRouteId = NavItemId | "playthroughs";
+
+/** The page a path belongs to, for its title, or null for the landing page and unknown paths. */
+export const getPageRouteId = (pathname: string): PageRouteId | null => {
+  if (pathname === PLAYTHROUGHS_HREF) return "playthroughs";
   const item = [
     ...navGroups.flatMap((group) => group.items),
     settingsNavItem,
   ].find((navItem) => isNavItemActive(navItem, pathname));
-  return item?.label ?? pageTitles[pathname] ?? APP_NAME;
+  return item?.id ?? null;
 };

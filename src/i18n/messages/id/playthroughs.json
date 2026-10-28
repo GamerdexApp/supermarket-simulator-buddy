@@ -1,0 +1,85 @@
+{
+    "title": "Sesi Main",
+    "subline": "{count, plural, other {{amount} sesi main}}",
+    "newPlaythrough": "Sesi main baru",
+    "loading": "Membaca data tersimpan dari browser ini.",
+    "filters": {
+        "search": "Cari nama",
+        "sortLabel": "Urutkan",
+        "sort": {
+            "lastModified": "Terakhir diperbarui",
+            "name": "Nama",
+            "createdAt": "Tanggal dibuat",
+            "storeLevel": "Level toko"
+        },
+        "showing": "Menampilkan {shown} dari {count, plural, other {{amount} sesi main}}",
+        "clear": "Hapus pencarian"
+    },
+    "empty": {
+        "title": "Belum ada sesi main",
+        "deletedTitle": "Sesi main dihapus",
+        "description": "Buat sesi main untuk mulai melacak tokomu. Semuanya tetap di browser ini kecuali kamu menyalakan sinkronisasi.",
+        "restore": "Pulihkan dari cadangan"
+    },
+    "noMatch": {
+        "title": "Tidak ada sesi main yang cocok dengan “{query}”",
+        "description": "Coba nama lain."
+    },
+    "card": {
+        "active": "Aktif",
+        "setActive": "Jadikan aktif",
+        "openOverview": "Buka ringkasan",
+        "edit": "Edit",
+        "delete": "Hapus",
+        "created": "Dibuat {date}",
+        "lastModified": "Terakhir diperbarui {date}",
+        "storeLevel": "Level toko",
+        "spending": "Total pengeluaran",
+        "licenses": "Lisensi",
+        "shopping": "Daftar belanja",
+        "ofTotal": "{count} dari {total}",
+        "switched": "Beralih ke {name}"
+    },
+    "fields": {
+        "nameLabel": "Nama Sesi Main",
+        "namePlaceholder": "mis. Toko Pertamaku",
+        "nameError": "Masukkan nama untuk sesi main ini.",
+        "descriptionLabel": "Deskripsi",
+        "descriptionPlaceholder": "Tambahkan deskripsi untuk sesi main ini...",
+        "cancel": "Batal"
+    },
+    "create": {
+        "title": "Buat Sesi Main Baru",
+        "submit": "Buat",
+        "done": "{name} dibuat",
+        "starterTitle": "Setiap sesi main baru dimulai dengan",
+        "starter": {
+            "item1": "Level toko 0",
+            "item2": "Lisensi 0, lisensi awal gratis",
+            "item3": "Bagian perluasan 1",
+            "item4": "Alat Paper Bag, Sponge, dan Mop"
+        }
+    },
+    "edit": {
+        "title": "Edit Sesi Main",
+        "description": "Kolom diisi dengan nilai yang tersimpan.",
+        "save": "Simpan",
+        "saved": "Tersimpan",
+        "savedMessage": "{name} diperbarui.",
+        "dates": "Dibuat {created} · Terakhir diperbarui {updated}"
+    },
+    "delete": {
+        "title": "Hapus Sesi Main",
+        "question": "Yakin ingin menghapus “{name}”?",
+        "description": "Ini menghapus semua progres tersimpan untuk sesi main ini dari perangkat ini. Jika sinkronisasi aktif, sesi main ini juga terhapus dari perangkatmu yang lain pada sinkronisasi berikutnya.",
+        "activeNext": "Ini sesi main aktifmu. {next} akan menjadi aktif sebagai gantinya.",
+        "activeLast": "Ini sesi main aktifmu dan satu-satunya. Setelah ini kamu tidak punya sesi main aktif.",
+        "exportFirst": "Ekspor cadangan dulu",
+        "cancel": "Batal",
+        "confirm": "Hapus",
+        "done": "{name} dihapus",
+        "doneMessage": "Urungkan dalam 10 detik untuk mengembalikannya.",
+        "undo": "Urungkan"
+    },
+    "sublineActive": "{count, plural, other {{amount} sesi main}} · {name} aktif"
+}

@@ -1,0 +1,93 @@
+{
+    "title": "마켓",
+    "tabsLabel": "마켓",
+    "tabs": {
+        "products": "상품",
+        "furniture": "가구",
+        "paint": "페인트",
+        "tools": "도구",
+        "vehicles": "차량"
+    },
+    "sublines": {
+        "products": "{name} · 라이선스로 잠금 해제한 상품",
+        "furniture": "{name} · 가구 가격",
+        "paint": "{name} · 페인트 가격",
+        "tools": "{name} · 보유한 도구",
+        "vehicles": "{name} · 보유한 차량"
+    },
+    "emptyDescription": "회차를 선택하거나 만들어서 보유한 상품, 도구, 차량을 확인하세요.",
+    "free": "무료",
+    "undoUnlock": "잠금 해제 취소",
+    "unlock": "잠금 해제",
+    "locked": "잠김",
+    "states": {
+        "unlocked": "잠금 해제됨",
+        "canUnlock": "잠금 해제 가능",
+        "locked": "잠김"
+    },
+    "products": {
+        "search": "이름 또는 회사로 검색...",
+        "displayType": "진열 유형으로 필터",
+        "allDisplayTypes": "모든 진열 유형",
+        "category": "카테고리로 필터",
+        "allCategories": "모든 카테고리",
+        "option": "{label} ({count})",
+        "filtersTitle": "상품 필터",
+        "showing": "{count, plural, other {상품 {amount}개}} 중 {shown}개 표시",
+        "showButton": "{count, plural, other {상품 {amount}개 보기}}",
+        "unlocked": "잠금 해제된 상품 ({count})",
+        "locked": "잠긴 상품 ({count})",
+        "lockedHelp": "이 상품을 팔려면 관리에서 라이선스를 잠금 해제하세요.",
+        "noUnlocked": "필터에 맞는 잠금 해제된 상품이 없어요.",
+        "noLocked": "필터에 맞는 잠긴 상품이 없어요.",
+        "requires": "필요: 라이선스 {number}",
+        "itemsPerBox": "상자당 개수",
+        "weightPerBox": "상자당 무게",
+        "kg": "{weight} kg",
+        "boxesPerStorage": "창고 칸당 상자 수",
+        "details": "{name} 상세 정보",
+        "detail": {
+            "company": "회사",
+            "displayType": "진열 유형",
+            "category": "카테고리",
+            "boughtAt": "구매처",
+            "license": "라이선스",
+            "unlocked": "라이선스 {number}, 잠금 해제됨",
+            "locked": "라이선스 {number}, 아직 잠김",
+            "none": "정보 없음",
+            "toLicenses": "라이선스 열기",
+            "close": "닫기"
+        },
+        "stores": {
+            "liquor_store": "Liquor Store",
+            "janitorial_supply": "Janitorial Supply",
+            "deli_and_grocery": "Deli and Grocery",
+            "meat_and_dairy": "Meat and Dairy",
+            "green_market": "Green Market"
+        }
+    },
+    "furniture": {
+        "heading": "전체 가구 ({count})",
+        "note": "게임 내 가격이에요. 가구는 저장되는 상태가 없어요."
+    },
+    "paint": {
+        "heading": "전체 페인트 ({count})",
+        "note": "게임 내 가격이에요. 페인트는 저장되는 상태가 없어요."
+    },
+    "tools": {
+        "totalSpent": "도구 총 지출",
+        "unlockedOf": "{owned} / {count, plural, other {{amount}개 도구 잠금 해제됨}}",
+        "requiresLicenses": "{count, plural, other {라이선스 {amount}개 필요}} · 보유 {owned}개",
+        "unlocked": "{name} 잠금 해제됨",
+        "undone": "{name}이(가) 다시 잠겼어요"
+    },
+    "vehicles": {
+        "totalSpent": "차량 총 지출",
+        "unlockedOf": "{owned} / {count, plural, other {{amount}대 차량 잠금 해제됨}}",
+        "price": "가격",
+        "storeLevel": "매장 레벨",
+        "requiresLevel": "매장 레벨 {level} 필요 · 현재 레벨 {current}",
+        "unlocked": "{name} 잠금 해제됨",
+        "undone": "{name}이(가) 다시 잠겼어요"
+    }
+}

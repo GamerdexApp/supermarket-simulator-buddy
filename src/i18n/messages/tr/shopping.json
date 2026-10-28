@@ -1,0 +1,63 @@
+{
+    "title": "Alışveriş Listesi",
+    "subline": "{name} için ürün alımlarını planla",
+    "emptyDescription": "Alımları planlamak için bir oynanış oluştur.",
+    "addProducts": "Ürün Ekle",
+    "summary": {
+        "title": "Alışveriş Özeti",
+        "purchased": "{bought} / {count, plural, one {{amount} ürün alındı} other {{amount} ürün alındı}}",
+        "boxes": "{count, plural, one {Toplam {amount} koli} other {Toplam {amount} koli}}",
+        "reset": "Listeyi Sıfırla"
+    },
+    "reset": {
+        "title": "Alışveriş listesi sıfırlansın mı?",
+        "body": "Bu, {count, plural, one {{amount} ürünü} other {{amount} ürünü}} kaldırır ({bought} alındı, {boxCount, plural, one {{boxes} koli} other {{boxes} koli}}).",
+        "cancel": "İptal",
+        "confirm": "Listeyi sıfırla",
+        "done": "Alışveriş listesi sıfırlandı",
+        "doneMessage": "{count, plural, one {{amount} ürün kaldırıldı.} other {{amount} ürün kaldırıldı.}}"
+    },
+    "empty": {
+        "title": "Alışveriş listen boş",
+        "body": "Bir sonraki alışverişinden önce hangi ürünleri alacağını planla.",
+        "steps": {
+            "item1": "Açtığın lisanslardan ürün ekle.",
+            "item2": "Bir koli daha eklemek için ürüne tekrar dokun.",
+            "item3": "Aldıkça ürünleri işaretle."
+        },
+        "missing": "Bir ürün mü eksik? Yönetim'de lisansının kilidini aç.",
+        "toManagement": "Lisansları aç"
+    },
+    "shop": {
+        "noShop": "Dükkân Belirtilmemiş",
+        "items": "{count, plural, one {{amount} ürün} other {{amount} ürün}}",
+        "progress": "{total} içinden {bought} alındı · {count, plural, one {{amount} koli} other {{amount} koli}}"
+    },
+    "row": {
+        "purchased": "Alındı olarak işaretle: {label}",
+        "boxes": "Koli",
+        "remove": "Kaldır: {label}",
+        "removed": "Kaldırıldı: {name}"
+    },
+    "undo": "Geri al",
+    "dialog": {
+        "title": "Alışveriş Listesine Ürün Ekle",
+        "search": "Ürün Ara",
+        "searchPlaceholder": "Ada veya şirkete göre ara...",
+        "source": "Yalnızca açık lisanslardaki ürünler listelenir.",
+        "showing": "{total} içinden {shown} gösteriliyor",
+        "pick": "Eklemek için bir ürüne dokun",
+        "noResults": "\"{term}\" ile eşleşen ürün bulunamadı",
+        "noResultsHint": "Eksik bir ürün, henüz açmadığın bir lisansı gerektiriyor olabilir.",
+        "clearSearch": "Aramayı temizle",
+        "addOne": "Bir koli ekle: {label}",
+        "pending": "Eklenecek Ürünler ({count})",
+        "noPending": "Henüz ürün eklenmedi. Bir koli eklemek için soldaki bir ürüne dokun. Daha fazlası için tekrar dokun.",
+        "merges": "Listende zaten olan bir ürünün satırına bu koliler eklenir.",
+        "boxes": "{count, plural, one {{amount} koli} other {{amount} koli}}",
+        "removePending": "Eklenecekler listesinden kaldır: {label}",
+        "cancel": "İptal",
+        "submit": "{count, plural, one {Listeye {amount} Ürün Ekle} other {Listeye {amount} Ürün Ekle}}",
+        "added": "{count, plural, one {{amount} ürün eklendi} other {{amount} ürün eklendi}}"
+    }
+}

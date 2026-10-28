@@ -1,6 +1,6 @@
+import { useTranslations } from "next-intl";
 import type { ReactNode } from "react";
 import { LuSearch } from "react-icons/lu";
-import { uiText } from "@/lib/messages/ui";
 import { Button } from "@/comps/ui/Button";
 import { Input } from "@/comps/ui/Input";
 
@@ -11,10 +11,10 @@ interface SearchBlockProps {
 	summary: ReactNode;
 }
 
-const text = uiText.filters;
-
 /** The toolbar of a list that has a name search and no other filter. */
 export function SearchBlock({ label, value, onChange, summary }: SearchBlockProps) {
+	const t = useTranslations("ui.filters");
+
 	return (
 		<div role="group" aria-label={label} className="flex flex-col gap-3">
 			<Input
@@ -29,7 +29,7 @@ export function SearchBlock({ label, value, onChange, summary }: SearchBlockProp
 				<span className="text-muted">{summary}</span>
 				{value !== "" && (
 					<Button variant="link" onClick={() => onChange("")}>
-						{text.clearFilters}
+						{t("clearFilters")}
 					</Button>
 				)}
 			</div>

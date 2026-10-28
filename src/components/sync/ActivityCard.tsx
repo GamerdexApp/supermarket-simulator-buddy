@@ -1,27 +1,32 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { useSync } from "@/lib/contexts/SyncContext";
-import { formatDateTime } from "@/lib/format";
-import { syncText } from "@/lib/messages/sync";
+import { formatDateTime, formatNumber } from "@/lib/format";
 import type { ActivityEntry } from "@/lib/sync/device";
 import { Card } from "@/comps/ui/Card";
 
-const text = syncText.activity;
-
-const describe = (entry: ActivityEntry) => {
-	if (entry.kind === "connected") return text.connected(syncText.provider[entry.provider].name);
-	if (entry.kind === "conflicts") return text.conflicts(entry.count ?? 0);
-	return text[entry.kind];
-};
+function ActivityText({ entry }: { entry: ActivityEntry }) {
+	const t = useTranslations("sync");
+	if (entry.kind === "connected") {
+		return t("activity.connected", { provider: t(`provider.${entry.provider}.name`) });
+	}
+	if (entry.kind === "conflicts") {
+		const count = entry.count ?? 0;
+		return t("activity.conflicts", { count, amount: formatNumber(count) });
+	}
+	return t(`activity.${entry.kind}`);
+}
 
 export function ActivityCard() {
+	const t = useTranslations("sync.activity");
 	const { activity } = useSync();
 
 	return (
 		<Card className="flex flex-col gap-3 p-4">
-			<h2 className="text-base font-semibold">{text.title}</h2>
+			<h2 className="text-base font-semibold">{t("title")}</h2>
 			{activity.length === 0 ? (
-				<p className="text-muted">{text.empty}</p>
+				<p className="text-muted">{t("empty")}</p>
 			) : (
 				<ul className="flex flex-col">
 					{activity.map((entry) => (
@@ -32,7 +37,9 @@ export function ActivityCard() {
 							<span className="text-muted font-mono text-xs">
 								{formatDateTime(entry.at)}
 							</span>
-							<span>{describe(entry)}</span>
+							<span>
+								<ActivityText entry={entry} />
+							</span>
 						</li>
 					))}
 				</ul>

@@ -1,0 +1,39 @@
+{
+    "title": "银行贷款",
+    "subline": "管理 {name} 的贷款",
+    "emptyDescription": "选择或创建一个存档来记录贷款。",
+    "loanTitle": "贷款 #{number}",
+    "states": {
+        "active": "生效中",
+        "available": "可申请",
+        "locked": "已锁定"
+    },
+    "principal": "本金",
+    "rate": "日利率",
+    "level": "所需商店等级",
+    "term": "期限：{count, plural, other {{amount} 天}}",
+    "days": "{count, plural, other {{amount} 天}}",
+    "termFixed": "贷款移除前期限不可更改。",
+    "details": "贷款详情",
+    "totalInterest": "总利息",
+    "totalPayment": "还款总额",
+    "dailyPayment": "每日还款",
+    "activate": "启用贷款",
+    "activatedOn": "启用日期：{date}",
+    "remove": "移除贷款",
+    "requiresLevel": "需要商店等级 {level}（你当前为 {current} 级）",
+    "locked": "已锁定",
+    "activated": "贷款 #{number} 已启用",
+    "removed": "贷款 #{number} 已移除",
+    "undo": "撤销",
+    "yourLoans": {
+        "title": "你的贷款",
+        "activeLoans": "生效中的贷款",
+        "dailyPayment": "每日还款",
+        "totalDebt": "贷款总额",
+        "none": "没有生效中的贷款。在下方选择一笔贷款的期限并启用。",
+        "line": "{principal}，日利率 {rate}，期限 {count, plural, other {{amount} 天}}",
+        "payments": "每天 {daily} · 共 {total}",
+        "formula": "利息 = 本金 × 日利率 × 期限天数。"
+    }
+}

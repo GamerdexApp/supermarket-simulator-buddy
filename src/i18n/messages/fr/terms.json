@@ -1,0 +1,22 @@
+{
+    "displayTypes": {
+        "shelf": "Étagère",
+        "fridge": "Réfrigérateur",
+        "freezer": "Congélateur",
+        "stall": "Étal",
+        "pegboard": "Présentoir à crochets",
+        "garment_rack": "Portant à vêtements"
+    },
+    "categories": {
+        "edible": "Alimentaire",
+        "produce": "Fruits et légumes",
+        "drink": "Boissons",
+        "cleaning": "Entretien",
+        "books": "Livres",
+        "cloth": "Vêtements",
+        "electronics": "Électronique",
+        "hardware": "Bricolage",
+        "kitchen": "Cuisine",
+        "pet": "Animaux"
+    }
+}

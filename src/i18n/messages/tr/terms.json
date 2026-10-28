@@ -1,0 +1,22 @@
+{
+    "displayTypes": {
+        "shelf": "Raf",
+        "fridge": "Buzdolabı",
+        "freezer": "Dondurucu",
+        "stall": "Tezgâh",
+        "pegboard": "Askılı pano",
+        "garment_rack": "Elbise askılığı"
+    },
+    "categories": {
+        "edible": "Gıda",
+        "produce": "Meyve ve sebze",
+        "drink": "İçecek",
+        "cleaning": "Temizlik",
+        "books": "Kitap",
+        "cloth": "Giyim",
+        "electronics": "Elektronik",
+        "hardware": "Hırdavat",
+        "kitchen": "Mutfak",
+        "pet": "Evcil hayvan"
+    }
+}

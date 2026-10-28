@@ -1,0 +1,22 @@
+{
+    "displayTypes": {
+        "shelf": "Regal",
+        "fridge": "Kühlschrank",
+        "freezer": "Gefriertruhe",
+        "stall": "Stand",
+        "pegboard": "Lochwand",
+        "garment_rack": "Kleiderständer"
+    },
+    "categories": {
+        "edible": "Lebensmittel",
+        "produce": "Obst und Gemüse",
+        "drink": "Getränke",
+        "cleaning": "Reinigung",
+        "books": "Bücher",
+        "cloth": "Kleidung",
+        "electronics": "Elektronik",
+        "hardware": "Baumarkt",
+        "kitchen": "Küche",
+        "pet": "Tierbedarf"
+    }
+}

@@ -1,0 +1,93 @@
+{
+    "title": "Pasar",
+    "tabsLabel": "Pasar",
+    "tabs": {
+        "products": "Produk",
+        "furniture": "Furnitur",
+        "paint": "Cat",
+        "tools": "Alat",
+        "vehicles": "Kendaraan"
+    },
+    "sublines": {
+        "products": "{name} · Produk yang dibuka oleh lisensimu",
+        "furniture": "{name} · Harga furnitur",
+        "paint": "{name} · Harga cat",
+        "tools": "{name} · Alat yang kamu miliki",
+        "vehicles": "{name} · Kendaraan yang kamu miliki"
+    },
+    "emptyDescription": "Pilih atau buat sesi main untuk melihat produk, alat, dan kendaraan yang kamu miliki.",
+    "free": "Gratis",
+    "undoUnlock": "Urungkan buka",
+    "unlock": "Buka",
+    "locked": "Terkunci",
+    "states": {
+        "unlocked": "Terbuka",
+        "canUnlock": "Bisa dibuka",
+        "locked": "Terkunci"
+    },
+    "products": {
+        "search": "Cari nama atau perusahaan...",
+        "displayType": "Filter Jenis Tampilan",
+        "allDisplayTypes": "Semua Jenis Tampilan",
+        "category": "Filter Kategori",
+        "allCategories": "Semua Kategori",
+        "option": "{label} ({count})",
+        "filtersTitle": "Filter produk",
+        "showing": "Menampilkan {shown} dari {count, plural, other {{amount} produk}}",
+        "showButton": "Tampilkan {count, plural, other {{amount} produk}}",
+        "unlocked": "Produk Terbuka ({count})",
+        "locked": "Produk Terkunci ({count})",
+        "lockedHelp": "Buka lisensinya di Manajemen untuk menjual produk ini.",
+        "noUnlocked": "Tidak ada produk terbuka yang cocok dengan filtermu.",
+        "noLocked": "Tidak ada produk terkunci yang cocok dengan filtermu.",
+        "requires": "Butuh: Lisensi {number}",
+        "itemsPerBox": "Item per kotak",
+        "weightPerBox": "Berat per kotak",
+        "kg": "{weight} kg",
+        "boxesPerStorage": "Kotak per rak gudang",
+        "details": "Detail untuk {name}",
+        "detail": {
+            "company": "Perusahaan",
+            "displayType": "Jenis tampilan",
+            "category": "Kategori",
+            "boughtAt": "Dibeli di",
+            "license": "Lisensi",
+            "unlocked": "Lisensi {number}, terbuka",
+            "locked": "Lisensi {number}, belum terbuka",
+            "none": "Tidak tercantum",
+            "toLicenses": "Ke Lisensi",
+            "close": "Tutup"
+        },
+        "stores": {
+            "liquor_store": "Liquor Store",
+            "janitorial_supply": "Janitorial Supply",
+            "deli_and_grocery": "Deli and Grocery",
+            "meat_and_dairy": "Meat and Dairy",
+            "green_market": "Green Market"
+        }
+    },
+    "furniture": {
+        "heading": "Semua Furnitur ({count})",
+        "note": "Harga dari game. Furnitur tidak memiliki status tersimpan."
+    },
+    "paint": {
+        "heading": "Semua Cat ({count})",
+        "note": "Harga dari game. Cat tidak memiliki status tersimpan."
+    },
+    "tools": {
+        "totalSpent": "Total Pengeluaran untuk Alat",
+        "unlockedOf": "{owned} dari {count, plural, other {{amount} alat terbuka}}",
+        "requiresLicenses": "Butuh {count, plural, other {{amount} lisensi}} · kamu punya {owned}",
+        "unlocked": "{name} terbuka",
+        "undone": "{name} terkunci lagi"
+    },
+    "vehicles": {
+        "totalSpent": "Total Pengeluaran untuk Kendaraan",
+        "unlockedOf": "{owned} dari {count, plural, other {{amount} kendaraan terbuka}}",
+        "price": "Harga",
+        "storeLevel": "Level toko",
+        "requiresLevel": "Butuh level toko {level} · kamu di level {current}",
+        "unlocked": "{name} terbuka",
+        "undone": "{name} terkunci lagi"
+    }
+}

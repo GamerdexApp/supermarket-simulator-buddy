@@ -1,0 +1,85 @@
+{
+    "title": "Sesi Permainan",
+    "subline": "{count, plural, other {{amount} sesi permainan}}",
+    "newPlaythrough": "Sesi permainan baharu",
+    "loading": "Membaca data yang disimpan daripada pelayar ini.",
+    "filters": {
+        "search": "Cari mengikut nama",
+        "sortLabel": "Isih mengikut",
+        "sort": {
+            "lastModified": "Kemas kini terakhir",
+            "name": "Nama",
+            "createdAt": "Tarikh dicipta",
+            "storeLevel": "Tahap kedai"
+        },
+        "showing": "Menunjukkan {shown} daripada {count, plural, other {{amount} sesi permainan}}",
+        "clear": "Kosongkan carian"
+    },
+    "empty": {
+        "title": "Belum ada sesi permainan",
+        "deletedTitle": "Sesi permainan dipadam",
+        "description": "Cipta sesi permainan untuk mula menjejak kedai anda. Semuanya kekal dalam pelayar ini melainkan anda menghidupkan penyegerakan.",
+        "restore": "Pulihkan daripada sandaran"
+    },
+    "noMatch": {
+        "title": "Tiada sesi permainan yang sepadan dengan “{query}”",
+        "description": "Cuba nama lain."
+    },
+    "card": {
+        "active": "Aktif",
+        "setActive": "Jadikan aktif",
+        "openOverview": "Buka ringkasan",
+        "edit": "Edit",
+        "delete": "Padam",
+        "created": "Dicipta {date}",
+        "lastModified": "Kemas kini terakhir {date}",
+        "storeLevel": "Tahap kedai",
+        "spending": "Jumlah perbelanjaan",
+        "licenses": "Lesen",
+        "shopping": "Senarai beli-belah",
+        "ofTotal": "{count} daripada {total}",
+        "switched": "Bertukar ke {name}"
+    },
+    "fields": {
+        "nameLabel": "Nama Sesi Permainan",
+        "namePlaceholder": "cth., Kedai Pertama Saya",
+        "nameError": "Masukkan nama untuk sesi permainan ini.",
+        "descriptionLabel": "Penerangan",
+        "descriptionPlaceholder": "Tambah penerangan untuk sesi permainan ini...",
+        "cancel": "Batal"
+    },
+    "create": {
+        "title": "Cipta Sesi Permainan Baharu",
+        "submit": "Cipta",
+        "done": "{name} dicipta",
+        "starterTitle": "Setiap sesi permainan baharu bermula dengan",
+        "starter": {
+            "item1": "Tahap kedai 0",
+            "item2": "Lesen 0, lesen permulaan percuma",
+            "item3": "Bahagian pembesaran 1",
+            "item4": "Alatan Paper Bag, Sponge dan Mop"
+        }
+    },
+    "edit": {
+        "title": "Edit Sesi Permainan",
+        "description": "Medan diisi dengan nilai yang disimpan.",
+        "save": "Simpan",
+        "saved": "Disimpan",
+        "savedMessage": "{name} telah dikemas kini.",
+        "dates": "Dicipta {created} · Kemas kini terakhir {updated}"
+    },
+    "delete": {
+        "title": "Padam Sesi Permainan",
+        "question": "Adakah anda pasti mahu memadam “{name}”?",
+        "description": "Ini membuang semua kemajuan yang disimpan untuk sesi permainan ini daripada peranti ini. Jika penyegerakan dihidupkan, sesi ini juga dibuang daripada peranti anda yang lain pada penyegerakan seterusnya.",
+        "activeNext": "Ini sesi permainan aktif anda. {next} akan menjadi aktif sebagai gantinya.",
+        "activeLast": "Ini sesi permainan aktif anda dan satu-satunya. Selepas ini anda tidak akan mempunyai sesi permainan aktif.",
+        "exportFirst": "Eksport sandaran dahulu",
+        "cancel": "Batal",
+        "confirm": "Padam",
+        "done": "{name} dipadam",
+        "doneMessage": "Buat asal dalam masa 10 saat untuk mengembalikannya.",
+        "undo": "Buat asal"
+    },
+    "sublineActive": "{count, plural, other {{amount} sesi permainan}} · {name} aktif"
+}

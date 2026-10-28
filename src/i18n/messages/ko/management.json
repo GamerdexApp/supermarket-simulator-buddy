@@ -1,0 +1,149 @@
+{
+    "title": "관리",
+    "tabsLabel": "관리",
+    "tabs": {
+        "licenses": "라이선스",
+        "growth": "확장",
+        "storage": "창고",
+        "hiring": "고용",
+        "customizations": "커스터마이징"
+    },
+    "sublines": {
+        "licenses": "{name} · 라이선스를 잠금 해제해 더 많은 상품을 판매하세요",
+        "growth": "{name} · 매장을 한 구역씩 넓혀요",
+        "storage": "{name} · 창고를 한 구역씩 넓혀요",
+        "hiring": "{name} · 직원을 고용해 매장을 운영하세요",
+        "customizations": "{name} · 게임에서 구매하는 매장 변경 사항"
+    },
+    "emptyDescription": "회차를 선택하거나 만들어서 라이선스, 매장 확장, 창고, 직원을 기록하세요.",
+    "storeLevel": "매장 레벨",
+    "storeLevelCaption": "사이드바에서 바꿀 수 있어요",
+    "free": "무료",
+    "requiresLevel": "매장 레벨 {level} 필요 (현재 레벨 {current})",
+    "locked": "잠김",
+    "states": {
+        "unlocked": "잠금 해제됨",
+        "canUnlock": "잠금 해제 가능",
+        "locked": "잠김"
+    },
+    "licenses": {
+        "totalSpent": "라이선스 총 지출",
+        "unlockedOf": "{owned} / {count, plural, other {{amount}개 라이선스 잠금 해제됨}}",
+        "canUnlockNow": "지금 잠금 해제 가능",
+        "lockedByLevel": "레벨 부족으로 잠김",
+        "title": "라이선스 {number}",
+        "price": "가격",
+        "level": "매장 레벨",
+        "unlocks": "{count, plural, other {상품 {amount}개 잠금 해제}}",
+        "unlock": "라이선스 잠금 해제",
+        "undoUnlock": "잠금 해제 취소",
+        "unlocked": "라이선스 {number} 잠금 해제됨",
+        "undone": "라이선스 {number}이(가) 다시 잠겼어요",
+        "filters": {
+            "search": "라이선스 또는 상품 검색",
+            "title": "라이선스 필터",
+            "show": "표시",
+            "showOptions": {
+                "all": "전체",
+                "unlocked": "잠금 해제됨",
+                "canUnlock": "잠금 해제 가능",
+                "locked": "잠김"
+            },
+            "sort": "정렬",
+            "sortOptions": {
+                "number": "라이선스 번호",
+                "price": "가격 낮은 순",
+                "storeLevel": "매장 레벨 낮은 순"
+            },
+            "summary": "{count, plural, other {라이선스 {amount}개}} 중 {shown}개 표시",
+            "showButton": "{count, plural, other {라이선스 {amount}개 보기}}"
+        },
+        "noMatch": "필터에 맞는 라이선스가 없어요",
+        "noMatchDescription": "다른 검색어를 쓰거나 모든 라이선스를 표시하세요."
+    },
+    "sections": {
+        "growth": {
+            "totalSpent": "확장 총 지출",
+            "unlockedOf": "{owned} / {count, plural, other {{amount}개 구역 잠금 해제됨}}",
+            "title": "확장 구역 {num}",
+            "pathLabel": "확장 구역",
+            "unlocked": "확장 구역 {num} 잠금 해제됨",
+            "undone": "확장 {count, plural, other {구역 {range}}}이(가) 다시 잠겼어요",
+            "cascadeTitle": "확장 구역 {num}을(를) 취소할까요?"
+        },
+        "storage": {
+            "totalSpent": "창고 총 지출",
+            "unlockedOf": "{owned} / {count, plural, other {{amount}개 구역 잠금 해제됨}}",
+            "title": "창고 구역 {num}",
+            "pathLabel": "창고 구역",
+            "firstSectionNote": "게임 데이터에서 창고 구역 1은 매장 레벨 0에 $800이지만, 확장 구역 1은 무료예요.",
+            "unlocked": "창고 구역 {num} 잠금 해제됨",
+            "undone": "창고 {count, plural, other {구역 {range}}}이(가) 다시 잠겼어요",
+            "cascadeTitle": "창고 구역 {num}을(를) 취소할까요?"
+        },
+        "nextSection": "다음 구역",
+        "nextSectionValue": "구역 {num} · 레벨 {level} · {price}",
+        "allUnlocked": "모두 잠금 해제됨",
+        "level": "레벨 {level}",
+        "size": "크기 {size}",
+        "nextToUnlock": "다음 잠금 해제",
+        "unlock": "잠금 해제",
+        "unlockFirst": "먼저 구역 {num}을(를) 잠금 해제하세요.",
+        "cascade": {
+            "body": "{count, plural, other {구역 {range}에 이 구역이 필요해서 함께 잠겨요}}. 총 지출이 {price}만큼 줄어요.",
+            "confirm": "{count, plural, other {구역 {range} 취소}}",
+            "keep": "잠금 해제 유지"
+        },
+        "range": "{first}~{last}"
+    },
+    "hiring": {
+        "dailyWages": "총 일일 급여",
+        "dailyWagesCaption": "고용한 모든 직원의 하루 비용 합계",
+        "hired": "고용한 직원",
+        "hiringCosts": "지불한 고용 비용",
+        "hiringCostsCaption": "1회성 비용, 일일 급여에 포함 안 됨",
+        "roles": {
+            "cashiers": {
+                "title": "계산원",
+                "stat": "계산 완료: <stat>{value}</stat>",
+                "employeeName": "계산원 {number}"
+            },
+            "restockers": {
+                "title": "진열 직원",
+                "stat": "선반 수: <stat>{value}</stat>",
+                "employeeName": "진열 직원 {number}"
+            },
+            "customerHelpers": {
+                "title": "고객 도우미",
+                "stat": "계산대 수: <stat>{value}</stat>",
+                "employeeName": "고객 도우미 {number}"
+            },
+            "securityGuards": {
+                "title": "경비원",
+                "employeeName": "경비원 {number}"
+            },
+            "janitors": {
+                "title": "청소부",
+                "employeeName": "청소부 {number}"
+            }
+        },
+        "hiredOf": "{total}명 중 {count}명 고용",
+        "roleWages": "일일 급여: {amount}",
+        "hiredBadge": "고용됨",
+        "level": "매장 레벨",
+        "cost": "고용 비용",
+        "wage": "일일 급여",
+        "perDay": "{amount} / 일",
+        "hire": "고용",
+        "fire": "해고",
+        "hiredToast": "{name} 고용됨",
+        "firedToast": "{name} 해고됨"
+    },
+    "customizations": {
+        "total": "세 가지 전체 가격",
+        "totalCaption": "게임 데이터 기준, 저장 안 됨",
+        "note": "이 변경 사항은 게임에서 구매해요. 여기에는 아무것도 저장되지 않아요.",
+        "price": "가격"
+    },
+    "tabCount": "{owned} / {total}"
+}

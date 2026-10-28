@@ -1,0 +1,39 @@
+{
+    "title": "Bankkredite",
+    "subline": "Verwalte deine Kredite für {name}",
+    "emptyDescription": "Wähle oder erstelle einen Spielstand, um seine Kredite zu verfolgen.",
+    "loanTitle": "Kredit #{number}",
+    "states": {
+        "active": "Aktiv",
+        "available": "Verfügbar",
+        "locked": "Gesperrt"
+    },
+    "principal": "Kreditbetrag",
+    "rate": "Tageszinssatz",
+    "level": "Benötigtes Ladenlevel",
+    "term": "Laufzeit: {count, plural, one {{amount} Tag} other {{amount} Tage}}",
+    "days": "{count, plural, one {{amount} Tag} other {{amount} Tage}}",
+    "termFixed": "Die Laufzeit ist fest, bis der Kredit entfernt wird.",
+    "details": "Kreditdetails",
+    "totalInterest": "Zinsen gesamt",
+    "totalPayment": "Zahlung gesamt",
+    "dailyPayment": "Tägliche Rate",
+    "activate": "Kredit aktivieren",
+    "activatedOn": "Aktiviert am: {date}",
+    "remove": "Kredit entfernen",
+    "requiresLevel": "Benötigt Ladenlevel {level} (du hast Level {current})",
+    "locked": "Gesperrt",
+    "activated": "Kredit #{number} aktiviert",
+    "removed": "Kredit #{number} entfernt",
+    "undo": "Rückgängig",
+    "yourLoans": {
+        "title": "Deine Kredite",
+        "activeLoans": "Aktive Kredite",
+        "dailyPayment": "Tägliche Rate",
+        "totalDebt": "Kreditschulden gesamt",
+        "none": "Keine aktiven Kredite. Wähle unten bei einem Kredit eine Laufzeit und aktiviere ihn.",
+        "line": "{principal} zu {rate} pro Tag für {count, plural, one {{amount} Tag} other {{amount} Tage}}",
+        "payments": "{daily} pro Tag · {total} gesamt",
+        "formula": "Die Zinsen sind Kreditbetrag mal Tageszinssatz mal Laufzeit in Tagen."
+    }
+}

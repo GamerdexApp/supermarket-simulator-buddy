@@ -1,13 +1,13 @@
 "use client";
 
+import { useLocale, useTranslations } from "next-intl";
 import { useRef, useState } from "react";
 import type { ChangeEvent } from "react";
 import { LuDownload, LuUpload } from "react-icons/lu";
 import type { AppData } from "@/types/playthrough";
 import { usePlaythrough } from "@/lib/contexts/PlaythroughContext";
 import { useOptionalSync } from "@/lib/contexts/SyncContext";
-import { settingsText } from "@/lib/messages/settings";
-import { syncText } from "@/lib/messages/sync";
+import { formatNumber } from "@/lib/format";
 import type { ImportMode } from "@/service/backup";
 import { backupFileName, downloadBackup } from "@/service/backup";
 import { EMPTY_APP_DATA } from "@/service/storage";
@@ -20,11 +20,12 @@ import { ImportDialog } from "./ImportDialog";
 import type { ImportFile } from "./ImportDialog";
 import { SettingsCard } from "./SettingsCard";
 
-const text = settingsText.data;
-
 const sectionClasses = "border-line flex flex-col gap-2 border-t-[1.5px] pt-3";
 
 export function DataCard() {
+	const t = useTranslations("settings");
+	const tSync = useTranslations("sync");
+	const locale = useLocale();
 	const showToast = useToast();
 	const { appData, playthroughs, updateData } = usePlaythrough();
 	const fileInputRef = useRef<HTMLInputElement>(null);
@@ -39,7 +40,7 @@ export function DataCard() {
 	const exportBackup = () => {
 		showToast({
 			variant: "success",
-			title: text.export.done,
+			title: t("data.export.done"),
 			message: downloadBackup(appData),
 		});
 	};
@@ -66,9 +67,9 @@ export function DataCard() {
 		if (fileInputRef.current) fileInputRef.current.value = "";
 		showToast({
 			variant: "success",
-			title: mode === "merge" ? text.import.merged : text.import.replaced,
+			title: mode === "merge" ? t("data.import.merged") : t("data.import.replaced"),
 			message: summary,
-			action: { label: text.import.undo, onAction: () => updateData(() => previous) },
+			action: { label: t("data.import.undo"), onAction: () => updateData(() => previous) },
 		});
 	};
 
@@ -85,41 +86,52 @@ export function DataCard() {
 		setAlsoDeleteSyncedCopy(false);
 		showToast({
 			variant: "warning",
-			title: text.reset.done,
-			message:
-				text.reset.doneMessage(previous.playthroughs.length) +
-				(disconnect ? text.reset.syncDisconnected : ""),
-			action: { label: text.reset.undo, onAction: () => updateData(() => previous) },
+			title: t("data.reset.done"),
+			message: t(
+				disconnect ? "data.reset.doneMessageDisconnected" : "data.reset.doneMessage",
+				{
+					count: previous.playthroughs.length,
+					amount: formatNumber(previous.playthroughs.length),
+				}
+			),
+			action: { label: t("data.reset.undo"), onAction: () => updateData(() => previous) },
 		});
 	};
 
-	const names = new Intl.ListFormat(undefined, { type: "conjunction" }).format(
+	const names = new Intl.ListFormat(locale, { type: "conjunction" }).format(
 		playthroughs.map((playthrough) => playthrough.name)
 	);
 
 	return (
 		<SettingsCard
-			title={text.title}
-			aside={<Badge tone="added">{settingsText.playthroughCount(playthroughs.length)}</Badge>}
+			title={t("data.title")}
+			aside={
+				<Badge tone="added">
+					{t("playthroughCount", {
+						count: playthroughs.length,
+						amount: formatNumber(playthroughs.length),
+					})}
+				</Badge>
+			}
 		>
 			<section className={sectionClasses}>
-				<h3 className="font-medium">{text.export.title}</h3>
-				<p className="text-muted">{text.export.description}</p>
+				<h3 className="font-medium">{t("data.export.title")}</h3>
+				<p className="text-muted">{t("data.export.description")}</p>
 				<div>
 					<Button onClick={exportBackup}>
 						<LuDownload size={16} aria-hidden="true" />
-						{text.export.button}
+						{t("data.export.button")}
 					</Button>
 				</div>
 				<code className="text-muted font-mono text-xs break-all">{backupFileName()}</code>
 			</section>
 			<section className={sectionClasses}>
-				<h3 className="font-medium">{text.import.title}</h3>
+				<h3 className="font-medium">{t("data.import.title")}</h3>
 				<input
 					ref={fileInputRef}
 					type="file"
 					accept=".json,application/json"
-					aria-label={text.import.fileLabel}
+					aria-label={t("data.import.fileLabel")}
 					onChange={chooseFile}
 					className="sr-only"
 					tabIndex={-1}
@@ -127,46 +139,48 @@ export function DataCard() {
 				<div className="flex flex-wrap items-center gap-3">
 					<Button onClick={() => fileInputRef.current?.click()}>
 						<LuUpload size={16} aria-hidden="true" />
-						{text.import.chooseFile}
+						{t("data.import.chooseFile")}
 					</Button>
 					<span className="text-muted break-all">
-						{chosenFile?.name ?? text.import.noFile}
+						{chosenFile?.name ?? t("data.import.noFile")}
 					</span>
 				</div>
-				<p className="text-muted">{text.import.description}</p>
+				<p className="text-muted">{t("data.import.description")}</p>
 				<div>
 					<Button variant="primary" disabled={!chosenFile} onClick={reviewImport}>
-						{text.import.review}
+						{t("data.import.review")}
 					</Button>
 				</div>
 			</section>
 			<section className={sectionClasses}>
-				<h3 className="font-medium">{text.reset.title}</h3>
-				<p className="text-muted">{text.reset.warning}</p>
+				<h3 className="font-medium">{t("data.reset.title")}</h3>
+				<p className="text-muted">{t("data.reset.warning")}</p>
 				{confirmingReset ? (
-					<Note tone="warning" title={text.reset.confirmTitle}>
+					<Note tone="warning" title={t("data.reset.confirmTitle")}>
 						<span className="flex flex-col gap-3">
-							<span>{text.reset.confirmBody(names)}</span>
+							<span>{t("data.reset.confirmBody", { names })}</span>
 							{syncProvider && (
 								<span className="flex flex-col gap-1">
 									<Checkbox
-										label={text.reset.syncedCopy(
-											syncText.provider[syncProvider].name
-										)}
+										label={t("data.reset.syncedCopy", {
+											provider: tSync(`provider.${syncProvider}.name`),
+										})}
 										checked={alsoDeleteSyncedCopy}
 										onChange={setAlsoDeleteSyncedCopy}
 									/>
 									{alsoDeleteSyncedCopy && (
-										<span className="text-muted">{text.reset.syncedOn}</span>
+										<span className="text-muted">
+											{t("data.reset.syncedOn")}
+										</span>
 									)}
 								</span>
 							)}
 							<span className="flex flex-wrap gap-2">
 								<Button data-autofocus onClick={() => setConfirmingReset(false)}>
-									{text.reset.cancel}
+									{t("data.reset.cancel")}
 								</Button>
 								<Button variant="danger" onClick={confirmReset}>
-									{text.reset.confirm}
+									{t("data.reset.confirm")}
 								</Button>
 							</span>
 						</span>
@@ -178,7 +192,7 @@ export function DataCard() {
 							disabled={playthroughs.length === 0}
 							onClick={() => setConfirmingReset(true)}
 						>
-							{text.reset.button}
+							{t("data.reset.button")}
 						</Button>
 					</div>
 				)}

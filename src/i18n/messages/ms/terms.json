@@ -1,0 +1,22 @@
+{
+    "displayTypes": {
+        "shelf": "Rak",
+        "fridge": "Peti Sejuk",
+        "freezer": "Peti Beku",
+        "stall": "Gerai",
+        "pegboard": "Papan Gantung",
+        "garment_rack": "Rak Pakaian"
+    },
+    "categories": {
+        "edible": "Makanan",
+        "produce": "Hasil Segar",
+        "drink": "Minuman",
+        "cleaning": "Pembersihan",
+        "books": "Buku",
+        "cloth": "Pakaian",
+        "electronics": "Elektronik",
+        "hardware": "Perkakasan",
+        "kitchen": "Dapur",
+        "pet": "Haiwan Peliharaan"
+    }
+}

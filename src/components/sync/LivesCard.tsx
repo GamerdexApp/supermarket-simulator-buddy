@@ -1,14 +1,13 @@
 "use client";
 
 import { DATA_FILE, META_FILE } from "@gamerdexapp/gamerdex-sync";
+import { useTranslations } from "next-intl";
 import { useSync } from "@/lib/contexts/SyncContext";
-import { syncText } from "@/lib/messages/sync";
+import { formatNumber } from "@/lib/format";
 import { SYNC_APP_ID } from "@/lib/sync/device";
 import { dataFolderOf } from "@/lib/sync/providerFactory";
 import { usesRepository } from "@/lib/sync/providers";
 import { Card } from "@/comps/ui/Card";
-
-const text = syncText.lives;
 
 function Row({ label, value, mono = true }: { label: string; value: string; mono?: boolean }) {
 	return (
@@ -28,6 +27,7 @@ function Row({ label, value, mono = true }: { label: string; value: string; mono
 }
 
 export function LivesCard() {
+	const t = useTranslations("sync");
 	const { provider, repository, cloudCopy } = useSync();
 	if (!provider) return null;
 
@@ -37,25 +37,29 @@ export function LivesCard() {
 
 	return (
 		<Card className="flex flex-col gap-3 p-4">
-			<h2 className="text-base font-semibold">{text.title}</h2>
+			<h2 className="text-base font-semibold">{t("lives.title")}</h2>
 			<dl className="grid grid-cols-[auto_1fr] gap-x-4 gap-y-2">
-				<Row label={text.storage} value={syncText.provider[provider].name} mono={false} />
+				<Row
+					label={t("lives.storage")}
+					value={t(`provider.${provider}.name`)}
+					mono={false}
+				/>
 				{usesRepository(provider) && repository && (
-					<Row label={syncText.connected.repository} value={repository} />
+					<Row label={t("connected.repository")} value={repository} />
 				)}
-				<Row label={text.folder} value={dataFolderOf(provider, SYNC_APP_ID)} />
-				<Row label={text.dataFile} value={DATA_FILE} />
+				<Row label={t("lives.folder")} value={dataFolderOf(provider, SYNC_APP_ID)} />
+				<Row label={t("lives.dataFile")} value={DATA_FILE} />
 				{kilobytes !== null && (
 					<Row
-						label={text.size}
-						value={text.kb(kilobytes.toLocaleString())}
+						label={t("lives.size")}
+						value={t("lives.kb", { amount: formatNumber(kilobytes) })}
 						mono={false}
 					/>
 				)}
-				<Row label={text.metaFile} value={META_FILE} />
+				<Row label={t("lives.metaFile")} value={META_FILE} />
 			</dl>
-			<p className="text-muted">{text.note}</p>
-			<p className="text-muted">{text[`${provider}Note`]}</p>
+			<p className="text-muted">{t("lives.note")}</p>
+			<p className="text-muted">{t(`lives.${provider}Note`)}</p>
 		</Card>
 	);
 }

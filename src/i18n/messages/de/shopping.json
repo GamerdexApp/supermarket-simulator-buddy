@@ -1,0 +1,63 @@
+{
+    "title": "Einkaufsliste",
+    "subline": "Plane deine Produkteinkäufe für {name}",
+    "emptyDescription": "Erstelle einen Spielstand, um Einkäufe zu planen.",
+    "addProducts": "Produkte hinzufügen",
+    "summary": {
+        "title": "Einkaufsübersicht",
+        "purchased": "{bought} / {count, plural, one {{amount} Artikel gekauft} other {{amount} Artikel gekauft}}",
+        "boxes": "{count, plural, one {{amount} Karton gesamt} other {{amount} Kartons gesamt}}",
+        "reset": "Liste leeren"
+    },
+    "reset": {
+        "title": "Einkaufsliste leeren?",
+        "body": "Damit {count, plural, one {wird {amount} Artikel} other {werden {amount} Artikel}} entfernt ({bought} gekauft, {boxCount, plural, one {{boxes} Karton} other {{boxes} Kartons}}).",
+        "cancel": "Abbrechen",
+        "confirm": "Liste leeren",
+        "done": "Einkaufsliste geleert",
+        "doneMessage": "{count, plural, one {{amount} Artikel} other {{amount} Artikel}} entfernt."
+    },
+    "empty": {
+        "title": "Deine Einkaufsliste ist leer",
+        "body": "Plane, welche Produkte du vor deiner nächsten Einkaufstour kaufen willst.",
+        "steps": {
+            "item1": "Füge Produkte aus deinen freigeschalteten Lizenzen hinzu.",
+            "item2": "Tippe erneut auf ein Produkt, um noch einen Karton hinzuzufügen.",
+            "item3": "Hake Artikel ab, sobald du sie kaufst."
+        },
+        "missing": "Fehlt ein Produkt? Schalte seine Lizenz unter Verwaltung frei.",
+        "toManagement": "Lizenzen öffnen"
+    },
+    "shop": {
+        "noShop": "Kein Händler angegeben",
+        "items": "{count, plural, one {{amount} Artikel} other {{amount} Artikel}}",
+        "progress": "{bought} von {total} gekauft · {count, plural, one {{amount} Karton} other {{amount} Kartons}}"
+    },
+    "row": {
+        "purchased": "Als gekauft markieren: {label}",
+        "boxes": "Kartons",
+        "remove": "{label} entfernen",
+        "removed": "{name} entfernt"
+    },
+    "undo": "Rückgängig",
+    "dialog": {
+        "title": "Produkte zur Einkaufsliste hinzufügen",
+        "search": "Produkte suchen",
+        "searchPlaceholder": "Nach Name oder Firma suchen …",
+        "source": "Es werden nur Produkte aus freigeschalteten Lizenzen angezeigt.",
+        "showing": "{shown} von {total} angezeigt",
+        "pick": "Produkt antippen zum Hinzufügen",
+        "noResults": "Keine Produkte gefunden für „{term}“",
+        "noResultsHint": "Ein fehlendes Produkt braucht eventuell eine Lizenz, die du noch nicht freigeschaltet hast.",
+        "clearSearch": "Suche löschen",
+        "addOne": "Einen Karton {label} hinzufügen",
+        "pending": "Hinzuzufügende Artikel ({count})",
+        "noPending": "Noch keine Artikel hinzugefügt. Tippe links auf ein Produkt, um einen Karton hinzuzufügen. Tippe erneut für mehr.",
+        "merges": "Ist ein Produkt schon auf deiner Liste, kommen diese Kartons zu seiner Zeile dazu.",
+        "boxes": "{count, plural, one {{amount} Karton} other {{amount} Kartons}}",
+        "removePending": "{label} aus den hinzuzufügenden Artikeln entfernen",
+        "cancel": "Abbrechen",
+        "submit": "{count, plural, one {{amount} Artikel hinzufügen} other {{amount} Artikel hinzufügen}}",
+        "added": "{count, plural, one {{amount} Artikel} other {{amount} Artikel}} hinzugefügt"
+    }
+}

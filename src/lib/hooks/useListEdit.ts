@@ -1,7 +1,7 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { usePlaythrough } from "@/lib/contexts/PlaythroughContext";
-import { uiText } from "@/lib/messages/ui";
 import type { UnlockListField } from "@/service/appData";
 import {
   addToList,
@@ -15,6 +15,7 @@ import { useToast } from "@/comps/ui/Toast";
  * back only that list, so edits made since then to other lists or playthroughs stay.
  */
 export function useListEdit(playthroughId: string, field: UnlockListField) {
+  const t = useTranslations("ui");
   const { updateData } = usePlaythrough();
   const showToast = useToast();
 
@@ -32,7 +33,7 @@ export function useListEdit(playthroughId: string, field: UnlockListField) {
       variant: "success",
       title,
       action: {
-        label: uiText.undo,
+        label: t("undo"),
         onAction: () =>
           updateData((current) =>
             updatePlaythrough(current, playthroughId, {

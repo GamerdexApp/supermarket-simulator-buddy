@@ -1,0 +1,156 @@
+{
+    "title": "Einstellungen",
+    "subline": "Verwalte deine Daten und App-Einstellungen",
+    "tabsLabel": "Einstellungen",
+    "tabs": {
+        "sync": "Cloud-Sync",
+        "preferences": "Präferenzen",
+        "data": "Backup und Daten",
+        "about": "Info"
+    },
+    "playthroughCount": "{count, plural, one {{amount} Spielstand} other {{amount} Spielstände}}",
+    "storageNote": {
+        "title": "Datenspeicherung",
+        "body": "Deine Daten werden in diesem Browser gespeichert. Löschst du die Browserdaten, gehen sie verloren, außer Cloud-Sync hat eine Kopie. Exportiere ab und zu ein Backup."
+    },
+    "data": {
+        "title": "Datenverwaltung",
+        "export": {
+            "title": "Daten exportieren",
+            "button": "Alle Spielstände exportieren",
+            "description": "Lade eine Backup-Datei aller gespeicherten Spielstände herunter.",
+            "done": "Backup heruntergeladen"
+        },
+        "import": {
+            "title": "Daten importieren",
+            "description": "Lade eine zuvor exportierte Datei (.json) hoch",
+            "fileLabel": "Backup-Datei",
+            "chooseFile": "Datei wählen",
+            "noFile": "Keine Datei gewählt",
+            "review": "Import prüfen",
+            "merged": "Import zusammengeführt",
+            "replaced": "Daten ersetzt",
+            "undo": "Rückgängig"
+        },
+        "reset": {
+            "title": "Alle Daten zurücksetzen",
+            "warning": "Damit wird jeder Spielstand auf diesem Gerät gelöscht. Du kannst es danach 10 Sekunden lang rückgängig machen.",
+            "button": "Alle Daten zurücksetzen",
+            "confirmTitle": "Alle Daten zurücksetzen?",
+            "confirmBody": "Damit wird {names} gelöscht.",
+            "cancel": "Abbrechen",
+            "confirm": "Ja, alles zurücksetzen",
+            "syncedCopy": "Auch die synchronisierte Kopie in {provider} löschen",
+            "syncedOn": "Sync bleibt an. Deine anderen Geräte verlieren diese Spielstände beim nächsten Sync. Exportiere zuerst ein Backup, wenn du unsicher bist.",
+            "done": "Alle Daten zurückgesetzt",
+            "doneMessage": "{count, plural, one {{amount} Spielstand} other {{amount} Spielstände}} gelöscht.",
+            "undo": "Rückgängig",
+            "doneMessageDisconnected": "{count, plural, one {{amount} Spielstand} other {{amount} Spielstände}} gelöscht. Sync ist in diesem Browser getrennt."
+        }
+    },
+    "appearance": {
+        "title": "Darstellung",
+        "description": "Wähle, wie die App aussieht. Die Wahl wird nur auf diesem Gerät gespeichert und ist nicht Teil eines Backups.",
+        "themeLabel": "Design",
+        "themes": {
+            "light": "Hell",
+            "dark": "Dunkel",
+            "system": "System"
+        },
+        "themeNote": "System folgt deinem Gerät, das gerade das {mode, select, dark {dunkle} other {helle}} Design nutzt."
+    },
+    "playthroughs": {
+        "title": "Spielstände",
+        "description": "Erstelle, wechsle, bearbeite und lösche Spielstände auf der Seite Spielstände.",
+        "manage": "Spielstände verwalten"
+    },
+    "about": {
+        "version": "Version {version}",
+        "summary": "Ein Fortschritts-Tracker für Supermarket Simulator. Deine Daten werden in diesem Browser gespeichert oder in deinem eigenen Cloud-Speicher, wenn du Cloud-Sync einschaltest.",
+        "officialGame": "Offizielles Spiel",
+        "disclaimer": "Nicht verbunden mit, unterstützt von oder verknüpft mit Supermarket Simulator oder seinen Entwicklern. Alle Marken und Spielinhalte gehören ihren Inhabern."
+    },
+    "importDialog": {
+        "title": "Backup importieren",
+        "fileInfo": "{name} · {size}",
+        "bytes": "{count} B",
+        "kilobytes": "{count} KB",
+        "failedTitle": "Import fehlgeschlagen",
+        "checksTitle": "Datei geprüft",
+        "checks": "{count, plural, one {{amount} Eintrag} other {{amount} Einträge}} gelesen, {kept} mit ID und Name.",
+        "howToApply": "Wie soll die Datei angewendet werden?",
+        "modeLabel": "Importmodus",
+        "modes": {
+            "merge": "Mit diesem Gerät zusammenführen (empfohlen)",
+            "replace": "Alles ersetzen"
+        },
+        "modeNotes": {
+            "merge": "Fügt neue Spielstände hinzu. Bei einem Spielstand, der auf beiden Seiten existiert, gewinnt die zuletzt aktualisierte Kopie. Spielstände, die nur auf diesem Gerät sind, bleiben. Dein aktiver Spielstand bleibt aktiv.",
+            "replace": "Löscht die Spielstände auf diesem Gerät und behält nur die Datei. Der aktive Spielstand der Datei wird aktiv."
+        },
+        "whatChanges": "Was sich ändert",
+        "columns": {
+            "playthrough": "Spielstand",
+            "inFile": "In der Datei",
+            "onDevice": "Auf dem Gerät",
+            "result": "Ergebnis"
+        },
+        "results": {
+            "added": "Hinzugefügt",
+            "updated": "Aus Datei aktualisiert",
+            "kept": "Behalten",
+            "replaced": "Aus Datei",
+            "removed": "Entfernt"
+        },
+        "notThere": "Nicht vorhanden",
+        "noPlaythroughs": "Die Datei enthält keine Spielstände.",
+        "undoNote": "Du kannst den Import danach 10 Sekunden lang rückgängig machen.",
+        "cancel": "Abbrechen",
+        "close": "Schließen",
+        "merge": "Zusammenführen",
+        "replace": "Alles ersetzen",
+        "skipped": "{count, plural, one {{amount} Eintrag} other {{amount} Einträge}} übersprungen.",
+        "levelsFixed": "{count, plural, one {{amount} Ladenlevel} other {{amount} Ladenlevels}} unter 0 werden als 0 gespeichert.",
+        "errors": {
+            "notJson": "Diese Datei ist kein Backup von Supermarket Simulator Buddy: Sie ist kein gültiges JSON. Es wurde nichts geändert.",
+            "playthroughsMissing": "Diese Datei ist kein Backup von Supermarket Simulator Buddy: Die Liste der Spielstände fehlt. Es wurde nichts geändert."
+        },
+        "summary": {
+            "added": "{amount} hinzugefügt",
+            "updated": "{amount} aktualisiert",
+            "kept": "{amount} behalten",
+            "replaced": "{amount} ersetzt",
+            "removed": "{amount} entfernt"
+        }
+    },
+    "region": {
+        "title": "Sprache und Region",
+        "description": "Wie Texte, Zahlen und Daten auf diesem Gerät angezeigt werden. Nur auf diesem Gerät gespeichert.",
+        "language": {
+            "label": "Sprache",
+            "hint": "Namen aus dem Spiel wie Produkte, Lizenzen und Werkzeuge bleiben auf Englisch."
+        },
+        "numberFormat": {
+            "label": "Zahlenformat",
+            "hint": "Beispiel: {example}",
+            "options": {
+                "auto": "Automatisch, folgt der Sprache",
+                "us": "1,234.56 (Vereinigte Staaten)",
+                "european": "1.234,56 (Deutschland)",
+                "french": "1 234,56 (Frankreich)",
+                "swiss": "1’234.56 (Schweiz)",
+                "indian": "12,34,567.89 (Indien)"
+            }
+        },
+        "dateFormat": {
+            "label": "Datumsformat",
+            "hint": "Beispiel: {example}",
+            "options": {
+                "auto": "Automatisch, folgt der Sprache",
+                "mdy": "Monat/Tag/Jahr",
+                "dmy": "Tag/Monat/Jahr",
+                "ymd": "Jahr-Monat-Tag"
+            }
+        }
+    }
+}

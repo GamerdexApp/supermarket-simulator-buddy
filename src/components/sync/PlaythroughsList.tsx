@@ -1,17 +1,13 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import type { Playthrough } from "@/types/playthrough";
 import { usePlaythrough } from "@/lib/contexts/PlaythroughContext";
 import { useSync } from "@/lib/contexts/SyncContext";
-import { formatDateTime } from "@/lib/format";
-import { syncText } from "@/lib/messages/sync";
+import { formatDateTime, formatNumber } from "@/lib/format";
 import { readStoreLevel } from "@/service/appData";
 import { Badge } from "@/comps/ui/Badge";
 import { Button } from "@/comps/ui/Button";
-
-const text = syncText.playthroughs;
-
-type PlaythroughStatus = keyof typeof text.status;
 
 const tones = {
 	synced: "kept",
@@ -19,6 +15,8 @@ const tones = {
 	conflict: "warn",
 	newHere: "changed",
 } as const;
+
+type PlaythroughStatus = keyof typeof tones;
 
 const statusOf = (
 	playthrough: Playthrough,
@@ -31,9 +29,10 @@ const statusOf = (
 };
 
 function Describe({ playthrough }: { playthrough: Playthrough }) {
+	const t = useTranslations("sync.playthroughs");
 	return (
 		<>
-			<span>{text.describe(readStoreLevel(playthrough))}</span>
+			<span>{t("describe", { level: formatNumber(readStoreLevel(playthrough)) })}</span>
 			<span className="text-muted font-mono text-xs">
 				{formatDateTime(playthrough.lastModified)}
 			</span>
@@ -42,12 +41,13 @@ function Describe({ playthrough }: { playthrough: Playthrough }) {
 }
 
 export function PlaythroughsList({ onReview }: { onReview: () => void }) {
+	const t = useTranslations("sync.playthroughs");
 	const { playthroughs } = usePlaythrough();
 	const { cloudCopy, conflicts } = useSync();
 
 	return (
 		<div className="flex flex-col gap-3">
-			<h3 className="text-base font-semibold">{text.title}</h3>
+			<h3 className="text-base font-semibold">{t("title")}</h3>
 			<ul className="flex flex-col gap-3">
 				{playthroughs.map((playthrough) => {
 					const cloud = cloudCopy?.playthroughs.find(
@@ -66,26 +66,26 @@ export function PlaythroughsList({ onReview }: { onReview: () => void }) {
 						>
 							<div className="flex items-start justify-between gap-3">
 								<span className="font-semibold">{playthrough.name}</span>
-								<Badge tone={tones[current]}>{text.status[current]}</Badge>
+								<Badge tone={tones[current]}>{t(`status.${current}`)}</Badge>
 							</div>
 							<dl className="grid grid-cols-[auto_1fr] gap-x-4 gap-y-2">
-								<dt className="text-muted">{text.thisDevice}</dt>
+								<dt className="text-muted">{t("thisDevice")}</dt>
 								<dd className="flex flex-col items-end text-end">
 									<Describe playthrough={playthrough} />
 								</dd>
-								<dt className="text-muted">{text.cloud}</dt>
+								<dt className="text-muted">{t("cloud")}</dt>
 								<dd className="flex flex-col items-end text-end">
 									{cloud ? (
 										<Describe playthrough={cloud} />
 									) : (
-										<span className="text-muted">{text.notInCloud}</span>
+										<span className="text-muted">{t("notInCloud")}</span>
 									)}
 								</dd>
 							</dl>
 							{current === "conflict" && (
 								<div>
 									<Button variant="link" onClick={onReview}>
-										{text.review}
+										{t("review")}
 									</Button>
 								</div>
 							)}
@@ -93,7 +93,7 @@ export function PlaythroughsList({ onReview }: { onReview: () => void }) {
 					);
 				})}
 			</ul>
-			<p className="text-muted">{text.note}</p>
+			<p className="text-muted">{t("note")}</p>
 		</div>
 	);
 }

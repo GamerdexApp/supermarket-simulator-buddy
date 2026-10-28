@@ -16,12 +16,11 @@ import { changePlaythrough } from "./appData";
 import { currentProductName } from "./products";
 
 const SHOP_NAMES: Record<string, string> = {
-  [DELI_AND_GROCERY_LOCATION]: "Deli and Grocery",
-  [MEAT_AND_DAIRY_LOCATION]: "Meat and Dairy",
-  [GREEN_MARKET_LOCATION]: "Green Market",
-  [LIQUOR_STORE_LOCATION]: "Liquor Store",
-  [JANITORIAL_SUPPLY_LOCATION]: "Janitorial Supply",
-  "": "No Shop Available",
+  [DELI_AND_GROCERY_LOCATION]: "Deli and Grocery", // i18n-ignore
+  [MEAT_AND_DAIRY_LOCATION]: "Meat and Dairy", // i18n-ignore
+  [GREEN_MARKET_LOCATION]: "Green Market", // i18n-ignore
+  [LIQUOR_STORE_LOCATION]: "Liquor Store", // i18n-ignore
+  [JANITORIAL_SUPPLY_LOCATION]: "Janitorial Supply", // i18n-ignore
 };
 
 const SHOP_ORDER = [
@@ -32,14 +31,20 @@ const SHOP_ORDER = [
   JANITORIAL_SUPPLY_LOCATION,
 ];
 
-/** An unknown shop key shows as it is stored, as the old page did. */
+/** The store key of a product that no shop sells. */
+export const NO_SHOP = "";
+
+/**
+ * The in-game shop name, which stays English. An unknown key shows as it is stored,
+ * as the old page did. The caller translates the label for NO_SHOP.
+ */
 export const shopName = (store: string) => SHOP_NAMES[store] ?? store;
 
 /** The known shops in game order, then any other key, then items with no shop. */
 const shopRank = (store: string) => {
   const index = SHOP_ORDER.indexOf(store);
   if (index >= 0) return index;
-  return store === "" ? 999 : 500;
+  return store === NO_SHOP ? 999 : 500;
 };
 
 export interface ShopGroup {

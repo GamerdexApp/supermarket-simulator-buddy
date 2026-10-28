@@ -1,6 +1,5 @@
 import { AppData, Playthrough } from "@/types";
 import type { NewPlaythrough } from "@/service/appData";
-import type { ImportMode } from "@/service/backup";
 
 export interface PlaythroughContextType {
   appData: AppData;
@@ -17,13 +16,6 @@ export interface PlaythroughContextType {
   addPlaythrough: (playthrough: NewPlaythrough) => string | null;
   updatePlaythrough: (id: string, updates: Partial<Playthrough>) => void;
   deletePlaythrough: (id: string) => AppData | null;
-  importData: (
-    jsonString: string,
-    mode?: ImportMode,
-  ) => { success: boolean; error?: string };
-  exportData: () => string;
-  /** Removes the saved data and returns it for Undo. */
-  clearAllData: () => AppData;
 }
 
 export interface UIContextType {

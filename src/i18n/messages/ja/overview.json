@@ -1,0 +1,56 @@
+{
+    "title": "概要",
+    "subline": "{name} · すべてをひと目で",
+    "emptyDescription": "プレイデータを選ぶか作成すると、進行状況をひと目で確認できます。",
+    "identity": {
+        "created": "作成日: {date}",
+        "lastModified": "最終更新: {date}",
+        "manage": "プレイデータを管理"
+    },
+    "storeLevel": {
+        "title": "ストアレベル",
+        "subtitle": "現在の進行レベル",
+        "hint": "サイドバーのストアレベルで変更できます。"
+    },
+    "financial": {
+        "title": "財務の概要",
+        "activeLoans": "有効なローン",
+        "dailyPayments": "毎日の返済額",
+        "totalDebt": "ローン残高の合計",
+        "none": "有効なローンはありません。銀行を開いて借り入れできます。",
+        "formula": "各ローンの費用は、元本に「元本 × 日利 × 期間」を足した額です。有効なローンはすべて毎日返済するものとして計算します。",
+        "view": "銀行の詳細を見る"
+    },
+    "investment": {
+        "title": "総投資額",
+        "subtitle": "管理とマーケットの支出の合計",
+        "formula": "管理 {managementSpent} + マーケット {marketSpent} = {total}"
+    },
+    "management": {
+        "title": "管理",
+        "licenses": "ライセンス",
+        "growth": "拡張アップグレード",
+        "storage": "倉庫アップグレード",
+        "employees": "従業員",
+        "unlocked": "{total}件中{owned}件を解放済み",
+        "hired": "{total}人中{owned}人を雇用済み",
+        "perDay": "{amount}/日",
+        "hiringNote": "これまでに支払った雇用費: {amount}。総投資額には含まれません。",
+        "total": "総投資額",
+        "view": "管理を見る"
+    },
+    "market": {
+        "title": "マーケット",
+        "products": "商品",
+        "licensesUnlocked": "{count, plural, other {{amount}件のライセンスを解放済み}}",
+        "available": "{amount}件が利用可能",
+        "tools": "ツール",
+        "vehicles": "車両",
+        "furniture": "家具",
+        "furnitureItems": "{count, plural, other {{amount}点が利用可能}}",
+        "unlocked": "{total}件中{owned}件を解放済み",
+        "note": "家具とペンキは保存されないため、その支出は計算に含まれません。",
+        "total": "総投資額",
+        "view": "マーケットを見る"
+    }
+}
