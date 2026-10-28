@@ -50,11 +50,11 @@ const products: Product[] = [
     bigBoxStore: GREEN_MARKET_LOCATION,
   },
   {
-    name: "Avacado",
+    name: "Avocado",
     weightPerBox: 0,
     boxesPerStorage: 4,
     licenseId: "license_21",
-    imageUrl: "/assets/products/produce/Avacado.png",
+    imageUrl: "/assets/products/produce/Avocado.png",
     displayType: STALL_TYPE,
     category: PRODUCE_CATEGORY,
     bigBoxStore: GREEN_MARKET_LOCATION,

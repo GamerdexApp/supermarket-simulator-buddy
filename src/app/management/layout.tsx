@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import RequirePlaythrough from "@/comps/layout/RequirePlaythrough";
 
 export const metadata: Metadata = {
 	title: "Management",
@@ -16,5 +17,5 @@ export const metadata: Metadata = {
 };
 
 export default function ManagementLayout({ children }: { children: React.ReactNode }) {
-	return children;
+	return <RequirePlaythrough>{children}</RequirePlaythrough>;
 }

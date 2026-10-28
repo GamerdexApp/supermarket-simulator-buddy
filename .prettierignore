@@ -7,4 +7,4 @@ pnpm-lock.yaml
 .editorconfig
 .gitignore
 .prettierignore
-.flowbite-react/class-list.json
+.flowbite-react/class-list.jsondocs/

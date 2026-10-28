@@ -1,137 +1,72 @@
-import type { AppData, Playthrough } from "@/types/playthrough";
+import type { AppData } from "@/types/playthrough";
 
-const STORAGE_KEY = "supermarket-simulator-buddy";
+export const STORAGE_KEY = "supermarket-simulator-buddy";
 
-const defaultData: AppData = {
+export const EMPTY_APP_DATA: AppData = {
   playthroughs: [],
   activePlaythroughId: null,
 };
 
+const listeners = new Set<() => void>();
+let cachedRaw: string | null = null;
+let cachedData: AppData = EMPTY_APP_DATA;
+
+const notifyListeners = () => listeners.forEach((listener) => listener());
+
+const parseStored = (raw: string | null): AppData => {
+  if (raw === null) return EMPTY_APP_DATA;
+  const parsed = JSON.parse(raw) as AppData;
+  return Array.isArray(parsed?.playthroughs) ? parsed : EMPTY_APP_DATA;
+};
+
 export const storageService = {
   /**
-   * Load data from localStorage
+   * Returns the same object until the stored text changes, as `useSyncExternalStore` requires.
+   * The stored object is returned as it is. Missing optional lists are read as empty where they
+   * are used, as the old app did, so nothing is filled in or written back on load.
    */
   load(): AppData {
-    if (typeof window === "undefined") return defaultData;
+    if (typeof window === "undefined") return EMPTY_APP_DATA;
 
     try {
-      const stored = localStorage.getItem(STORAGE_KEY);
-      if (!stored) return defaultData;
+      const raw = localStorage.getItem(STORAGE_KEY);
+      if (raw === cachedRaw) return cachedData;
 
-      return JSON.parse(stored) as AppData;
+      cachedData = parseStored(raw);
+      cachedRaw = raw;
+      return cachedData;
     } catch (error) {
       console.error("Error loading data from localStorage:", error);
-      return defaultData;
+      return EMPTY_APP_DATA;
     }
   },
 
-  /**
-   * Save data to localStorage
-   */
-  save(data: AppData): void {
-    if (typeof window === "undefined") return;
+  loadOnServer(): AppData {
+    return EMPTY_APP_DATA;
+  },
 
+  save(data: AppData): boolean {
     try {
       localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+      notifyListeners();
+      return true;
     } catch (error) {
       console.error("Error saving data to localStorage:", error);
+      return false;
     }
   },
 
-  /**
-   * Export data as JSON string
-   */
-  exportData(): string {
-    const data = this.load();
-    return JSON.stringify(data, null, 2);
-  },
-
-  /**
-   * Import data from JSON string
-   */
-  importData(jsonString: string): { success: boolean; error?: string } {
-    try {
-      const data = JSON.parse(jsonString) as AppData;
-
-      // Validate the data structure
-      if (!data.playthroughs || !Array.isArray(data.playthroughs)) {
-        return {
-          success: false,
-          error: "Invalid data format: missing playthroughs array",
-        };
-      }
-
-      this.save(data);
-      return { success: true };
-    } catch (error) {
-      return {
-        success: false,
-        error: error instanceof Error ? error.message : "Unknown error",
-      };
-    }
-  },
-
-  /**
-   * Clear all data
-   */
   clear(): void {
-    if (typeof window === "undefined") return;
     localStorage.removeItem(STORAGE_KEY);
+    notifyListeners();
   },
 
-  /**
-   * Add a new playthrough
-   */
-  addPlaythrough(playthrough: Playthrough): void {
-    const data = this.load();
-    data.playthroughs.push(playthrough);
-
-    // Set as active if it's the first playthrough
-    if (data.playthroughs.length === 1) {
-      data.activePlaythroughId = playthrough.id;
-    }
-
-    this.save(data);
-  },
-
-  /**
-   * Update an existing playthrough
-   */
-  updatePlaythrough(id: string, updates: Partial<Playthrough>): void {
-    const data = this.load();
-    const index = data.playthroughs.findIndex((p) => p.id === id);
-
-    if (index !== -1) {
-      data.playthroughs[index] = {
-        ...data.playthroughs[index],
-        ...updates,
-        lastModified: new Date().toISOString(),
-      };
-      this.save(data);
-    }
-  },
-
-  /**
-   * Delete a playthrough
-   */
-  deletePlaythrough(id: string): void {
-    const data = this.load();
-    data.playthroughs = data.playthroughs.filter((p) => p.id !== id);
-
-    // If the deleted playthrough was active, set a new active one
-    if (data.activePlaythroughId === id) {
-      data.activePlaythroughId = data.playthroughs[0]?.id || null;
-    }
-
-    this.save(data);
-  },
-
-  /**
-   * Set active playthrough
-   */
-  setActivePlaythrough(id: string | null): void {
-    const data = this.load();
-    data.activePlaythroughId = id;
-    this.save(data);
+  subscribe(listener: () => void): () => void {
+    listeners.add(listener);
+    window.addEventListener("storage", listener);
+    return () => {
+      listeners.delete(listener);
+      window.removeEventListener("storage", listener);
+    };
   },
 };
