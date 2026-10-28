@@ -3,17 +3,17 @@
 import { useId } from "react";
 import type { Playthrough } from "@/types/playthrough";
 import { formatMoney } from "@/lib/format";
+import { useListEdit } from "@/lib/hooks/useListEdit";
 import { managementText } from "@/lib/messages/management";
 import { readStoreLevel } from "@/service/appData";
 import type { Employee, RoleId } from "@/service/management";
 import { allEmployees, employeeNumber, hiringTotals, roles } from "@/service/management";
+import { LockReason } from "@/comps/page/LockReason";
 import { Badge } from "@/comps/ui/Badge";
 import { Button } from "@/comps/ui/Button";
 import { Card } from "@/comps/ui/Card";
 import { SummaryTile } from "@/comps/ui/SummaryTile";
-import { LockReason } from "./LockReason";
 import { StoreLevelTile } from "./StoreLevelTile";
-import { useListEdit } from "./useListEdit";
 
 const text = managementText;
 const hiringText = text.hiring;

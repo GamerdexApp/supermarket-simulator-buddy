@@ -130,7 +130,8 @@ export interface Tool {
   name: string;
   description: string;
   unitPrice: number;
-  requirement?: string;
+  /** Licenses the playthrough must own before the tool can be unlocked. */
+  requiredLicenses?: number;
   imageUrl: string;
 }
 

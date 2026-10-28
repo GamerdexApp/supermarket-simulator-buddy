@@ -1,7 +1,7 @@
 "use client";
 
 import { usePlaythrough } from "@/lib/contexts/PlaythroughContext";
-import { managementText } from "@/lib/messages/management";
+import { uiText } from "@/lib/messages/ui";
 import type { UnlockListField } from "@/service/appData";
 import {
   addToList,
@@ -32,7 +32,7 @@ export function useListEdit(playthroughId: string, field: UnlockListField) {
       variant: "success",
       title,
       action: {
-        label: managementText.undo,
+        label: uiText.undo,
         onAction: () =>
           updateData((current) =>
             updatePlaythrough(current, playthroughId, {

@@ -4,6 +4,7 @@ import { useState } from "react";
 import { LuCheck } from "react-icons/lu";
 import type { Playthrough } from "@/types/playthrough";
 import { formatMoney } from "@/lib/format";
+import { useListEdit } from "@/lib/hooks/useListEdit";
 import { managementText } from "@/lib/messages/management";
 import { readStoreLevel } from "@/service/appData";
 import type { SectionKind, SectionStep } from "@/service/management";
@@ -17,14 +18,13 @@ import {
 	sectionsToLock,
 } from "@/service/management";
 import { spending } from "@/service/spending";
+import { LockReason } from "@/comps/page/LockReason";
+import { SpendSummary } from "@/comps/page/SpendSummary";
 import { Badge } from "@/comps/ui/Badge";
 import { Button } from "@/comps/ui/Button";
 import { Note } from "@/comps/ui/Note";
 import { SummaryTile } from "@/comps/ui/SummaryTile";
-import { LockReason } from "./LockReason";
-import { SpendSummary } from "./SpendSummary";
 import { StoreLevelTile } from "./StoreLevelTile";
-import { useListEdit } from "./useListEdit";
 
 const text = managementText;
 const sectionText = text.sections;

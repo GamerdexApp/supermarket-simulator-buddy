@@ -2109,7 +2109,7 @@ const furnitures: Furniture[] = [
     imageUrl: "/assets/furniture/Freezer_Single.png",
   },
   {
-    name: FREEZER_TYPE,
+    name: "Freezer Double",
     unitPrice: 400,
     imageUrl: "/assets/furniture/Freezer_Double.png",
   },
@@ -2362,7 +2362,7 @@ const tools: Tool[] = [
     description: "A tablet to order products by scanning labels on shelves.",
     unitPrice: 150,
     imageUrl: "/assets/tools/TabletScannerIcon.png",
-    requirement: "Requires 3 Licenses Owned",
+    requiredLicenses: 3,
   },
 ];
 const vehicles: Vehicle[] = [

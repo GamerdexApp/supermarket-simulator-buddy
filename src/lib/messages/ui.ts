@@ -1,5 +1,6 @@
 export const uiText = {
   close: "Close",
+  undo: "Undo",
   field: { optional: "Optional" },
   stepper: {
     lower: (label: string) => `Lower ${label}`,
