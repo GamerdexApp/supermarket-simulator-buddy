@@ -1,0 +1,39 @@
+{
+    "title": "Pinjaman Bank",
+    "subline": "Urus pinjaman anda untuk {name}",
+    "emptyDescription": "Pilih atau cipta sesi permainan untuk menjejak pinjamannya.",
+    "loanTitle": "Pinjaman #{number}",
+    "states": {
+        "active": "Aktif",
+        "available": "Tersedia",
+        "locked": "Dikunci"
+    },
+    "principal": "Jumlah Pokok",
+    "rate": "Kadar Faedah Harian",
+    "level": "Tahap Kedai Diperlukan",
+    "term": "Tempoh: {count, plural, other {{amount} hari}}",
+    "days": "{count, plural, other {{amount} hari}}",
+    "termFixed": "Tempoh ini tetap sehingga pinjaman dibuang.",
+    "details": "Butiran Pinjaman",
+    "totalInterest": "Jumlah Faedah",
+    "totalPayment": "Jumlah Bayaran",
+    "dailyPayment": "Bayaran Harian",
+    "activate": "Aktifkan Pinjaman",
+    "activatedOn": "Diaktifkan pada: {date}",
+    "remove": "Buang pinjaman",
+    "requiresLevel": "Memerlukan tahap kedai {level} (anda di tahap {current})",
+    "locked": "Dikunci",
+    "activated": "Pinjaman #{number} diaktifkan",
+    "removed": "Pinjaman #{number} dibuang",
+    "undo": "Buat asal",
+    "yourLoans": {
+        "title": "Pinjaman anda",
+        "activeLoans": "Pinjaman aktif",
+        "dailyPayment": "Bayaran harian",
+        "totalDebt": "Jumlah hutang pinjaman",
+        "none": "Tiada pinjaman aktif. Pilih tempoh pada pinjaman di bawah dan aktifkannya.",
+        "line": "{principal} pada {rate} sehari selama {count, plural, other {{amount} hari}}",
+        "payments": "{daily} sehari · {total} keseluruhan",
+        "formula": "Faedah ialah jumlah pokok didarab kadar harian didarab tempoh dalam hari."
+    }
+}

@@ -1,0 +1,56 @@
+{
+    "title": "Genel Bakış",
+    "subline": "{name} · Her şey bir bakışta",
+    "emptyDescription": "İlerlemesini bir bakışta görmek için bir oynanış seç veya oluştur.",
+    "identity": {
+        "created": "Oluşturuldu: {date}",
+        "lastModified": "Son Değişiklik: {date}",
+        "manage": "Oynanışları yönet"
+    },
+    "storeLevel": {
+        "title": "Mağaza Seviyesi",
+        "subtitle": "Mevcut ilerleme seviyesi",
+        "hint": "Kenar çubuğundaki Mağaza seviyesi sayacıyla değiştir."
+    },
+    "financial": {
+        "title": "Finansal Durum",
+        "activeLoans": "Aktif Krediler",
+        "dailyPayments": "Günlük Ödemeler",
+        "totalDebt": "Toplam Kredi Borcu",
+        "none": "Aktif kredi yok. Kredi almak için bankayı aç.",
+        "formula": "Her kredinin maliyeti, ana para artı ana paranın günlük oran ve vadeyle çarpımıdır. Her aktif kredi her gün ödenmiş sayılır.",
+        "view": "Banka Ayrıntıları"
+    },
+    "investment": {
+        "title": "Toplam Yatırım",
+        "subtitle": "Yönetim ve market harcamalarının toplamı",
+        "formula": "Yönetim {managementSpent} + Market {marketSpent} = {total}"
+    },
+    "management": {
+        "title": "Yönetim",
+        "licenses": "Lisanslar",
+        "growth": "Genişletmeler",
+        "storage": "Depo Genişletmeleri",
+        "employees": "Çalışanlar",
+        "unlocked": "{total} içinden {owned} açık",
+        "hired": "{total} içinden {owned} işe alındı",
+        "perDay": "{amount}/gün",
+        "hiringNote": "Şimdiye kadar ödenen işe alım ücretleri: {amount}. Bunlar Toplam Yatırım'a dahil değil.",
+        "total": "Toplam Yatırım",
+        "view": "Yönetimi Gör"
+    },
+    "market": {
+        "title": "Market",
+        "products": "Ürünler",
+        "licensesUnlocked": "{count, plural, one {{amount} lisans açık} other {{amount} lisans açık}}",
+        "available": "{amount} mevcut",
+        "tools": "Aletler",
+        "vehicles": "Araçlar",
+        "furniture": "Mobilya",
+        "furnitureItems": "{count, plural, one {{amount} ürün mevcut} other {{amount} ürün mevcut}}",
+        "unlocked": "{total} içinden {owned} açık",
+        "note": "Mobilya ve boya kaydedilmez, bu yüzden harcamaları sayılmaz.",
+        "total": "Toplam Yatırım",
+        "view": "Marketi Gör"
+    }
+}

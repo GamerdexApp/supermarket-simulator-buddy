@@ -1,0 +1,149 @@
+{
+    "title": "Yönetim",
+    "tabsLabel": "Yönetim",
+    "tabs": {
+        "licenses": "Lisanslar",
+        "growth": "Genişletme",
+        "storage": "Depo",
+        "hiring": "İşe alım",
+        "customizations": "Özelleştirmeler"
+    },
+    "sublines": {
+        "licenses": "{name} · Daha fazla ürün satmak için lisansların kilidini aç",
+        "growth": "{name} · Mağaza alanını bölüm bölüm büyüt",
+        "storage": "{name} · Depoyu bölüm bölüm büyüt",
+        "hiring": "{name} · Mağazayı çalıştırmak için personel al",
+        "customizations": "{name} · Oyunda satın alınan mağaza değişiklikleri"
+    },
+    "emptyDescription": "Lisansları, mağaza genişletmesini, depoyu ve personeli takip etmek için bir oynanış seç veya oluştur.",
+    "storeLevel": "Mağaza seviyesi",
+    "storeLevelCaption": "Kenar çubuğundan değiştir",
+    "free": "Ücretsiz",
+    "requiresLevel": "Mağaza seviyesi {level} gerekli (senin seviyen {current})",
+    "locked": "Kilitli",
+    "states": {
+        "unlocked": "Açık",
+        "canUnlock": "Açılabilir",
+        "locked": "Kilitli"
+    },
+    "licenses": {
+        "totalSpent": "Lisanslara harcanan toplam",
+        "unlockedOf": "{count, plural, one {{amount} lisanstan {owned} tanesi açık} other {{amount} lisanstan {owned} tanesi açık}}",
+        "canUnlockNow": "Şimdi açılabilir",
+        "lockedByLevel": "Seviye yetersiz",
+        "title": "Lisans {number}",
+        "price": "Fiyat",
+        "level": "Mağaza seviyesi",
+        "unlocks": "{count, plural, one {{amount} ürünün kilidini açar} other {{amount} ürünün kilidini açar}}",
+        "unlock": "Lisansın kilidini aç",
+        "undoUnlock": "Kilit açmayı geri al",
+        "unlocked": "Lisans {number} açıldı",
+        "undone": "Lisans {number} yeniden kilitlendi",
+        "filters": {
+            "search": "Lisans veya ürün ara",
+            "title": "Lisansları filtrele",
+            "show": "Göster",
+            "showOptions": {
+                "all": "Tümü",
+                "unlocked": "Açık",
+                "canUnlock": "Açılabilir",
+                "locked": "Kilitli"
+            },
+            "sort": "Sırala",
+            "sortOptions": {
+                "number": "Lisans numarası",
+                "price": "Fiyat, artan",
+                "storeLevel": "Mağaza seviyesi, artan"
+            },
+            "summary": "{count, plural, one {{amount} lisanstan {shown} tanesi gösteriliyor} other {{amount} lisanstan {shown} tanesi gösteriliyor}}",
+            "showButton": "{count, plural, one {{amount} lisansı göster} other {{amount} lisansı göster}}"
+        },
+        "noMatch": "Bu filtrelere uyan lisans yok",
+        "noMatchDescription": "Başka bir arama dene veya tüm lisansları göster."
+    },
+    "sections": {
+        "growth": {
+            "totalSpent": "Genişletmeye harcanan toplam",
+            "unlockedOf": "{count, plural, one {{amount} bölümden {owned} tanesi açık} other {{amount} bölümden {owned} tanesi açık}}",
+            "title": "Genişletme bölümü {num}",
+            "pathLabel": "Genişletme bölümleri",
+            "unlocked": "Genişletme bölümü {num} açıldı",
+            "undone": "Genişletme {count, plural, one {bölümü {range}} other {bölümleri {range}}} yeniden kilitlendi",
+            "cascadeTitle": "Genişletme bölümü {num} geri alınsın mı?"
+        },
+        "storage": {
+            "totalSpent": "Depoya harcanan toplam",
+            "unlockedOf": "{count, plural, one {{amount} bölümden {owned} tanesi açık} other {{amount} bölümden {owned} tanesi açık}}",
+            "title": "Depo bölümü {num}",
+            "pathLabel": "Depo bölümleri",
+            "firstSectionNote": "Oyun verilerine göre depo bölümü 1, mağaza seviyesi 0'da $800 tutar, genişletme bölümü 1 ise ücretsizdir.",
+            "unlocked": "Depo bölümü {num} açıldı",
+            "undone": "Depo {count, plural, one {bölümü {range}} other {bölümleri {range}}} yeniden kilitlendi",
+            "cascadeTitle": "Depo bölümü {num} geri alınsın mı?"
+        },
+        "nextSection": "Sonraki bölüm",
+        "nextSectionValue": "Bölüm {num} · seviye {level} · {price}",
+        "allUnlocked": "Hepsi açık",
+        "level": "Seviye {level}",
+        "size": "Boyut {size}",
+        "nextToUnlock": "Sıradaki",
+        "unlock": "Kilidi aç",
+        "unlockFirst": "Önce bölüm {num} kilidini aç.",
+        "cascade": {
+            "body": "{count, plural, one {Bölüm {range} buna bağlı ve onunla birlikte kilitlenir} other {Bölümler {range} buna bağlı ve onunla birlikte kilitlenir}}. Toplam harcama {price} azalır.",
+            "confirm": "{count, plural, one {Bölüm {range} geri al} other {Bölümler {range} geri al}}",
+            "keep": "Açık kalsın"
+        },
+        "range": "{first} - {last}"
+    },
+    "hiring": {
+        "dailyWages": "Toplam günlük maaş",
+        "dailyWagesCaption": "İşe alınan tüm çalışanların günlük toplam maliyeti",
+        "hired": "İşe alınan çalışanlar",
+        "hiringCosts": "Ödenen işe alım ücretleri",
+        "hiringCostsCaption": "Tek seferlik, günlük maaşlara dahil değil",
+        "roles": {
+            "cashiers": {
+                "title": "Kasiyerler",
+                "stat": "Tamamlanan ödeme: <stat>{value}</stat>",
+                "employeeName": "Kasiyer {number}"
+            },
+            "restockers": {
+                "title": "Reyon görevlileri",
+                "stat": "Raf sayısı: <stat>{value}</stat>",
+                "employeeName": "Reyon görevlisi {number}"
+            },
+            "customerHelpers": {
+                "title": "Müşteri yardımcıları",
+                "stat": "Kasa sayısı: <stat>{value}</stat>",
+                "employeeName": "Müşteri yardımcısı {number}"
+            },
+            "securityGuards": {
+                "title": "Güvenlik görevlileri",
+                "employeeName": "Güvenlik görevlisi {number}"
+            },
+            "janitors": {
+                "title": "Temizlikçiler",
+                "employeeName": "Temizlikçi {number}"
+            }
+        },
+        "hiredOf": "{total} kişiden {count} işe alındı",
+        "roleWages": "Günlük maaş: {amount}",
+        "hiredBadge": "İşe alındı",
+        "level": "Mağaza seviyesi",
+        "cost": "İşe alım ücreti",
+        "wage": "Günlük maaş",
+        "perDay": "{amount} / gün",
+        "hire": "İşe al",
+        "fire": "İşten çıkar",
+        "hiredToast": "{name} işe alındı",
+        "firedToast": "{name} işten çıkarıldı"
+    },
+    "customizations": {
+        "total": "Üçünün fiyatı",
+        "totalCaption": "Oyun verilerinden hesaplanır, kaydedilmez",
+        "note": "Bu değişiklikler oyunda satın alınır. Burada hiçbir şey kaydedilmez.",
+        "price": "Fiyat"
+    },
+    "tabCount": "{owned} / {total}"
+}

@@ -1,0 +1,149 @@
+{
+    "title": "การจัดการ",
+    "tabsLabel": "การจัดการ",
+    "tabs": {
+        "licenses": "ใบอนุญาต",
+        "growth": "ขยายร้าน",
+        "storage": "คลังสินค้า",
+        "hiring": "จ้างพนักงาน",
+        "customizations": "การปรับแต่ง"
+    },
+    "sublines": {
+        "licenses": "{name} · ปลดล็อกใบอนุญาตเพื่อขายสินค้าได้มากขึ้น",
+        "growth": "{name} · ขยายพื้นที่ร้านทีละส่วน",
+        "storage": "{name} · ขยายคลังสินค้าทีละส่วน",
+        "hiring": "{name} · จ้างพนักงานมาดูแลร้าน",
+        "customizations": "{name} · การปรับแต่งร้านที่ซื้อในเกม"
+    },
+    "emptyDescription": "เลือกหรือสร้างรอบการเล่นเพื่อติดตามใบอนุญาต การขยายร้าน คลังสินค้า และพนักงาน",
+    "storeLevel": "เลเวลร้าน",
+    "storeLevelCaption": "เปลี่ยนได้ในแถบข้าง",
+    "free": "ฟรี",
+    "requiresLevel": "ต้องใช้เลเวลร้าน {level} (ตอนนี้เลเวล {current})",
+    "locked": "ล็อกอยู่",
+    "states": {
+        "unlocked": "ปลดล็อกแล้ว",
+        "canUnlock": "ปลดล็อกได้",
+        "locked": "ล็อกอยู่"
+    },
+    "licenses": {
+        "totalSpent": "ใช้จ่ายกับใบอนุญาตรวม",
+        "unlockedOf": "ปลดล็อกแล้ว {owned} จาก {count, plural, other {{amount} ใบอนุญาต}}",
+        "canUnlockNow": "ปลดล็อกได้ตอนนี้",
+        "lockedByLevel": "ล็อกเพราะเลเวล",
+        "title": "ใบอนุญาต {number}",
+        "price": "ราคา",
+        "level": "เลเวลร้าน",
+        "unlocks": "ปลดล็อก {count, plural, other {{amount} สินค้า}}",
+        "unlock": "ปลดล็อกใบอนุญาต",
+        "undoUnlock": "เลิกทำการปลดล็อก",
+        "unlocked": "ปลดล็อกใบอนุญาต {number} แล้ว",
+        "undone": "ใบอนุญาต {number} ถูกล็อกอีกครั้ง",
+        "filters": {
+            "search": "ค้นหาใบอนุญาตหรือสินค้า",
+            "title": "กรองใบอนุญาต",
+            "show": "แสดง",
+            "showOptions": {
+                "all": "ทั้งหมด",
+                "unlocked": "ปลดล็อกแล้ว",
+                "canUnlock": "ปลดล็อกได้",
+                "locked": "ล็อกอยู่"
+            },
+            "sort": "เรียงตาม",
+            "sortOptions": {
+                "number": "หมายเลขใบอนุญาต",
+                "price": "ราคาต่ำไปสูง",
+                "storeLevel": "เลเวลร้านต่ำไปสูง"
+            },
+            "summary": "แสดง {shown} จาก {count, plural, other {{amount} ใบอนุญาต}}",
+            "showButton": "แสดง {count, plural, other {{amount} ใบอนุญาต}}"
+        },
+        "noMatch": "ไม่มีใบอนุญาตที่ตรงกับตัวกรองนี้",
+        "noMatchDescription": "ลองค้นหาคำอื่นหรือแสดงใบอนุญาตทั้งหมด"
+    },
+    "sections": {
+        "growth": {
+            "totalSpent": "ใช้จ่ายกับการขยายร้านรวม",
+            "unlockedOf": "ปลดล็อกแล้ว {owned} จาก {count, plural, other {{amount} ส่วน}}",
+            "title": "ส่วนขยายร้าน {num}",
+            "pathLabel": "ส่วนขยายร้าน",
+            "unlocked": "ปลดล็อกส่วนขยายร้าน {num} แล้ว",
+            "undone": "{count, plural, other {ส่วนขยายร้าน {range}}} ถูกล็อกอีกครั้ง",
+            "cascadeTitle": "เลิกทำส่วนขยายร้าน {num} ไหม"
+        },
+        "storage": {
+            "totalSpent": "ใช้จ่ายกับคลังสินค้ารวม",
+            "unlockedOf": "ปลดล็อกแล้ว {owned} จาก {count, plural, other {{amount} ส่วน}}",
+            "title": "ส่วนคลังสินค้า {num}",
+            "pathLabel": "ส่วนคลังสินค้า",
+            "firstSectionNote": "ในข้อมูลเกม ส่วนคลังสินค้า 1 ราคา $800 ที่เลเวลร้าน 0 ส่วนส่วนขยายร้าน 1 ฟรี",
+            "unlocked": "ปลดล็อกส่วนคลังสินค้า {num} แล้ว",
+            "undone": "{count, plural, other {ส่วนคลังสินค้า {range}}} ถูกล็อกอีกครั้ง",
+            "cascadeTitle": "เลิกทำส่วนคลังสินค้า {num} ไหม"
+        },
+        "nextSection": "ส่วนถัดไป",
+        "nextSectionValue": "ส่วน {num} · เลเวล {level} · {price}",
+        "allUnlocked": "ปลดล็อกครบแล้ว",
+        "level": "เลเวล {level}",
+        "size": "ขนาด {size}",
+        "nextToUnlock": "ปลดล็อกถัดไป",
+        "unlock": "ปลดล็อก",
+        "unlockFirst": "ปลดล็อกส่วน {num} ก่อน",
+        "cascade": {
+            "body": "{count, plural, other {ส่วน {range} ต้องใช้ส่วนนี้และจะถูกล็อกไปด้วย}} ค่าใช้จ่ายรวมลดลง {price}",
+            "confirm": "{count, plural, other {เลิกทำส่วน {range}}}",
+            "keep": "คงการปลดล็อกไว้"
+        },
+        "range": "{first} ถึง {last}"
+    },
+    "hiring": {
+        "dailyWages": "ค่าจ้างรายวันรวม",
+        "dailyWagesCaption": "ค่าใช้จ่ายต่อวันรวมของพนักงานที่จ้างทั้งหมด",
+        "hired": "พนักงานที่จ้าง",
+        "hiringCosts": "ค่าธรรมเนียมการจ้างที่จ่ายแล้ว",
+        "hiringCostsCaption": "จ่ายครั้งเดียว ไม่รวมในค่าจ้างรายวัน",
+        "roles": {
+            "cashiers": {
+                "title": "แคชเชียร์",
+                "stat": "คิดเงินเสร็จ: <stat>{value}</stat>",
+                "employeeName": "แคชเชียร์ {number}"
+            },
+            "restockers": {
+                "title": "พนักงานเติมสินค้า",
+                "stat": "จำนวนชั้นวาง: <stat>{value}</stat>",
+                "employeeName": "พนักงานเติมสินค้า {number}"
+            },
+            "customerHelpers": {
+                "title": "พนักงานช่วยลูกค้า",
+                "stat": "จำนวนจุดชำระเงิน: <stat>{value}</stat>",
+                "employeeName": "พนักงานช่วยลูกค้า {number}"
+            },
+            "securityGuards": {
+                "title": "พนักงานรักษาความปลอดภัย",
+                "employeeName": "พนักงานรักษาความปลอดภัย {number}"
+            },
+            "janitors": {
+                "title": "พนักงานทำความสะอาด",
+                "employeeName": "พนักงานทำความสะอาด {number}"
+            }
+        },
+        "hiredOf": "จ้างแล้ว {count} จาก {total}",
+        "roleWages": "ค่าจ้างรายวัน: {amount}",
+        "hiredBadge": "จ้างแล้ว",
+        "level": "เลเวลร้าน",
+        "cost": "ค่าธรรมเนียมการจ้าง",
+        "wage": "ค่าจ้างรายวัน",
+        "perDay": "{amount} / วัน",
+        "hire": "จ้าง",
+        "fire": "ไล่ออก",
+        "hiredToast": "จ้าง {name} แล้ว",
+        "firedToast": "ไล่ {name} ออกแล้ว"
+    },
+    "customizations": {
+        "total": "ราคารวมทั้งสามอย่าง",
+        "totalCaption": "คำนวณจากข้อมูลเกม ไม่ได้บันทึก",
+        "note": "การปรับแต่งเหล่านี้ซื้อในเกม ที่นี่ไม่ได้บันทึกอะไรไว้",
+        "price": "ราคา"
+    },
+    "tabCount": "{owned} / {total}"
+}

@@ -1,0 +1,22 @@
+{
+    "displayTypes": {
+        "shelf": "ชั้นวาง",
+        "fridge": "ตู้เย็น",
+        "freezer": "ตู้แช่แข็ง",
+        "stall": "แผงขาย",
+        "pegboard": "แผงแขวนสินค้า",
+        "garment_rack": "ราวแขวนเสื้อผ้า"
+    },
+    "categories": {
+        "edible": "ของกิน",
+        "produce": "ผักผลไม้",
+        "drink": "เครื่องดื่ม",
+        "cleaning": "ทำความสะอาด",
+        "books": "หนังสือ",
+        "cloth": "เสื้อผ้า",
+        "electronics": "อิเล็กทรอนิกส์",
+        "hardware": "ฮาร์ดแวร์",
+        "kitchen": "ห้องครัว",
+        "pet": "สัตว์เลี้ยง"
+    }
+}

@@ -1,0 +1,39 @@
+{
+    "title": "銀行ローン",
+    "subline": "{name}のローンを管理",
+    "emptyDescription": "ローンを記録するには、プレイデータを選ぶか作成してください。",
+    "loanTitle": "ローン #{number}",
+    "states": {
+        "active": "有効",
+        "available": "利用可能",
+        "locked": "ロック中"
+    },
+    "principal": "元本",
+    "rate": "日利",
+    "level": "必要なストアレベル",
+    "term": "期間: {count, plural, other {{amount}日}}",
+    "days": "{count, plural, other {{amount}日}}",
+    "termFixed": "ローンを削除するまで期間は変更できません。",
+    "details": "ローンの詳細",
+    "totalInterest": "利息の合計",
+    "totalPayment": "返済総額",
+    "dailyPayment": "毎日の返済額",
+    "activate": "ローンを有効にする",
+    "activatedOn": "有効にした日: {date}",
+    "remove": "ローンを削除",
+    "requiresLevel": "ストアレベル{level}が必要です（現在はレベル{current}）",
+    "locked": "ロック中",
+    "activated": "ローン #{number} を有効にしました",
+    "removed": "ローン #{number} を削除しました",
+    "undo": "元に戻す",
+    "yourLoans": {
+        "title": "あなたのローン",
+        "activeLoans": "有効なローン",
+        "dailyPayment": "毎日の返済額",
+        "totalDebt": "ローン残高の合計",
+        "none": "有効なローンはありません。下のローンで期間を選んで有効にしてください。",
+        "line": "{principal}、日利{rate}、期間{count, plural, other {{amount}日}}",
+        "payments": "1日{daily} · 合計{total}",
+        "formula": "利息は「元本 × 日利 × 期間の日数」です。"
+    }
+}

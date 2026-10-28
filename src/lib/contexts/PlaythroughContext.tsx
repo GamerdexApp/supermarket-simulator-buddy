@@ -1,131 +1,68 @@
 "use client";
 
-import React, { createContext, useContext, useEffect, useRef, useState } from "react";
-import type { AppData, Playthrough, PlaythroughContextType } from "@/types";
+import React, { createContext, useContext, useState, useSyncExternalStore } from "react";
+import type { AppData, PlaythroughContextType } from "@/types";
+import { useIsHydrated } from "@/lib/hooks/useIsHydrated";
+import * as appData from "@/service/appData";
 import { storageService } from "@/service/storage";
 
 const PlaythroughContext = createContext<PlaythroughContextType | undefined>(undefined);
 
-const defaultData: AppData = { playthroughs: [], activePlaythroughId: null };
-
 export function PlaythroughProvider({ children }: { children: React.ReactNode }) {
-	const [appData, setAppData] = useState<AppData>(defaultData);
-	const isLoadedRef = useRef(false);
+	const data = useSyncExternalStore(
+		storageService.subscribe,
+		storageService.load,
+		storageService.loadOnServer
+	);
+	const isLoaded = useIsHydrated();
+	const [lastSavedAt, setLastSavedAt] = useState<Date | null>(null);
+	const [saveFailed, setSaveFailed] = useState(false);
 
-	useEffect(() => {
-		const loaded = storageService.load();
-		isLoadedRef.current = true;
-		// eslint-disable-next-line react-hooks/set-state-in-effect
-		setAppData(loaded);
-	}, []);
+	const updateData: PlaythroughContextType["updateData"] = (update) => {
+		const previous = storageService.load();
+		const saved = storageService.save(update(previous));
 
-	useEffect(() => {
-		if (isLoadedRef.current) {
-			storageService.save(appData);
-		}
-	}, [appData]);
+		setSaveFailed(!saved);
+		if (saved) setLastSavedAt(new Date());
+		return saved ? previous : null;
+	};
 
 	const activePlaythrough =
-		appData.playthroughs.find((p) => p.id === appData.activePlaythroughId) || null;
+		data.playthroughs.find((p) => p.id === data.activePlaythroughId) ?? null;
 
-	const setActivePlaythrough = (id: string | null) => {
-		setAppData((prev) => ({
-			...prev,
-			activePlaythroughId: id,
-		}));
+	const setActivePlaythrough: PlaythroughContextType["setActivePlaythrough"] = (id) => {
+		updateData((current) => appData.setActivePlaythrough(current, id));
 	};
 
-	const addPlaythrough = (
-		playthrough: Omit<Playthrough, "id" | "createdAt" | "lastModified">
-	) => {
-		const now = new Date().toISOString();
-		const newPlaythrough: Playthrough = {
-			...playthrough,
-			id: crypto.randomUUID(),
-			createdAt: now,
-			lastModified: now,
-			// Auto-unlock starter license and growth
-			unlockedLicenses: ["license_0"],
-			unlockedGrowth: ["1"],
-			// Auto-unlock starter tools
-			unlockedTools: ["Paper Bag", "Sponge", "Mop"],
-		};
-
-		setAppData((prev) => {
-			const newPlaythroughs = [...prev.playthroughs, newPlaythrough];
-			const newActiveId =
-				prev.playthroughs.length === 0 ? newPlaythrough.id : prev.activePlaythroughId;
-
-			return {
-				playthroughs: newPlaythroughs,
-				activePlaythroughId: newActiveId,
-			};
-		});
+	const addPlaythrough: PlaythroughContextType["addPlaythrough"] = (input) => {
+		const id = crypto.randomUUID();
+		const saved = updateData((current) =>
+			appData.addPlaythrough(current, input, new Date(), id)
+		);
+		return saved ? id : null;
 	};
 
-	const updatePlaythrough = (id: string, updates: Partial<Playthrough>) => {
-		setAppData((prev) => ({
-			...prev,
-			playthroughs: prev.playthroughs.map((p) =>
-				p.id === id
-					? {
-							...p,
-							...updates,
-							lastModified: new Date().toISOString(),
-						}
-					: p
-			),
-		}));
+	const updatePlaythrough: PlaythroughContextType["updatePlaythrough"] = (id, updates) => {
+		updateData((current) => appData.updatePlaythrough(current, id, updates));
 	};
 
-	const deletePlaythrough = (id: string) => {
-		setAppData((prev) => {
-			const newPlaythroughs = prev.playthroughs.filter((p) => p.id !== id);
-			const newActiveId =
-				prev.activePlaythroughId === id
-					? newPlaythroughs[0]?.id || null
-					: prev.activePlaythroughId;
-
-			return {
-				playthroughs: newPlaythroughs,
-				activePlaythroughId: newActiveId,
-			};
-		});
-	};
-
-	const importData = (jsonString: string) => {
-		const result = storageService.importData(jsonString);
-		if (result.success) {
-			const data = storageService.load();
-			setAppData(data);
-		}
-		return result;
-	};
-
-	const exportData = () => {
-		return storageService.exportData();
-	};
-
-	const clearAllData = () => {
-		setAppData({
-			playthroughs: [],
-			activePlaythroughId: null,
-		});
-		storageService.clear();
-	};
+	const deletePlaythrough: PlaythroughContextType["deletePlaythrough"] = (id) =>
+		updateData((current) => appData.deletePlaythrough(current, id));
 
 	return (
 		<PlaythroughContext.Provider
 			value={{
-				playthroughs: appData.playthroughs,
+				appData: data as AppData,
+				playthroughs: data.playthroughs,
 				activePlaythrough,
+				isLoaded,
+				lastSavedAt,
+				saveFailed,
+				updateData,
 				setActivePlaythrough,
 				addPlaythrough,
 				updatePlaythrough,
 				deletePlaythrough,
-				importData,
-				exportData,
-				clearAllData,
 			}}
 		>
 			{children}
@@ -136,7 +73,7 @@ export function PlaythroughProvider({ children }: { children: React.ReactNode })
 export function usePlaythrough() {
 	const context = useContext(PlaythroughContext);
 	if (context === undefined) {
-		throw new Error("usePlaythrough must be used within a PlaythroughProvider");
+		throw new Error("usePlaythrough must be used within a PlaythroughProvider"); // i18n-ignore
 	}
 	return context;
 }

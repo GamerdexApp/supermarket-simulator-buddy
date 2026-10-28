@@ -1,0 +1,156 @@
+{
+    "title": "Ayarlar",
+    "subline": "Verilerini ve uygulama ayarlarını yönet",
+    "tabsLabel": "Ayarlar",
+    "tabs": {
+        "sync": "Bulut eşitleme",
+        "preferences": "Tercihler",
+        "data": "Yedek ve veri",
+        "about": "Hakkında"
+    },
+    "playthroughCount": "{count, plural, one {{amount} Oynanış} other {{amount} Oynanış}}",
+    "storageNote": {
+        "title": "Veri depolama",
+        "body": "Verilerin bu tarayıcıda saklanır. Tarayıcı verilerini temizlersen, Bulut eşitleme bir kopyasını tutmuyorsa veriler silinir. Arada bir yedek dışa aktar."
+    },
+    "data": {
+        "title": "Veri Yönetimi",
+        "export": {
+            "title": "Verileri Dışa Aktar",
+            "button": "Tüm Oynanışları Dışa Aktar",
+            "description": "Kayıtlı tüm oynanışlarının yedek dosyasını indir.",
+            "done": "Yedek indirildi"
+        },
+        "import": {
+            "title": "Verileri İçe Aktar",
+            "description": "Daha önce dışa aktarılmış bir dosya yükle (.json)",
+            "fileLabel": "Yedek dosyası",
+            "chooseFile": "Dosya seç",
+            "noFile": "Dosya seçilmedi",
+            "review": "İçe aktarmayı incele",
+            "merged": "İçe aktarma birleştirildi",
+            "replaced": "Veriler değiştirildi",
+            "undo": "Geri al"
+        },
+        "reset": {
+            "title": "Tüm Verileri Sıfırla",
+            "warning": "Bu, bu cihazdaki tüm oynanışları siler. Sonrasında 10 saniye boyunca geri alabilirsin.",
+            "button": "Tüm verileri sıfırla",
+            "confirmTitle": "Tüm veriler sıfırlansın mı?",
+            "confirmBody": "Silinecek: {names}.",
+            "cancel": "İptal",
+            "confirm": "Evet, tüm verileri sıfırla",
+            "syncedCopy": "{provider} içindeki eşitlenmiş kopyayı da sil",
+            "syncedOn": "Eşitleme açık kalır. Diğer cihazların bir sonraki eşitlemede bu oynanışları kaybeder. Emin değilsen önce bir yedek dışa aktar.",
+            "done": "Tüm veriler sıfırlandı",
+            "doneMessage": "{count, plural, one {{amount} oynanış silindi.} other {{amount} oynanış silindi.}}",
+            "undo": "Geri al",
+            "doneMessageDisconnected": "{count, plural, one {{amount} oynanış silindi.} other {{amount} oynanış silindi.}} Bu tarayıcıda eşitleme bağlantısı kesildi."
+        }
+    },
+    "appearance": {
+        "title": "Görünüm",
+        "description": "Uygulamanın nasıl görüneceğini seç. Seçim yalnızca bu cihazda kaydedilir ve yedeğe dahil edilmez.",
+        "themeLabel": "Tema",
+        "themes": {
+            "light": "Açık",
+            "dark": "Koyu",
+            "system": "Sistem"
+        },
+        "themeNote": "Sistem, cihazını takip eder. Cihazın şu anda {mode, select, dark {koyu} other {açık}} temayı kullanıyor."
+    },
+    "playthroughs": {
+        "title": "Oynanışlar",
+        "description": "Oynanışları Oynanışlar sayfasında oluştur, değiştir, düzenle ve sil.",
+        "manage": "Oynanışları yönet"
+    },
+    "about": {
+        "version": "Sürüm {version}",
+        "summary": "Supermarket Simulator için bir ilerleme takip aracı. Verilerin bu tarayıcıda ya da eşitlemeyi açarsan kendi bulut depolama alanında saklanır.",
+        "officialGame": "Resmi oyun",
+        "disclaimer": "Supermarket Simulator veya geliştiricileriyle bağlantılı değildir, onlar tarafından desteklenmez. Tüm ticari markalar ve oyun içeriği sahiplerine aittir."
+    },
+    "importDialog": {
+        "title": "Yedeği içe aktar",
+        "fileInfo": "{name} · {size}",
+        "bytes": "{count} B",
+        "kilobytes": "{count} KB",
+        "failedTitle": "İçe aktarma başarısız",
+        "checksTitle": "Dosya kontrol edildi",
+        "checks": "{count, plural, one {{amount} kayıt okundu} other {{amount} kayıt okundu}}, {kept} tanesinde kimlik ve ad var.",
+        "howToApply": "Dosya nasıl uygulansın?",
+        "modeLabel": "İçe aktarma modu",
+        "modes": {
+            "merge": "Bu cihazla birleştir (önerilen)",
+            "replace": "Her şeyi değiştir"
+        },
+        "modeNotes": {
+            "merge": "Yeni oynanışları ekler. İki tarafta da olan bir oynanışta en son güncellenen kopya kazanır. Yalnızca bu cihazda olan oynanışlar kalır. Aktif oynanışın aktif kalır.",
+            "replace": "Bu cihazdaki oynanışları siler ve yalnızca dosyadakileri tutar. Dosyadaki aktif oynanış aktif olur."
+        },
+        "whatChanges": "Neler değişir",
+        "columns": {
+            "playthrough": "Oynanış",
+            "inFile": "Dosyada",
+            "onDevice": "Cihazda",
+            "result": "Sonuç"
+        },
+        "results": {
+            "added": "Eklendi",
+            "updated": "Dosyadan güncellendi",
+            "kept": "Korundu",
+            "replaced": "Dosyadan",
+            "removed": "Kaldırıldı"
+        },
+        "notThere": "Yok",
+        "noPlaythroughs": "Dosyada oynanış yok.",
+        "undoNote": "Sonrasında içe aktarmayı 10 saniye boyunca geri alabilirsin.",
+        "cancel": "İptal",
+        "close": "Kapat",
+        "merge": "Birleştir",
+        "replace": "Her şeyi değiştir",
+        "skipped": "{count, plural, one {{amount} kayıt atlandı.} other {{amount} kayıt atlandı.}}",
+        "levelsFixed": "0'ın altındaki {count, plural, one {{amount} mağaza seviyesi} other {{amount} mağaza seviyesi}} 0 olarak kaydedilecek.",
+        "errors": {
+            "notJson": "Bu dosya bir Supermarket Simulator Buddy yedeği değil: geçerli bir JSON değil. Hiçbir şey değiştirilmedi.",
+            "playthroughsMissing": "Bu dosya bir Supermarket Simulator Buddy yedeği değil: oynanış listesi eksik. Hiçbir şey değiştirilmedi."
+        },
+        "summary": {
+            "added": "{amount} eklendi",
+            "updated": "{amount} güncellendi",
+            "kept": "{amount} korundu",
+            "replaced": "{amount} değiştirildi",
+            "removed": "{amount} kaldırıldı"
+        }
+    },
+    "region": {
+        "title": "Dil ve bölge",
+        "description": "Metin, sayı ve tarihlerin bu cihazda nasıl gösterileceği. Yalnızca bu cihazda kaydedilir.",
+        "language": {
+            "label": "Dil",
+            "hint": "Ürünler, lisanslar ve aletler gibi oyun adları İngilizce kalır."
+        },
+        "numberFormat": {
+            "label": "Sayı biçimi",
+            "hint": "Örnek: {example}",
+            "options": {
+                "auto": "Otomatik, dili takip eder",
+                "us": "1,234.56 (Amerika Birleşik Devletleri)",
+                "european": "1.234,56 (Almanya)",
+                "french": "1 234,56 (Fransa)",
+                "swiss": "1’234.56 (İsviçre)",
+                "indian": "12,34,567.89 (Hindistan)"
+            }
+        },
+        "dateFormat": {
+            "label": "Tarih biçimi",
+            "hint": "Örnek: {example}",
+            "options": {
+                "auto": "Otomatik, dili takip eder",
+                "mdy": "Ay/Gün/Yıl",
+                "dmy": "Gün/Ay/Yıl",
+                "ymd": "Yıl-Ay-Gün"
+            }
+        }
+    }
+}

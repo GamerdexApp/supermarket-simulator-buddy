@@ -1,0 +1,149 @@
+{
+    "title": "管理",
+    "tabsLabel": "管理",
+    "tabs": {
+        "licenses": "ライセンス",
+        "growth": "拡張",
+        "storage": "倉庫",
+        "hiring": "雇用",
+        "customizations": "カスタマイズ"
+    },
+    "sublines": {
+        "licenses": "{name} · ライセンスを解放して販売できる商品を増やす",
+        "growth": "{name} · 売り場を1区画ずつ拡張する",
+        "storage": "{name} · 倉庫を1区画ずつ拡張する",
+        "hiring": "{name} · 従業員を雇ってストアを運営する",
+        "customizations": "{name} · ゲーム内で購入したストアの改装"
+    },
+    "emptyDescription": "ライセンス、ストアの拡張、倉庫、従業員を記録するには、プレイデータを選ぶか作成してください。",
+    "storeLevel": "ストアレベル",
+    "storeLevelCaption": "サイドバーで変更できます",
+    "free": "無料",
+    "requiresLevel": "ストアレベル{level}が必要です（現在はレベル{current}）",
+    "locked": "ロック中",
+    "states": {
+        "unlocked": "解放済み",
+        "canUnlock": "解放可能",
+        "locked": "ロック中"
+    },
+    "licenses": {
+        "totalSpent": "ライセンスの支出合計",
+        "unlockedOf": "{count, plural, other {{amount}件のライセンス}}中{owned}件を解放済み",
+        "canUnlockNow": "今すぐ解放可能",
+        "lockedByLevel": "レベル不足でロック中",
+        "title": "ライセンス{number}",
+        "price": "価格",
+        "level": "ストアレベル",
+        "unlocks": "{count, plural, other {{amount}件の商品}}を解放",
+        "unlock": "ライセンスを解放",
+        "undoUnlock": "解放を元に戻す",
+        "unlocked": "ライセンス{number}を解放しました",
+        "undone": "ライセンス{number}を再びロックしました",
+        "filters": {
+            "search": "ライセンスまたは商品を検索",
+            "title": "ライセンスを絞り込む",
+            "show": "表示",
+            "showOptions": {
+                "all": "すべて",
+                "unlocked": "解放済み",
+                "canUnlock": "解放可能",
+                "locked": "ロック中"
+            },
+            "sort": "並べ替え",
+            "sortOptions": {
+                "number": "ライセンス番号",
+                "price": "価格の安い順",
+                "storeLevel": "ストアレベルの低い順"
+            },
+            "summary": "{count, plural, other {{amount}件のライセンス}}中{shown}件を表示",
+            "showButton": "{count, plural, other {{amount}件のライセンス}}を表示"
+        },
+        "noMatch": "フィルターに一致するライセンスはありません",
+        "noMatchDescription": "別の語で検索するか、すべてのライセンスを表示してください。"
+    },
+    "sections": {
+        "growth": {
+            "totalSpent": "拡張の支出合計",
+            "unlockedOf": "{count, plural, other {{amount}区画}}中{owned}区画を解放済み",
+            "title": "拡張区画{num}",
+            "pathLabel": "拡張区画",
+            "unlocked": "拡張区画{num}を解放しました",
+            "undone": "拡張{count, plural, other {区画{range}}}を再びロックしました",
+            "cascadeTitle": "拡張区画{num}を元に戻しますか？"
+        },
+        "storage": {
+            "totalSpent": "倉庫の支出合計",
+            "unlockedOf": "{count, plural, other {{amount}区画}}中{owned}区画を解放済み",
+            "title": "倉庫区画{num}",
+            "pathLabel": "倉庫区画",
+            "firstSectionNote": "ゲームのデータでは、倉庫区画1はストアレベル0で $800 かかり、拡張区画1は無料です。",
+            "unlocked": "倉庫区画{num}を解放しました",
+            "undone": "倉庫{count, plural, other {区画{range}}}を再びロックしました",
+            "cascadeTitle": "倉庫区画{num}を元に戻しますか？"
+        },
+        "nextSection": "次の区画",
+        "nextSectionValue": "区画{num} · レベル{level} · {price}",
+        "allUnlocked": "すべて解放済み",
+        "level": "レベル{level}",
+        "size": "サイズ{size}",
+        "nextToUnlock": "次に解放",
+        "unlock": "解放",
+        "unlockFirst": "先に区画{num}を解放してください。",
+        "cascade": {
+            "body": "{count, plural, other {区画{range}はこの区画が必要なため、一緒にロックされます}}。支出合計は{price}減ります。",
+            "confirm": "{count, plural, other {区画{range}}}を元に戻す",
+            "keep": "解放したままにする"
+        },
+        "range": "{first}〜{last}"
+    },
+    "hiring": {
+        "dailyWages": "日給の合計",
+        "dailyWagesCaption": "雇用中の全従業員の1日あたりの費用",
+        "hired": "雇用中の従業員",
+        "hiringCosts": "支払った雇用費",
+        "hiringCostsCaption": "一回限りの費用で、日給には含まれません",
+        "roles": {
+            "cashiers": {
+                "title": "レジ係",
+                "stat": "会計の完了: <stat>{value}</stat>",
+                "employeeName": "レジ係{number}"
+            },
+            "restockers": {
+                "title": "品出し係",
+                "stat": "担当する棚の数: <stat>{value}</stat>",
+                "employeeName": "品出し係{number}"
+            },
+            "customerHelpers": {
+                "title": "接客係",
+                "stat": "担当するレジの数: <stat>{value}</stat>",
+                "employeeName": "接客係{number}"
+            },
+            "securityGuards": {
+                "title": "警備員",
+                "employeeName": "警備員{number}"
+            },
+            "janitors": {
+                "title": "清掃員",
+                "employeeName": "清掃員{number}"
+            }
+        },
+        "hiredOf": "{total}人中{count}人を雇用",
+        "roleWages": "日給: {amount}",
+        "hiredBadge": "雇用中",
+        "level": "ストアレベル",
+        "cost": "雇用費",
+        "wage": "日給",
+        "perDay": "{amount}/日",
+        "hire": "雇用",
+        "fire": "解雇",
+        "hiredToast": "{name}を雇用しました",
+        "firedToast": "{name}を解雇しました"
+    },
+    "customizations": {
+        "total": "3つの合計価格",
+        "totalCaption": "ゲームのデータから計算、保存されません",
+        "note": "これらの改装はゲーム内で購入します。ここでは何も保存されません。",
+        "price": "価格"
+    },
+    "tabCount": "{owned}/{total}"
+}

@@ -1,0 +1,93 @@
+{
+    "title": "Pasar",
+    "tabsLabel": "Pasar",
+    "tabs": {
+        "products": "Produk",
+        "furniture": "Perabot",
+        "paint": "Cat",
+        "tools": "Alatan",
+        "vehicles": "Kenderaan"
+    },
+    "sublines": {
+        "products": "{name} · Produk yang dibuka oleh lesen anda",
+        "furniture": "{name} · Harga perabot",
+        "paint": "{name} · Harga cat",
+        "tools": "{name} · Alatan yang anda miliki",
+        "vehicles": "{name} · Kenderaan yang anda miliki"
+    },
+    "emptyDescription": "Pilih atau cipta sesi permainan untuk melihat produk, alatan dan kenderaan yang anda ada.",
+    "free": "Percuma",
+    "undoUnlock": "Buat asal buka kunci",
+    "unlock": "Buka kunci",
+    "locked": "Dikunci",
+    "states": {
+        "unlocked": "Dibuka",
+        "canUnlock": "Boleh dibuka",
+        "locked": "Dikunci"
+    },
+    "products": {
+        "search": "Cari nama atau syarikat...",
+        "displayType": "Tapis mengikut Jenis Paparan",
+        "allDisplayTypes": "Semua Jenis Paparan",
+        "category": "Tapis mengikut Kategori",
+        "allCategories": "Semua Kategori",
+        "option": "{label} ({count})",
+        "filtersTitle": "Tapis produk",
+        "showing": "Menunjukkan {shown} daripada {count, plural, other {{amount} produk}}",
+        "showButton": "Tunjuk {count, plural, other {{amount} produk}}",
+        "unlocked": "Produk Dibuka ({count})",
+        "locked": "Produk Dikunci ({count})",
+        "lockedHelp": "Buka kunci lesen dalam Pengurusan untuk menjual produk ini.",
+        "noUnlocked": "Tiada produk dibuka yang sepadan dengan penapis anda.",
+        "noLocked": "Tiada produk dikunci yang sepadan dengan penapis anda.",
+        "requires": "Memerlukan: Lesen {number}",
+        "itemsPerBox": "Item setiap kotak",
+        "weightPerBox": "Berat setiap kotak",
+        "kg": "{weight} kg",
+        "boxesPerStorage": "Kotak setiap rak stor",
+        "details": "Butiran untuk {name}",
+        "detail": {
+            "company": "Syarikat",
+            "displayType": "Jenis paparan",
+            "category": "Kategori",
+            "boughtAt": "Dibeli di",
+            "license": "Lesen",
+            "unlocked": "Lesen {number}, dibuka",
+            "locked": "Lesen {number}, belum dibuka",
+            "none": "Tidak disenaraikan",
+            "toLicenses": "Pergi ke Lesen",
+            "close": "Tutup"
+        },
+        "stores": {
+            "liquor_store": "Liquor Store",
+            "janitorial_supply": "Janitorial Supply",
+            "deli_and_grocery": "Deli and Grocery",
+            "meat_and_dairy": "Meat and Dairy",
+            "green_market": "Green Market"
+        }
+    },
+    "furniture": {
+        "heading": "Semua Perabot ({count})",
+        "note": "Harga daripada permainan. Perabot tidak mempunyai keadaan yang disimpan."
+    },
+    "paint": {
+        "heading": "Semua Cat ({count})",
+        "note": "Harga daripada permainan. Cat tidak mempunyai keadaan yang disimpan."
+    },
+    "tools": {
+        "totalSpent": "Jumlah Perbelanjaan untuk Alatan",
+        "unlockedOf": "{owned} daripada {count, plural, other {{amount} alatan dibuka}}",
+        "requiresLicenses": "Memerlukan {count, plural, other {{amount} lesen}} · anda memiliki {owned}",
+        "unlocked": "{name} dibuka",
+        "undone": "{name} dikunci semula"
+    },
+    "vehicles": {
+        "totalSpent": "Jumlah Perbelanjaan untuk Kenderaan",
+        "unlockedOf": "{owned} daripada {count, plural, other {{amount} kenderaan dibuka}}",
+        "price": "Harga",
+        "storeLevel": "Tahap kedai",
+        "requiresLevel": "Memerlukan tahap kedai {level} · anda di tahap {current}",
+        "unlocked": "{name} dibuka",
+        "undone": "{name} dikunci semula"
+    }
+}

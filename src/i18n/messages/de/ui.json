@@ -1,0 +1,43 @@
+{
+    "close": "Schließen",
+    "undo": "Rückgängig",
+    "field": {
+        "optional": "Optional"
+    },
+    "stepper": {
+        "lower": "{label} senken",
+        "raise": "{label} erhöhen",
+        "labelPrefix": "{label}, "
+    },
+    "switch": {
+        "on": "An",
+        "off": "Aus"
+    },
+    "tabs": {
+        "locked": " (gesperrt)"
+    },
+    "toast": {
+        "dismiss": "Ausblenden",
+        "variants": {
+            "success": "Erfolg",
+            "info": "Info",
+            "warning": "Warnung",
+            "error": "Fehler"
+        }
+    },
+    "filters": {
+        "filters": "Filter",
+        "activeCount": "{count, plural, one {{amount} aktiv} other {{amount} aktiv}}",
+        "clearFilters": "Filter löschen",
+        "reset": "Zurücksetzen",
+        "description": "Änderungen gelten sofort. Filter werden nicht gespeichert.",
+        "groupLabel": "Filter: {label}"
+    },
+    "savedChip": {
+        "automatic": "Speichert automatisch",
+        "justNow": "Gerade gespeichert",
+        "minutesAgo": "{count, plural, one {Vor {amount} Min. gespeichert} other {Vor {amount} Min. gespeichert}}",
+        "at": "Gespeichert {time}",
+        "failed": "Nicht gespeichert, Speicher ist voll"
+    }
+}

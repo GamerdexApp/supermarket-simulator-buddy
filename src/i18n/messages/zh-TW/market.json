@@ -1,0 +1,93 @@
+{
+    "title": "市場",
+    "tabsLabel": "市場",
+    "tabs": {
+        "products": "商品",
+        "furniture": "家具",
+        "paint": "油漆",
+        "tools": "工具",
+        "vehicles": "車輛"
+    },
+    "sublines": {
+        "products": "{name} · 執照解鎖的商品",
+        "furniture": "{name} · 家具價格",
+        "paint": "{name} · 油漆價格",
+        "tools": "{name} · 你擁有的工具",
+        "vehicles": "{name} · 你擁有的車輛"
+    },
+    "emptyDescription": "選擇或建立一個存檔，查看你擁有哪些商品、工具和車輛。",
+    "free": "免費",
+    "undoUnlock": "復原解鎖",
+    "unlock": "解鎖",
+    "locked": "已鎖定",
+    "states": {
+        "unlocked": "已解鎖",
+        "canUnlock": "可解鎖",
+        "locked": "已鎖定"
+    },
+    "products": {
+        "search": "依名稱或公司搜尋…",
+        "displayType": "依陳列類型篩選",
+        "allDisplayTypes": "所有陳列類型",
+        "category": "依類別篩選",
+        "allCategories": "所有類別",
+        "option": "{label}（{count}）",
+        "filtersTitle": "篩選商品",
+        "showing": "顯示 {shown}/{count, plural, other {{amount} 項商品}}",
+        "showButton": "顯示 {count, plural, other {{amount} 項商品}}",
+        "unlocked": "已解鎖商品（{count}）",
+        "locked": "未解鎖商品（{count}）",
+        "lockedHelp": "在管理中解鎖執照後即可販售這些商品。",
+        "noUnlocked": "沒有符合篩選條件的已解鎖商品。",
+        "noLocked": "沒有符合篩選條件的未解鎖商品。",
+        "requires": "需要：執照 {number}",
+        "itemsPerBox": "每箱數量",
+        "weightPerBox": "每箱重量",
+        "kg": "{weight} kg",
+        "boxesPerStorage": "每個倉庫位箱數",
+        "details": "{name} 的詳情",
+        "detail": {
+            "company": "公司",
+            "displayType": "陳列類型",
+            "category": "類別",
+            "boughtAt": "購買地點",
+            "license": "執照",
+            "unlocked": "執照 {number}，已解鎖",
+            "locked": "執照 {number}，尚未解鎖",
+            "none": "未列出",
+            "toLicenses": "開啟執照",
+            "close": "關閉"
+        },
+        "stores": {
+            "liquor_store": "Liquor Store",
+            "janitorial_supply": "Janitorial Supply",
+            "deli_and_grocery": "Deli and Grocery",
+            "meat_and_dairy": "Meat and Dairy",
+            "green_market": "Green Market"
+        }
+    },
+    "furniture": {
+        "heading": "所有家具（{count}）",
+        "note": "價格取自遊戲。家具沒有儲存狀態。"
+    },
+    "paint": {
+        "heading": "所有油漆（{count}）",
+        "note": "價格取自遊戲。油漆沒有儲存狀態。"
+    },
+    "tools": {
+        "totalSpent": "工具總花費",
+        "unlockedOf": "已解鎖 {owned}/{count, plural, other {{amount} 個工具}}",
+        "requiresLicenses": "需要 {count, plural, other {{amount} 張執照}} · 你擁有 {owned} 張",
+        "unlocked": "{name} 已解鎖",
+        "undone": "{name} 已重新鎖定"
+    },
+    "vehicles": {
+        "totalSpent": "車輛總花費",
+        "unlockedOf": "已解鎖 {owned}/{count, plural, other {{amount} 輛車輛}}",
+        "price": "價格",
+        "storeLevel": "商店等級",
+        "requiresLevel": "需要商店等級 {level} · 你目前是 {current} 級",
+        "unlocked": "{name} 已解鎖",
+        "undone": "{name} 已重新鎖定"
+    }
+}

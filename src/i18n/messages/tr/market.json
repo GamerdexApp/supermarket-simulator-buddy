@@ -1,0 +1,93 @@
+{
+    "title": "Market",
+    "tabsLabel": "Market",
+    "tabs": {
+        "products": "Ürünler",
+        "furniture": "Mobilya",
+        "paint": "Boya",
+        "tools": "Aletler",
+        "vehicles": "Araçlar"
+    },
+    "sublines": {
+        "products": "{name} · Lisanslarının açtığı ürünler",
+        "furniture": "{name} · Mobilya fiyatları",
+        "paint": "{name} · Boya fiyatları",
+        "tools": "{name} · Sahip olduğun aletler",
+        "vehicles": "{name} · Sahip olduğun araçlar"
+    },
+    "emptyDescription": "Hangi ürünlere, aletlere ve araçlara sahip olduğunu görmek için bir oynanış seç veya oluştur.",
+    "free": "Ücretsiz",
+    "undoUnlock": "Kilit açmayı geri al",
+    "unlock": "Kilidi aç",
+    "locked": "Kilitli",
+    "states": {
+        "unlocked": "Açık",
+        "canUnlock": "Açılabilir",
+        "locked": "Kilitli"
+    },
+    "products": {
+        "search": "Ada veya şirkete göre ara...",
+        "displayType": "Teşhir Türüne Göre Filtrele",
+        "allDisplayTypes": "Tüm Teşhir Türleri",
+        "category": "Kategoriye Göre Filtrele",
+        "allCategories": "Tüm Kategoriler",
+        "option": "{label} ({count})",
+        "filtersTitle": "Ürünleri filtrele",
+        "showing": "{count, plural, one {{amount} üründen {shown} tanesi gösteriliyor} other {{amount} üründen {shown} tanesi gösteriliyor}}",
+        "showButton": "{count, plural, one {{amount} ürünü göster} other {{amount} ürünü göster}}",
+        "unlocked": "Açık Ürünler ({count})",
+        "locked": "Kilitli Ürünler ({count})",
+        "lockedHelp": "Bunları satmak için Yönetim'de lisansın kilidini aç.",
+        "noUnlocked": "Filtrelerine uyan açık ürün yok.",
+        "noLocked": "Filtrelerine uyan kilitli ürün yok.",
+        "requires": "Gerekli: Lisans {number}",
+        "itemsPerBox": "Koli başına adet",
+        "weightPerBox": "Koli başına ağırlık",
+        "kg": "{weight} kg",
+        "boxesPerStorage": "Depo rafı başına koli",
+        "details": "Ayrıntılar: {name}",
+        "detail": {
+            "company": "Şirket",
+            "displayType": "Teşhir türü",
+            "category": "Kategori",
+            "boughtAt": "Satın alma yeri",
+            "license": "Lisans",
+            "unlocked": "Lisans {number}, açık",
+            "locked": "Lisans {number}, henüz açılmadı",
+            "none": "Belirtilmemiş",
+            "toLicenses": "Lisansları aç",
+            "close": "Kapat"
+        },
+        "stores": {
+            "liquor_store": "Liquor Store",
+            "janitorial_supply": "Janitorial Supply",
+            "deli_and_grocery": "Deli and Grocery",
+            "meat_and_dairy": "Meat and Dairy",
+            "green_market": "Green Market"
+        }
+    },
+    "furniture": {
+        "heading": "Tüm Mobilyalar ({count})",
+        "note": "Fiyatlar oyundan. Mobilya kaydedilmez."
+    },
+    "paint": {
+        "heading": "Tüm Boyalar ({count})",
+        "note": "Fiyatlar oyundan. Boya kaydedilmez."
+    },
+    "tools": {
+        "totalSpent": "Aletlere Harcanan Toplam",
+        "unlockedOf": "{count, plural, one {{amount} aletten {owned} tanesi açık} other {{amount} aletten {owned} tanesi açık}}",
+        "requiresLicenses": "{count, plural, one {{amount} lisans gerekli} other {{amount} lisans gerekli}} · sende {owned} var",
+        "unlocked": "{name} açıldı",
+        "undone": "{name} yeniden kilitlendi"
+    },
+    "vehicles": {
+        "totalSpent": "Araçlara Harcanan Toplam",
+        "unlockedOf": "{count, plural, one {{amount} araçtan {owned} tanesi açık} other {{amount} araçtan {owned} tanesi açık}}",
+        "price": "Fiyat",
+        "storeLevel": "Mağaza seviyesi",
+        "requiresLevel": "Mağaza seviyesi {level} gerekli · senin seviyen {current}",
+        "unlocked": "{name} açıldı",
+        "undone": "{name} yeniden kilitlendi"
+    }
+}

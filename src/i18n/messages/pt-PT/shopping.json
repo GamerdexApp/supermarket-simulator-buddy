@@ -1,0 +1,63 @@
+{
+    "title": "Lista de compras",
+    "subline": "Planear as compras de produtos de {name}",
+    "emptyDescription": "Cria uma partida para planear compras.",
+    "addProducts": "Adicionar produtos",
+    "summary": {
+        "title": "Resumo das compras",
+        "purchased": "{bought} / {count, plural, one {{amount} artigo comprado} other {{amount} artigos comprados}}",
+        "boxes": "{count, plural, one {{amount} caixa no total} other {{amount} caixas no total}}",
+        "reset": "Repor lista"
+    },
+    "reset": {
+        "title": "Repor a lista de compras?",
+        "body": "Vai remover {count, plural, one {{amount} artigo} other {{amount} artigos}} ({bought} comprados, {boxCount, plural, one {{boxes} caixa} other {{boxes} caixas}}).",
+        "cancel": "Cancelar",
+        "confirm": "Repor lista",
+        "done": "Lista de compras reposta",
+        "doneMessage": "{count, plural, one {{amount} artigo removido} other {{amount} artigos removidos}}."
+    },
+    "empty": {
+        "title": "A lista de compras está vazia",
+        "body": "Planeia que produtos comprar antes da próxima ida às lojas.",
+        "steps": {
+            "item1": "Adiciona produtos das licenças que já desbloqueaste.",
+            "item2": "Toca outra vez num produto para adicionar mais uma caixa.",
+            "item3": "Marca os artigos à medida que os compras."
+        },
+        "missing": "Falta um produto? Desbloqueia a licença em Gestão.",
+        "toManagement": "Abrir licenças"
+    },
+    "shop": {
+        "noShop": "Nenhuma loja disponível",
+        "items": "{count, plural, one {{amount} artigo} other {{amount} artigos}}",
+        "progress": "{bought} de {total} comprados · {count, plural, one {{amount} caixa} other {{amount} caixas}}"
+    },
+    "row": {
+        "purchased": "Marcar como comprado: {label}",
+        "boxes": "Caixas",
+        "remove": "Remover {label}",
+        "removed": "{name} removido"
+    },
+    "undo": "Anular",
+    "dialog": {
+        "title": "Adicionar produtos à lista de compras",
+        "search": "Pesquisar produtos",
+        "searchPlaceholder": "Pesquisar por nome ou empresa...",
+        "source": "Só aparecem produtos de licenças desbloqueadas.",
+        "showing": "A mostrar {shown} de {total}",
+        "pick": "Toca num produto para o adicionar",
+        "noResults": "Nenhum produto encontrado para «{term}»",
+        "noResultsHint": "Um produto em falta pode precisar de uma licença que ainda não desbloqueaste.",
+        "clearSearch": "Limpar pesquisa",
+        "addOne": "Adicionar uma caixa de {label}",
+        "pending": "Artigos a adicionar ({count})",
+        "noPending": "Ainda não há artigos adicionados. Toca num produto à esquerda para adicionar uma caixa. Toca outra vez para adicionar mais.",
+        "merges": "Se um produto já estiver na lista, estas caixas são adicionadas à sua linha.",
+        "boxes": "{count, plural, one {{amount} caixa} other {{amount} caixas}}",
+        "removePending": "Remover {label} dos artigos a adicionar",
+        "cancel": "Cancelar",
+        "submit": "{count, plural, one {Adicionar {amount} artigo à lista} other {Adicionar {amount} artigos à lista}}",
+        "added": "{count, plural, one {{amount} artigo adicionado} other {{amount} artigos adicionados}}"
+    }
+}

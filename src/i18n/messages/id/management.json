@@ -1,0 +1,149 @@
+{
+    "title": "Manajemen",
+    "tabsLabel": "Manajemen",
+    "tabs": {
+        "licenses": "Lisensi",
+        "growth": "Perluasan",
+        "storage": "Gudang",
+        "hiring": "Rekrutmen",
+        "customizations": "Kustomisasi"
+    },
+    "sublines": {
+        "licenses": "{name} · Buka lisensi untuk menjual lebih banyak produk",
+        "growth": "{name} · Perluas lantai toko satu bagian demi satu bagian",
+        "storage": "{name} · Perluas gudang satu bagian demi satu bagian",
+        "hiring": "{name} · Rekrut staf untuk menjalankan toko",
+        "customizations": "{name} · Perubahan toko yang dibeli di dalam game"
+    },
+    "emptyDescription": "Pilih atau buat sesi main untuk melacak lisensi, perluasan toko, gudang, dan staf.",
+    "storeLevel": "Level toko",
+    "storeLevelCaption": "Ubah di bilah samping",
+    "free": "Gratis",
+    "requiresLevel": "Butuh level toko {level} (kamu di level {current})",
+    "locked": "Terkunci",
+    "states": {
+        "unlocked": "Terbuka",
+        "canUnlock": "Bisa dibuka",
+        "locked": "Terkunci"
+    },
+    "licenses": {
+        "totalSpent": "Total pengeluaran untuk lisensi",
+        "unlockedOf": "{owned} dari {count, plural, other {{amount} lisensi terbuka}}",
+        "canUnlockNow": "Bisa dibuka sekarang",
+        "lockedByLevel": "Terkunci oleh level",
+        "title": "Lisensi {number}",
+        "price": "Harga",
+        "level": "Level toko",
+        "unlocks": "Membuka {count, plural, other {{amount} produk}}",
+        "unlock": "Buka lisensi",
+        "undoUnlock": "Urungkan buka",
+        "unlocked": "Lisensi {number} terbuka",
+        "undone": "Lisensi {number} terkunci lagi",
+        "filters": {
+            "search": "Cari lisensi atau produk",
+            "title": "Filter lisensi",
+            "show": "Tampilkan",
+            "showOptions": {
+                "all": "Semua",
+                "unlocked": "Terbuka",
+                "canUnlock": "Bisa dibuka",
+                "locked": "Terkunci"
+            },
+            "sort": "Urutkan",
+            "sortOptions": {
+                "number": "Nomor lisensi",
+                "price": "Harga terendah ke tertinggi",
+                "storeLevel": "Level toko terendah ke tertinggi"
+            },
+            "summary": "Menampilkan {shown} dari {count, plural, other {{amount} lisensi}}",
+            "showButton": "Tampilkan {count, plural, other {{amount} lisensi}}"
+        },
+        "noMatch": "Tidak ada lisensi yang cocok dengan filter ini",
+        "noMatchDescription": "Coba pencarian lain atau tampilkan semua lisensi."
+    },
+    "sections": {
+        "growth": {
+            "totalSpent": "Total pengeluaran untuk perluasan",
+            "unlockedOf": "{owned} dari {count, plural, other {{amount} bagian terbuka}}",
+            "title": "Bagian perluasan {num}",
+            "pathLabel": "Bagian perluasan",
+            "unlocked": "Bagian perluasan {num} terbuka",
+            "undone": "{count, plural, other {Bagian perluasan {range}}} terkunci lagi",
+            "cascadeTitle": "Urungkan bagian perluasan {num}?"
+        },
+        "storage": {
+            "totalSpent": "Total pengeluaran untuk gudang",
+            "unlockedOf": "{owned} dari {count, plural, other {{amount} bagian terbuka}}",
+            "title": "Bagian gudang {num}",
+            "pathLabel": "Bagian gudang",
+            "firstSectionNote": "Bagian gudang 1 berharga $800 di level toko 0 menurut data game, sedangkan bagian perluasan 1 gratis.",
+            "unlocked": "Bagian gudang {num} terbuka",
+            "undone": "{count, plural, other {Bagian gudang {range}}} terkunci lagi",
+            "cascadeTitle": "Urungkan bagian gudang {num}?"
+        },
+        "nextSection": "Bagian berikutnya",
+        "nextSectionValue": "Bagian {num} · level {level} · {price}",
+        "allUnlocked": "Semua terbuka",
+        "level": "Level {level}",
+        "size": "Ukuran {size}",
+        "nextToUnlock": "Berikutnya untuk dibuka",
+        "unlock": "Buka",
+        "unlockFirst": "Buka bagian {num} terlebih dahulu.",
+        "cascade": {
+            "body": "{count, plural, other {Bagian {range} membutuhkannya dan ikut terkunci}}. Total pengeluaran turun sebesar {price}.",
+            "confirm": "Urungkan {count, plural, other {bagian {range}}}",
+            "keep": "Biarkan tetap terbuka"
+        },
+        "range": "{first} sampai {last}"
+    },
+    "hiring": {
+        "dailyWages": "Total upah harian",
+        "dailyWagesCaption": "Biaya harian gabungan untuk semua karyawan",
+        "hired": "Karyawan direkrut",
+        "hiringCosts": "Biaya rekrutmen dibayar",
+        "hiringCostsCaption": "Sekali bayar, bukan bagian dari upah harian",
+        "roles": {
+            "cashiers": {
+                "title": "Kasir",
+                "stat": "Penyelesaian di kasir: <stat>{value}</stat>",
+                "employeeName": "Kasir {number}"
+            },
+            "restockers": {
+                "title": "Pengisi rak",
+                "stat": "Jumlah rak: <stat>{value}</stat>",
+                "employeeName": "Pengisi rak {number}"
+            },
+            "customerHelpers": {
+                "title": "Asisten pelanggan",
+                "stat": "Jumlah meja kasir: <stat>{value}</stat>",
+                "employeeName": "Asisten pelanggan {number}"
+            },
+            "securityGuards": {
+                "title": "Satpam",
+                "employeeName": "Satpam {number}"
+            },
+            "janitors": {
+                "title": "Petugas kebersihan",
+                "employeeName": "Petugas kebersihan {number}"
+            }
+        },
+        "hiredOf": "{count} dari {total} direkrut",
+        "roleWages": "Upah harian: {amount}",
+        "hiredBadge": "Direkrut",
+        "level": "Level toko",
+        "cost": "Biaya rekrutmen",
+        "wage": "Upah harian",
+        "perDay": "{amount} / hari",
+        "hire": "Rekrut",
+        "fire": "Pecat",
+        "hiredToast": "{name} direkrut",
+        "firedToast": "{name} dipecat"
+    },
+    "customizations": {
+        "total": "Harga ketiganya",
+        "totalCaption": "Dihitung dari data game, tidak disimpan",
+        "note": "Perubahan ini dibeli di dalam game. Tidak ada yang disimpan di sini.",
+        "price": "Harga"
+    },
+    "tabCount": "{owned} / {total}"
+}

@@ -10,7 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
-      url: `${SITE_URL}/dashboard`,
+      url: `${SITE_URL}/overview`,
       changeFrequency: "weekly",
       priority: 0.8,
     },
@@ -33,6 +33,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${SITE_URL}/shopping-list`,
       changeFrequency: "weekly",
       priority: 0.6,
+    },
+    {
+      url: `${SITE_URL}/playthroughs`,
+      changeFrequency: "monthly",
+      priority: 0.5,
     },
     {
       url: `${SITE_URL}/settings`,

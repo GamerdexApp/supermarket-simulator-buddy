@@ -1,266 +1,86 @@
 # Supermarket Simulator Buddy
 
-A comprehensive progress tracking companion app for [Supermarket Simulator](https://supermarketsimulator.com/). Manage multiple playthroughs, track your store growth, manage licenses, monitor finances, and organize your shopping lists—all in one place.
+A free progress tracker for the game Supermarket Simulator. Keep several playthroughs, track your store level, licenses, store growth, staff, loans and shopping lists, and see what to unlock next. Everything is saved in your browser. There is no account. Cloud sync is optional and keeps your data in your own storage.
 
-![Supermarket Simulator Buddy](./public/screenshot.png)
+Live at [supermarket-simulator.gamerdex.app](https://supermarket-simulator.gamerdex.app).
 
-## Features
+This is an unofficial fan tool. It is not affiliated with, endorsed by, or connected to Supermarket Simulator or its developers. Game names and images belong to their owners.
 
-### 🎮 Multiple Playthroughs
+## What it does
 
-- Create and manage unlimited playthroughs
-- Track different strategies and challenge runs separately
-- Switch between playthroughs easily with the sidebar dropdown
+Each playthrough has one page per game area. Every change saves at once, and a toast offers Undo.
 
-### 📊 Comprehensive Tracking
+- **Overview**: store level, loans, total investment and progress across management and the market.
+- **Market**: all 186 products with search, display type and category filters, and a detail view with the shop they are bought at. Furniture and paint prices. Tools and vehicles you own, with the Tablet's 3 license rule.
+- **Management**: licenses with filters and the products each one unlocks, growth and storage sections as an ordered path, staff hiring with daily wages, and store customizations.
+- **Bank**: the five loans with a term slider, live interest and payments, and your active loans with totals.
+- **Shopping list**: products from your unlocked licenses, grouped by shop, with box counts and a purchased check.
+- **Playthroughs**: create, switch, edit and delete, with search and sort.
+- **Settings**: cloud sync, language and region, number and date formats, theme (light, dark or system), backup export and import, and reset.
 
-- **Store Level Management**: Track your store's progression
-- **License Management**: Monitor all product licenses and see what items each unlocks
-- **Storage & Growth Sections**: Track store expansion and storage upgrades
-- **Furniture & Paint**: Keep track of purchased store customizations
-- **Tools & Vehicles**: Manage your equipment and delivery vehicles
+The store level sits in the sidebar, because it gates every unlock.
 
-### 💰 Financial Tracking
+## Run it
 
-- Budget tracking across all categories
-- Total spending summaries for licenses, storage, growth, furniture, paint, tools, and vehicles
-- Bank loan management and tracking
+Node 24 and pnpm are required.
 
-### 📝 Shopping Lists
-
-- Create custom shopping lists organized by shop location
-- Automatic grouping by:
-  - Deli and Grocery
-  - Meat and Dairy
-  - Green Market
-  - Liquor Store
-  - Janitorial Supply
-  - No Shop Available (for items not available at shops)
-- Checkbox tracking for purchased items
-- Quantity management with box counts
-
-### 💾 Data Management
-
-- Export your progress as JSON for backup
-- Import data anytime
-- All data stored locally in browser localStorage
-- No server required, complete privacy
-
-### 🎨 Modern UI
-
-- Clean, responsive design
-- Dark mode support
-- Mobile-friendly interface
-- Built with Flowbite React components
-
-## Technology Stack
-
-- **Framework**: [Next.js 16](https://nextjs.org/) with App Router
-- **React**: v19 with React Server Components (RSC)
-- **TypeScript**: Strict mode enabled
-- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/) with PostCSS
-- **UI Library**: [Flowbite React v0.12.10](https://flowbite-react.com/)
-- **Icons**: [React Icons](https://react-icons.github.io/react-icons/)
-- **Notifications**: [React Toastify](https://fkhadra.github.io/react-toastify/)
-- **State Management**: React Context API
-- **Data Persistence**: Browser localStorage
-
-## Getting Started
-
-### Prerequisites
-
-- Node.js 18.x or higher
-- npm, yarn, or pnpm
-
-### Installation
-
-1. Clone the repository:
-
-```bash
-git clone https://github.com/chiefpansancolt/supermarket-simulator-buddy.git
-cd supermarket-simulator-buddy
 ```
-
-2. Install dependencies:
-
-```bash
-npm install
-# or
-yarn install
-# or
 pnpm install
-```
-
-3. Run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
 pnpm dev
 ```
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser
+Then open http://localhost:3000. Other commands:
 
-## Development Commands
-
-### Running the Application
-
-```bash
-npm run dev          # Start development server
-npm run build        # Build for production
-npm run start        # Start production server
+```
+pnpm build
+pnpm lint
+pnpm test
+pnpm format:check
 ```
 
-### Code Quality
+Two scripts keep the text catalogs honest:
 
-```bash
-npm run lint         # Run ESLint
-npm run format       # Format code with Prettier
-npm run format:check # Check formatting without modifying files
+```
+node scripts/check-catalogs.mjs     # every language against English
+node scripts/check-i18n.mjs         # text in code that is not in a catalog
 ```
 
-## Project Structure
+### Environment variables
 
-```text
-supermarket-simulator-buddy/
-├── public/
-│   ├── assets/
-│   │   └── images/        # Background and assets
-│   ├── logo.jpg           # App logo
-│   └── screenshot.png     # App screenshot
-├── src/
-│   ├── app/              # Next.js App Router pages
-│   │   ├── (home)/       # Landing page
-│   │   ├── dashboard/    # Playthrough dashboard
-│   │   ├── management/   # Licenses, storage, growth
-│   │   ├── market/       # Furniture, paint, tools, vehicles
-│   │   ├── shopping-list/ # Shopping list management
-│   │   ├── bank/         # Loan tracking
-│   │   ├── settings/     # Data import/export
-│   │   ├── layout.tsx    # Root layout
-│   │   └── globals.css   # Global styles
-│   ├── components/       # React components
-│   │   ├── AppNavbar.tsx
-│   │   ├── AppSidebar.tsx
-│   │   └── LayoutContent.tsx
-│   ├── data/             # Game data and constants
-│   │   ├── constants/
-│   │   └── supermarket-simulator/
-│   ├── lib/              # Utilities and services
-│   │   ├── contexts/     # React Context providers
-│   │   └── services/     # localStorage service
-│   └── types/            # TypeScript type definitions
-├── .flowbite-react/      # Flowbite config (auto-managed)
-├── CLAUDE.md            # AI development guide
-├── README.md
-├── next.config.ts
-├── tailwind.config.ts
-├── tsconfig.json
-└── package.json
-```
+All are optional and public (`NEXT_PUBLIC_`). Next.js reads them at build time, so redeploy after a change.
 
-## Usage Guide
+- `NEXT_PUBLIC_GAMERDEX_AUTH_URL`: the address of the sign-in service. The package `@gamerdexapp/gamerdex-sync` has a default. An empty value turns sync off.
+- `NEXT_PUBLIC_GOOGLE_CLIENT_ID`, `NEXT_PUBLIC_DROPBOX_CLIENT_ID`, `NEXT_PUBLIC_MICROSOFT_CLIENT_ID`: override the client ID of a sync provider. An empty value leaves that provider out.
 
-### Creating a Playthrough
+## Project structure
 
-1. Click the dropdown in the sidebar
-2. Select "Create New Playthrough"
-3. Enter a name and optional description
-4. Your new playthrough is now active
+- `src/app`: routes. The old `/dashboard` address redirects to `/overview`.
+- `src/components`: the app shell, the shared UI kit in `ui/`, and one folder per page.
+- `src/lib`: contexts, hooks, services (storage, backup, spending, loans, shopping list, management and market rules) and sync.
+- `src/data/supermarket-simulator`: the game data for licenses, sections, staff, products, furniture, paint, tools, vehicles and loans.
+- `src/i18n`: the language setup and the text catalogs.
+- `tests`: unit tests, run by Vitest, including save compatibility tests against a frozen copy of the old storage code.
 
-### Managing Store Progress
+## Data and privacy
 
-1. Navigate to **Management** to track:
-   - Licenses (unlock product categories)
-   - Storage sections
-   - Growth areas
+Your playthroughs are stored in your browser under the `localStorage` key `supermarket-simulator-buddy`, in the same format the app has always used, so older saves and backup files still load. The theme is kept in `supermarket-simulator-buddy-theme`, language and formats in `supermarket-simulator-buddy-prefs`, and the cloud sync sign-in in `supermarket-simulator-buddy-sync`. The tracker has no account. Clearing site data removes everything, so use Settings, Backup and data to export a JSON file. You can import it again later, on this device or another, and choose to merge it or replace everything.
 
-2. Navigate to **Market** to track purchases:
-   - Furniture
-   - Paint
-   - Tools
-   - Vehicles
+Language, formats, theme and the active playthrough belong to the device. They are not part of the export file or the synced file.
 
-### Creating Shopping Lists
+Cloud sync is off until you turn it on in Settings, Cloud sync. You choose Google Drive, Dropbox, OneDrive or GitHub, and the app keeps one file in your own storage. The file has the same format as the export file. A small sign-in service, [gamerdex-auth](https://github.com/GamerdexApp/gamerdex-auth), only exchanges the login token and does not see or keep your data. See the [privacy policy](https://gamerdex.app/privacy).
 
-1. Go to **Shopping List**
-2. Click "Add Products"
-3. Search and select products from your unlocked licenses
-4. Items are automatically grouped by shop location
-5. Check off items as you purchase them
+## Language support
 
-### Exporting/Importing Data
-
-1. Go to **Settings**
-2. Click "Export Data" to download a JSON backup
-3. Use "Import Data" to restore from a backup file
-
-## Data Storage
-
-All data is stored locally in your browser using localStorage under the key `supermarket-simulator-buddy`. Your data includes:
-
-- All playthroughs
-- Active playthrough selection
-- Store levels and unlocked items
-- Shopping lists
-- Financial tracking
-
-## Browser Compatibility
-
-- Chrome/Edge (recommended)
-- Firefox
-- Safari
-- Any modern browser with localStorage support
+The app ships in 19 languages: English, Arabic, German, Spanish (Spain and Latin America), French, Indonesian, Italian, Japanese, Korean, Malay, Portuguese (Brazil and Portugal), Russian, Thai, Turkish, Vietnamese and Chinese (Simplified and Traditional). Arabic reads right to left. The text lives in catalogs under `src/i18n/messages/<code>/`, so a new language is a new catalog folder and one entry in `src/i18n/locales.ts`. Game names such as products, companies, tools, vehicles and shops stay in English.
 
 ## Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+Issues and pull requests are welcome. Read [CONTRIBUTING.md](.github/CONTRIBUTING.md) first, or ask on [Discord](https://discord.gg/gc773YF9Jh).
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+## Changelog
 
-## Code Style
+See [CHANGELOG.md](CHANGELOG.md).
 
-This project uses:
+## License
 
-- **Prettier** for code formatting (tabs for indentation)
-- **ESLint** for code linting
-- Automatic import sorting
-
-Run `npm run format` before committing.
-
-## 📋 Changelog
-
-See [CHANGELOG.md](CHANGELOG.md) for a full history of releases and changes.
-
-## 🌐 Live Demo
-
-[Try Supermarket Simulator Buddy Online](https://supermarket-simulator-buddy.vercel.app)
-
-## Disclaimer
-
-This application is not affiliated with, endorsed by, or connected to Supermarket Simulator or its developers. All trademarks and game content are the property of their respective owners.
-
-This is a fan-made tool created to enhance the gaming experience.
-
-## Links
-
-- [Official Supermarket Simulator Game](https://supermarketsimulator.com/)
-- [Report Issues](https://github.com/chiefpansancolt/supermarket-simulator-buddy/issues)
-- [GitHub Repository](https://github.com/chiefpansancolt/supermarket-simulator-buddy)
-
-## Acknowledgments
-
-- Built with [Next.js](https://nextjs.org/)
-- UI components from [Flowbite React](https://flowbite-react.com/)
-- Icons from [React Icons](https://react-icons.github.io/react-icons/)
-- Inspired by the amazing [Supermarket Simulator](https://supermarketsimulator.com/) game
-
----
-
-Made with ❤️ for the Supermarket Simulator community
+MIT. See [LICENSE](LICENSE). The game, its name and its content belong to their owners.

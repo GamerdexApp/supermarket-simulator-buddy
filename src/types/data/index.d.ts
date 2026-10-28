@@ -1,4 +1,4 @@
-import {
+import type {
   CATEGORIES,
   DISPLAY_TYPES,
   LOCATIONS,
@@ -42,12 +42,16 @@ export interface Growth {
   sectionNum: string;
   storeLevel: number;
   price: number;
+  /** Floor area in tiles, for example "4x4". */
+  size: string;
 }
 
 export interface Storage {
   sectionNum: string;
   storeLevel: number;
   price: number;
+  /** Floor area in tiles, for example "4x4". */
+  size: string;
 }
 
 export interface Hiring {
@@ -110,9 +114,9 @@ export interface Product {
   itemsPerBox?: number;
   weightPerBox?: number;
   boxesPerStorage: number;
-  displayType: DISPLAY_TYPES;
-  category?: CATEGORIES;
-  bigBoxStore?: LOCATIONS | "";
+  displayType: (typeof DISPLAY_TYPES)[number];
+  category?: (typeof CATEGORIES)[number];
+  bigBoxStore?: (typeof LOCATIONS)[number] | "";
 }
 
 export interface Furniture {
@@ -126,7 +130,8 @@ export interface Tool {
   name: string;
   description: string;
   unitPrice: number;
-  requirement?: string;
+  /** Licenses the playthrough must own before the tool can be unlocked. */
+  requiredLicenses?: number;
   imageUrl: string;
 }
 

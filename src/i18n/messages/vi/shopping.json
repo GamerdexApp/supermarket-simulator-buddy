@@ -1,0 +1,63 @@
+{
+    "title": "Danh sách mua sắm",
+    "subline": "Lên kế hoạch mua sản phẩm cho {name}",
+    "emptyDescription": "Tạo một lượt chơi để lên kế hoạch mua hàng.",
+    "addProducts": "Thêm sản phẩm",
+    "summary": {
+        "title": "Tóm tắt mua sắm",
+        "purchased": "Đã mua {bought} / {count, plural, other {{amount} món}}",
+        "boxes": "{count, plural, other {Tổng {amount} thùng}}",
+        "reset": "Đặt lại danh sách"
+    },
+    "reset": {
+        "title": "Đặt lại danh sách mua sắm?",
+        "body": "Thao tác này xóa {count, plural, other {{amount} món}} ({bought} đã mua, {boxCount, plural, other {{boxes} thùng}}).",
+        "cancel": "Hủy",
+        "confirm": "Đặt lại danh sách",
+        "done": "Đã đặt lại danh sách mua sắm",
+        "doneMessage": "Đã xóa {count, plural, other {{amount} món}}."
+    },
+    "empty": {
+        "title": "Danh sách mua sắm đang trống",
+        "body": "Lên kế hoạch mua sản phẩm nào trước chuyến đi chợ tiếp theo.",
+        "steps": {
+            "item1": "Thêm sản phẩm từ các giấy phép bạn đã mở khóa.",
+            "item2": "Chạm lại vào sản phẩm để thêm một thùng nữa.",
+            "item3": "Đánh dấu từng món khi bạn mua xong."
+        },
+        "missing": "Thiếu sản phẩm? Mở khóa giấy phép của nó trong Quản lý.",
+        "toManagement": "Mở Giấy phép"
+    },
+    "shop": {
+        "noShop": "Không có cửa hàng",
+        "items": "{count, plural, other {{amount} món}}",
+        "progress": "Đã mua {bought} / {total} · {count, plural, other {{amount} thùng}}"
+    },
+    "row": {
+        "purchased": "Đánh dấu đã mua: {label}",
+        "boxes": "Thùng",
+        "remove": "Xóa {label}",
+        "removed": "Đã xóa {name}"
+    },
+    "undo": "Hoàn tác",
+    "dialog": {
+        "title": "Thêm sản phẩm vào danh sách mua sắm",
+        "search": "Tìm sản phẩm",
+        "searchPlaceholder": "Tìm theo tên hoặc công ty...",
+        "source": "Chỉ hiện sản phẩm từ giấy phép đã mở khóa.",
+        "showing": "Đang hiển thị {shown} / {total}",
+        "pick": "Chạm vào sản phẩm để thêm",
+        "noResults": "Không tìm thấy sản phẩm nào khớp “{term}”",
+        "noResultsHint": "Sản phẩm bị thiếu có thể cần một giấy phép bạn chưa mở khóa.",
+        "clearSearch": "Xóa tìm kiếm",
+        "addOne": "Thêm một thùng {label}",
+        "pending": "Món sẽ thêm ({count})",
+        "noPending": "Chưa thêm món nào. Chạm vào sản phẩm bên trái để thêm một thùng. Chạm lại để thêm nữa.",
+        "merges": "Sản phẩm đã có trong danh sách sẽ được cộng thêm số thùng này vào dòng của nó.",
+        "boxes": "{count, plural, other {{amount} thùng}}",
+        "removePending": "Bỏ {label} khỏi món sẽ thêm",
+        "cancel": "Hủy",
+        "submit": "{count, plural, other {Thêm {amount} món vào danh sách}}",
+        "added": "Đã thêm {count, plural, other {{amount} món}}"
+    }
+}

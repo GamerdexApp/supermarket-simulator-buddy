@@ -1,0 +1,39 @@
+{
+    "title": "Prestiti bancari",
+    "subline": "Gestisci i tuoi prestiti per {name}",
+    "emptyDescription": "Scegli o crea una partita per tenere traccia dei suoi prestiti.",
+    "loanTitle": "Prestito n. {number}",
+    "states": {
+        "active": "Attivo",
+        "available": "Disponibile",
+        "locked": "Bloccato"
+    },
+    "principal": "Capitale",
+    "rate": "Tasso di interesse giornaliero",
+    "level": "Livello del negozio richiesto",
+    "term": "Durata: {count, plural, one {{amount} giorno} other {{amount} giorni}}",
+    "days": "{count, plural, one {{amount} giorno} other {{amount} giorni}}",
+    "termFixed": "La durata resta fissa finché il prestito non viene rimosso.",
+    "details": "Dettagli del prestito",
+    "totalInterest": "Interessi totali",
+    "totalPayment": "Pagamento totale",
+    "dailyPayment": "Pagamento giornaliero",
+    "activate": "Attiva prestito",
+    "activatedOn": "Attivato il: {date}",
+    "remove": "Rimuovi prestito",
+    "requiresLevel": "Richiede il livello del negozio {level} (sei al livello {current})",
+    "locked": "Bloccato",
+    "activated": "Prestito n. {number} attivato",
+    "removed": "Prestito n. {number} rimosso",
+    "undo": "Annulla",
+    "yourLoans": {
+        "title": "I tuoi prestiti",
+        "activeLoans": "Prestiti attivi",
+        "dailyPayment": "Pagamento giornaliero",
+        "totalDebt": "Debito totale dei prestiti",
+        "none": "Nessun prestito attivo. Scegli una durata su un prestito qui sotto e attivalo.",
+        "line": "{principal} al {rate} al giorno per {count, plural, one {{amount} giorno} other {{amount} giorni}}",
+        "payments": "{daily} al giorno · {total} in totale",
+        "formula": "Gli interessi sono il capitale moltiplicato per il tasso giornaliero e per la durata in giorni."
+    }
+}

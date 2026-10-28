@@ -1,0 +1,102 @@
+{
+    "header": {
+        "label": "首页",
+        "features": "功能",
+        "faq": "常见问题",
+        "github": "GitHub",
+        "discord": "Discord"
+    },
+    "cta": {
+        "create": "创建你的第一个存档",
+        "dashboard": "前往控制面板",
+        "newPlaythrough": "新建存档",
+        "learn": "了解更多"
+    },
+    "hero": {
+        "title": "追踪你的超市<accent>帝国</accent>",
+        "body": "Supermarket Simulator 的必备助手。管理多个存档，追踪你的进度，放心打造你的超市帝国。",
+        "preview": "Pezz's Market 的概览，显示总花费、商店进度和生效中的贷款"
+    },
+    "continueCard": {
+        "label": "继续",
+        "level": "商店等级 {level}",
+        "updated": "最后更新于 {date}"
+    },
+    "steps": {
+        "title": "一分钟上手",
+        "items": {
+            "item1": {
+                "title": "创建存档",
+                "body": "给它起个名字。所有内容都保存在此浏览器中，无需账户。"
+            },
+            "item2": {
+                "title": "从基础开始",
+                "body": "每个存档都从许可证 0、扩建区域 1 以及 Paper Bag、Sponge 和 Mop 开始。"
+            },
+            "item3": {
+                "title": "边玩边解锁",
+                "body": "提升商店等级，然后像在游戏中一样解锁许可证、区域、员工、工具和车辆。"
+            }
+        }
+    },
+    "features": {
+        "eyebrow": "所需功能一应俱全",
+        "title": "所有进度集中一处",
+        "body": "Supermarket Simulator Buddy 全面追踪你超市经营的方方面面。从许可证到仓库，全都帮你记好。",
+        "items": {
+            "item1": {
+                "title": "多个存档",
+                "body": "创建和管理任意数量的存档。分别追踪不同的策略和挑战玩法。"
+            },
+            "item2": {
+                "title": "许可证管理",
+                "body": "追踪你所有的商品许可证，查看每个许可证为你的商店解锁哪些商品。"
+            },
+            "item3": {
+                "title": "商店扩建",
+                "body": "详细追踪仓库区域和扩建区域，掌握商店的扩张情况。"
+            },
+            "item4": {
+                "title": "预算追踪",
+                "body": "通过完整的财务汇总，掌握各个类别的花费。"
+            },
+            "item5": {
+                "title": "购物清单",
+                "body": "创建自定义购物清单，清楚知道每家供货店要买什么。"
+            },
+            "item6": {
+                "title": "数据导出/导入",
+                "body": "将进度导出为 JSON 用于备份或分享给朋友。随时导入数据。"
+            }
+        }
+    },
+    "faq": {
+        "title": "常见问题",
+        "items": {
+            "item1": {
+                "question": "Supermarket Simulator Buddy 是什么？",
+                "answer": "Supermarket Simulator Buddy 是一款为游戏 Supermarket Simulator 打造的全面进度追踪工具。它帮你管理多个存档、追踪商店扩建、管理许可证并掌握财务进度，一切集中一处。"
+            },
+            "item2": {
+                "question": "我的数据如何存储？",
+                "answer": "你的所有数据都通过 localStorage 保存在本地浏览器中。这意味着你的进度是私密的，不需要服务器，也不需要注册账户。你还可以将数据导出和导入为 JSON 文件，用于备份或分享。"
+            },
+            "item3": {
+                "question": "可以追踪多个存档吗？",
+                "answer": "可以！你可以创建和管理多个存档，每个存档都有独立的进度记录。用侧边栏的下拉菜单即可轻松切换，分别追踪不同的策略或挑战玩法。"
+            },
+            "item4": {
+                "question": "可以追踪哪些内容？",
+                "answer": "追踪你的商店等级、许可证、仓库区域、扩建区域、工具、车辆和购物清单，还能浏览家具和油漆的价格。通过详细的预算追踪，掌握各个类别的财务进度。"
+            },
+            "item5": {
+                "question": "这个应用免费吗？",
+                "answer": "是的，Supermarket Simulator Buddy 完全免费。没有订阅，没有广告，也没有隐藏费用。所有功能对所有人开放。"
+            }
+        }
+    },
+    "closing": {
+        "title": "准备好经营你的商店了吗？",
+        "body": "免费、私密，保存在你的浏览器中。"
+    }
+}

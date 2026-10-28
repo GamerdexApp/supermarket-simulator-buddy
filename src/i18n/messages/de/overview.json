@@ -1,0 +1,56 @@
+{
+    "title": "Übersicht",
+    "subline": "{name} · Alles auf einen Blick",
+    "emptyDescription": "Wähle oder erstelle einen Spielstand, um seinen Fortschritt auf einen Blick zu sehen.",
+    "identity": {
+        "created": "Erstellt: {date}",
+        "lastModified": "Zuletzt geändert: {date}",
+        "manage": "Spielstände verwalten"
+    },
+    "storeLevel": {
+        "title": "Ladenlevel",
+        "subtitle": "Aktueller Fortschritt",
+        "hint": "Ändere es mit dem Ladenlevel-Regler in der Seitenleiste."
+    },
+    "financial": {
+        "title": "Finanzübersicht",
+        "activeLoans": "Aktive Kredite",
+        "dailyPayments": "Tägliche Raten",
+        "totalDebt": "Kreditschulden gesamt",
+        "none": "Keine aktiven Kredite. Öffne die Bank, um einen aufzunehmen.",
+        "formula": "Jeder Kredit kostet den Kreditbetrag plus Kreditbetrag mal Tageszinssatz mal Laufzeit. Jeder aktive Kredit gilt jeden Tag als bezahlt.",
+        "view": "Zur Bank"
+    },
+    "investment": {
+        "title": "Gesamtinvestition",
+        "subtitle": "Ausgaben für Verwaltung und Markt zusammen",
+        "formula": "Verwaltung {managementSpent} + Markt {marketSpent} = {total}"
+    },
+    "management": {
+        "title": "Verwaltung",
+        "licenses": "Lizenzen",
+        "growth": "Ladenausbau",
+        "storage": "Lagerausbau",
+        "employees": "Mitarbeiter",
+        "unlocked": "{owned} von {total} freigeschaltet",
+        "hired": "{owned} von {total} eingestellt",
+        "perDay": "{amount}/Tag",
+        "hiringNote": "Bisher gezahlte Einstellungskosten: {amount}. Sie zählen nicht zur Gesamtinvestition.",
+        "total": "Gesamtinvestition",
+        "view": "Zur Verwaltung"
+    },
+    "market": {
+        "title": "Markt",
+        "products": "Produkte",
+        "licensesUnlocked": "{count, plural, one {{amount} Lizenz freigeschaltet} other {{amount} Lizenzen freigeschaltet}}",
+        "available": "{amount} verfügbar",
+        "tools": "Werkzeuge",
+        "vehicles": "Fahrzeuge",
+        "furniture": "Möbel",
+        "furnitureItems": "{count, plural, one {{amount} Artikel verfügbar} other {{amount} Artikel verfügbar}}",
+        "unlocked": "{owned} von {total} freigeschaltet",
+        "note": "Möbel und Farben werden nicht gespeichert, daher zählen ihre Ausgaben nicht.",
+        "total": "Gesamtinvestition",
+        "view": "Zum Markt"
+    }
+}

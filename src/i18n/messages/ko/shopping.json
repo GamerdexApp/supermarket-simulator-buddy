@@ -1,0 +1,63 @@
+{
+    "title": "쇼핑 목록",
+    "subline": "{name}의 상품 구매를 계획하세요",
+    "emptyDescription": "회차를 만들어 구매를 계획하세요.",
+    "addProducts": "상품 추가",
+    "summary": {
+        "title": "쇼핑 요약",
+        "purchased": "{bought} / {count, plural, other {{amount}개 항목 구매함}}",
+        "boxes": "{count, plural, other {총 {amount}상자}}",
+        "reset": "목록 초기화"
+    },
+    "reset": {
+        "title": "쇼핑 목록을 초기화할까요?",
+        "body": "{count, plural, other {항목 {amount}개}}를 삭제해요 (구매함 {bought}개, {boxCount, plural, other {{boxes}상자}}).",
+        "cancel": "취소",
+        "confirm": "목록 초기화",
+        "done": "쇼핑 목록 초기화됨",
+        "doneMessage": "{count, plural, other {항목 {amount}개}}를 삭제했어요."
+    },
+    "empty": {
+        "title": "쇼핑 목록이 비어 있어요",
+        "body": "다음에 가게에 가기 전에 살 상품을 계획하세요.",
+        "steps": {
+            "item1": "잠금 해제한 라이선스의 상품을 추가하세요.",
+            "item2": "상품을 다시 탭하면 상자가 하나 더 추가돼요.",
+            "item3": "구매한 항목은 체크하세요."
+        },
+        "missing": "상품이 없나요? 관리에서 해당 라이선스를 잠금 해제하세요.",
+        "toManagement": "라이선스 열기"
+    },
+    "shop": {
+        "noShop": "구매처 없음",
+        "items": "{count, plural, other {항목 {amount}개}}",
+        "progress": "{total}개 중 {bought}개 구매 · {count, plural, other {{amount}상자}}"
+    },
+    "row": {
+        "purchased": "구매함으로 표시: {label}",
+        "boxes": "상자",
+        "remove": "{label} 삭제",
+        "removed": "{name} 삭제됨"
+    },
+    "undo": "실행 취소",
+    "dialog": {
+        "title": "쇼핑 목록에 상품 추가",
+        "search": "상품 검색",
+        "searchPlaceholder": "이름 또는 회사로 검색...",
+        "source": "잠금 해제한 라이선스의 상품만 표시돼요.",
+        "showing": "{total}개 중 {shown}개 표시",
+        "pick": "추가할 상품을 탭하세요",
+        "noResults": "“{term}”와(과) 일치하는 상품이 없어요",
+        "noResultsHint": "없는 상품은 아직 잠금 해제하지 않은 라이선스가 필요할 수 있어요.",
+        "clearSearch": "검색 지우기",
+        "addOne": "{label} 1상자 추가",
+        "pending": "추가할 항목 ({count})",
+        "noPending": "아직 추가한 항목이 없어요. 왼쪽의 상품을 탭하면 1상자가 추가돼요. 다시 탭하면 더 추가돼요.",
+        "merges": "이미 목록에 있는 상품은 해당 줄에 상자가 더해져요.",
+        "boxes": "{count, plural, other {{amount}상자}}",
+        "removePending": "추가할 항목에서 {label} 삭제",
+        "cancel": "취소",
+        "submit": "{count, plural, other {항목 {amount}개를 목록에 추가}}",
+        "added": "{count, plural, other {항목 {amount}개}} 추가됨"
+    }
+}

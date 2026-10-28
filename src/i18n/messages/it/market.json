@@ -1,0 +1,93 @@
+{
+    "title": "Mercato",
+    "tabsLabel": "Mercato",
+    "tabs": {
+        "products": "Prodotti",
+        "furniture": "Mobili",
+        "paint": "Vernici",
+        "tools": "Strumenti",
+        "vehicles": "Veicoli"
+    },
+    "sublines": {
+        "products": "{name} · Prodotti sbloccati dalle tue licenze",
+        "furniture": "{name} · Prezzi dei mobili",
+        "paint": "{name} · Prezzi delle vernici",
+        "tools": "{name} · Strumenti che possiedi",
+        "vehicles": "{name} · Veicoli che possiedi"
+    },
+    "emptyDescription": "Scegli o crea una partita per vedere quali prodotti, strumenti e veicoli hai.",
+    "free": "Gratis",
+    "undoUnlock": "Annulla sblocco",
+    "unlock": "Sblocca",
+    "locked": "Bloccato",
+    "states": {
+        "unlocked": "Sbloccato",
+        "canUnlock": "Sbloccabile",
+        "locked": "Bloccato"
+    },
+    "products": {
+        "search": "Cerca per nome o azienda...",
+        "displayType": "Filtra per tipo di espositore",
+        "allDisplayTypes": "Tutti i tipi di espositore",
+        "category": "Filtra per categoria",
+        "allCategories": "Tutte le categorie",
+        "option": "{label} ({count})",
+        "filtersTitle": "Filtra prodotti",
+        "showing": "{shown} di {count, plural, one {{amount} prodotto} other {{amount} prodotti}} mostrati",
+        "showButton": "Mostra {count, plural, one {{amount} prodotto} other {{amount} prodotti}}",
+        "unlocked": "Prodotti sbloccati ({count})",
+        "locked": "Prodotti bloccati ({count})",
+        "lockedHelp": "Sblocca la licenza in Gestione per vendere questi prodotti.",
+        "noUnlocked": "Nessun prodotto sbloccato corrisponde ai filtri.",
+        "noLocked": "Nessun prodotto bloccato corrisponde ai filtri.",
+        "requires": "Richiede: licenza {number}",
+        "itemsPerBox": "Articoli per scatola",
+        "weightPerBox": "Peso per scatola",
+        "kg": "{weight} kg",
+        "boxesPerStorage": "Scatole per scaffale del magazzino",
+        "details": "Dettagli di {name}",
+        "detail": {
+            "company": "Azienda",
+            "displayType": "Tipo di espositore",
+            "category": "Categoria",
+            "boughtAt": "Acquistato presso",
+            "license": "Licenza",
+            "unlocked": "Licenza {number}, sbloccata",
+            "locked": "Licenza {number}, non ancora sbloccata",
+            "none": "Non indicato",
+            "toLicenses": "Apri licenze",
+            "close": "Chiudi"
+        },
+        "stores": {
+            "liquor_store": "Liquor Store",
+            "janitorial_supply": "Janitorial Supply",
+            "deli_and_grocery": "Deli and Grocery",
+            "meat_and_dairy": "Meat and Dairy",
+            "green_market": "Green Market"
+        }
+    },
+    "furniture": {
+        "heading": "Tutti i mobili ({count})",
+        "note": "Prezzi dal gioco. I mobili non vengono salvati."
+    },
+    "paint": {
+        "heading": "Tutte le vernici ({count})",
+        "note": "Prezzi dal gioco. Le vernici non vengono salvate."
+    },
+    "tools": {
+        "totalSpent": "Totale speso in strumenti",
+        "unlockedOf": "Sbloccati {owned} di {count, plural, one {{amount} strumento} other {{amount} strumenti}}",
+        "requiresLicenses": "Richiede {count, plural, one {{amount} licenza} other {{amount} licenze}} · ne hai {owned}",
+        "unlocked": "{name} sbloccato",
+        "undone": "{name} di nuovo bloccato"
+    },
+    "vehicles": {
+        "totalSpent": "Totale speso in veicoli",
+        "unlockedOf": "Sbloccati {owned} di {count, plural, one {{amount} veicolo} other {{amount} veicoli}}",
+        "price": "Prezzo",
+        "storeLevel": "Livello del negozio",
+        "requiresLevel": "Richiede il livello del negozio {level} · sei al livello {current}",
+        "unlocked": "{name} sbloccato",
+        "undone": "{name} di nuovo bloccato"
+    }
+}

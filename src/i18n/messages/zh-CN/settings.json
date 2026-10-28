@@ -1,0 +1,156 @@
+{
+    "title": "设置",
+    "subline": "管理你的数据和应用设置",
+    "tabsLabel": "设置",
+    "tabs": {
+        "sync": "云同步",
+        "preferences": "偏好设置",
+        "data": "备份与数据",
+        "about": "关于"
+    },
+    "playthroughCount": "{count, plural, other {{amount} 个存档}}",
+    "storageNote": {
+        "title": "数据存储",
+        "body": "你的数据保存在此浏览器中。清除浏览器数据会删除这些数据，除非云同步保留了副本。请不时导出一份备份。"
+    },
+    "data": {
+        "title": "数据管理",
+        "export": {
+            "title": "导出数据",
+            "button": "导出所有存档",
+            "description": "下载包含所有已保存存档的备份文件。",
+            "done": "备份已下载"
+        },
+        "import": {
+            "title": "导入数据",
+            "description": "上传之前导出的文件（.json）",
+            "fileLabel": "备份文件",
+            "chooseFile": "选择文件",
+            "noFile": "未选择文件",
+            "review": "检查导入内容",
+            "merged": "导入已合并",
+            "replaced": "数据已替换",
+            "undo": "撤销"
+        },
+        "reset": {
+            "title": "重置所有数据",
+            "warning": "这会删除此设备上的所有存档。之后 10 秒内可以撤销。",
+            "button": "重置所有数据",
+            "confirmTitle": "重置所有数据？",
+            "confirmBody": "这会删除 {names}。",
+            "cancel": "取消",
+            "confirm": "是的，重置所有数据",
+            "syncedCopy": "同时删除 {provider} 中的同步副本",
+            "syncedOn": "同步保持开启。你的其他设备会在下次同步时失去这些存档。如果不确定，请先导出备份。",
+            "done": "所有数据已重置",
+            "doneMessage": "已删除 {count, plural, other {{amount} 个存档}}。",
+            "undo": "撤销",
+            "doneMessageDisconnected": "已删除 {count, plural, other {{amount} 个存档}}。此浏览器上的同步已断开。"
+        }
+    },
+    "appearance": {
+        "title": "外观",
+        "description": "选择应用的外观。此设置只保存在此设备上，不包含在备份中。",
+        "themeLabel": "主题",
+        "themes": {
+            "light": "浅色",
+            "dark": "深色",
+            "system": "跟随系统"
+        },
+        "themeNote": "“跟随系统”会使用你设备的设置，你的设备当前使用{mode, select, dark {深色} other {浅色}}主题。"
+    },
+    "playthroughs": {
+        "title": "存档",
+        "description": "在存档页面中创建、切换、编辑和删除存档。",
+        "manage": "管理存档"
+    },
+    "about": {
+        "version": "版本 {version}",
+        "summary": "Supermarket Simulator 的进度追踪工具。你的数据保存在此浏览器中，开启同步后则保存在你自己的云存储中。",
+        "officialGame": "官方游戏",
+        "disclaimer": "与 Supermarket Simulator 及其开发者无关，未获其认可，也与其没有任何联系。所有商标和游戏内容归其所有者所有。"
+    },
+    "importDialog": {
+        "title": "导入备份",
+        "fileInfo": "{name} · {size}",
+        "bytes": "{count} B",
+        "kilobytes": "{count} KB",
+        "failedTitle": "导入失败",
+        "checksTitle": "文件已检查",
+        "checks": "已读取 {count, plural, other {{amount} 个条目}}，其中 {kept} 个有 ID 和名称。",
+        "howToApply": "如何应用此文件？",
+        "modeLabel": "导入方式",
+        "modes": {
+            "merge": "合并到此设备（推荐）",
+            "replace": "全部替换"
+        },
+        "modeNotes": {
+            "merge": "添加新的存档。两边都有的存档，以最后更新的版本为准。只在此设备上的存档会保留。你的当前存档保持不变。",
+            "replace": "删除此设备上的存档，只保留文件中的存档。文件中的当前存档将成为当前存档。"
+        },
+        "whatChanges": "变更内容",
+        "columns": {
+            "playthrough": "存档",
+            "inFile": "文件中",
+            "onDevice": "设备上",
+            "result": "结果"
+        },
+        "results": {
+            "added": "已添加",
+            "updated": "已从文件更新",
+            "kept": "已保留",
+            "replaced": "来自文件",
+            "removed": "已移除"
+        },
+        "notThere": "无",
+        "noPlaythroughs": "文件中没有存档。",
+        "undoNote": "导入后 10 秒内可以撤销。",
+        "cancel": "取消",
+        "close": "关闭",
+        "merge": "合并",
+        "replace": "全部替换",
+        "skipped": "已跳过 {count, plural, other {{amount} 个条目}}。",
+        "levelsFixed": "{count, plural, other {{amount} 个低于 0 的商店等级}}将保存为 0。",
+        "errors": {
+            "notJson": "此文件不是 Supermarket Simulator Buddy 备份：它不是有效的 JSON。没有进行任何更改。",
+            "playthroughsMissing": "此文件不是 Supermarket Simulator Buddy 备份：缺少存档列表。没有进行任何更改。"
+        },
+        "summary": {
+            "added": "已添加 {amount} 个",
+            "updated": "已更新 {amount} 个",
+            "kept": "已保留 {amount} 个",
+            "replaced": "已替换 {amount} 个",
+            "removed": "已移除 {amount} 个"
+        }
+    },
+    "region": {
+        "title": "语言和地区",
+        "description": "文字、数字和日期在此设备上的显示方式。只保存在此设备上。",
+        "language": {
+            "label": "语言",
+            "hint": "商品、许可证和工具等游戏名称保持英文。"
+        },
+        "numberFormat": {
+            "label": "数字格式",
+            "hint": "示例：{example}",
+            "options": {
+                "auto": "自动，跟随语言",
+                "us": "1,234.56（美国）",
+                "european": "1.234,56（德国）",
+                "french": "1 234,56（法国）",
+                "swiss": "1’234.56（瑞士）",
+                "indian": "12,34,567.89（印度）"
+            }
+        },
+        "dateFormat": {
+            "label": "日期格式",
+            "hint": "示例：{example}",
+            "options": {
+                "auto": "自动，跟随语言",
+                "mdy": "月/日/年",
+                "dmy": "日/月/年",
+                "ymd": "年-月-日"
+            }
+        }
+    }
+}

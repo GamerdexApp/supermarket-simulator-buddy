@@ -1,0 +1,229 @@
+{
+    "tab": {
+        "title": "Bulut eşitleme"
+    },
+    "unavailable": "Eşitleme bu sürümde kullanılamıyor.",
+    "provider": {
+        "github": {
+            "name": "GitHub",
+            "tile": "Sahibi olduğun, adı {repository} olan gizli bir repo.",
+            "badge": "Geliştiriciler için"
+        },
+        "google": {
+            "name": "Google Drive",
+            "tile": "Drive'ında görünür bir Gamerdex klasörü. Gamerdex yalnızca kendi oluşturduğu dosyaları görür.",
+            "badge": "Önerilen"
+        },
+        "dropbox": {
+            "name": "Dropbox",
+            "tile": "Dropbox'ındaki Apps klasörünün içinde bir Gamerdex klasörü. Gamerdex yalnızca o klasörü görür.",
+            "badge": "Yalnızca uygulama klasörü"
+        },
+        "microsoft": {
+            "name": "OneDrive",
+            "tile": "OneDrive'ındaki Apps klasörünün içinde bir Gamerdex klasörü. Gamerdex yalnızca o klasörü görür.",
+            "badge": "Kişisel hesaplar"
+        }
+    },
+    "connect": {
+        "title": "Cihazlar arasında eşitle",
+        "pill": "Bağlı değil",
+        "intro": "Oynanışlarını bilgisayarında ve telefonunda aynı tut. Eşitleme isteğe bağlı ve ücretsiz. Kopyanın nerede duracağını seç.",
+        "pickerLabel": "Kopya nerede dursun",
+        "panelTitle": "{provider} bağla",
+        "another": "Giriş yapmadan önce başka bir sağlayıcı seçebilirsin.",
+        "firstSync": "İki tarafta da veri varsa ilk eşitlemede neyin kalacağını seç. Sen karar vermeden hiçbir şey değiştirilmez.",
+        "google": {
+            "step1": "Bu pencerede Google ile giriş yap.",
+            "step2": "Gamerdex'in oluşturduğu dosyalara erişim izni ver. Uygulama diğer dosyalarını göremez.",
+            "button": "Google Drive'ı bağla"
+        },
+        "github": {
+            "step1": "Adı {repository} olan boş bir gizli repo oluştur. Add a README file seçeneğini işaretle.",
+            "step2": "GitHub ile giriş yap, sonra Gamerdex Sync'e yalnızca o repoya erişim ver.",
+            "button": "GitHub'ı bağla"
+        },
+        "dropbox": {
+            "step1": "Bu pencerede Dropbox ile giriş yap.",
+            "step2": "Gamerdex uygulama klasörüne erişim izni ver. Uygulama diğer dosyalarını göremez.",
+            "button": "Dropbox'ı bağla"
+        },
+        "microsoft": {
+            "step1": "Bu pencerede kişisel Microsoft hesabınla giriş yap.",
+            "step2": "Gamerdex uygulama klasörüne erişim izni ver. Uygulama diğer dosyalarını göremez.",
+            "button": "OneDrive'ı bağla"
+        }
+    },
+    "how": {
+        "title": "Eşitleme nasıl çalışır",
+        "points": {
+            "item1": "Oynanışların kendi depolamanda tek bir dosya olarak, yedek dosyasıyla aynı biçimde saklanır; yanında cihaz listesi için küçük bir dosya daha olur.",
+            "item2": "Gamerdex'in verilerini saklayan bir sunucusu yok. Tarayıcın doğrudan depolamanla konuşur.",
+            "item3": "Kilit açmalar, personel, krediler ve alışveriş listesi ürünlerinde iki cihazdan birinin yaptığı değişiklik korunur ve yüksek olan mağaza seviyesi kazanır. İki cihaz da bir adı, bir açıklamayı veya aynı alışveriş listesi ürününü değiştirirse hangisinin kalacağını sen seçersin.",
+            "item4": "Her cihaz kendi aktif oynanışını ve kendi temasını tutar. Eşitleme bunları asla değiştirmez.",
+            "item5": "İstediğin zaman bağlantıyı kes. Oynanışların her cihazda kalır."
+        }
+    },
+    "repository": {
+        "title": "Veri reponu kur",
+        "body": "Verilerin GitHub hesabında, adı {name} olan gizli bir repoda tutulur. Gamerdex Sync yalnızca bu repoya erişebilir.",
+        "checking": "Aranıyor: {name}",
+        "checkFailed": "Repoların yüklenemedi. Bağlantını kontrol et ve tekrar kontrol et.",
+        "public": "{fullName} reposu herkese açık. GitHub ayarlarından gizli yap, sonra tekrar kontrol et. Herkese açık bir repo kullanılamaz, çünkü verilerini herkes okuyabilir.",
+        "missing": "{name} reposu bulunamadı",
+        "steps": {
+            "create": "Adı {name} olan gizli bir repo oluştur. Add a README file seçeneğini işaretle.",
+            "install": "Gamerdex Sync'e yalnızca o repoya erişim ver. Only select repositories seçeneğini seç, sonra {name} reposunu seç.",
+            "recheck": "Buraya dön ve tekrar kontrol et."
+        },
+        "createButton": "Repo oluştur",
+        "installButton": "GitHub'da repo seç",
+        "recheckButton": "Tekrar kontrol et"
+    },
+    "connected": {
+        "repository": "Repo",
+        "lastSync": "Son eşitleme",
+        "never": "Henüz eşitlenmedi",
+        "syncNow": "Şimdi eşitle",
+        "signOut": "Çıkış yap",
+        "folder": "Klasör: {name}",
+        "signInWith": "{provider} ile giriş yap"
+    },
+    "status": {
+        "idle": "Eşitlendi",
+        "syncing": "Eşitleniyor",
+        "offline": "Çevrimdışı",
+        "reauth": "Tekrar giriş yap",
+        "needsChoice": "Seçimin gerekli",
+        "error": "Eşitleme başarısız",
+        "signedOut": "Giriş yapılmadı",
+        "needsRepository": "Bir repo seç",
+        "conflicts": "Değişiklikleri incele"
+    },
+    "error": {
+        "rateLimit": "GitHub istekleri sınırlıyor. Eşitleme birkaç dakika içinde yeniden çalışır.",
+        "notFound": "Repo bulunamadı. Tekrar seç.",
+        "server": "GitHub düzgün yanıt vermedi. Daha sonra tekrar dene.",
+        "data": "Eşitlenen veriler geçerli değil, bu yüzden hiçbir şey değiştirilmedi.",
+        "busy": "Başka bir cihaz verileri sürekli değiştiriyor. Biraz sonra tekrar dene.",
+        "other": "Bir şeyler ters gitti. Hiçbir şey değiştirilmedi.",
+        "reauth": "Oturumun sona erdi. Eşitlemeye devam etmek için tekrar giriş yap.",
+        "forbidden": "GitHub repoya erişimi reddetti. Gamerdex Sync'in Contents için Read and write erişimi olduğunu kontrol et, sonra tekrar eşitle.",
+        "httpStatus": "GitHub yanıtı: {status}.",
+        "notFoundFolder": "{provider} içinde bir dosya veya klasör bulunamadı. Tekrar eşitle.",
+        "forbiddenFolder": "{provider} erişimi reddetti. Tekrar giriş yap ve Gamerdex'in oluşturduğu dosyalara erişim izni ver.",
+        "httpStatusFolder": "{provider} yanıtı: {status}."
+    },
+    "choice": {
+        "title": "Hem bu cihazda hem bulutta veri var",
+        "body": "Bu, bu cihazdan ilk eşitleme. Ne yapılacağını seç. Sen seçene kadar buluttan hiçbir şey silinmez.",
+        "merge": "İkisini birleştir",
+        "mergeHint": "İki taraftaki her şeyi tut. Yüksek olan değer kazanır.",
+        "keepLocal": "Bu cihazı koru",
+        "keepLocalHint": "Buluttaki verileri bu cihazdaki verilerle değiştir.",
+        "keepCloud": "Bulutu koru",
+        "keepCloudHint": "Bu cihazdaki verileri buluttaki verilerle değiştir."
+    },
+    "first": {
+        "thisDevice": "Bu cihaz",
+        "cloud": "Bulut",
+        "recommended": "Önerilen",
+        "later": "Sonra karar ver",
+        "apply": "Seçimi uygula",
+        "optionsLabel": "Ne kalsın"
+    },
+    "playthroughCount": "{count, plural, one {{amount} oynanış} other {{amount} oynanış}}",
+    "conflicts": {
+        "title": "Birleştirilemeyen değişiklikler",
+        "body": "İki cihaz aynı değeri değiştirdi. Buluttaki değer korundu. Bunun yerine kullanmak için bu cihazın değerini seç.",
+        "cloudValue": "Bulut",
+        "deviceValue": "Bu cihaz",
+        "keepDevice": "Bu cihazın değerini kullan",
+        "dismiss": "Kapat",
+        "empty": "Hiçbir şey",
+        "deletedEdited": "Bir cihaz bunu kaldırdı, diğeri değiştirdi. Değiştirilen sürüm korundu."
+    },
+    "banner": {
+        "title": "{count, plural, one {{amount} değişiklik karar bekliyor} other {{amount} değişiklik karar bekliyor}}",
+        "body": "İki cihaz aynı değeri değiştirdi. Sen karar verene kadar buluttaki değer korunur.",
+        "review": "İncele",
+        "waiting": "İlk eşitleme senin seçimini bekliyor.",
+        "choose": "Seç"
+    },
+    "playthroughs": {
+        "title": "Oynanışlar",
+        "thisDevice": "Bu cihaz",
+        "cloud": "Bulut, son eşitleme",
+        "notInCloud": "Henüz bulutta yok",
+        "review": "İncele",
+        "note": "Bir oynanışı silmek, onu bir sonraki eşitlemede eşitleme dosyasından kaldırır.",
+        "status": {
+            "synced": "Eşitlendi",
+            "changedHere": "Burada değişti",
+            "conflict": "Çakışma",
+            "newHere": "Burada yeni"
+        },
+        "describe": "Mağaza seviyesi {level}"
+    },
+    "activity": {
+        "title": "Son eşitleme etkinliği",
+        "empty": "Henüz hiçbir şey eşitlenmedi.",
+        "connected": "Bu tarayıcıda {provider} bağlandı.",
+        "uploaded": "Bu cihazdaki değişiklikler yüklendi.",
+        "downloaded": "Buluttaki değişiklikler indirildi.",
+        "merged": "İki tarafın değişiklikleri birleştirildi.",
+        "conflicts": "{count, plural, one {{amount} değişiklik karar bekliyor.} other {{amount} değişiklik karar bekliyor.}}",
+        "failed": "Eşitleme başarısız oldu."
+    },
+    "settings": {
+        "title": "Eşitleme ayarları",
+        "auto": "Otomatik eşitle",
+        "autoHint": "Takipçi açıldığında ve her değişiklikten birkaç saniye sonra eşitler.",
+        "focus": "Sekmeye döndüğümde değişiklikleri kontrol et",
+        "focusHint": "Takipçiye geri döndüğünde buluttaki daha yeni verileri çeker.",
+        "metered": "Sınırlı bağlantıda beni bekle",
+        "meteredHint": "Tarayıcı veri tasarrufu bağlantısı bildirdiği sürece otomatik eşitlemeleri atlar. Şimdi eşitle yine çalışır."
+    },
+    "lives": {
+        "title": "Verilerin nerede duruyor",
+        "storage": "Depolama",
+        "folder": "Klasör",
+        "dataFile": "Veri dosyası",
+        "metaFile": "Meta dosyası",
+        "size": "Boyut",
+        "kb": "{amount} KB",
+        "note": "Veri dosyası yedek dosyasıyla aynı biçimi kullanır. Meta dosyası cihaz listesini tutar, oyun verisi içermez. Giriş bilgilerin hiçbir dosyada yer almaz.",
+        "googleNote": "Gamerdex klasörü Drive'ında görünür. Gamerdex yalnızca kendi oluşturduğu dosyaları açabilir.",
+        "githubNote": "Repoyu gizli tut. Onu açabilen herkes verilerini okuyabilir.",
+        "dropboxNote": "Gamerdex klasörü Dropbox'ındaki Apps klasörünün içindedir. Gamerdex yalnızca o klasörü açabilir.",
+        "microsoftNote": "Gamerdex klasörü OneDrive'ındaki Apps klasörünün içindedir. Gamerdex yalnızca o klasörü açabilir."
+    },
+    "device": {
+        "title": "Bu cihaz",
+        "name": "Cihaz adı",
+        "nameHint": "Eşitleme dosyaları bu cihaz için bu adı gösterir. Yeniden adlandırınca meta dosyası bir sonraki eşitlemede güncellenir.",
+        "activePlaythrough": "Aktif oynanış",
+        "noPlaythrough": "Yok",
+        "login": "Eşitleme girişi",
+        "loginValue": "Yalnızca bu cihazda",
+        "loginHint": "Aktif oynanış ve tema her cihazda ayrı seçilir, eşitleme bunları asla değiştirmez. Girişin bu cihazda kalır. Kayıtlı verilerde, yedek dosyasında veya eşitleme dosyalarında asla yer almaz."
+    },
+    "disconnect": {
+        "title": "Bağlantıyı kes",
+        "body": "Bu tarayıcıda eşitlemeyi durdurur. Oynanışların bu cihazda ve bulutta kalır. Diğer cihazlar eşitlemeye devam eder.",
+        "button": "{provider} bağlantısını kes",
+        "googleHint": "Bulut kopyasını kendin silmek için bağlantıyı kes, sonra Google Drive'ındaki Gamerdex klasörünü sil.",
+        "githubHint": "Bulut kopyasını kendin silmek için bağlantıyı kes, sonra reponundaki Gamerdex klasörünü sil.",
+        "dropboxHint": "Bulut kopyasını kendin silmek için bağlantıyı kes, sonra Dropbox'ındaki Apps altında bulunan uygulama klasörünü sil.",
+        "microsoftHint": "Bulut kopyasını kendin silmek için bağlantıyı kes, sonra OneDrive'ındaki Apps altında bulunan uygulama klasörünü sil."
+    },
+    "callback": {
+        "title": "Giriş yapılıyor",
+        "working": "Giriş tamamlanıyor",
+        "back": "Ayarlara dön",
+        "denied": "Giriş iptal edildi.",
+        "state": "Giriş doğrulanamadı. Ayarlar'dan yeniden başla.",
+        "missing": "Giriş bir kod göndermedi. Ayarlar'dan yeniden başla.",
+        "failed": "Giriş tamamlanamadı. Daha sonra tekrar dene."
+    }
+}

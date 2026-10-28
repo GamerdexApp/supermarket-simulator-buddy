@@ -1,0 +1,56 @@
+{
+    "title": "概览",
+    "subline": "{name} · 一览全部内容",
+    "emptyDescription": "选择或创建一个存档，即可一览其进度。",
+    "identity": {
+        "created": "创建时间：{date}",
+        "lastModified": "最后修改：{date}",
+        "manage": "管理存档"
+    },
+    "storeLevel": {
+        "title": "商店等级",
+        "subtitle": "当前进度等级",
+        "hint": "可在侧边栏的商店等级调节器中修改。"
+    },
+    "financial": {
+        "title": "财务概览",
+        "activeLoans": "生效中的贷款",
+        "dailyPayments": "每日还款",
+        "totalDebt": "贷款总额",
+        "none": "没有生效中的贷款。打开银行即可申请。",
+        "formula": "每笔贷款的费用为本金加上本金乘以日利率再乘以期限。每笔生效中的贷款都按每天还款计算。",
+        "view": "查看银行详情"
+    },
+    "investment": {
+        "title": "总投入",
+        "subtitle": "管理和市场的花费合计",
+        "formula": "管理 {managementSpent} + 市场 {marketSpent} = {total}"
+    },
+    "management": {
+        "title": "管理",
+        "licenses": "许可证",
+        "growth": "扩建升级",
+        "storage": "仓库升级",
+        "employees": "员工",
+        "unlocked": "已解锁 {owned}/{total}",
+        "hired": "已雇用 {owned}/{total}",
+        "perDay": "{amount}/天",
+        "hiringNote": "目前已支付的雇用费用：{amount}。不计入总投入。",
+        "total": "总投入",
+        "view": "查看管理"
+    },
+    "market": {
+        "title": "市场",
+        "products": "商品",
+        "licensesUnlocked": "{count, plural, other {已解锁 {amount} 个许可证}}",
+        "available": "{amount} 个可用",
+        "tools": "工具",
+        "vehicles": "车辆",
+        "furniture": "家具",
+        "furnitureItems": "{count, plural, other {{amount} 件可用}}",
+        "unlocked": "已解锁 {owned}/{total}",
+        "note": "家具和油漆不会保存，因此不计入花费。",
+        "total": "总投入",
+        "view": "查看市场"
+    }
+}

@@ -1,0 +1,102 @@
+{
+    "header": {
+        "label": "Halaman utama",
+        "features": "Ciri",
+        "faq": "Soalan Lazim",
+        "github": "GitHub",
+        "discord": "Discord"
+    },
+    "cta": {
+        "create": "Cipta sesi permainan pertama anda",
+        "dashboard": "Pergi ke papan pemuka",
+        "newPlaythrough": "Sesi permainan baharu",
+        "learn": "Ketahui lebih lanjut"
+    },
+    "hero": {
+        "title": "Jejak <accent>Empayar</accent> Pasar Raya Anda",
+        "body": "Aplikasi teman untuk Supermarket Simulator. Urus beberapa sesi permainan, jejak kemajuan anda dan bina empayar pasar raya anda dengan yakin.",
+        "preview": "Ringkasan Pezz's Market yang menunjukkan jumlah perbelanjaan, kemajuan kedai dan pinjaman aktif"
+    },
+    "continueCard": {
+        "label": "Teruskan",
+        "level": "Tahap kedai {level}",
+        "updated": "Kemas kini terakhir {date}"
+    },
+    "steps": {
+        "title": "Mula dalam seminit",
+        "items": {
+            "item1": {
+                "title": "Cipta sesi permainan",
+                "body": "Beri nama. Semuanya disimpan dalam pelayar ini, tanpa akaun."
+            },
+            "item2": {
+                "title": "Mula dengan asas",
+                "body": "Setiap sesi permainan bermula dengan Lesen 0, bahagian pembesaran 1 serta Paper Bag, Sponge dan Mop."
+            },
+            "item3": {
+                "title": "Buka kunci sambil bermain",
+                "body": "Naikkan tahap kedai anda, kemudian buka kunci lesen, bahagian, pekerja, alatan dan kenderaan seperti dalam permainan."
+            }
+        }
+    },
+    "features": {
+        "eyebrow": "Semua yang anda perlukan",
+        "title": "Semua kemajuan anda di satu tempat",
+        "body": "Supermarket Simulator Buddy menjejak setiap aspek perniagaan pasar raya anda. Daripada lesen hingga stor, semuanya ada di sini.",
+        "items": {
+            "item1": {
+                "title": "Banyak Sesi Permainan",
+                "body": "Cipta dan urus sesi permainan tanpa had. Jejak strategi dan cabaran yang berbeza secara berasingan."
+            },
+            "item2": {
+                "title": "Pengurusan Lesen",
+                "body": "Jejak semua lesen produk anda dan lihat item yang dibuka oleh setiap lesen untuk kedai anda."
+            },
+            "item3": {
+                "title": "Pembesaran Kedai",
+                "body": "Pantau pembesaran kedai anda dengan penjejakan terperinci bagi bahagian stor dan pembesaran."
+            },
+            "item4": {
+                "title": "Penjejakan Bajet",
+                "body": "Pantau perbelanjaan anda dalam semua kategori dengan ringkasan kewangan yang lengkap."
+            },
+            "item5": {
+                "title": "Senarai Beli-belah",
+                "body": "Cipta senarai beli-belah sendiri supaya anda tahu apa yang perlu dibeli di setiap kedai."
+            },
+            "item6": {
+                "title": "Eksport/Import Data",
+                "body": "Eksport kemajuan anda sebagai JSON untuk sandaran atau untuk dikongsi dengan rakan. Import data pada bila-bila masa."
+            }
+        }
+    },
+    "faq": {
+        "title": "Soalan lazim",
+        "items": {
+            "item1": {
+                "question": "Apakah Supermarket Simulator Buddy?",
+                "answer": "Supermarket Simulator Buddy ialah alat penjejak kemajuan untuk permainan Supermarket Simulator. Alat ini membantu anda mengurus beberapa sesi permainan, menjejak pembesaran kedai, mengurus lesen dan memantau kemajuan kewangan anda di satu tempat."
+            },
+            "item2": {
+                "question": "Bagaimanakah data saya disimpan?",
+                "answer": "Semua data anda disimpan secara setempat dalam pelayar anda menggunakan localStorage. Ini bermakna kemajuan anda adalah peribadi dan tidak memerlukan pelayan atau akaun. Anda juga boleh mengeksport dan mengimport data anda sebagai fail JSON untuk sandaran atau perkongsian."
+            },
+            "item3": {
+                "question": "Bolehkah saya menjejak beberapa sesi permainan?",
+                "answer": "Boleh! Anda boleh mencipta dan mengurus beberapa sesi permainan, masing-masing dengan kemajuannya sendiri. Tukar antara sesi dengan mudah melalui menu lungsur di bar sisi, dan jejak strategi atau cabaran yang berbeza secara berasingan."
+            },
+            "item4": {
+                "question": "Ciri apakah yang boleh saya jejak?",
+                "answer": "Jejak tahap kedai, lesen, bahagian stor, kawasan pembesaran, alatan, kenderaan dan senarai beli-belah, serta lihat harga perabot dan cat. Pantau kemajuan kewangan anda dengan penjejakan bajet terperinci dalam semua kategori."
+            },
+            "item5": {
+                "question": "Adakah aplikasi ini percuma?",
+                "answer": "Ya, Supermarket Simulator Buddy percuma sepenuhnya. Tiada langganan, tiada iklan dan tiada kos tersembunyi. Semua ciri tersedia untuk semua orang."
+            }
+        }
+    },
+    "closing": {
+        "title": "Sedia untuk mengendalikan kedai anda?",
+        "body": "Percuma, peribadi dan disimpan dalam pelayar anda."
+    }
+}

@@ -1,0 +1,85 @@
+{
+    "title": "Oynanışlar",
+    "subline": "{count, plural, one {{amount} oynanış} other {{amount} oynanış}}",
+    "newPlaythrough": "Yeni oynanış",
+    "loading": "Kayıtlı veriler bu tarayıcıdan okunuyor.",
+    "filters": {
+        "search": "Ada göre ara",
+        "sortLabel": "Sırala",
+        "sort": {
+            "lastModified": "Son güncelleme",
+            "name": "Ad",
+            "createdAt": "Oluşturma tarihi",
+            "storeLevel": "Mağaza seviyesi"
+        },
+        "showing": "{count, plural, one {{amount} oynanıştan {shown} tanesi gösteriliyor} other {{amount} oynanıştan {shown} tanesi gösteriliyor}}",
+        "clear": "Aramayı temizle"
+    },
+    "empty": {
+        "title": "Henüz oynanış yok",
+        "deletedTitle": "Oynanış silindi",
+        "description": "Mağazanı takip etmeye başlamak için bir oynanış oluştur. Eşitlemeyi açmadıkça her şey bu tarayıcıda kalır.",
+        "restore": "Yedekten geri yükle"
+    },
+    "noMatch": {
+        "title": "“{query}” ile eşleşen oynanış yok",
+        "description": "Farklı bir ad dene."
+    },
+    "card": {
+        "active": "Aktif",
+        "setActive": "Aktif yap",
+        "openOverview": "Genel bakışı aç",
+        "edit": "Düzenle",
+        "delete": "Sil",
+        "created": "Oluşturuldu: {date}",
+        "lastModified": "Son güncelleme: {date}",
+        "storeLevel": "Mağaza seviyesi",
+        "spending": "Toplam harcama",
+        "licenses": "Lisanslar",
+        "shopping": "Alışveriş listesi",
+        "ofTotal": "{count} / {total}",
+        "switched": "Aktif oynanış: {name}"
+    },
+    "fields": {
+        "nameLabel": "Oynanış Adı",
+        "namePlaceholder": "ör. İlk Mağazam",
+        "nameError": "Bu oynanış için bir ad gir.",
+        "descriptionLabel": "Açıklama",
+        "descriptionPlaceholder": "Bu oynanış için bir açıklama ekle...",
+        "cancel": "İptal"
+    },
+    "create": {
+        "title": "Yeni Oynanış Oluştur",
+        "submit": "Oluştur",
+        "done": "{name} oluşturuldu",
+        "starterTitle": "Her yeni oynanış bunlarla başlar",
+        "starter": {
+            "item1": "Mağaza seviyesi 0",
+            "item2": "Lisans 0, ücretsiz başlangıç lisansı",
+            "item3": "Genişletme bölümü 1",
+            "item4": "Paper Bag, Sponge ve Mop aletleri"
+        }
+    },
+    "edit": {
+        "title": "Oynanışı Düzenle",
+        "description": "Alanlar kayıtlı değerlerle başlar.",
+        "save": "Kaydet",
+        "saved": "Kaydedildi",
+        "savedMessage": "{name} güncellendi.",
+        "dates": "Oluşturuldu: {created} · Son güncelleme: {updated}"
+    },
+    "delete": {
+        "title": "Oynanışı Sil",
+        "question": "“{name}” oynanışını silmek istediğine emin misin?",
+        "description": "Bu, oynanışın kayıtlı tüm ilerlemesini bu cihazdan kaldırır. Eşitleme açıksa bir sonraki eşitlemede diğer cihazlarından da kaldırılır.",
+        "activeNext": "Bu senin aktif oynanışın. Bunun yerine {next} aktif olur.",
+        "activeLast": "Bu senin aktif ve tek oynanışın. Sonrasında aktif oynanışın olmayacak.",
+        "exportFirst": "Önce bir yedek dışa aktar",
+        "cancel": "İptal",
+        "confirm": "Sil",
+        "done": "{name} silindi",
+        "doneMessage": "Geri getirmek için 10 saniye içinde geri al.",
+        "undo": "Geri al"
+    },
+    "sublineActive": "{count, plural, one {{amount} oynanış} other {{amount} oynanış}} · aktif: {name}"
+}

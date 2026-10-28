@@ -1,0 +1,56 @@
+{
+    "title": "Visão geral",
+    "subline": "{name} · Tudo num relance",
+    "emptyDescription": "Escolhe ou cria uma partida para ver o progresso num relance.",
+    "identity": {
+        "created": "Criada em: {date}",
+        "lastModified": "Última alteração: {date}",
+        "manage": "Gerir partidas"
+    },
+    "storeLevel": {
+        "title": "Nível da loja",
+        "subtitle": "Nível de progressão atual",
+        "hint": "Altera-o com o seletor Nível da loja na barra lateral."
+    },
+    "financial": {
+        "title": "Resumo financeiro",
+        "activeLoans": "Empréstimos ativos",
+        "dailyPayments": "Pagamentos diários",
+        "totalDebt": "Dívida total dos empréstimos",
+        "none": "Sem empréstimos ativos. Abre o banco para pedir um.",
+        "formula": "Cada empréstimo custa o capital mais o capital multiplicado pela taxa diária e pelo prazo. Cada empréstimo ativo conta como pago todos os dias.",
+        "view": "Ver o banco"
+    },
+    "investment": {
+        "title": "Investimento total",
+        "subtitle": "Gastos combinados de gestão e mercado",
+        "formula": "Gestão {managementSpent} + Mercado {marketSpent} = {total}"
+    },
+    "management": {
+        "title": "Gestão",
+        "licenses": "Licenças",
+        "growth": "Expansões",
+        "storage": "Expansões do armazém",
+        "employees": "Funcionários",
+        "unlocked": "{owned} de {total} desbloqueados",
+        "hired": "{owned} de {total} contratados",
+        "perDay": "{amount}/dia",
+        "hiringNote": "Custos de contratação pagos até agora: {amount}. Não fazem parte do total investido.",
+        "total": "Total investido",
+        "view": "Ver a gestão"
+    },
+    "market": {
+        "title": "Mercado",
+        "products": "Produtos",
+        "licensesUnlocked": "{count, plural, one {{amount} licença desbloqueada} other {{amount} licenças desbloqueadas}}",
+        "available": "{amount} disponíveis",
+        "tools": "Ferramentas",
+        "vehicles": "Veículos",
+        "furniture": "Mobiliário",
+        "furnitureItems": "{count, plural, one {{amount} artigo disponível} other {{amount} artigos disponíveis}}",
+        "unlocked": "{owned} de {total} desbloqueados",
+        "note": "O mobiliário e as tintas não são guardados, por isso os seus gastos não contam.",
+        "total": "Total investido",
+        "view": "Ver o mercado"
+    }
+}

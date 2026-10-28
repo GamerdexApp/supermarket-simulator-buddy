@@ -1,0 +1,93 @@
+{
+    "title": "マーケット",
+    "tabsLabel": "マーケット",
+    "tabs": {
+        "products": "商品",
+        "furniture": "家具",
+        "paint": "ペンキ",
+        "tools": "ツール",
+        "vehicles": "車両"
+    },
+    "sublines": {
+        "products": "{name} · ライセンスで解放される商品",
+        "furniture": "{name} · 家具の価格",
+        "paint": "{name} · ペンキの価格",
+        "tools": "{name} · 所有しているツール",
+        "vehicles": "{name} · 所有している車両"
+    },
+    "emptyDescription": "所有している商品、ツール、車両を見るには、プレイデータを選ぶか作成してください。",
+    "free": "無料",
+    "undoUnlock": "解放を元に戻す",
+    "unlock": "解放",
+    "locked": "ロック中",
+    "states": {
+        "unlocked": "解放済み",
+        "canUnlock": "解放可能",
+        "locked": "ロック中"
+    },
+    "products": {
+        "search": "名前または会社で検索…",
+        "displayType": "陳列タイプで絞り込む",
+        "allDisplayTypes": "すべての陳列タイプ",
+        "category": "カテゴリーで絞り込む",
+        "allCategories": "すべてのカテゴリー",
+        "option": "{label}（{count}）",
+        "filtersTitle": "商品を絞り込む",
+        "showing": "{count, plural, other {{amount}件の商品}}中{shown}件を表示",
+        "showButton": "{count, plural, other {{amount}件の商品}}を表示",
+        "unlocked": "解放済みの商品（{count}）",
+        "locked": "ロック中の商品（{count}）",
+        "lockedHelp": "これらを販売するには、管理でライセンスを解放してください。",
+        "noUnlocked": "フィルターに一致する解放済みの商品はありません。",
+        "noLocked": "フィルターに一致するロック中の商品はありません。",
+        "requires": "必要: ライセンス{number}",
+        "itemsPerBox": "1箱あたりの個数",
+        "weightPerBox": "1箱あたりの重さ",
+        "kg": "{weight} kg",
+        "boxesPerStorage": "倉庫1枠あたりの箱数",
+        "details": "{name}の詳細",
+        "detail": {
+            "company": "会社",
+            "displayType": "陳列タイプ",
+            "category": "カテゴリー",
+            "boughtAt": "購入場所",
+            "license": "ライセンス",
+            "unlocked": "ライセンス{number}、解放済み",
+            "locked": "ライセンス{number}、未解放",
+            "none": "記載なし",
+            "toLicenses": "ライセンスを開く",
+            "close": "閉じる"
+        },
+        "stores": {
+            "liquor_store": "Liquor Store",
+            "janitorial_supply": "Janitorial Supply",
+            "deli_and_grocery": "Deli and Grocery",
+            "meat_and_dairy": "Meat and Dairy",
+            "green_market": "Green Market"
+        }
+    },
+    "furniture": {
+        "heading": "すべての家具（{count}）",
+        "note": "価格はゲームのデータです。家具の状態は保存されません。"
+    },
+    "paint": {
+        "heading": "すべてのペンキ（{count}）",
+        "note": "価格はゲームのデータです。ペンキの状態は保存されません。"
+    },
+    "tools": {
+        "totalSpent": "ツールの支出合計",
+        "unlockedOf": "{count, plural, other {{amount}件のツール}}中{owned}件を解放済み",
+        "requiresLicenses": "{count, plural, other {{amount}件のライセンス}}が必要 · 所有数{owned}件",
+        "unlocked": "{name}を解放しました",
+        "undone": "{name}を再びロックしました"
+    },
+    "vehicles": {
+        "totalSpent": "車両の支出合計",
+        "unlockedOf": "{count, plural, other {{amount}台の車両}}中{owned}台を解放済み",
+        "price": "価格",
+        "storeLevel": "ストアレベル",
+        "requiresLevel": "ストアレベル{level}が必要 · 現在はレベル{current}",
+        "unlocked": "{name}を解放しました",
+        "undone": "{name}を再びロックしました"
+    }
+}

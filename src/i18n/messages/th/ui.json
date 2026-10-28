@@ -1,0 +1,43 @@
+{
+    "close": "ปิด",
+    "undo": "เลิกทำ",
+    "field": {
+        "optional": "ไม่บังคับ"
+    },
+    "stepper": {
+        "lower": "ลด{label}",
+        "raise": "เพิ่ม{label}",
+        "labelPrefix": "{label}, "
+    },
+    "switch": {
+        "on": "เปิด",
+        "off": "ปิด"
+    },
+    "tabs": {
+        "locked": " (ล็อกอยู่)"
+    },
+    "toast": {
+        "dismiss": "ปิด",
+        "variants": {
+            "success": "สำเร็จ",
+            "info": "ข้อมูล",
+            "warning": "คำเตือน",
+            "error": "ข้อผิดพลาด"
+        }
+    },
+    "filters": {
+        "filters": "ตัวกรอง",
+        "activeCount": "{count, plural, other {ใช้อยู่ {amount}}}",
+        "clearFilters": "ล้างตัวกรอง",
+        "reset": "รีเซ็ต",
+        "description": "การเปลี่ยนแปลงมีผลทันที ตัวกรองไม่ได้บันทึกไว้",
+        "groupLabel": "ตัวกรอง: {label}"
+    },
+    "savedChip": {
+        "automatic": "บันทึกอัตโนมัติ",
+        "justNow": "บันทึกเมื่อสักครู่",
+        "minutesAgo": "{count, plural, other {บันทึกเมื่อ {amount} นาทีที่แล้ว}}",
+        "at": "บันทึกเมื่อ {time}",
+        "failed": "ไม่ได้บันทึก พื้นที่เก็บข้อมูลเต็ม"
+    }
+}

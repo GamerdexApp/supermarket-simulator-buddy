@@ -1,0 +1,81 @@
+{
+    "skipToContent": "Saltar para o conteúdo",
+    "closeMenu": "Fechar menu",
+    "openMenu": "Abrir menu",
+    "menuLabel": "Menu do site",
+    "mainNav": "Principal",
+    "brandWords": {
+        "item1": "Supermarket",
+        "item2": "Simulator",
+        "item3": "Buddy"
+    },
+    "noPlaythroughHint": "Cria uma partida para começar a acompanhar.",
+    "switcher": {
+        "sectionLabel": "Partida",
+        "loading": "A carregar",
+        "none": "Nenhuma selecionada",
+        "switch": "Mudar de partida",
+        "playthroughs": "Partidas",
+        "active": "Ativa",
+        "all": "Todas as partidas",
+        "create": "Nova partida",
+        "level": "Nível {level}",
+        "rowDetail": "Nível {level} · {date}",
+        "switched": "Partida ativa: {name}",
+        "empty": "Ainda não há partidas criadas"
+    },
+    "storeLevel": {
+        "label": "Nível da loja",
+        "edit": "Nível da loja {level}, selecionar para escrever um nível",
+        "atZero": "Já está no nível 0"
+    },
+    "empty": {
+        "title": "Nenhuma partida selecionada",
+        "description": "Cria uma partida ou escolhe uma da lista para ver esta página.",
+        "create": "Nova partida",
+        "all": "Todas as partidas"
+    },
+    "footer": {
+        "tagline": "Uma ferramenta gratuita para acompanhar o progresso em Supermarket Simulator. Os dados ficam no navegador, ou no teu próprio armazenamento na nuvem se ativares a sincronização.",
+        "support": "Suporte",
+        "about": "Acerca de",
+        "settings": "Definições",
+        "discord": "Discord",
+        "github": "GitHub",
+        "officialGame": "Jogo oficial",
+        "privacy": "Política de privacidade",
+        "terms": "Termos de serviço",
+        "disclaimerTitle": "Aviso legal",
+        "disclaimer": "Este projeto não tem afiliação, aprovação ou ligação a Supermarket Simulator ou aos seus criadores. Todas as marcas registadas e conteúdos do jogo pertencem aos respetivos proprietários.",
+        "framework": "Feito com o framework Gamerdex, uma base partilhada para ferramentas gratuitas de acompanhamento de jogos.",
+        "visitGamerdex": "Visitar Gamerdex"
+    },
+    "notFound": {
+        "title": "Página não encontrada",
+        "body": "Não existe nenhuma página em <code>{path}</code>.",
+        "didYouMean": "Querias dizer <link>{suggestion}</link>?",
+        "quickLinks": "Secções",
+        "toOverview": "Ir para a visão geral",
+        "toHome": "Voltar ao início"
+    },
+    "saveFailed": {
+        "title": "Não guardado",
+        "message": "O navegador não conseguiu guardar as alterações. Transfere uma cópia de segurança para não perder nada.",
+        "exportBackup": "Transferir cópia de segurança"
+    },
+    "nav": {
+        "groups": {
+            "store": "A tua loja",
+            "plan": "Planear"
+        },
+        "items": {
+            "overview": "Visão geral",
+            "market": "Mercado",
+            "management": "Gestão",
+            "bank": "Banco",
+            "shoppingList": "Lista de compras",
+            "settings": "Definições",
+            "playthroughs": "Partidas"
+        }
+    }
+}

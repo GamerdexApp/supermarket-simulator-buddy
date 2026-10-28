@@ -1,0 +1,43 @@
+{
+    "close": "Kapat",
+    "undo": "Geri al",
+    "field": {
+        "optional": "İsteğe bağlı"
+    },
+    "stepper": {
+        "lower": "Azalt: {label}",
+        "raise": "Artır: {label}",
+        "labelPrefix": "{label}, "
+    },
+    "switch": {
+        "on": "Açık",
+        "off": "Kapalı"
+    },
+    "tabs": {
+        "locked": " (kilitli)"
+    },
+    "toast": {
+        "dismiss": "Kapat",
+        "variants": {
+            "success": "Başarılı",
+            "info": "Bilgi",
+            "warning": "Uyarı",
+            "error": "Hata"
+        }
+    },
+    "filters": {
+        "filters": "Filtreler",
+        "activeCount": "{count, plural, one {{amount} aktif} other {{amount} aktif}}",
+        "clearFilters": "Filtreleri temizle",
+        "reset": "Sıfırla",
+        "description": "Değişiklikler anında uygulanır. Filtreler kaydedilmez.",
+        "groupLabel": "Filtreler: {label}"
+    },
+    "savedChip": {
+        "automatic": "Otomatik kaydeder",
+        "justNow": "Az önce kaydedildi",
+        "minutesAgo": "{count, plural, one {{amount} dk önce kaydedildi} other {{amount} dk önce kaydedildi}}",
+        "at": "Kaydedildi: {time}",
+        "failed": "Kaydedilmedi, depolama dolu"
+    }
+}

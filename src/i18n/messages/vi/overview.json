@@ -1,0 +1,56 @@
+{
+    "title": "Tổng quan",
+    "subline": "{name} · Xem mọi thứ trong nháy mắt",
+    "emptyDescription": "Chọn hoặc tạo một lượt chơi để xem nhanh tiến độ.",
+    "identity": {
+        "created": "Ngày tạo: {date}",
+        "lastModified": "Sửa lần cuối: {date}",
+        "manage": "Quản lý lượt chơi"
+    },
+    "storeLevel": {
+        "title": "Cấp cửa hàng",
+        "subtitle": "Cấp tiến độ hiện tại",
+        "hint": "Đổi bằng nút chỉnh Cấp cửa hàng ở thanh bên."
+    },
+    "financial": {
+        "title": "Tổng quan tài chính",
+        "activeLoans": "Khoản vay đang có",
+        "dailyPayments": "Trả mỗi ngày",
+        "totalDebt": "Tổng nợ vay",
+        "none": "Chưa có khoản vay nào. Mở ngân hàng để vay.",
+        "formula": "Mỗi khoản vay tốn tiền gốc cộng tiền gốc nhân lãi suất mỗi ngày nhân kỳ hạn. Mọi khoản vay đang có được tính là đã trả mỗi ngày.",
+        "view": "Xem chi tiết ngân hàng"
+    },
+    "investment": {
+        "title": "Tổng đầu tư",
+        "subtitle": "Tổng chi tiêu cho quản lý và chợ",
+        "formula": "Quản lý {managementSpent} + Chợ {marketSpent} = {total}"
+    },
+    "management": {
+        "title": "Quản lý",
+        "licenses": "Giấy phép",
+        "growth": "Nâng cấp mở rộng",
+        "storage": "Nâng cấp kho",
+        "employees": "Nhân viên",
+        "unlocked": "Đã mở khóa {owned} / {total}",
+        "hired": "Đã thuê {owned} / {total}",
+        "perDay": "{amount}/ngày",
+        "hiringNote": "Phí tuyển dụng đã trả đến nay: {amount}. Khoản này không tính vào Tổng đầu tư.",
+        "total": "Tổng đầu tư",
+        "view": "Xem Quản lý"
+    },
+    "market": {
+        "title": "Chợ",
+        "products": "Sản phẩm",
+        "licensesUnlocked": "Đã mở khóa {count, plural, other {{amount} giấy phép}}",
+        "available": "Có {amount}",
+        "tools": "Dụng cụ",
+        "vehicles": "Phương tiện",
+        "furniture": "Nội thất",
+        "furnitureItems": "Có {count, plural, other {{amount} món}}",
+        "unlocked": "Đã mở khóa {owned} / {total}",
+        "note": "Nội thất và sơn không được lưu nên chi tiêu cho chúng không được tính.",
+        "total": "Tổng đầu tư",
+        "view": "Xem Chợ"
+    }
+}

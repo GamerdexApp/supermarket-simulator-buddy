@@ -1,0 +1,81 @@
+{
+    "skipToContent": "本文へスキップ",
+    "closeMenu": "メニューを閉じる",
+    "openMenu": "メニューを開く",
+    "menuLabel": "サイトメニュー",
+    "mainNav": "メイン",
+    "brandWords": {
+        "item1": "Supermarket",
+        "item2": "Simulator",
+        "item3": "Buddy"
+    },
+    "noPlaythroughHint": "プレイデータを作成すると記録を始められます。",
+    "switcher": {
+        "sectionLabel": "プレイデータ",
+        "loading": "読み込み中",
+        "none": "未選択",
+        "switch": "プレイデータを切り替え",
+        "playthroughs": "プレイデータ",
+        "active": "使用中",
+        "all": "すべてのプレイデータ",
+        "create": "新しいプレイデータ",
+        "level": "レベル{level}",
+        "rowDetail": "レベル{level} · {date}",
+        "switched": "{name}に切り替えました",
+        "empty": "プレイデータはまだありません"
+    },
+    "storeLevel": {
+        "label": "ストアレベル",
+        "edit": "ストアレベル{level}、選択するとレベルを入力できます",
+        "atZero": "すでにレベル0です"
+    },
+    "empty": {
+        "title": "プレイデータが選択されていません",
+        "description": "このページを見るには、プレイデータを作成するか、一覧から選んでください。",
+        "create": "新しいプレイデータ",
+        "all": "すべてのプレイデータ"
+    },
+    "footer": {
+        "tagline": "Supermarket Simulator の無料の進行状況トラッカーです。データはブラウザーに保存され、同期をオンにすると自分のクラウドストレージにも保存されます。",
+        "support": "サポート",
+        "about": "このアプリについて",
+        "settings": "設定",
+        "discord": "Discord",
+        "github": "GitHub",
+        "officialGame": "公式ゲーム",
+        "privacy": "プライバシーポリシー",
+        "terms": "利用規約",
+        "disclaimerTitle": "免責事項",
+        "disclaimer": "このプロジェクトは Supermarket Simulator およびその開発者とは提携しておらず、承認や関係もありません。すべての商標とゲームコンテンツはそれぞれの所有者に帰属します。",
+        "framework": "無料のゲーム進行状況トラッカー共通の基盤である Gamerdex フレームワークで作られています。",
+        "visitGamerdex": "Gamerdex を見る"
+    },
+    "notFound": {
+        "title": "ページが見つかりません",
+        "body": "<code>{path}</code> にページはありません。",
+        "didYouMean": "もしかして <link>{suggestion}</link> ですか？",
+        "quickLinks": "ページ",
+        "toOverview": "概要へ移動",
+        "toHome": "ホームに戻る"
+    },
+    "saveFailed": {
+        "title": "保存されていません",
+        "message": "ブラウザーに変更を保存できませんでした。データを失わないよう、バックアップをダウンロードしてください。",
+        "exportBackup": "バックアップをダウンロード"
+    },
+    "nav": {
+        "groups": {
+            "store": "あなたのストア",
+            "plan": "計画"
+        },
+        "items": {
+            "overview": "概要",
+            "market": "マーケット",
+            "management": "管理",
+            "bank": "銀行",
+            "shoppingList": "買い物リスト",
+            "settings": "設定",
+            "playthroughs": "プレイデータ"
+        }
+    }
+}

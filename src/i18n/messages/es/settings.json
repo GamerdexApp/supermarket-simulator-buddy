@@ -1,0 +1,156 @@
+{
+    "title": "Ajustes",
+    "subline": "Gestiona tus datos y los ajustes de la aplicación",
+    "tabsLabel": "Ajustes",
+    "tabs": {
+        "sync": "Sincronización",
+        "preferences": "Preferencias",
+        "data": "Copia y datos",
+        "about": "Acerca de"
+    },
+    "playthroughCount": "{count, plural, one {{amount} partida} other {{amount} partidas}}",
+    "storageNote": {
+        "title": "Almacenamiento de datos",
+        "body": "Tus datos se guardan en este navegador. Si borras los datos del navegador, se eliminan, a menos que la sincronización guarde una copia. Exporta una copia de seguridad de vez en cuando."
+    },
+    "data": {
+        "title": "Gestión de datos",
+        "export": {
+            "title": "Exportar datos",
+            "button": "Exportar todas las partidas",
+            "description": "Descarga una copia de seguridad de todas tus partidas guardadas.",
+            "done": "Copia de seguridad descargada"
+        },
+        "import": {
+            "title": "Importar datos",
+            "description": "Sube un archivo exportado anteriormente (.json)",
+            "fileLabel": "Archivo de copia de seguridad",
+            "chooseFile": "Elegir archivo",
+            "noFile": "Ningún archivo elegido",
+            "review": "Revisar importación",
+            "merged": "Importación combinada",
+            "replaced": "Datos reemplazados",
+            "undo": "Deshacer"
+        },
+        "reset": {
+            "title": "Restablecer todos los datos",
+            "warning": "Esto elimina todas las partidas de este dispositivo. Puedes deshacerlo durante 10 segundos.",
+            "button": "Restablecer todo",
+            "confirmTitle": "¿Restablecer todos los datos?",
+            "confirmBody": "Esto elimina {names}.",
+            "cancel": "Cancelar",
+            "confirm": "Sí, restablecer todo",
+            "syncedCopy": "Eliminar también la copia sincronizada en {provider}",
+            "syncedOn": "La sincronización sigue activada. Tus otros dispositivos perderán estas partidas en su siguiente sincronización. Si no estás seguro, exporta antes una copia de seguridad.",
+            "done": "Todos los datos restablecidos",
+            "doneMessage": "{count, plural, one {{amount} partida eliminada} other {{amount} partidas eliminadas}}.",
+            "undo": "Deshacer",
+            "doneMessageDisconnected": "{count, plural, one {{amount} partida eliminada} other {{amount} partidas eliminadas}}. La sincronización está desconectada en este navegador."
+        }
+    },
+    "appearance": {
+        "title": "Apariencia",
+        "description": "Elige el aspecto de la aplicación. Se guarda solo en este dispositivo y no forma parte de las copias de seguridad.",
+        "themeLabel": "Tema",
+        "themes": {
+            "light": "Claro",
+            "dark": "Oscuro",
+            "system": "Sistema"
+        },
+        "themeNote": "Sistema sigue a tu dispositivo, que ahora mismo usa el tema {mode, select, dark {oscuro} other {claro}}."
+    },
+    "playthroughs": {
+        "title": "Partidas",
+        "description": "Crea, cambia, edita y elimina partidas en la página Partidas.",
+        "manage": "Gestionar partidas"
+    },
+    "about": {
+        "version": "Versión {version}",
+        "summary": "Una herramienta para registrar el progreso en Supermarket Simulator. Tus datos se guardan en este navegador o en tu propio almacenamiento en la nube si activas la sincronización.",
+        "officialGame": "Juego oficial",
+        "disclaimer": "No está afiliado, respaldado ni vinculado a Supermarket Simulator ni a sus desarrolladores. Todas las marcas comerciales y el contenido del juego pertenecen a sus propietarios."
+    },
+    "importDialog": {
+        "title": "Importar una copia de seguridad",
+        "fileInfo": "{name} · {size}",
+        "bytes": "{count} B",
+        "kilobytes": "{count} KB",
+        "failedTitle": "Error al importar",
+        "checksTitle": "Archivo comprobado",
+        "checks": "{count, plural, one {{amount} entrada leída} other {{amount} entradas leídas}}, {kept} con id y nombre.",
+        "howToApply": "¿Cómo se aplica el archivo?",
+        "modeLabel": "Modo de importación",
+        "modes": {
+            "merge": "Combinar con este dispositivo (recomendado)",
+            "replace": "Reemplazar todo"
+        },
+        "modeNotes": {
+            "merge": "Añade las partidas nuevas. Si una partida está en los dos lados, gana la copia actualizada más tarde. Las partidas que solo están en este dispositivo se quedan. Tu partida activa sigue activa.",
+            "replace": "Elimina las partidas de este dispositivo y conserva solo las del archivo. La partida activa del archivo pasa a ser la activa."
+        },
+        "whatChanges": "Qué cambia",
+        "columns": {
+            "playthrough": "Partida",
+            "inFile": "En el archivo",
+            "onDevice": "En el dispositivo",
+            "result": "Resultado"
+        },
+        "results": {
+            "added": "Añadida",
+            "updated": "Actualizada desde el archivo",
+            "kept": "Conservada",
+            "replaced": "Del archivo",
+            "removed": "Eliminada"
+        },
+        "notThere": "No está",
+        "noPlaythroughs": "El archivo no tiene partidas.",
+        "undoNote": "Puedes deshacer la importación durante 10 segundos.",
+        "cancel": "Cancelar",
+        "close": "Cerrar",
+        "merge": "Combinar",
+        "replace": "Reemplazar todo",
+        "skipped": "{count, plural, one {{amount} entrada omitida} other {{amount} entradas omitidas}}.",
+        "levelsFixed": "{count, plural, one {{amount} nivel de tienda por debajo de 0 se guardará} other {{amount} niveles de tienda por debajo de 0 se guardarán}} como 0.",
+        "errors": {
+            "notJson": "Este archivo no es una copia de seguridad de Supermarket Simulator Buddy: no es un JSON válido. No se ha cambiado nada.",
+            "playthroughsMissing": "Este archivo no es una copia de seguridad de Supermarket Simulator Buddy: falta la lista de partidas. No se ha cambiado nada."
+        },
+        "summary": {
+            "added": "{amount} añadidas",
+            "updated": "{amount} actualizadas",
+            "kept": "{amount} conservadas",
+            "replaced": "{amount} reemplazadas",
+            "removed": "{amount} eliminadas"
+        }
+    },
+    "region": {
+        "title": "Idioma y región",
+        "description": "Cómo se muestran los textos, los números y las fechas en este dispositivo. Se guarda solo en este dispositivo.",
+        "language": {
+            "label": "Idioma",
+            "hint": "Los nombres del juego, como productos, licencias y herramientas, se quedan en inglés."
+        },
+        "numberFormat": {
+            "label": "Formato de números",
+            "hint": "Ejemplo: {example}",
+            "options": {
+                "auto": "Automático, según el idioma",
+                "us": "1,234.56 (Estados Unidos)",
+                "european": "1.234,56 (Alemania)",
+                "french": "1 234,56 (Francia)",
+                "swiss": "1’234.56 (Suiza)",
+                "indian": "12,34,567.89 (India)"
+            }
+        },
+        "dateFormat": {
+            "label": "Formato de fecha",
+            "hint": "Ejemplo: {example}",
+            "options": {
+                "auto": "Automático, según el idioma",
+                "mdy": "Mes/Día/Año",
+                "dmy": "Día/Mes/Año",
+                "ymd": "Año-Mes-Día"
+            }
+        }
+    }
+}

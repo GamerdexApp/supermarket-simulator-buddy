@@ -1,0 +1,156 @@
+{
+    "title": "Configurações",
+    "subline": "Gerencie seus dados e as configurações do app",
+    "tabsLabel": "Configurações",
+    "tabs": {
+        "sync": "Sincronização",
+        "preferences": "Preferências",
+        "data": "Backup e dados",
+        "about": "Sobre"
+    },
+    "playthroughCount": "{count, plural, one {{amount} partida} other {{amount} partidas}}",
+    "storageNote": {
+        "title": "Armazenamento de dados",
+        "body": "Seus dados ficam salvos neste navegador. Limpar os dados do navegador apaga tudo, a menos que a sincronização guarde uma cópia. Exporte um backup de vez em quando."
+    },
+    "data": {
+        "title": "Gerenciamento de dados",
+        "export": {
+            "title": "Exportar dados",
+            "button": "Exportar todas as partidas",
+            "description": "Baixe um arquivo de backup de todas as suas partidas salvas.",
+            "done": "Backup baixado"
+        },
+        "import": {
+            "title": "Importar dados",
+            "description": "Envie um arquivo exportado antes (.json)",
+            "fileLabel": "Arquivo de backup",
+            "chooseFile": "Escolher arquivo",
+            "noFile": "Nenhum arquivo escolhido",
+            "review": "Revisar importação",
+            "merged": "Importação mesclada",
+            "replaced": "Dados substituídos",
+            "undo": "Desfazer"
+        },
+        "reset": {
+            "title": "Redefinir todos os dados",
+            "warning": "Isso exclui todas as partidas deste dispositivo. Você pode desfazer por 10 segundos depois.",
+            "button": "Redefinir tudo",
+            "confirmTitle": "Redefinir todos os dados?",
+            "confirmBody": "Isso exclui {names}.",
+            "cancel": "Cancelar",
+            "confirm": "Sim, redefinir tudo",
+            "syncedCopy": "Excluir também a cópia sincronizada no {provider}",
+            "syncedOn": "A sincronização continua ativada. Seus outros dispositivos vão perder estas partidas na próxima sincronização deles. Se não tiver certeza, exporte um backup antes.",
+            "done": "Todos os dados redefinidos",
+            "doneMessage": "{count, plural, one {{amount} partida excluída} other {{amount} partidas excluídas}}.",
+            "undo": "Desfazer",
+            "doneMessageDisconnected": "{count, plural, one {{amount} partida excluída} other {{amount} partidas excluídas}}. A sincronização está desconectada neste navegador."
+        }
+    },
+    "appearance": {
+        "title": "Aparência",
+        "description": "Escolha a aparência do app. A escolha fica salva só neste dispositivo e não faz parte do backup.",
+        "themeLabel": "Tema",
+        "themes": {
+            "light": "Claro",
+            "dark": "Escuro",
+            "system": "Sistema"
+        },
+        "themeNote": "Sistema segue o seu dispositivo, que agora usa o tema {mode, select, dark {escuro} other {claro}}."
+    },
+    "playthroughs": {
+        "title": "Partidas",
+        "description": "Crie, troque, edite e exclua partidas na página Partidas.",
+        "manage": "Gerenciar partidas"
+    },
+    "about": {
+        "version": "Versão {version}",
+        "summary": "Uma ferramenta para acompanhar o progresso em Supermarket Simulator. Seus dados ficam salvos neste navegador ou no seu próprio armazenamento na nuvem, se você ativar a sincronização.",
+        "officialGame": "Jogo oficial",
+        "disclaimer": "Não é afiliado, endossado nem ligado a Supermarket Simulator ou aos seus desenvolvedores. Todas as marcas registradas e o conteúdo do jogo pertencem aos seus donos."
+    },
+    "importDialog": {
+        "title": "Importar um backup",
+        "fileInfo": "{name} · {size}",
+        "bytes": "{count} B",
+        "kilobytes": "{count} KB",
+        "failedTitle": "Falha na importação",
+        "checksTitle": "Arquivo verificado",
+        "checks": "{count, plural, one {{amount} entrada lida} other {{amount} entradas lidas}}, {kept} com id e nome.",
+        "howToApply": "Como o arquivo deve ser aplicado?",
+        "modeLabel": "Modo de importação",
+        "modes": {
+            "merge": "Mesclar neste dispositivo (recomendado)",
+            "replace": "Substituir tudo"
+        },
+        "modeNotes": {
+            "merge": "Adiciona as partidas novas. Se uma partida estiver nos dois lados, vale a cópia atualizada por último. As partidas que só estão neste dispositivo ficam. Sua partida ativa continua ativa.",
+            "replace": "Exclui as partidas deste dispositivo e mantém só as do arquivo. A partida ativa do arquivo passa a ser a ativa."
+        },
+        "whatChanges": "O que muda",
+        "columns": {
+            "playthrough": "Partida",
+            "inFile": "No arquivo",
+            "onDevice": "No dispositivo",
+            "result": "Resultado"
+        },
+        "results": {
+            "added": "Adicionada",
+            "updated": "Atualizada pelo arquivo",
+            "kept": "Mantida",
+            "replaced": "Do arquivo",
+            "removed": "Removida"
+        },
+        "notThere": "Não está",
+        "noPlaythroughs": "O arquivo não tem partidas.",
+        "undoNote": "Você pode desfazer a importação por 10 segundos depois.",
+        "cancel": "Cancelar",
+        "close": "Fechar",
+        "merge": "Mesclar",
+        "replace": "Substituir tudo",
+        "skipped": "{count, plural, one {{amount} entrada ignorada} other {{amount} entradas ignoradas}}.",
+        "levelsFixed": "{count, plural, one {{amount} nível da loja abaixo de 0 será salvo} other {{amount} níveis da loja abaixo de 0 serão salvos}} como 0.",
+        "errors": {
+            "notJson": "Este arquivo não é um backup do Supermarket Simulator Buddy: não é um JSON válido. Nada foi alterado.",
+            "playthroughsMissing": "Este arquivo não é um backup do Supermarket Simulator Buddy: a lista de partidas está faltando. Nada foi alterado."
+        },
+        "summary": {
+            "added": "{amount} adicionadas",
+            "updated": "{amount} atualizadas",
+            "kept": "{amount} mantidas",
+            "replaced": "{amount} substituídas",
+            "removed": "{amount} removidas"
+        }
+    },
+    "region": {
+        "title": "Idioma e região",
+        "description": "Como textos, números e datas aparecem neste dispositivo. Salvo só neste dispositivo.",
+        "language": {
+            "label": "Idioma",
+            "hint": "Nomes do jogo, como produtos, licenças e ferramentas, continuam em inglês."
+        },
+        "numberFormat": {
+            "label": "Formato de número",
+            "hint": "Exemplo: {example}",
+            "options": {
+                "auto": "Automático, segue o idioma",
+                "us": "1,234.56 (Estados Unidos)",
+                "european": "1.234,56 (Alemanha)",
+                "french": "1 234,56 (França)",
+                "swiss": "1’234.56 (Suíça)",
+                "indian": "12,34,567.89 (Índia)"
+            }
+        },
+        "dateFormat": {
+            "label": "Formato de data",
+            "hint": "Exemplo: {example}",
+            "options": {
+                "auto": "Automático, segue o idioma",
+                "mdy": "Mês/Dia/Ano",
+                "dmy": "Dia/Mês/Ano",
+                "ymd": "Ano-Mês-Dia"
+            }
+        }
+    }
+}

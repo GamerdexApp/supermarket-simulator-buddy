@@ -1,0 +1,39 @@
+{
+    "title": "Banka Kredileri",
+    "subline": "{name} için kredilerini yönet",
+    "emptyDescription": "Kredilerini takip etmek için bir oynanış seç veya oluştur.",
+    "loanTitle": "Kredi #{number}",
+    "states": {
+        "active": "Aktif",
+        "available": "Uygun",
+        "locked": "Kilitli"
+    },
+    "principal": "Ana Para",
+    "rate": "Günlük Faiz Oranı",
+    "level": "Gereken Mağaza Seviyesi",
+    "term": "Vade: {count, plural, one {{amount} gün} other {{amount} gün}}",
+    "days": "{count, plural, one {{amount} gün} other {{amount} gün}}",
+    "termFixed": "Kredi kaldırılana kadar vade sabit kalır.",
+    "details": "Kredi Ayrıntıları",
+    "totalInterest": "Toplam Faiz",
+    "totalPayment": "Toplam Ödeme",
+    "dailyPayment": "Günlük Ödeme",
+    "activate": "Krediyi Etkinleştir",
+    "activatedOn": "Etkinleştirme: {date}",
+    "remove": "Krediyi kaldır",
+    "requiresLevel": "Mağaza seviyesi {level} gerekli (senin seviyen {current})",
+    "locked": "Kilitli",
+    "activated": "Kredi #{number} etkinleştirildi",
+    "removed": "Kredi #{number} kaldırıldı",
+    "undo": "Geri al",
+    "yourLoans": {
+        "title": "Kredilerin",
+        "activeLoans": "Aktif krediler",
+        "dailyPayment": "Günlük ödeme",
+        "totalDebt": "Toplam kredi borcu",
+        "none": "Aktif kredi yok. Aşağıdaki bir kredide vade seç ve krediyi etkinleştir.",
+        "line": "{principal}, günlük {rate} faizle, {count, plural, one {{amount} gün} other {{amount} gün}}",
+        "payments": "Günde {daily} · toplam {total}",
+        "formula": "Faiz, ana paranın günlük oranla ve gün cinsinden vadeyle çarpımıdır."
+    }
+}

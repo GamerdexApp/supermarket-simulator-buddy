@@ -1,0 +1,81 @@
+{
+    "skipToContent": "跳至主要內容",
+    "closeMenu": "關閉選單",
+    "openMenu": "開啟選單",
+    "menuLabel": "網站選單",
+    "mainNav": "主要導覽",
+    "brandWords": {
+        "item1": "Supermarket",
+        "item2": "Simulator",
+        "item3": "Buddy"
+    },
+    "noPlaythroughHint": "建立一個存檔即可開始記錄。",
+    "switcher": {
+        "sectionLabel": "存檔",
+        "loading": "載入中",
+        "none": "未選擇",
+        "switch": "切換存檔",
+        "playthroughs": "存檔",
+        "active": "目前",
+        "all": "所有存檔",
+        "create": "新增存檔",
+        "level": "等級 {level}",
+        "rowDetail": "等級 {level} · {date}",
+        "switched": "已切換至 {name}",
+        "empty": "尚未建立任何存檔"
+    },
+    "storeLevel": {
+        "label": "商店等級",
+        "edit": "商店等級 {level}，選取後可輸入等級",
+        "atZero": "已經是 0 級"
+    },
+    "empty": {
+        "title": "未選擇存檔",
+        "description": "建立一個存檔，或從清單中選一個，即可查看此頁面。",
+        "create": "新增存檔",
+        "all": "所有存檔"
+    },
+    "footer": {
+        "tagline": "免費的 Supermarket Simulator 進度追蹤工具。你的資料會留在瀏覽器中；開啟同步後，也會存放在你自己的雲端儲存空間。",
+        "support": "支援",
+        "about": "關於",
+        "settings": "設定",
+        "discord": "Discord",
+        "github": "GitHub",
+        "officialGame": "官方遊戲",
+        "privacy": "隱私權政策",
+        "terms": "服務條款",
+        "disclaimerTitle": "免責聲明",
+        "disclaimer": "本專案與 Supermarket Simulator 及其開發者無關，未獲其背書，也與其沒有任何關聯。所有商標與遊戲內容皆屬其所有者。",
+        "framework": "以 Gamerdex 框架打造，這是免費遊戲進度追蹤工具共用的基礎。",
+        "visitGamerdex": "前往 Gamerdex"
+    },
+    "notFound": {
+        "title": "找不到頁面",
+        "body": "<code>{path}</code> 沒有頁面。",
+        "didYouMean": "你是不是要找 <link>{suggestion}</link>？",
+        "quickLinks": "頁面",
+        "toOverview": "前往總覽",
+        "toHome": "返回首頁"
+    },
+    "saveFailed": {
+        "title": "未儲存",
+        "message": "瀏覽器無法儲存你的變更。請下載備份，以免資料遺失。",
+        "exportBackup": "下載備份"
+    },
+    "nav": {
+        "groups": {
+            "store": "你的商店",
+            "plan": "規劃"
+        },
+        "items": {
+            "overview": "總覽",
+            "market": "市場",
+            "management": "管理",
+            "bank": "銀行",
+            "shoppingList": "購物清單",
+            "settings": "設定",
+            "playthroughs": "存檔"
+        }
+    }
+}

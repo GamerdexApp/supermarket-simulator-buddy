@@ -1,0 +1,85 @@
+{
+    "title": "存檔",
+    "subline": "{count, plural, other {{amount} 個存檔}}",
+    "newPlaythrough": "新增存檔",
+    "loading": "正在讀取此瀏覽器中儲存的資料。",
+    "filters": {
+        "search": "依名稱搜尋",
+        "sortLabel": "排序方式",
+        "sort": {
+            "lastModified": "最後更新",
+            "name": "名稱",
+            "createdAt": "建立日期",
+            "storeLevel": "商店等級"
+        },
+        "showing": "顯示 {shown}/{count, plural, other {{amount} 個存檔}}",
+        "clear": "清除搜尋"
+    },
+    "empty": {
+        "title": "尚無存檔",
+        "deletedTitle": "存檔已刪除",
+        "description": "建立一個存檔，開始記錄你的商店。除非開啟同步，所有資料都只會留在此瀏覽器中。",
+        "restore": "從備份還原"
+    },
+    "noMatch": {
+        "title": "沒有符合「{query}」的存檔",
+        "description": "換個名稱試試看。"
+    },
+    "card": {
+        "active": "目前",
+        "setActive": "設為目前存檔",
+        "openOverview": "開啟總覽",
+        "edit": "編輯",
+        "delete": "刪除",
+        "created": "建立於 {date}",
+        "lastModified": "最後更新於 {date}",
+        "storeLevel": "商店等級",
+        "spending": "總花費",
+        "licenses": "執照",
+        "shopping": "購物清單",
+        "ofTotal": "{count}/{total}",
+        "switched": "已切換至 {name}"
+    },
+    "fields": {
+        "nameLabel": "存檔名稱",
+        "namePlaceholder": "例如：我的第一家店",
+        "nameError": "請輸入這個存檔的名稱。",
+        "descriptionLabel": "說明",
+        "descriptionPlaceholder": "為這個存檔加上說明…",
+        "cancel": "取消"
+    },
+    "create": {
+        "title": "新增存檔",
+        "submit": "建立",
+        "done": "已建立 {name}",
+        "starterTitle": "每個新存檔的初始內容",
+        "starter": {
+            "item1": "商店等級 0",
+            "item2": "執照 0，免費的初始執照",
+            "item3": "擴建區域 1",
+            "item4": "Paper Bag、Sponge 和 Mop 工具"
+        }
+    },
+    "edit": {
+        "title": "編輯存檔",
+        "description": "欄位會顯示已儲存的值。",
+        "save": "儲存",
+        "saved": "已儲存",
+        "savedMessage": "{name} 已更新。",
+        "dates": "建立於 {created} · 最後更新於 {updated}"
+    },
+    "delete": {
+        "title": "刪除存檔",
+        "question": "確定要刪除「{name}」嗎？",
+        "description": "這會從此裝置刪除這個存檔的所有已儲存進度。如果開啟了同步，下次同步時也會從你的其他裝置刪除。",
+        "activeNext": "這是你目前的存檔。{next} 將成為目前的存檔。",
+        "activeLast": "這是你目前的存檔，也是唯一的存檔。刪除後將沒有目前的存檔。",
+        "exportFirst": "先匯出備份",
+        "cancel": "取消",
+        "confirm": "刪除",
+        "done": "已刪除 {name}",
+        "doneMessage": "10 秒內復原即可救回。",
+        "undo": "復原"
+    },
+    "sublineActive": "{count, plural, other {{amount} 個存檔}} · 目前的存檔是 {name}"
+}

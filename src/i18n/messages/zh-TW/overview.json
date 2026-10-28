@@ -1,0 +1,56 @@
+{
+    "title": "總覽",
+    "subline": "{name} · 一覽所有內容",
+    "emptyDescription": "選擇或建立一個存檔，即可一覽它的進度。",
+    "identity": {
+        "created": "建立時間：{date}",
+        "lastModified": "最後修改：{date}",
+        "manage": "管理存檔"
+    },
+    "storeLevel": {
+        "title": "商店等級",
+        "subtitle": "目前的進度等級",
+        "hint": "可在側邊欄的商店等級調整器中修改。"
+    },
+    "financial": {
+        "title": "財務總覽",
+        "activeLoans": "生效中的貸款",
+        "dailyPayments": "每日還款",
+        "totalDebt": "貸款總額",
+        "none": "沒有生效中的貸款。開啟銀行即可申請。",
+        "formula": "每筆貸款的費用為本金加上本金乘以日利率再乘以期限。每筆生效中的貸款都視為每天還款。",
+        "view": "查看銀行詳情"
+    },
+    "investment": {
+        "title": "總投入",
+        "subtitle": "管理與市場的花費合計",
+        "formula": "管理 {managementSpent} + 市場 {marketSpent} = {total}"
+    },
+    "management": {
+        "title": "管理",
+        "licenses": "執照",
+        "growth": "擴建升級",
+        "storage": "倉庫升級",
+        "employees": "員工",
+        "unlocked": "已解鎖 {owned}/{total}",
+        "hired": "已僱用 {owned}/{total}",
+        "perDay": "{amount}/天",
+        "hiringNote": "目前已支付的僱用費用：{amount}。不計入總投入。",
+        "total": "總投入",
+        "view": "查看管理"
+    },
+    "market": {
+        "title": "市場",
+        "products": "商品",
+        "licensesUnlocked": "{count, plural, other {已解鎖 {amount} 張執照}}",
+        "available": "{amount} 個可用",
+        "tools": "工具",
+        "vehicles": "車輛",
+        "furniture": "家具",
+        "furnitureItems": "{count, plural, other {{amount} 件可用}}",
+        "unlocked": "已解鎖 {owned}/{total}",
+        "note": "家具和油漆不會儲存，因此不計入花費。",
+        "total": "總投入",
+        "view": "查看市場"
+    }
+}

@@ -1,0 +1,102 @@
+{
+    "header": {
+        "label": "Trang giới thiệu",
+        "features": "Tính năng",
+        "faq": "Hỏi đáp",
+        "github": "GitHub",
+        "discord": "Discord"
+    },
+    "cta": {
+        "create": "Tạo lượt chơi đầu tiên",
+        "dashboard": "Vào bảng điều khiển",
+        "newPlaythrough": "Lượt chơi mới",
+        "learn": "Tìm hiểu thêm"
+    },
+    "hero": {
+        "title": "Theo dõi <accent>đế chế</accent> siêu thị của bạn",
+        "body": "Ứng dụng đồng hành tốt nhất cho Supermarket Simulator. Quản lý nhiều lượt chơi, theo dõi tiến độ và tự tin xây dựng đế chế siêu thị của bạn.",
+        "preview": "Tổng quan của Pezz's Market với tổng chi tiêu, tiến độ cửa hàng và khoản vay đang có"
+    },
+    "continueCard": {
+        "label": "Tiếp tục",
+        "level": "Cấp cửa hàng {level}",
+        "updated": "Cập nhật lần cuối {date}"
+    },
+    "steps": {
+        "title": "Bắt đầu trong một phút",
+        "items": {
+            "item1": {
+                "title": "Tạo một lượt chơi",
+                "body": "Đặt tên cho nó. Mọi thứ được lưu trong trình duyệt này, không cần tài khoản."
+            },
+            "item2": {
+                "title": "Bắt đầu từ cơ bản",
+                "body": "Mỗi lượt chơi bắt đầu với Giấy phép 0, khu mở rộng 1 cùng Paper Bag, Sponge và Mop."
+            },
+            "item3": {
+                "title": "Mở khóa khi chơi",
+                "body": "Nâng cấp cửa hàng, rồi mở khóa giấy phép, khu, nhân viên, dụng cụ và phương tiện như trong game."
+            }
+        }
+    },
+    "features": {
+        "eyebrow": "Mọi thứ bạn cần",
+        "title": "Toàn bộ tiến độ ở một nơi",
+        "body": "Supermarket Simulator Buddy theo dõi đầy đủ mọi mặt của việc kinh doanh siêu thị. Từ giấy phép đến kho, bạn đều có đủ.",
+        "items": {
+            "item1": {
+                "title": "Nhiều lượt chơi",
+                "body": "Tạo và quản lý không giới hạn lượt chơi. Theo dõi riêng các chiến thuật và lượt chơi thử thách khác nhau."
+            },
+            "item2": {
+                "title": "Quản lý giấy phép",
+                "body": "Theo dõi mọi giấy phép sản phẩm và xem mỗi giấy phép mở khóa những mặt hàng nào cho cửa hàng."
+            },
+            "item3": {
+                "title": "Mở rộng cửa hàng",
+                "body": "Theo dõi việc mở rộng cửa hàng với chi tiết từng khu kho và khu mở rộng."
+            },
+            "item4": {
+                "title": "Theo dõi ngân sách",
+                "body": "Nắm rõ chi tiêu ở mọi hạng mục với bản tóm tắt tài chính đầy đủ."
+            },
+            "item5": {
+                "title": "Danh sách mua sắm",
+                "body": "Tạo danh sách mua sắm để biết cần mua gì ở mỗi cửa hàng."
+            },
+            "item6": {
+                "title": "Xuất/Nhập dữ liệu",
+                "body": "Xuất tiến độ thành JSON để sao lưu hoặc chia sẻ với bạn bè. Nhập dữ liệu bất cứ lúc nào."
+            }
+        }
+    },
+    "faq": {
+        "title": "Câu hỏi thường gặp",
+        "items": {
+            "item1": {
+                "question": "Supermarket Simulator Buddy là gì?",
+                "answer": "Supermarket Simulator Buddy là công cụ theo dõi tiến độ đầy đủ cho game Supermarket Simulator. Nó giúp bạn quản lý nhiều lượt chơi, theo dõi việc mở rộng cửa hàng, quản lý giấy phép và nắm tình hình tài chính, tất cả ở một nơi."
+            },
+            "item2": {
+                "question": "Dữ liệu của tôi được lưu thế nào?",
+                "answer": "Toàn bộ dữ liệu được lưu ngay trong trình duyệt bằng localStorage. Nhờ vậy tiến độ của bạn là riêng tư và không cần máy chủ hay tài khoản. Bạn cũng có thể xuất và nhập dữ liệu dưới dạng tệp JSON để sao lưu hoặc chia sẻ."
+            },
+            "item3": {
+                "question": "Tôi có thể theo dõi nhiều lượt chơi không?",
+                "answer": "Có! Bạn có thể tạo và quản lý nhiều lượt chơi, mỗi lượt có tiến độ riêng. Chuyển đổi dễ dàng bằng menu thả xuống ở thanh bên và theo dõi riêng các chiến thuật hoặc lượt chơi thử thách."
+            },
+            "item4": {
+                "question": "Tôi có thể theo dõi những gì?",
+                "answer": "Theo dõi cấp cửa hàng, giấy phép, khu kho, khu mở rộng, dụng cụ, phương tiện và danh sách mua sắm, cùng xem giá nội thất và sơn. Nắm tình hình tài chính với phần theo dõi ngân sách chi tiết ở mọi hạng mục."
+            },
+            "item5": {
+                "question": "Ứng dụng này có miễn phí không?",
+                "answer": "Có, Supermarket Simulator Buddy hoàn toàn miễn phí. Không có gói đăng ký, không quảng cáo và không có chi phí ẩn. Mọi tính năng đều dành cho tất cả mọi người."
+            }
+        }
+    },
+    "closing": {
+        "title": "Sẵn sàng điều hành cửa hàng chưa?",
+        "body": "Miễn phí, riêng tư và lưu trong trình duyệt của bạn."
+    }
+}

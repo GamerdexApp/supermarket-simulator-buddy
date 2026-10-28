@@ -1,0 +1,81 @@
+{
+    "skipToContent": "Aller au contenu",
+    "closeMenu": "Fermer le menu",
+    "openMenu": "Ouvrir le menu",
+    "menuLabel": "Menu du site",
+    "mainNav": "Principal",
+    "brandWords": {
+        "item1": "Supermarket",
+        "item2": "Simulator",
+        "item3": "Buddy"
+    },
+    "noPlaythroughHint": "Créez une partie pour commencer le suivi.",
+    "switcher": {
+        "sectionLabel": "Partie",
+        "loading": "Chargement",
+        "none": "Aucune sélection",
+        "switch": "Changer de partie",
+        "playthroughs": "Parties",
+        "active": "Active",
+        "all": "Toutes les parties",
+        "create": "Nouvelle partie",
+        "level": "Niveau {level}",
+        "rowDetail": "Niveau {level} · {date}",
+        "switched": "Partie active : {name}",
+        "empty": "Aucune partie créée pour l'instant"
+    },
+    "storeLevel": {
+        "label": "Niveau du magasin",
+        "edit": "Niveau du magasin {level}, sélectionnez pour saisir un niveau",
+        "atZero": "Déjà au niveau 0"
+    },
+    "empty": {
+        "title": "Aucune partie sélectionnée",
+        "description": "Créez une partie ou choisissez-en une dans votre liste pour voir cette page.",
+        "create": "Nouvelle partie",
+        "all": "Toutes les parties"
+    },
+    "footer": {
+        "tagline": "Un outil de suivi de progression gratuit pour Supermarket Simulator. Vos données restent dans votre navigateur, ou dans votre propre stockage cloud si vous activez la synchronisation.",
+        "support": "Aide",
+        "about": "À propos",
+        "settings": "Paramètres",
+        "discord": "Discord",
+        "github": "GitHub",
+        "officialGame": "Jeu officiel",
+        "privacy": "Politique de confidentialité",
+        "terms": "Conditions d'utilisation",
+        "disclaimerTitle": "Avertissement",
+        "disclaimer": "Ce projet n'est pas affilié à Supermarket Simulator ni à ses développeurs, ni approuvé par eux. Toutes les marques et tous les contenus du jeu appartiennent à leurs propriétaires.",
+        "framework": "Construit avec le framework Gamerdex, une base commune pour des outils de suivi de jeux gratuits.",
+        "visitGamerdex": "Visiter Gamerdex"
+    },
+    "notFound": {
+        "title": "Page introuvable",
+        "body": "Il n'existe aucune page à l'adresse <code>{path}</code>.",
+        "didYouMean": "Vouliez-vous dire <link>{suggestion}</link> ?",
+        "quickLinks": "Sections",
+        "toOverview": "Aller à la vue d'ensemble",
+        "toHome": "Retour à l'accueil"
+    },
+    "saveFailed": {
+        "title": "Non enregistré",
+        "message": "Le navigateur n'a pas pu stocker vos modifications. Téléchargez une sauvegarde pour ne rien perdre.",
+        "exportBackup": "Télécharger une sauvegarde"
+    },
+    "nav": {
+        "groups": {
+            "store": "Votre magasin",
+            "plan": "Planifier"
+        },
+        "items": {
+            "overview": "Vue d'ensemble",
+            "market": "Marché",
+            "management": "Gestion",
+            "bank": "Banque",
+            "shoppingList": "Liste de courses",
+            "settings": "Paramètres",
+            "playthroughs": "Parties"
+        }
+    }
+}

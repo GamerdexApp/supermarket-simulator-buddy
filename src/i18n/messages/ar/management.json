@@ -1,0 +1,149 @@
+{
+    "title": "الإدارة",
+    "tabsLabel": "الإدارة",
+    "tabs": {
+        "licenses": "التراخيص",
+        "growth": "التوسعة",
+        "storage": "المخزن",
+        "hiring": "التوظيف",
+        "customizations": "التخصيصات"
+    },
+    "sublines": {
+        "licenses": "{name} · افتح التراخيص لبيع منتجات أكثر",
+        "growth": "{name} · وسّع أرضية المتجر قسمًا بعد قسم",
+        "storage": "{name} · وسّع غرفة المخزن قسمًا بعد قسم",
+        "hiring": "{name} · وظّف موظفين لتشغيل المتجر",
+        "customizations": "{name} · تغييرات المتجر المشتراة في اللعبة"
+    },
+    "emptyDescription": "اختر جولة لعب أو أنشئ واحدة لتتبع التراخيص وتوسعة المتجر والمخزن والموظفين.",
+    "storeLevel": "مستوى المتجر",
+    "storeLevelCaption": "غيّره من الشريط الجانبي",
+    "free": "مجاني",
+    "requiresLevel": "يتطلب مستوى المتجر {level} (المستوى الحالي {current})",
+    "locked": "مقفل",
+    "states": {
+        "unlocked": "مفتوح",
+        "canUnlock": "يمكن فتحه",
+        "locked": "مقفل"
+    },
+    "licenses": {
+        "totalSpent": "إجمالي الإنفاق على التراخيص",
+        "unlockedOf": "تم فتح {owned} من {count, plural, zero {{amount} ترخيص} one {{amount} ترخيص} two {{amount} ترخيصان} few {{amount} تراخيص} many {{amount} ترخيصًا} other {{amount} ترخيص}}",
+        "canUnlockNow": "يمكن فتحه الآن",
+        "lockedByLevel": "مقفل بسبب المستوى",
+        "title": "الترخيص {number}",
+        "price": "السعر",
+        "level": "مستوى المتجر",
+        "unlocks": "يفتح {count, plural, zero {{amount} منتج} one {{amount} منتج} two {{amount} منتجان} few {{amount} منتجات} many {{amount} منتجًا} other {{amount} منتج}}",
+        "unlock": "فتح الترخيص",
+        "undoUnlock": "تراجع عن الفتح",
+        "unlocked": "تم فتح الترخيص {number}",
+        "undone": "تمت إعادة قفل الترخيص {number}",
+        "filters": {
+            "search": "ابحث عن التراخيص أو المنتجات",
+            "title": "تصفية التراخيص",
+            "show": "عرض",
+            "showOptions": {
+                "all": "الكل",
+                "unlocked": "مفتوح",
+                "canUnlock": "يمكن فتحه",
+                "locked": "مقفل"
+            },
+            "sort": "الترتيب حسب",
+            "sortOptions": {
+                "number": "رقم الترخيص",
+                "price": "السعر من الأقل إلى الأعلى",
+                "storeLevel": "مستوى المتجر من الأقل إلى الأعلى"
+            },
+            "summary": "عرض {shown} من {count, plural, zero {{amount} ترخيص} one {{amount} ترخيص} two {{amount} ترخيصان} few {{amount} تراخيص} many {{amount} ترخيصًا} other {{amount} ترخيص}}",
+            "showButton": "عرض {count, plural, zero {{amount} ترخيص} one {{amount} ترخيص} two {{amount} ترخيصان} few {{amount} تراخيص} many {{amount} ترخيصًا} other {{amount} ترخيص}}"
+        },
+        "noMatch": "لا توجد تراخيص تطابق عوامل التصفية هذه",
+        "noMatchDescription": "جرّب بحثًا آخر أو اعرض كل التراخيص."
+    },
+    "sections": {
+        "growth": {
+            "totalSpent": "إجمالي الإنفاق على التوسعة",
+            "unlockedOf": "تم فتح {owned} من {count, plural, zero {{amount} قسم} one {{amount} قسم} two {{amount} قسمان} few {{amount} أقسام} many {{amount} قسمًا} other {{amount} قسم}}",
+            "title": "قسم التوسعة {num}",
+            "pathLabel": "أقسام التوسعة",
+            "unlocked": "تم فتح قسم التوسعة {num}",
+            "undone": "تمت إعادة قفل {count, plural, zero {أقسام التوسعة {range}} one {قسم التوسعة {range}} two {قسمَي التوسعة {range}} few {أقسام التوسعة {range}} many {أقسام التوسعة {range}} other {أقسام التوسعة {range}}}",
+            "cascadeTitle": "التراجع عن قسم التوسعة {num}؟"
+        },
+        "storage": {
+            "totalSpent": "إجمالي الإنفاق على المخزن",
+            "unlockedOf": "تم فتح {owned} من {count, plural, zero {{amount} قسم} one {{amount} قسم} two {{amount} قسمان} few {{amount} أقسام} many {{amount} قسمًا} other {{amount} قسم}}",
+            "title": "قسم المخزن {num}",
+            "pathLabel": "أقسام المخزن",
+            "firstSectionNote": "يكلف قسم المخزن 1 مبلغ $800 عند مستوى المتجر 0 في بيانات اللعبة، بينما قسم التوسعة 1 مجاني.",
+            "unlocked": "تم فتح قسم المخزن {num}",
+            "undone": "تمت إعادة قفل {count, plural, zero {أقسام المخزن {range}} one {قسم المخزن {range}} two {قسمَي المخزن {range}} few {أقسام المخزن {range}} many {أقسام المخزن {range}} other {أقسام المخزن {range}}}",
+            "cascadeTitle": "التراجع عن قسم المخزن {num}؟"
+        },
+        "nextSection": "القسم التالي",
+        "nextSectionValue": "القسم {num} · المستوى {level} · {price}",
+        "allUnlocked": "الكل مفتوح",
+        "level": "المستوى {level}",
+        "size": "الحجم {size}",
+        "nextToUnlock": "التالي للفتح",
+        "unlock": "فتح",
+        "unlockFirst": "افتح القسم {num} أولًا.",
+        "cascade": {
+            "body": "{count, plural, zero {الأقسام {range} تعتمد عليه وتُقفل معه} one {القسم {range} يعتمد عليه ويُقفل معه} two {القسمان {range} يعتمدان عليه ويُقفلان معه} few {الأقسام {range} تعتمد عليه وتُقفل معه} many {الأقسام {range} تعتمد عليه وتُقفل معه} other {الأقسام {range} تعتمد عليه وتُقفل معه}}. ينخفض إجمالي الإنفاق بمقدار {price}.",
+            "confirm": "التراجع عن {count, plural, zero {الأقسام {range}} one {القسم {range}} two {القسمين {range}} few {الأقسام {range}} many {الأقسام {range}} other {الأقسام {range}}}",
+            "keep": "إبقاؤها مفتوحة"
+        },
+        "range": "{first} إلى {last}"
+    },
+    "hiring": {
+        "dailyWages": "إجمالي الأجور اليومية",
+        "dailyWagesCaption": "التكلفة اليومية المجمعة لكل الموظفين",
+        "hired": "الموظفون المعيَّنون",
+        "hiringCosts": "تكاليف التوظيف المدفوعة",
+        "hiringCostsCaption": "تُدفع مرة واحدة، وليست جزءًا من الأجور اليومية",
+        "roles": {
+            "cashiers": {
+                "title": "أمناء الصندوق",
+                "stat": "إتمام الدفع: <stat>{value}</stat>",
+                "employeeName": "أمين الصندوق {number}"
+            },
+            "restockers": {
+                "title": "عمال تعبئة الرفوف",
+                "stat": "عدد الرفوف: <stat>{value}</stat>",
+                "employeeName": "عامل تعبئة الرفوف {number}"
+            },
+            "customerHelpers": {
+                "title": "مساعدو العملاء",
+                "stat": "عدد نقاط الدفع: <stat>{value}</stat>",
+                "employeeName": "مساعد العملاء {number}"
+            },
+            "securityGuards": {
+                "title": "حراس الأمن",
+                "employeeName": "حارس الأمن {number}"
+            },
+            "janitors": {
+                "title": "عمال النظافة",
+                "employeeName": "عامل النظافة {number}"
+            }
+        },
+        "hiredOf": "تم توظيف {count} من {total}",
+        "roleWages": "الأجور اليومية: {amount}",
+        "hiredBadge": "معيَّن",
+        "level": "مستوى المتجر",
+        "cost": "تكلفة التوظيف",
+        "wage": "الأجر اليومي",
+        "perDay": "{amount} / يوم",
+        "hire": "توظيف",
+        "fire": "فصل",
+        "hiredToast": "تم توظيف {name}",
+        "firedToast": "تم فصل {name}"
+    },
+    "customizations": {
+        "total": "سعر الثلاثة",
+        "totalCaption": "محسوب من بيانات اللعبة، وغير محفوظ",
+        "note": "تُشترى هذه التغييرات في اللعبة. لا يُحفظ شيء هنا.",
+        "price": "السعر"
+    },
+    "tabCount": "{owned} / {total}"
+}

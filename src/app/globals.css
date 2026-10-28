@@ -1,9 +1,161 @@
 @import "tailwindcss";
-@import "flowbite-react/plugin/tailwindcss";
-@source "../../.flowbite-react/class-list.json";
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-.Toastify__toast {
-  padding: 0 !important;
+/* Fresh Produce, the light theme (variant `store`). */
+:root {
+  --bg: #f4f7f0;
+  --surface: #ffffff;
+  --line: #d3dec8;
+  --track: #e4ecda;
+  --ink: #14211a;
+  --muted: #4f6155;
+  --primary: #1f7a33;
+  --on-primary: #ffffff;
+  --tint: #e3f2e0;
+  --link: #1b5fa8;
+  --danger: #b3261e;
+  --warn: #8a5300;
+  --accent: #b8e32a;
+  --locked: #6b7a70;
+  --scrim: rgba(15, 27, 45, 0.55);
+  --sb-bg: #0f1b2d;
+  --sb-text: #eaf3e4;
+  --sb-muted: #9fb4a7;
+  --sb-line: #243a4f;
+  --sb-active-bg: #b8e32a;
+  --sb-active-text: #0f1b2d;
+  --sb-ring: #b8e32a;
+  --kept: #1f7a33;
+  --changed: #8a5300;
+  --added: #1b5fa8;
+  --fixed: #4b4fa3;
+  --ring: var(--primary);
+}
+
+/* Night Shift, the dark theme (variant `store-dark`). */
+.dark {
+  --bg: #0f1115;
+  --surface: #171a21;
+  --line: #2a2f3a;
+  --track: #232834;
+  --ink: #eceff4;
+  --muted: #9aa3b2;
+  --primary: #3ddc97;
+  --on-primary: #06281a;
+  --tint: #17372b;
+  --link: #8db8ff;
+  --danger: #ff8a80;
+  --warn: #ffc266;
+  --accent: #3ddc97;
+  --locked: #8892a3;
+  --scrim: rgba(0, 0, 0, 0.62);
+  --sb-bg: #0a0c10;
+  --sb-text: #eceff4;
+  --sb-muted: #8892a3;
+  --sb-line: #1b1f28;
+  --sb-active-bg: #1f2a27;
+  --sb-active-text: #3ddc97;
+  --sb-ring: #3ddc97;
+  --kept: #3ddc97;
+  --changed: #ffc266;
+  --added: #8db8ff;
+  --fixed: #b0b3f5;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-line: var(--line);
+  --color-track: var(--track);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-primary: var(--primary);
+  --color-on-primary: var(--on-primary);
+  --color-tint: var(--tint);
+  --color-link: var(--link);
+  --color-danger: var(--danger);
+  --color-warn: var(--warn);
+  --color-accent: var(--accent);
+  --color-locked: var(--locked);
+  --color-scrim: var(--scrim);
+  --color-sb-bg: var(--sb-bg);
+  --color-sb-text: var(--sb-text);
+  --color-sb-muted: var(--sb-muted);
+  --color-sb-line: var(--sb-line);
+  --color-sb-active-bg: var(--sb-active-bg);
+  --color-sb-active-text: var(--sb-active-text);
+  --color-sb-ring: var(--sb-ring);
+  --color-kept: var(--kept);
+  --color-changed: var(--changed);
+  --color-added: var(--added);
+  --color-fixed: var(--fixed);
+
+  --font-sans: var(--font-plex-sans), system-ui, sans-serif;
+  --font-mono: var(--font-plex-mono), ui-monospace, monospace;
+  --font-brand: var(--font-poppins), var(--font-plex-sans), sans-serif;
+}
+
+@layer base {
+  html {
+    color-scheme: light;
+  }
+
+  html.dark {
+    color-scheme: dark;
+  }
+
+  body {
+    background-color: var(--bg);
+    color: var(--ink);
+    font-family: var(--font-sans);
+    font-size: 14px;
+    line-height: 1.4;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 2px;
+  }
+
+  /* A scrolling box clips an outline that sits outside its control, so these boxes draw the ring inside. */
+  [data-focus-inset] :focus-visible {
+    outline-offset: -2px;
+  }
+
+  /* Tailwind 4 resets buttons to the default cursor. Every control a user can click needs a pointer. */
+  a[href],
+  button:not(:disabled),
+  summary,
+  select:not(:disabled),
+  label[for],
+  [role="button"]:not([aria-disabled="true"]),
+  [role="tab"],
+  [role="switch"],
+  [role="menuitem"],
+  input:is([type="checkbox"], [type="radio"], [type="file"]):not(:disabled) {
+    cursor: pointer;
+  }
+
+  button:disabled {
+    cursor: not-allowed;
+  }
+
+  .text-start th {
+    text-align: start;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    ::before,
+    ::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+html:has(dialog[open]) {
+  overflow: hidden;
 }

@@ -1,0 +1,149 @@
+{
+    "title": "Management",
+    "tabsLabel": "Management",
+    "tabs": {
+        "licenses": "Licenses",
+        "growth": "Growth",
+        "storage": "Storage",
+        "hiring": "Hiring",
+        "customizations": "Customizations"
+    },
+    "sublines": {
+        "licenses": "{name} · Unlock licenses to sell more products",
+        "growth": "{name} · Grow the store floor one section at a time",
+        "storage": "{name} · Grow the storage room one section at a time",
+        "hiring": "{name} · Hire staff to run the store",
+        "customizations": "{name} · Store changes bought in the game"
+    },
+    "emptyDescription": "Pick or create a playthrough to track licenses, store growth, storage and staff.",
+    "storeLevel": "Store level",
+    "storeLevelCaption": "Change it in the sidebar",
+    "free": "Free",
+    "requiresLevel": "Requires store level {level} (you are level {current})",
+    "locked": "Locked",
+    "states": {
+        "unlocked": "Unlocked",
+        "canUnlock": "Can unlock",
+        "locked": "Locked"
+    },
+    "licenses": {
+        "totalSpent": "Total spent on licenses",
+        "unlockedOf": "{owned} of {count, plural, one {{amount} license unlocked} other {{amount} licenses unlocked}}",
+        "canUnlockNow": "Can unlock now",
+        "lockedByLevel": "Locked by level",
+        "title": "License {number}",
+        "price": "Price",
+        "level": "Store level",
+        "unlocks": "Unlocks {count, plural, one {{amount} product} other {{amount} products}}",
+        "unlock": "Unlock license",
+        "undoUnlock": "Undo unlock",
+        "unlocked": "License {number} unlocked",
+        "undone": "License {number} locked again",
+        "filters": {
+            "search": "Search licenses or products",
+            "title": "Filter licenses",
+            "show": "Show",
+            "showOptions": {
+                "all": "All",
+                "unlocked": "Unlocked",
+                "canUnlock": "Can unlock",
+                "locked": "Locked"
+            },
+            "sort": "Sort by",
+            "sortOptions": {
+                "number": "License number",
+                "price": "Price low to high",
+                "storeLevel": "Store level low to high"
+            },
+            "summary": "Showing {shown} of {count, plural, one {{amount} license} other {{amount} licenses}}",
+            "showButton": "Show {count, plural, one {{amount} license} other {{amount} licenses}}"
+        },
+        "noMatch": "No licenses match these filters",
+        "noMatchDescription": "Try another search or show all licenses."
+    },
+    "sections": {
+        "growth": {
+            "totalSpent": "Total spent on growth",
+            "unlockedOf": "{owned} of {count, plural, one {{amount} section unlocked} other {{amount} sections unlocked}}",
+            "title": "Growth section {num}",
+            "pathLabel": "Growth sections",
+            "unlocked": "Growth section {num} unlocked",
+            "undone": "Growth {count, plural, one {section {range}} other {sections {range}}} locked again",
+            "cascadeTitle": "Undo growth section {num}?"
+        },
+        "storage": {
+            "totalSpent": "Total spent on storage",
+            "unlockedOf": "{owned} of {count, plural, one {{amount} section unlocked} other {{amount} sections unlocked}}",
+            "title": "Storage section {num}",
+            "pathLabel": "Storage sections",
+            "firstSectionNote": "Storage section 1 costs $800 at store level 0 in the game data, while growth section 1 is free.",
+            "unlocked": "Storage section {num} unlocked",
+            "undone": "Storage {count, plural, one {section {range}} other {sections {range}}} locked again",
+            "cascadeTitle": "Undo storage section {num}?"
+        },
+        "nextSection": "Next section",
+        "nextSectionValue": "Section {num} · level {level} · {price}",
+        "allUnlocked": "All unlocked",
+        "level": "Level {level}",
+        "size": "Size {size}",
+        "nextToUnlock": "Next to unlock",
+        "unlock": "Unlock",
+        "unlockFirst": "Unlock section {num} first.",
+        "cascade": {
+            "body": "{count, plural, one {Section {range} needs it and locks with it} other {Sections {range} need it and lock with it}}. Total spent drops by {price}.",
+            "confirm": "Undo {count, plural, one {section {range}} other {sections {range}}}",
+            "keep": "Keep them unlocked"
+        },
+        "range": "{first} to {last}"
+    },
+    "hiring": {
+        "dailyWages": "Total daily wages",
+        "dailyWagesCaption": "Combined daily cost for all hired employees",
+        "hired": "Employees hired",
+        "hiringCosts": "Hiring costs paid",
+        "hiringCostsCaption": "One time, not part of daily wages",
+        "roles": {
+            "cashiers": {
+                "title": "Cashiers",
+                "stat": "Complete checkout: <stat>{value}</stat>",
+                "employeeName": "Cashier {number}"
+            },
+            "restockers": {
+                "title": "Restockers",
+                "stat": "Number of racks: <stat>{value}</stat>",
+                "employeeName": "Restocker {number}"
+            },
+            "customerHelpers": {
+                "title": "Customer helpers",
+                "stat": "Number of checkouts: <stat>{value}</stat>",
+                "employeeName": "Customer helper {number}"
+            },
+            "securityGuards": {
+                "title": "Security guards",
+                "employeeName": "Security guard {number}"
+            },
+            "janitors": {
+                "title": "Janitors",
+                "employeeName": "Janitor {number}"
+            }
+        },
+        "hiredOf": "Hired {count} of {total}",
+        "roleWages": "Daily wages: {amount}",
+        "hiredBadge": "Hired",
+        "level": "Store level",
+        "cost": "Hiring cost",
+        "wage": "Daily wage",
+        "perDay": "{amount} / day",
+        "hire": "Hire",
+        "fire": "Fire",
+        "hiredToast": "{name} hired",
+        "firedToast": "{name} fired"
+    },
+    "customizations": {
+        "total": "Price of all three",
+        "totalCaption": "Derived from the game data, not saved",
+        "note": "These changes are bought in the game. Nothing is saved here.",
+        "price": "Price"
+    },
+    "tabCount": "{owned} / {total}"
+}

@@ -1,0 +1,39 @@
+{
+    "title": "Банковские кредиты",
+    "subline": "Управляйте кредитами для {name}",
+    "emptyDescription": "Выберите или создайте прохождение, чтобы отслеживать его кредиты.",
+    "loanTitle": "Кредит №{number}",
+    "states": {
+        "active": "Активен",
+        "available": "Доступен",
+        "locked": "Закрыт"
+    },
+    "principal": "Сумма кредита",
+    "rate": "Ставка в день",
+    "level": "Нужный уровень магазина",
+    "term": "Срок: {count, plural, one {{amount} день} few {{amount} дня} many {{amount} дней} other {{amount} дня}}",
+    "days": "{count, plural, one {{amount} день} few {{amount} дня} many {{amount} дней} other {{amount} дня}}",
+    "termFixed": "Срок не меняется, пока кредит не удалён.",
+    "details": "Детали кредита",
+    "totalInterest": "Всего процентов",
+    "totalPayment": "Всего к оплате",
+    "dailyPayment": "Платёж в день",
+    "activate": "Взять кредит",
+    "activatedOn": "Взят: {date}",
+    "remove": "Удалить кредит",
+    "requiresLevel": "Нужен уровень магазина {level} (у вас уровень {current})",
+    "locked": "Закрыто",
+    "activated": "Кредит №{number} взят",
+    "removed": "Кредит №{number} удалён",
+    "undo": "Отменить",
+    "yourLoans": {
+        "title": "Ваши кредиты",
+        "activeLoans": "Активные кредиты",
+        "dailyPayment": "Платёж в день",
+        "totalDebt": "Общий долг",
+        "none": "Нет активных кредитов. Выберите срок у кредита ниже и возьмите его.",
+        "line": "{principal} под {rate} в день на {count, plural, one {{amount} день} few {{amount} дня} many {{amount} дней} other {{amount} дня}}",
+        "payments": "{daily} в день · {total} всего",
+        "formula": "Проценты равны сумме кредита, умноженной на ставку в день и на срок в днях."
+    }
+}

@@ -1,0 +1,102 @@
+{
+    "header": {
+        "label": "Página de inicio",
+        "features": "Funciones",
+        "faq": "Preguntas",
+        "github": "GitHub",
+        "discord": "Discord"
+    },
+    "cta": {
+        "create": "Crea tu primera partida",
+        "dashboard": "Ir al panel",
+        "newPlaythrough": "Nueva partida",
+        "learn": "Más información"
+    },
+    "hero": {
+        "title": "Controla tu <accent>imperio</accent> del supermercado",
+        "body": "La app de compañía definitiva para Supermarket Simulator. Gestiona varias partidas, registra tu progreso y construye tu imperio del supermercado con confianza.",
+        "preview": "Resumen de Pezz's Market con el gasto total, el progreso de la tienda y los préstamos activos"
+    },
+    "continueCard": {
+        "label": "Continuar",
+        "level": "Nivel de tienda {level}",
+        "updated": "Actualizada el {date}"
+    },
+    "steps": {
+        "title": "Empieza en un minuto",
+        "items": {
+            "item1": {
+                "title": "Crea una partida",
+                "body": "Ponle un nombre. Todo se guarda en este navegador, sin cuenta."
+            },
+            "item2": {
+                "title": "Empieza con lo básico",
+                "body": "Cada partida empieza con la licencia 0, la sección de crecimiento 1 y Paper Bag, Sponge y Mop."
+            },
+            "item3": {
+                "title": "Desbloquea mientras juegas",
+                "body": "Sube tu nivel de tienda y desbloquea licencias, secciones, personal, herramientas y vehículos igual que en el juego."
+            }
+        }
+    },
+    "features": {
+        "eyebrow": "Todo lo que necesitas",
+        "title": "Todo tu progreso en un solo lugar",
+        "body": "Supermarket Simulator Buddy registra cada aspecto de tu supermercado. De las licencias al almacén, lo tienes todo cubierto.",
+        "items": {
+            "item1": {
+                "title": "Varias partidas",
+                "body": "Crea y gestiona partidas sin límite. Registra por separado distintas estrategias y retos."
+            },
+            "item2": {
+                "title": "Gestión de licencias",
+                "body": "Registra todas tus licencias de productos y mira qué artículos desbloquea cada una para tu tienda."
+            },
+            "item3": {
+                "title": "Crecimiento de la tienda",
+                "body": "Sigue la ampliación de tu tienda con un registro detallado de las secciones de almacén y de crecimiento."
+            },
+            "item4": {
+                "title": "Control de gastos",
+                "body": "Controla tu gasto en todas las categorías con resúmenes financieros completos."
+            },
+            "item5": {
+                "title": "Listas de compras",
+                "body": "Crea tus propias listas de compras para saber qué comprar en cada tienda."
+            },
+            "item6": {
+                "title": "Exportar e importar datos",
+                "body": "Exporta tu progreso en JSON como copia de seguridad o para compartirlo con amigos. Importa datos cuando quieras."
+            }
+        }
+    },
+    "faq": {
+        "title": "Preguntas frecuentes",
+        "items": {
+            "item1": {
+                "question": "¿Qué es Supermarket Simulator Buddy?",
+                "answer": "Supermarket Simulator Buddy es una herramienta completa para registrar tu progreso en el juego Supermarket Simulator. Te ayuda a gestionar varias partidas, seguir el crecimiento de tu tienda, gestionar licencias y controlar tu progreso financiero en un solo lugar."
+            },
+            "item2": {
+                "question": "¿Cómo guarda mis datos?",
+                "answer": "Todos tus datos se guardan localmente en tu navegador con localStorage. Así tu progreso es privado y no necesitas ningún servidor ni crear una cuenta. También puedes exportar e importar tus datos como archivos JSON para tener una copia de seguridad o compartirlos."
+            },
+            "item3": {
+                "question": "¿Puedo registrar varias partidas?",
+                "answer": "Sí. Puedes crear y gestionar varias partidas, cada una con su propio progreso. Cambia de una a otra con el menú desplegable de la barra lateral y registra por separado distintas estrategias o retos."
+            },
+            "item4": {
+                "question": "¿Qué puedo registrar?",
+                "answer": "Registra tu nivel de tienda, licencias, secciones de almacén, zonas de crecimiento, herramientas, vehículos y listas de compras, y consulta los precios de muebles y pintura. Controla tu progreso financiero con un registro detallado de gastos en todas las categorías."
+            },
+            "item5": {
+                "question": "¿Es gratis?",
+                "answer": "Sí, Supermarket Simulator Buddy es totalmente gratis. No hay suscripciones, ni anuncios, ni costos ocultos. Todas las funciones están disponibles para todo el mundo."
+            }
+        }
+    },
+    "closing": {
+        "title": "¿Listo para llevar tu tienda?",
+        "body": "Gratis, privado y guardado en tu navegador."
+    }
+}

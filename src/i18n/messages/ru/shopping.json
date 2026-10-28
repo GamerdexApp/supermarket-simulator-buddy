@@ -1,0 +1,63 @@
+{
+    "title": "Список покупок",
+    "subline": "Планируйте закупки товаров для {name}",
+    "emptyDescription": "Создайте прохождение, чтобы планировать закупки.",
+    "addProducts": "Добавить товары",
+    "summary": {
+        "title": "Сводка покупок",
+        "purchased": "Куплено {bought} из {count, plural, one {{amount} позиции} few {{amount} позиций} many {{amount} позиций} other {{amount} позиции}}",
+        "boxes": "Всего {count, plural, one {{amount} коробка} few {{amount} коробки} many {{amount} коробок} other {{amount} коробки}}",
+        "reset": "Очистить список"
+    },
+    "reset": {
+        "title": "Очистить список покупок?",
+        "body": "Это удалит {count, plural, one {{amount} позицию} few {{amount} позиции} many {{amount} позиций} other {{amount} позиции}} (куплено: {bought}, {boxCount, plural, one {{boxes} коробка} few {{boxes} коробки} many {{boxes} коробок} other {{boxes} коробки}}).",
+        "cancel": "Отмена",
+        "confirm": "Очистить список",
+        "done": "Список покупок очищен",
+        "doneMessage": "Удалено: {count, plural, one {{amount} позиция} few {{amount} позиции} many {{amount} позиций} other {{amount} позиции}}."
+    },
+    "empty": {
+        "title": "Ваш список покупок пуст",
+        "body": "Запланируйте, какие товары купить перед следующей поездкой за покупками.",
+        "steps": {
+            "item1": "Добавляйте товары из открытых лицензий.",
+            "item2": "Нажмите на товар ещё раз, чтобы добавить ещё одну коробку.",
+            "item3": "Отмечайте позиции по мере покупки."
+        },
+        "missing": "Нет нужного товара? Откройте его лицензию в разделе Управление.",
+        "toManagement": "Открыть лицензии"
+    },
+    "shop": {
+        "noShop": "Магазин не указан",
+        "items": "{count, plural, one {{amount} позиция} few {{amount} позиции} many {{amount} позиций} other {{amount} позиции}}",
+        "progress": "Куплено {bought} из {total} · {count, plural, one {{amount} коробка} few {{amount} коробки} many {{amount} коробок} other {{amount} коробки}}"
+    },
+    "row": {
+        "purchased": "Отметить купленным: {label}",
+        "boxes": "Коробки",
+        "remove": "Удалить: {label}",
+        "removed": "Удалено: {name}"
+    },
+    "undo": "Отменить",
+    "dialog": {
+        "title": "Добавить товары в список покупок",
+        "search": "Поиск товаров",
+        "searchPlaceholder": "Поиск по названию или компании...",
+        "source": "Показаны только товары из открытых лицензий.",
+        "showing": "Показано {shown} из {total}",
+        "pick": "Нажмите на товар, чтобы добавить его",
+        "noResults": "Товары по запросу «{term}» не найдены",
+        "noResultsHint": "Для отсутствующего товара может быть нужна лицензия, которую вы ещё не открыли.",
+        "clearSearch": "Очистить поиск",
+        "addOne": "Добавить одну коробку: {label}",
+        "pending": "К добавлению ({count})",
+        "noPending": "Пока ничего не добавлено. Нажмите на товар слева, чтобы добавить одну коробку. Нажмите ещё раз, чтобы добавить больше.",
+        "merges": "Если товар уже есть в списке, эти коробки добавятся к его строке.",
+        "boxes": "{count, plural, one {{amount} коробка} few {{amount} коробки} many {{amount} коробок} other {{amount} коробки}}",
+        "removePending": "Убрать {label} из списка к добавлению",
+        "cancel": "Отмена",
+        "submit": "{count, plural, one {Добавить {amount} позицию} few {Добавить {amount} позиции} many {Добавить {amount} позиций} other {Добавить {amount} позиции}}",
+        "added": "Добавлено: {count, plural, one {{amount} позиция} few {{amount} позиции} many {{amount} позиций} other {{amount} позиции}}"
+    }
+}

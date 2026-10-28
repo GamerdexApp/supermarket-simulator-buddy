@@ -1,0 +1,156 @@
+{
+    "title": "Definições",
+    "subline": "Gerir os dados e as definições da aplicação",
+    "tabsLabel": "Definições",
+    "tabs": {
+        "sync": "Sincronização na nuvem",
+        "preferences": "Preferências",
+        "data": "Cópia de segurança e dados",
+        "about": "Acerca de"
+    },
+    "playthroughCount": "{count, plural, one {{amount} partida} other {{amount} partidas}}",
+    "storageNote": {
+        "title": "Armazenamento de dados",
+        "body": "Os dados ficam guardados neste navegador. Limpar os dados do navegador apaga-os, a não ser que a sincronização na nuvem guarde uma cópia. Exporta uma cópia de segurança de vez em quando."
+    },
+    "data": {
+        "title": "Gestão de dados",
+        "export": {
+            "title": "Exportar dados",
+            "button": "Exportar todas as partidas",
+            "description": "Transferir um ficheiro de cópia de segurança de todas as partidas guardadas.",
+            "done": "Cópia de segurança transferida"
+        },
+        "import": {
+            "title": "Importar dados",
+            "description": "Carregar um ficheiro exportado anteriormente (.json)",
+            "fileLabel": "Ficheiro de cópia de segurança",
+            "chooseFile": "Escolher ficheiro",
+            "noFile": "Nenhum ficheiro escolhido",
+            "review": "Rever importação",
+            "merged": "Dados importados e juntados",
+            "replaced": "Dados substituídos",
+            "undo": "Anular"
+        },
+        "reset": {
+            "title": "Repor todos os dados",
+            "warning": "Elimina todas as partidas deste dispositivo. É possível anular durante 10 segundos depois.",
+            "button": "Repor todos os dados",
+            "confirmTitle": "Repor todos os dados?",
+            "confirmBody": "Vai eliminar: {names}.",
+            "cancel": "Cancelar",
+            "confirm": "Sim, repor todos os dados",
+            "syncedCopy": "Eliminar também a cópia sincronizada em {provider}",
+            "syncedOn": "A sincronização continua ativa. Os outros dispositivos perdem estas partidas na sincronização seguinte. Em caso de dúvida, exporta primeiro uma cópia de segurança.",
+            "done": "Todos os dados repostos",
+            "doneMessage": "{count, plural, one {{amount} partida eliminada} other {{amount} partidas eliminadas}}.",
+            "undo": "Anular",
+            "doneMessageDisconnected": "{count, plural, one {{amount} partida eliminada} other {{amount} partidas eliminadas}}. A sincronização está desligada neste navegador."
+        }
+    },
+    "appearance": {
+        "title": "Aspeto",
+        "description": "Escolher o aspeto da aplicação. A escolha fica guardada só neste dispositivo e não faz parte da cópia de segurança.",
+        "themeLabel": "Tema",
+        "themes": {
+            "light": "Claro",
+            "dark": "Escuro",
+            "system": "Sistema"
+        },
+        "themeNote": "Sistema segue o dispositivo, que neste momento usa o tema {mode, select, dark {escuro} other {claro}}."
+    },
+    "playthroughs": {
+        "title": "Partidas",
+        "description": "Criar, mudar, editar e eliminar partidas na página Partidas.",
+        "manage": "Gerir partidas"
+    },
+    "about": {
+        "version": "Versão {version}",
+        "summary": "Uma ferramenta para acompanhar o progresso em Supermarket Simulator. Os dados ficam guardados neste navegador ou no teu armazenamento na nuvem, se ativares a sincronização.",
+        "officialGame": "Jogo oficial",
+        "disclaimer": "Sem afiliação, aprovação ou ligação a Supermarket Simulator ou aos seus criadores. Todas as marcas registadas e conteúdos do jogo pertencem aos respetivos proprietários."
+    },
+    "importDialog": {
+        "title": "Importar uma cópia de segurança",
+        "fileInfo": "{name} · {size}",
+        "bytes": "{count} B",
+        "kilobytes": "{count} KB",
+        "failedTitle": "A importação falhou",
+        "checksTitle": "Ficheiro verificado",
+        "checks": "{count, plural, one {{amount} entrada lida} other {{amount} entradas lidas}}, {kept} com um id e um nome.",
+        "howToApply": "Como aplicar o ficheiro?",
+        "modeLabel": "Modo de importação",
+        "modes": {
+            "merge": "Juntar a este dispositivo (recomendado)",
+            "replace": "Substituir tudo"
+        },
+        "modeNotes": {
+            "merge": "Adiciona as partidas novas. Numa partida que existe nos dois, ganha a cópia atualizada por último. As partidas que só existem neste dispositivo ficam. A partida ativa continua ativa.",
+            "replace": "Elimina as partidas deste dispositivo e mantém só o ficheiro. A partida ativa do ficheiro passa a ser a ativa."
+        },
+        "whatChanges": "O que muda",
+        "columns": {
+            "playthrough": "Partida",
+            "inFile": "No ficheiro",
+            "onDevice": "No dispositivo",
+            "result": "Resultado"
+        },
+        "results": {
+            "added": "Adicionada",
+            "updated": "Atualizada a partir do ficheiro",
+            "kept": "Mantida",
+            "replaced": "Do ficheiro",
+            "removed": "Removida"
+        },
+        "notThere": "Não existe",
+        "noPlaythroughs": "O ficheiro não tem partidas.",
+        "undoNote": "É possível anular a importação durante 10 segundos depois.",
+        "cancel": "Cancelar",
+        "close": "Fechar",
+        "merge": "Juntar",
+        "replace": "Substituir tudo",
+        "skipped": "{count, plural, one {{amount} entrada ignorada} other {{amount} entradas ignoradas}}.",
+        "levelsFixed": "{count, plural, one {{amount} nível da loja abaixo de 0 vai ser guardado} other {{amount} níveis da loja abaixo de 0 vão ser guardados}} como 0.",
+        "errors": {
+            "notJson": "Este ficheiro não é uma cópia de segurança do Supermarket Simulator Buddy: não é JSON válido. Nada foi alterado.",
+            "playthroughsMissing": "Este ficheiro não é uma cópia de segurança do Supermarket Simulator Buddy: falta a lista de partidas. Nada foi alterado."
+        },
+        "summary": {
+            "added": "{amount} adicionadas",
+            "updated": "{amount} atualizadas",
+            "kept": "{amount} mantidas",
+            "replaced": "{amount} substituídas",
+            "removed": "{amount} removidas"
+        }
+    },
+    "region": {
+        "title": "Idioma e região",
+        "description": "Como o texto, os números e as datas aparecem neste dispositivo. Guardado só neste dispositivo.",
+        "language": {
+            "label": "Idioma",
+            "hint": "Os nomes do jogo, como produtos, licenças e ferramentas, ficam em inglês."
+        },
+        "numberFormat": {
+            "label": "Formato dos números",
+            "hint": "Exemplo: {example}",
+            "options": {
+                "auto": "Automático, segue o idioma",
+                "us": "1,234.56 (Estados Unidos)",
+                "european": "1.234,56 (Alemanha)",
+                "french": "1 234,56 (França)",
+                "swiss": "1’234.56 (Suíça)",
+                "indian": "12,34,567.89 (Índia)"
+            }
+        },
+        "dateFormat": {
+            "label": "Formato da data",
+            "hint": "Exemplo: {example}",
+            "options": {
+                "auto": "Automático, segue o idioma",
+                "mdy": "Mês/Dia/Ano",
+                "dmy": "Dia/Mês/Ano",
+                "ymd": "Ano-Mês-Dia"
+            }
+        }
+    }
+}

@@ -1,0 +1,85 @@
+{
+    "title": "Spielstände",
+    "subline": "{count, plural, one {{amount} Spielstand} other {{amount} Spielstände}}",
+    "newPlaythrough": "Neuer Spielstand",
+    "loading": "Gespeicherte Daten werden aus diesem Browser gelesen.",
+    "filters": {
+        "search": "Nach Name suchen",
+        "sortLabel": "Sortieren nach",
+        "sort": {
+            "lastModified": "Zuletzt aktualisiert",
+            "name": "Name",
+            "createdAt": "Erstellt am",
+            "storeLevel": "Ladenlevel"
+        },
+        "showing": "{shown} von {count, plural, one {{amount} Spielstand} other {{amount} Spielständen}} angezeigt",
+        "clear": "Suche löschen"
+    },
+    "empty": {
+        "title": "Noch keine Spielstände",
+        "deletedTitle": "Spielstand gelöscht",
+        "description": "Erstelle einen Spielstand, um deinen Laden zu verfolgen. Alles bleibt in diesem Browser, außer du schaltest Sync ein.",
+        "restore": "Aus Backup wiederherstellen"
+    },
+    "noMatch": {
+        "title": "Keine Spielstände passen zu „{query}“",
+        "description": "Versuche einen anderen Namen."
+    },
+    "card": {
+        "active": "Aktiv",
+        "setActive": "Aktiv setzen",
+        "openOverview": "Übersicht öffnen",
+        "edit": "Bearbeiten",
+        "delete": "Löschen",
+        "created": "Erstellt {date}",
+        "lastModified": "Zuletzt aktualisiert {date}",
+        "storeLevel": "Ladenlevel",
+        "spending": "Ausgaben gesamt",
+        "licenses": "Lizenzen",
+        "shopping": "Einkaufsliste",
+        "ofTotal": "{count} von {total}",
+        "switched": "Zu {name} gewechselt"
+    },
+    "fields": {
+        "nameLabel": "Name des Spielstands",
+        "namePlaceholder": "z. B. Mein erster Laden",
+        "nameError": "Gib einen Namen für diesen Spielstand ein.",
+        "descriptionLabel": "Beschreibung",
+        "descriptionPlaceholder": "Beschreibung für diesen Spielstand hinzufügen …",
+        "cancel": "Abbrechen"
+    },
+    "create": {
+        "title": "Neuer Spielstand",
+        "submit": "Erstellen",
+        "done": "{name} erstellt",
+        "starterTitle": "Jeder neue Spielstand beginnt mit",
+        "starter": {
+            "item1": "Ladenlevel 0",
+            "item2": "Lizenz 0, der kostenlosen Startlizenz",
+            "item3": "Ladenabschnitt 1",
+            "item4": "den Werkzeugen Paper Bag, Sponge und Mop"
+        }
+    },
+    "edit": {
+        "title": "Spielstand bearbeiten",
+        "description": "Die Felder zeigen die gespeicherten Werte.",
+        "save": "Speichern",
+        "saved": "Gespeichert",
+        "savedMessage": "{name} wurde aktualisiert.",
+        "dates": "Erstellt {created} · Zuletzt aktualisiert {updated}"
+    },
+    "delete": {
+        "title": "Spielstand löschen",
+        "question": "Möchtest du „{name}“ wirklich löschen?",
+        "description": "Damit wird der gesamte gespeicherte Fortschritt dieses Spielstands von diesem Gerät entfernt. Ist Sync an, wird er beim nächsten Sync auch von deinen anderen Geräten entfernt.",
+        "activeNext": "Das ist dein aktiver Spielstand. Stattdessen wird {next} aktiv.",
+        "activeLast": "Das ist dein aktiver und einziger Spielstand. Danach hast du keinen aktiven Spielstand mehr.",
+        "exportFirst": "Zuerst ein Backup exportieren",
+        "cancel": "Abbrechen",
+        "confirm": "Löschen",
+        "done": "{name} gelöscht",
+        "doneMessage": "Innerhalb von 10 Sekunden rückgängig machen, um ihn zurückzuholen.",
+        "undo": "Rückgängig"
+    },
+    "sublineActive": "{count, plural, one {{amount} Spielstand} other {{amount} Spielstände}} · {name} ist aktiv"
+}

@@ -1,0 +1,85 @@
+{
+    "title": "Lượt chơi",
+    "subline": "{count, plural, other {{amount} lượt chơi}}",
+    "newPlaythrough": "Lượt chơi mới",
+    "loading": "Đang đọc dữ liệu đã lưu trong trình duyệt này.",
+    "filters": {
+        "search": "Tìm theo tên",
+        "sortLabel": "Sắp xếp theo",
+        "sort": {
+            "lastModified": "Cập nhật lần cuối",
+            "name": "Tên",
+            "createdAt": "Ngày tạo",
+            "storeLevel": "Cấp cửa hàng"
+        },
+        "showing": "Đang hiển thị {shown} / {count, plural, other {{amount} lượt chơi}}",
+        "clear": "Xóa tìm kiếm"
+    },
+    "empty": {
+        "title": "Chưa có lượt chơi nào",
+        "deletedTitle": "Đã xóa lượt chơi",
+        "description": "Tạo một lượt chơi để bắt đầu theo dõi cửa hàng. Mọi thứ chỉ nằm trong trình duyệt này trừ khi bạn bật đồng bộ.",
+        "restore": "Khôi phục từ bản sao lưu"
+    },
+    "noMatch": {
+        "title": "Không có lượt chơi nào khớp “{query}”",
+        "description": "Thử một tên khác."
+    },
+    "card": {
+        "active": "Đang dùng",
+        "setActive": "Đặt làm đang dùng",
+        "openOverview": "Mở tổng quan",
+        "edit": "Sửa",
+        "delete": "Xóa",
+        "created": "Tạo {date}",
+        "lastModified": "Cập nhật lần cuối {date}",
+        "storeLevel": "Cấp cửa hàng",
+        "spending": "Tổng chi tiêu",
+        "licenses": "Giấy phép",
+        "shopping": "Danh sách mua sắm",
+        "ofTotal": "{count} / {total}",
+        "switched": "Đã chuyển sang {name}"
+    },
+    "fields": {
+        "nameLabel": "Tên lượt chơi",
+        "namePlaceholder": "VD: Cửa hàng đầu tiên",
+        "nameError": "Nhập tên cho lượt chơi này.",
+        "descriptionLabel": "Mô tả",
+        "descriptionPlaceholder": "Thêm mô tả cho lượt chơi này...",
+        "cancel": "Hủy"
+    },
+    "create": {
+        "title": "Tạo lượt chơi mới",
+        "submit": "Tạo",
+        "done": "Đã tạo {name}",
+        "starterTitle": "Mỗi lượt chơi mới bắt đầu với",
+        "starter": {
+            "item1": "Cấp cửa hàng 0",
+            "item2": "Giấy phép 0, giấy phép khởi đầu miễn phí",
+            "item3": "Khu mở rộng 1",
+            "item4": "Các dụng cụ Paper Bag, Sponge và Mop"
+        }
+    },
+    "edit": {
+        "title": "Sửa lượt chơi",
+        "description": "Các trường lấy sẵn giá trị đã lưu.",
+        "save": "Lưu",
+        "saved": "Đã lưu",
+        "savedMessage": "Đã cập nhật {name}.",
+        "dates": "Tạo {created} · Cập nhật lần cuối {updated}"
+    },
+    "delete": {
+        "title": "Xóa lượt chơi",
+        "question": "Bạn có chắc muốn xóa “{name}”?",
+        "description": "Thao tác này xóa toàn bộ tiến độ đã lưu của lượt chơi này khỏi thiết bị này. Nếu đồng bộ đang bật, nó cũng bị xóa khỏi các thiết bị khác ở lần đồng bộ tiếp theo.",
+        "activeNext": "Đây là lượt chơi đang dùng. {next} sẽ trở thành lượt chơi đang dùng.",
+        "activeLast": "Đây là lượt chơi đang dùng và là lượt chơi duy nhất. Sau đó bạn sẽ không có lượt chơi đang dùng nào.",
+        "exportFirst": "Xuất bản sao lưu trước",
+        "cancel": "Hủy",
+        "confirm": "Xóa",
+        "done": "Đã xóa {name}",
+        "doneMessage": "Hoàn tác trong 10 giây để khôi phục.",
+        "undo": "Hoàn tác"
+    },
+    "sublineActive": "{count, plural, other {{amount} lượt chơi}} · {name} đang dùng"
+}

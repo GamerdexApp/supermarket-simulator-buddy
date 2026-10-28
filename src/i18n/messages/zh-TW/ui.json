@@ -1,0 +1,43 @@
+{
+    "close": "關閉",
+    "undo": "復原",
+    "field": {
+        "optional": "選填"
+    },
+    "stepper": {
+        "lower": "降低{label}",
+        "raise": "提高{label}",
+        "labelPrefix": "{label}，"
+    },
+    "switch": {
+        "on": "開",
+        "off": "關"
+    },
+    "tabs": {
+        "locked": "（已鎖定）"
+    },
+    "toast": {
+        "dismiss": "關閉",
+        "variants": {
+            "success": "成功",
+            "info": "資訊",
+            "warning": "警告",
+            "error": "錯誤"
+        }
+    },
+    "filters": {
+        "filters": "篩選",
+        "activeCount": "{count, plural, other {已套用 {amount} 項}}",
+        "clearFilters": "清除篩選",
+        "reset": "重設",
+        "description": "變更會立即套用。篩選條件不會儲存。",
+        "groupLabel": "篩選：{label}"
+    },
+    "savedChip": {
+        "automatic": "自動儲存",
+        "justNow": "剛剛已儲存",
+        "minutesAgo": "{count, plural, other {{amount} 分鐘前已儲存}}",
+        "at": "已於 {time} 儲存",
+        "failed": "未儲存，儲存空間已滿"
+    }
+}

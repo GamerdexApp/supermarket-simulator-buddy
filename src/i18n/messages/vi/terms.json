@@ -1,0 +1,22 @@
+{
+    "displayTypes": {
+        "shelf": "Kệ",
+        "fridge": "Tủ mát",
+        "freezer": "Tủ đông",
+        "stall": "Quầy",
+        "pegboard": "Bảng treo",
+        "garment_rack": "Giá treo quần áo"
+    },
+    "categories": {
+        "edible": "Đồ ăn",
+        "produce": "Nông sản",
+        "drink": "Đồ uống",
+        "cleaning": "Đồ vệ sinh",
+        "books": "Sách",
+        "cloth": "Quần áo",
+        "electronics": "Điện tử",
+        "hardware": "Đồ kim khí",
+        "kitchen": "Nhà bếp",
+        "pet": "Thú cưng"
+    }
+}

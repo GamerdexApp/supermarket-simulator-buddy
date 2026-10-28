@@ -1,0 +1,39 @@
+{
+    "title": "Pinjaman Bank",
+    "subline": "Kelola pinjaman untuk {name}",
+    "emptyDescription": "Pilih atau buat sesi main untuk melacak pinjamannya.",
+    "loanTitle": "Pinjaman #{number}",
+    "states": {
+        "active": "Aktif",
+        "available": "Tersedia",
+        "locked": "Terkunci"
+    },
+    "principal": "Pokok Pinjaman",
+    "rate": "Bunga Harian",
+    "level": "Level Toko yang Dibutuhkan",
+    "term": "Jangka Waktu: {count, plural, other {{amount} hari}}",
+    "days": "{count, plural, other {{amount} hari}}",
+    "termFixed": "Jangka waktu tetap sampai pinjaman dihapus.",
+    "details": "Detail Pinjaman",
+    "totalInterest": "Total Bunga",
+    "totalPayment": "Total Pembayaran",
+    "dailyPayment": "Cicilan Harian",
+    "activate": "Aktifkan Pinjaman",
+    "activatedOn": "Diaktifkan pada: {date}",
+    "remove": "Hapus pinjaman",
+    "requiresLevel": "Butuh level toko {level} (kamu di level {current})",
+    "locked": "Terkunci",
+    "activated": "Pinjaman #{number} diaktifkan",
+    "removed": "Pinjaman #{number} dihapus",
+    "undo": "Urungkan",
+    "yourLoans": {
+        "title": "Pinjamanmu",
+        "activeLoans": "Pinjaman aktif",
+        "dailyPayment": "Cicilan harian",
+        "totalDebt": "Total utang pinjaman",
+        "none": "Tidak ada pinjaman aktif. Pilih jangka waktu pada pinjaman di bawah lalu aktifkan.",
+        "line": "{principal} dengan bunga {rate} per hari selama {count, plural, other {{amount} hari}}",
+        "payments": "{daily} per hari · total {total}",
+        "formula": "Bunga adalah pokok pinjaman dikali bunga harian dikali jumlah hari."
+    }
+}

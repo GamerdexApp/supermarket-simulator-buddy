@@ -1,0 +1,156 @@
+{
+    "title": "Settings",
+    "subline": "Manage your data and application settings",
+    "tabsLabel": "Settings",
+    "tabs": {
+        "sync": "Cloud sync",
+        "preferences": "Preferences",
+        "data": "Backup and data",
+        "about": "About"
+    },
+    "playthroughCount": "{count, plural, one {{amount} Playthrough} other {{amount} Playthroughs}}",
+    "storageNote": {
+        "title": "Data storage",
+        "body": "Your data is saved in this browser. Clearing the browser data deletes it unless Cloud sync keeps a copy. Export a backup from time to time."
+    },
+    "data": {
+        "title": "Data Management",
+        "export": {
+            "title": "Export Data",
+            "button": "Export All Playthroughs",
+            "description": "Download a backup file of all your saved playthroughs.",
+            "done": "Backup downloaded"
+        },
+        "import": {
+            "title": "Import Data",
+            "description": "Upload a previously exported file (.json)",
+            "fileLabel": "Backup file",
+            "chooseFile": "Choose file",
+            "noFile": "No file chosen",
+            "review": "Review import",
+            "merged": "Import merged",
+            "replaced": "Data replaced",
+            "undo": "Undo"
+        },
+        "reset": {
+            "title": "Reset All Data",
+            "warning": "This deletes every playthrough on this device. You can undo it for 10 seconds afterwards.",
+            "button": "Reset all data",
+            "confirmTitle": "Reset all data?",
+            "confirmBody": "This deletes {names}.",
+            "cancel": "Cancel",
+            "confirm": "Yes, reset all data",
+            "syncedCopy": "Also delete the synced copy in {provider}",
+            "syncedOn": "Sync stays on. Your other devices lose these playthroughs at their next sync. Export a backup first if you are not sure.",
+            "done": "All data reset",
+            "doneMessage": "{count, plural, one {{amount} playthrough} other {{amount} playthroughs}} deleted.",
+            "undo": "Undo",
+            "doneMessageDisconnected": "{count, plural, one {{amount} playthrough} other {{amount} playthroughs}} deleted. Sync is disconnected on this browser."
+        }
+    },
+    "appearance": {
+        "title": "Appearance",
+        "description": "Choose how the app looks. The choice is saved on this device only and is not part of a backup.",
+        "themeLabel": "Theme",
+        "themes": {
+            "light": "Light",
+            "dark": "Dark",
+            "system": "System"
+        },
+        "themeNote": "System follows your device, which uses the {mode, select, dark {dark} other {light}} theme right now."
+    },
+    "playthroughs": {
+        "title": "Playthroughs",
+        "description": "Create, switch, edit and delete playthroughs on the Playthroughs page.",
+        "manage": "Manage playthroughs"
+    },
+    "about": {
+        "version": "Version {version}",
+        "summary": "A progress tracking tool for Supermarket Simulator. Your data is saved in this browser, or in your own cloud storage if you turn on sync.",
+        "officialGame": "Official game",
+        "disclaimer": "Not affiliated with, endorsed by, or connected to Supermarket Simulator or its developers. All trademarks and game content belong to their owners."
+    },
+    "importDialog": {
+        "title": "Import a backup",
+        "fileInfo": "{name} · {size}",
+        "bytes": "{count} B",
+        "kilobytes": "{count} KB",
+        "failedTitle": "Import failed",
+        "checksTitle": "File checked",
+        "checks": "{count, plural, one {{amount} entry} other {{amount} entries}} read, {kept} with an id and a name.",
+        "howToApply": "How should the file be applied?",
+        "modeLabel": "Import mode",
+        "modes": {
+            "merge": "Merge into this device (recommended)",
+            "replace": "Replace everything"
+        },
+        "modeNotes": {
+            "merge": "Adds playthroughs that are new. For a playthrough on both, the copy updated last wins. Playthroughs only on this device stay. Your active playthrough stays active.",
+            "replace": "Deletes the playthroughs on this device and keeps only the file. The file's active playthrough becomes active."
+        },
+        "whatChanges": "What changes",
+        "columns": {
+            "playthrough": "Playthrough",
+            "inFile": "In file",
+            "onDevice": "On device",
+            "result": "Result"
+        },
+        "results": {
+            "added": "Added",
+            "updated": "Updated from file",
+            "kept": "Kept",
+            "replaced": "From file",
+            "removed": "Removed"
+        },
+        "notThere": "Not there",
+        "noPlaythroughs": "The file has no playthroughs.",
+        "undoNote": "You can undo the import for 10 seconds afterwards.",
+        "cancel": "Cancel",
+        "close": "Close",
+        "merge": "Merge",
+        "replace": "Replace everything",
+        "skipped": "{count, plural, one {{amount} entry} other {{amount} entries}} skipped.",
+        "levelsFixed": "{count, plural, one {{amount} store level} other {{amount} store levels}} below 0 will be saved as 0.",
+        "errors": {
+            "notJson": "This file is not a Supermarket Simulator Buddy backup: it is not valid JSON. Nothing was changed.",
+            "playthroughsMissing": "This file is not a Supermarket Simulator Buddy backup: the playthroughs list is missing. Nothing was changed."
+        },
+        "summary": {
+            "added": "{amount} added",
+            "updated": "{amount} updated",
+            "kept": "{amount} kept",
+            "replaced": "{amount} replaced",
+            "removed": "{amount} removed"
+        }
+    },
+    "region": {
+        "title": "Language and region",
+        "description": "How text, numbers and dates show on this device. Saved on this device only.",
+        "language": {
+            "label": "Language",
+            "hint": "Game names such as products, licenses and tools stay in English."
+        },
+        "numberFormat": {
+            "label": "Number format",
+            "hint": "Example: {example}",
+            "options": {
+                "auto": "Automatic, follows the language",
+                "us": "1,234.56 (United States)",
+                "european": "1.234,56 (Germany)",
+                "french": "1 234,56 (France)",
+                "swiss": "1’234.56 (Switzerland)",
+                "indian": "12,34,567.89 (India)"
+            }
+        },
+        "dateFormat": {
+            "label": "Date format",
+            "hint": "Example: {example}",
+            "options": {
+                "auto": "Automatic, follows the language",
+                "mdy": "Month/Day/Year",
+                "dmy": "Day/Month/Year",
+                "ymd": "Year-Month-Day"
+            }
+        }
+    }
+}

@@ -1,0 +1,93 @@
+{
+    "title": "Chợ",
+    "tabsLabel": "Chợ",
+    "tabs": {
+        "products": "Sản phẩm",
+        "furniture": "Nội thất",
+        "paint": "Sơn",
+        "tools": "Dụng cụ",
+        "vehicles": "Phương tiện"
+    },
+    "sublines": {
+        "products": "{name} · Sản phẩm giấy phép của bạn mở khóa",
+        "furniture": "{name} · Giá nội thất",
+        "paint": "{name} · Giá sơn",
+        "tools": "{name} · Dụng cụ bạn sở hữu",
+        "vehicles": "{name} · Phương tiện bạn sở hữu"
+    },
+    "emptyDescription": "Chọn hoặc tạo một lượt chơi để xem bạn có những sản phẩm, dụng cụ và phương tiện nào.",
+    "free": "Miễn phí",
+    "undoUnlock": "Hoàn tác mở khóa",
+    "unlock": "Mở khóa",
+    "locked": "Đã khóa",
+    "states": {
+        "unlocked": "Đã mở khóa",
+        "canUnlock": "Có thể mở khóa",
+        "locked": "Đã khóa"
+    },
+    "products": {
+        "search": "Tìm theo tên hoặc công ty...",
+        "displayType": "Lọc theo loại kệ trưng bày",
+        "allDisplayTypes": "Mọi loại kệ trưng bày",
+        "category": "Lọc theo danh mục",
+        "allCategories": "Mọi danh mục",
+        "option": "{label} ({count})",
+        "filtersTitle": "Lọc sản phẩm",
+        "showing": "Đang hiển thị {shown} / {count, plural, other {{amount} sản phẩm}}",
+        "showButton": "Xem {count, plural, other {{amount} sản phẩm}}",
+        "unlocked": "Sản phẩm đã mở khóa ({count})",
+        "locked": "Sản phẩm đã khóa ({count})",
+        "lockedHelp": "Mở khóa giấy phép trong Quản lý để bán những sản phẩm này.",
+        "noUnlocked": "Không có sản phẩm đã mở khóa nào khớp bộ lọc.",
+        "noLocked": "Không có sản phẩm đã khóa nào khớp bộ lọc.",
+        "requires": "Yêu cầu: Giấy phép {number}",
+        "itemsPerBox": "Số món mỗi thùng",
+        "weightPerBox": "Khối lượng mỗi thùng",
+        "kg": "{weight} kg",
+        "boxesPerStorage": "Số thùng mỗi ô kho",
+        "details": "Chi tiết {name}",
+        "detail": {
+            "company": "Công ty",
+            "displayType": "Loại kệ trưng bày",
+            "category": "Danh mục",
+            "boughtAt": "Mua tại",
+            "license": "Giấy phép",
+            "unlocked": "Giấy phép {number}, đã mở khóa",
+            "locked": "Giấy phép {number}, chưa mở khóa",
+            "none": "Không có",
+            "toLicenses": "Mở Giấy phép",
+            "close": "Đóng"
+        },
+        "stores": {
+            "liquor_store": "Liquor Store",
+            "janitorial_supply": "Janitorial Supply",
+            "deli_and_grocery": "Deli and Grocery",
+            "meat_and_dairy": "Meat and Dairy",
+            "green_market": "Green Market"
+        }
+    },
+    "furniture": {
+        "heading": "Tất cả nội thất ({count})",
+        "note": "Giá lấy từ game. Nội thất không có trạng thái được lưu."
+    },
+    "paint": {
+        "heading": "Tất cả sơn ({count})",
+        "note": "Giá lấy từ game. Sơn không có trạng thái được lưu."
+    },
+    "tools": {
+        "totalSpent": "Tổng chi cho dụng cụ",
+        "unlockedOf": "Đã mở khóa {owned} / {count, plural, other {{amount} dụng cụ}}",
+        "requiresLicenses": "Cần {count, plural, other {{amount} giấy phép}} · bạn có {owned}",
+        "unlocked": "Đã mở khóa {name}",
+        "undone": "{name} đã khóa lại"
+    },
+    "vehicles": {
+        "totalSpent": "Tổng chi cho phương tiện",
+        "unlockedOf": "Đã mở khóa {owned} / {count, plural, other {{amount} phương tiện}}",
+        "price": "Giá",
+        "storeLevel": "Cấp cửa hàng",
+        "requiresLevel": "Cần cấp cửa hàng {level} · bạn đang ở cấp {current}",
+        "unlocked": "Đã mở khóa {name}",
+        "undone": "{name} đã khóa lại"
+    }
+}

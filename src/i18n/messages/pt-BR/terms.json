@@ -1,0 +1,22 @@
+{
+    "displayTypes": {
+        "shelf": "Prateleira",
+        "fridge": "Geladeira",
+        "freezer": "Freezer",
+        "stall": "Banca",
+        "pegboard": "Painel de ganchos",
+        "garment_rack": "Arara de roupas"
+    },
+    "categories": {
+        "edible": "Alimentos",
+        "produce": "Hortifrúti",
+        "drink": "Bebidas",
+        "cleaning": "Limpeza",
+        "books": "Livros",
+        "cloth": "Roupas",
+        "electronics": "Eletrônicos",
+        "hardware": "Ferragens",
+        "kitchen": "Cozinha",
+        "pet": "Pet"
+    }
+}

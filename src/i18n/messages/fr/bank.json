@@ -1,0 +1,39 @@
+{
+    "title": "Prêts bancaires",
+    "subline": "Gérez vos prêts pour {name}",
+    "emptyDescription": "Choisissez ou créez une partie pour suivre ses prêts.",
+    "loanTitle": "Prêt n° {number}",
+    "states": {
+        "active": "Actif",
+        "available": "Disponible",
+        "locked": "Verrouillé"
+    },
+    "principal": "Capital emprunté",
+    "rate": "Taux d'intérêt journalier",
+    "level": "Niveau du magasin requis",
+    "term": "Durée : {count, plural, one {{amount} jour} other {{amount} jours}}",
+    "days": "{count, plural, one {{amount} jour} other {{amount} jours}}",
+    "termFixed": "La durée reste fixe jusqu'au retrait du prêt.",
+    "details": "Détails du prêt",
+    "totalInterest": "Intérêts totaux",
+    "totalPayment": "Paiement total",
+    "dailyPayment": "Paiement journalier",
+    "activate": "Activer le prêt",
+    "activatedOn": "Activé le : {date}",
+    "remove": "Retirer le prêt",
+    "requiresLevel": "Nécessite le niveau du magasin {level} (vous êtes au niveau {current})",
+    "locked": "Verrouillé",
+    "activated": "Prêt n° {number} activé",
+    "removed": "Prêt n° {number} retiré",
+    "undo": "Annuler",
+    "yourLoans": {
+        "title": "Vos prêts",
+        "activeLoans": "Prêts actifs",
+        "dailyPayment": "Paiement journalier",
+        "totalDebt": "Dette totale des prêts",
+        "none": "Aucun prêt actif. Choisissez une durée sur un prêt ci-dessous et activez-le.",
+        "line": "{principal} à {rate} par jour pendant {count, plural, one {{amount} jour} other {{amount} jours}}",
+        "payments": "{daily} par jour · {total} au total",
+        "formula": "Les intérêts correspondent au capital multiplié par le taux journalier et par la durée en jours."
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "displayTypes": {
+        "shelf": "Rak",
+        "fridge": "Kulkas",
+        "freezer": "Freezer",
+        "stall": "Lapak",
+        "pegboard": "Papan gantung",
+        "garment_rack": "Rak Pakaian"
+    },
+    "categories": {
+        "edible": "Makanan",
+        "produce": "Hasil Bumi",
+        "drink": "Minuman",
+        "cleaning": "Kebersihan",
+        "books": "Buku",
+        "cloth": "Pakaian",
+        "electronics": "Elektronik",
+        "hardware": "Perkakas",
+        "kitchen": "Dapur",
+        "pet": "Hewan Peliharaan"
+    }
+}

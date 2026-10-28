@@ -1,0 +1,81 @@
+{
+    "skipToContent": "Zum Inhalt springen",
+    "closeMenu": "Menü schließen",
+    "openMenu": "Menü öffnen",
+    "menuLabel": "Seitenmenü",
+    "mainNav": "Hauptmenü",
+    "brandWords": {
+        "item1": "Supermarket",
+        "item2": "Simulator",
+        "item3": "Buddy"
+    },
+    "noPlaythroughHint": "Erstelle einen Spielstand, um loszulegen.",
+    "switcher": {
+        "sectionLabel": "Spielstand",
+        "loading": "Wird geladen",
+        "none": "Keiner gewählt",
+        "switch": "Spielstand wechseln",
+        "playthroughs": "Spielstände",
+        "active": "Aktiv",
+        "all": "Alle Spielstände",
+        "create": "Neuer Spielstand",
+        "level": "Level {level}",
+        "rowDetail": "Level {level} · {date}",
+        "switched": "Zu {name} gewechselt",
+        "empty": "Noch keine Spielstände erstellt"
+    },
+    "storeLevel": {
+        "label": "Ladenlevel",
+        "edit": "Ladenlevel {level}, auswählen, um ein Level einzugeben",
+        "atZero": "Bereits auf Level 0"
+    },
+    "empty": {
+        "title": "Kein Spielstand gewählt",
+        "description": "Erstelle einen Spielstand oder wähle einen aus deiner Liste, um diese Seite zu sehen.",
+        "create": "Neuer Spielstand",
+        "all": "Alle Spielstände"
+    },
+    "footer": {
+        "tagline": "Ein kostenloser Fortschritts-Tracker für Supermarket Simulator. Deine Daten bleiben in deinem Browser oder in deinem eigenen Cloud-Speicher, wenn du Sync einschaltest.",
+        "support": "Support",
+        "about": "Info",
+        "settings": "Einstellungen",
+        "discord": "Discord",
+        "github": "GitHub",
+        "officialGame": "Offizielles Spiel",
+        "privacy": "Datenschutz",
+        "terms": "Nutzungsbedingungen",
+        "disclaimerTitle": "Haftungsausschluss",
+        "disclaimer": "Dieses Projekt ist nicht verbunden mit, unterstützt von oder verknüpft mit Supermarket Simulator oder seinen Entwicklern. Alle Marken und Spielinhalte gehören ihren Inhabern.",
+        "framework": "Gebaut mit dem Gamerdex-Framework, einer gemeinsamen Basis für kostenlose Fortschritts-Tracker für Spiele.",
+        "visitGamerdex": "Gamerdex besuchen"
+    },
+    "notFound": {
+        "title": "Seite nicht gefunden",
+        "body": "Es gibt keine Seite unter <code>{path}</code>.",
+        "didYouMean": "Meintest du <link>{suggestion}</link>?",
+        "quickLinks": "Bereiche",
+        "toOverview": "Zur Übersicht",
+        "toHome": "Zur Startseite"
+    },
+    "saveFailed": {
+        "title": "Nicht gespeichert",
+        "message": "Der Browser konnte deine Änderungen nicht speichern. Lade ein Backup herunter, damit nichts verloren geht.",
+        "exportBackup": "Backup herunterladen"
+    },
+    "nav": {
+        "groups": {
+            "store": "Dein Laden",
+            "plan": "Planen"
+        },
+        "items": {
+            "overview": "Übersicht",
+            "market": "Markt",
+            "management": "Verwaltung",
+            "bank": "Bank",
+            "shoppingList": "Einkaufsliste",
+            "settings": "Einstellungen",
+            "playthroughs": "Spielstände"
+        }
+    }
+}

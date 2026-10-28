@@ -1,0 +1,149 @@
+{
+    "title": "Gestion",
+    "tabsLabel": "Gestion",
+    "tabs": {
+        "licenses": "Licences",
+        "growth": "Agrandissement",
+        "storage": "Entrepôt",
+        "hiring": "Recrutement",
+        "customizations": "Personnalisations"
+    },
+    "sublines": {
+        "licenses": "{name} · Débloquez des licences pour vendre plus de produits",
+        "growth": "{name} · Agrandissez la surface de vente section par section",
+        "storage": "{name} · Agrandissez l'entrepôt section par section",
+        "hiring": "{name} · Embauchez du personnel pour faire tourner le magasin",
+        "customizations": "{name} · Modifications du magasin achetées dans le jeu"
+    },
+    "emptyDescription": "Choisissez ou créez une partie pour suivre les licences, l'agrandissement du magasin, l'entrepôt et le personnel.",
+    "storeLevel": "Niveau du magasin",
+    "storeLevelCaption": "Modifiez-le dans la barre latérale",
+    "free": "Gratuit",
+    "requiresLevel": "Nécessite le niveau du magasin {level} (vous êtes au niveau {current})",
+    "locked": "Verrouillé",
+    "states": {
+        "unlocked": "Débloqué",
+        "canUnlock": "Déblocable",
+        "locked": "Verrouillé"
+    },
+    "licenses": {
+        "totalSpent": "Total dépensé en licences",
+        "unlockedOf": "{owned} sur {count, plural, one {{amount} licence débloquée} other {{amount} licences débloquées}}",
+        "canUnlockNow": "Déblocables maintenant",
+        "lockedByLevel": "Verrouillées par le niveau",
+        "title": "Licence {number}",
+        "price": "Prix",
+        "level": "Niveau du magasin",
+        "unlocks": "Débloque {count, plural, one {{amount} produit} other {{amount} produits}}",
+        "unlock": "Débloquer la licence",
+        "undoUnlock": "Annuler le déblocage",
+        "unlocked": "Licence {number} débloquée",
+        "undone": "Licence {number} de nouveau verrouillée",
+        "filters": {
+            "search": "Rechercher des licences ou des produits",
+            "title": "Filtrer les licences",
+            "show": "Afficher",
+            "showOptions": {
+                "all": "Toutes",
+                "unlocked": "Débloquées",
+                "canUnlock": "Déblocables",
+                "locked": "Verrouillées"
+            },
+            "sort": "Trier par",
+            "sortOptions": {
+                "number": "Numéro de licence",
+                "price": "Prix croissant",
+                "storeLevel": "Niveau du magasin croissant"
+            },
+            "summary": "{shown} sur {count, plural, one {{amount} licence} other {{amount} licences}} affichées",
+            "showButton": "Afficher {count, plural, one {{amount} licence} other {{amount} licences}}"
+        },
+        "noMatch": "Aucune licence ne correspond à ces filtres",
+        "noMatchDescription": "Essayez une autre recherche ou affichez toutes les licences."
+    },
+    "sections": {
+        "growth": {
+            "totalSpent": "Total dépensé en agrandissement",
+            "unlockedOf": "{owned} sur {count, plural, one {{amount} section débloquée} other {{amount} sections débloquées}}",
+            "title": "Section d'agrandissement {num}",
+            "pathLabel": "Sections d'agrandissement",
+            "unlocked": "Section d'agrandissement {num} débloquée",
+            "undone": "{count, plural, one {Section d'agrandissement {range} de nouveau verrouillée} other {Sections d'agrandissement {range} de nouveau verrouillées}}",
+            "cascadeTitle": "Annuler la section d'agrandissement {num} ?"
+        },
+        "storage": {
+            "totalSpent": "Total dépensé en entrepôt",
+            "unlockedOf": "{owned} sur {count, plural, one {{amount} section débloquée} other {{amount} sections débloquées}}",
+            "title": "Section d'entrepôt {num}",
+            "pathLabel": "Sections d'entrepôt",
+            "firstSectionNote": "Dans les données du jeu, la section d'entrepôt 1 coûte $800 au niveau du magasin 0, alors que la section d'agrandissement 1 est gratuite.",
+            "unlocked": "Section d'entrepôt {num} débloquée",
+            "undone": "{count, plural, one {Section d'entrepôt {range} de nouveau verrouillée} other {Sections d'entrepôt {range} de nouveau verrouillées}}",
+            "cascadeTitle": "Annuler la section d'entrepôt {num} ?"
+        },
+        "nextSection": "Section suivante",
+        "nextSectionValue": "Section {num} · niveau {level} · {price}",
+        "allUnlocked": "Tout est débloqué",
+        "level": "Niveau {level}",
+        "size": "Taille {size}",
+        "nextToUnlock": "Prochaine à débloquer",
+        "unlock": "Débloquer",
+        "unlockFirst": "Débloquez d'abord la section {num}.",
+        "cascade": {
+            "body": "{count, plural, one {La section {range} en dépend et sera verrouillée avec elle} other {Les sections {range} en dépendent et seront verrouillées avec elle}}. Le total dépensé baisse de {price}.",
+            "confirm": "Annuler {count, plural, one {la section {range}} other {les sections {range}}}",
+            "keep": "Les garder débloquées"
+        },
+        "range": "{first} à {last}"
+    },
+    "hiring": {
+        "dailyWages": "Salaires journaliers totaux",
+        "dailyWagesCaption": "Coût journalier cumulé de tous les employés embauchés",
+        "hired": "Employés embauchés",
+        "hiringCosts": "Frais d'embauche payés",
+        "hiringCostsCaption": "Paiement unique, hors salaires journaliers",
+        "roles": {
+            "cashiers": {
+                "title": "Caissiers",
+                "stat": "Caisses complètes : <stat>{value}</stat>",
+                "employeeName": "Caissier {number}"
+            },
+            "restockers": {
+                "title": "Employés de rayon",
+                "stat": "Nombre de rayonnages : <stat>{value}</stat>",
+                "employeeName": "Employé de rayon {number}"
+            },
+            "customerHelpers": {
+                "title": "Assistants clientèle",
+                "stat": "Nombre de caisses : <stat>{value}</stat>",
+                "employeeName": "Assistant clientèle {number}"
+            },
+            "securityGuards": {
+                "title": "Agents de sécurité",
+                "employeeName": "Agent de sécurité {number}"
+            },
+            "janitors": {
+                "title": "Agents d'entretien",
+                "employeeName": "Agent d'entretien {number}"
+            }
+        },
+        "hiredOf": "{count} sur {total} embauchés",
+        "roleWages": "Salaires journaliers : {amount}",
+        "hiredBadge": "Embauché",
+        "level": "Niveau du magasin",
+        "cost": "Frais d'embauche",
+        "wage": "Salaire journalier",
+        "perDay": "{amount} / jour",
+        "hire": "Embaucher",
+        "fire": "Licencier",
+        "hiredToast": "{name} embauché",
+        "firedToast": "{name} licencié"
+    },
+    "customizations": {
+        "total": "Prix des trois",
+        "totalCaption": "Calculé à partir des données du jeu, non enregistré",
+        "note": "Ces modifications s'achètent dans le jeu. Rien n'est enregistré ici.",
+        "price": "Prix"
+    },
+    "tabCount": "{owned} / {total}"
+}

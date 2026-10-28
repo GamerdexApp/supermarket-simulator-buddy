@@ -1,0 +1,85 @@
+{
+    "title": "プレイデータ",
+    "subline": "{count, plural, other {{amount}件のプレイデータ}}",
+    "newPlaythrough": "新しいプレイデータ",
+    "loading": "このブラウザーに保存されたデータを読み込んでいます。",
+    "filters": {
+        "search": "名前で検索",
+        "sortLabel": "並べ替え",
+        "sort": {
+            "lastModified": "最終更新",
+            "name": "名前",
+            "createdAt": "作成日",
+            "storeLevel": "ストアレベル"
+        },
+        "showing": "{count, plural, other {{amount}件のプレイデータ}}中{shown}件を表示",
+        "clear": "検索をクリア"
+    },
+    "empty": {
+        "title": "プレイデータはまだありません",
+        "deletedTitle": "プレイデータを削除しました",
+        "description": "プレイデータを作成して、ストアの記録を始めましょう。同期をオンにしない限り、すべてこのブラウザーに保存されます。",
+        "restore": "バックアップから復元"
+    },
+    "noMatch": {
+        "title": "「{query}」に一致するプレイデータはありません",
+        "description": "別の名前で試してください。"
+    },
+    "card": {
+        "active": "使用中",
+        "setActive": "使用中にする",
+        "openOverview": "概要を開く",
+        "edit": "編集",
+        "delete": "削除",
+        "created": "作成日 {date}",
+        "lastModified": "最終更新 {date}",
+        "storeLevel": "ストアレベル",
+        "spending": "支出合計",
+        "licenses": "ライセンス",
+        "shopping": "買い物リスト",
+        "ofTotal": "{count}/{total}",
+        "switched": "{name}に切り替えました"
+    },
+    "fields": {
+        "nameLabel": "プレイデータ名",
+        "namePlaceholder": "例: はじめてのストア",
+        "nameError": "このプレイデータの名前を入力してください。",
+        "descriptionLabel": "説明",
+        "descriptionPlaceholder": "このプレイデータの説明を追加…",
+        "cancel": "キャンセル"
+    },
+    "create": {
+        "title": "新しいプレイデータを作成",
+        "submit": "作成",
+        "done": "{name}を作成しました",
+        "starterTitle": "新しいプレイデータの初期状態",
+        "starter": {
+            "item1": "ストアレベル0",
+            "item2": "ライセンス0（無料の初期ライセンス）",
+            "item3": "拡張区画1",
+            "item4": "Paper Bag、Sponge、Mop のツール"
+        }
+    },
+    "edit": {
+        "title": "プレイデータを編集",
+        "description": "各項目には保存済みの値が入っています。",
+        "save": "保存",
+        "saved": "保存しました",
+        "savedMessage": "{name}を更新しました。",
+        "dates": "作成日 {created} · 最終更新 {updated}"
+    },
+    "delete": {
+        "title": "プレイデータを削除",
+        "question": "「{name}」を削除してもよろしいですか？",
+        "description": "このプレイデータの保存済みの進行状況を、この端末からすべて削除します。同期がオンの場合、次の同期でほかの端末からも削除されます。",
+        "activeNext": "これは使用中のプレイデータです。代わりに{next}が使用中になります。",
+        "activeLast": "これは使用中で、唯一のプレイデータです。削除すると使用中のプレイデータはなくなります。",
+        "exportFirst": "先にバックアップをエクスポート",
+        "cancel": "キャンセル",
+        "confirm": "削除",
+        "done": "{name}を削除しました",
+        "doneMessage": "10秒以内に元に戻すと復元できます。",
+        "undo": "元に戻す"
+    },
+    "sublineActive": "{count, plural, other {{amount}件のプレイデータ}} · {name}を使用中"
+}

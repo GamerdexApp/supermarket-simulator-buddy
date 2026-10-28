@@ -1,0 +1,85 @@
+{
+    "title": "Partite",
+    "subline": "{count, plural, one {{amount} partita} other {{amount} partite}}",
+    "newPlaythrough": "Nuova partita",
+    "loading": "Lettura dei dati salvati in questo browser.",
+    "filters": {
+        "search": "Cerca per nome",
+        "sortLabel": "Ordina per",
+        "sort": {
+            "lastModified": "Ultimo aggiornamento",
+            "name": "Nome",
+            "createdAt": "Data di creazione",
+            "storeLevel": "Livello del negozio"
+        },
+        "showing": "{shown} di {count, plural, one {{amount} partita} other {{amount} partite}} mostrate",
+        "clear": "Cancella ricerca"
+    },
+    "empty": {
+        "title": "Ancora nessuna partita",
+        "deletedTitle": "Partita eliminata",
+        "description": "Crea una partita per iniziare a seguire il tuo negozio. Tutto resta in questo browser, a meno che non attivi la sincronizzazione.",
+        "restore": "Ripristina da un backup"
+    },
+    "noMatch": {
+        "title": "Nessuna partita corrisponde a “{query}”",
+        "description": "Prova un altro nome."
+    },
+    "card": {
+        "active": "Attiva",
+        "setActive": "Imposta come attiva",
+        "openOverview": "Apri panoramica",
+        "edit": "Modifica",
+        "delete": "Elimina",
+        "created": "Creata il {date}",
+        "lastModified": "Aggiornata il {date}",
+        "storeLevel": "Livello del negozio",
+        "spending": "Spese totali",
+        "licenses": "Licenze",
+        "shopping": "Lista della spesa",
+        "ofTotal": "{count} di {total}",
+        "switched": "Partita attiva: {name}"
+    },
+    "fields": {
+        "nameLabel": "Nome della partita",
+        "namePlaceholder": "es. Il mio primo negozio",
+        "nameError": "Inserisci un nome per questa partita.",
+        "descriptionLabel": "Descrizione",
+        "descriptionPlaceholder": "Aggiungi una descrizione per questa partita...",
+        "cancel": "Annulla"
+    },
+    "create": {
+        "title": "Crea nuova partita",
+        "submit": "Crea",
+        "done": "{name} creata",
+        "starterTitle": "Ogni nuova partita inizia con",
+        "starter": {
+            "item1": "Livello del negozio 0",
+            "item2": "Licenza 0, la licenza iniziale gratuita",
+            "item3": "Sezione di espansione 1",
+            "item4": "Gli strumenti Paper Bag, Sponge e Mop"
+        }
+    },
+    "edit": {
+        "title": "Modifica partita",
+        "description": "I campi partono dai valori salvati.",
+        "save": "Salva",
+        "saved": "Salvato",
+        "savedMessage": "{name} è stata aggiornata.",
+        "dates": "Creata il {created} · Aggiornata il {updated}"
+    },
+    "delete": {
+        "title": "Elimina partita",
+        "question": "Vuoi davvero eliminare “{name}”?",
+        "description": "Rimuove tutti i progressi salvati di questa partita da questo dispositivo. Con la sincronizzazione attiva, la rimuove anche dagli altri dispositivi alla sincronizzazione successiva.",
+        "activeNext": "Questa è la tua partita attiva. Al suo posto diventa attiva {next}.",
+        "activeLast": "Questa è la tua partita attiva e l'unica. Dopo non avrai nessuna partita attiva.",
+        "exportFirst": "Esporta prima un backup",
+        "cancel": "Annulla",
+        "confirm": "Elimina",
+        "done": "{name} eliminata",
+        "doneMessage": "Annulla entro 10 secondi per recuperarla.",
+        "undo": "Annulla"
+    },
+    "sublineActive": "{count, plural, one {{amount} partita} other {{amount} partite}} · {name} è attiva"
+}

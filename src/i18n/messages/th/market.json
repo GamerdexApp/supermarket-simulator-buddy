@@ -1,0 +1,93 @@
+{
+    "title": "ตลาด",
+    "tabsLabel": "ตลาด",
+    "tabs": {
+        "products": "สินค้า",
+        "furniture": "เฟอร์นิเจอร์",
+        "paint": "สี",
+        "tools": "เครื่องมือ",
+        "vehicles": "ยานพาหนะ"
+    },
+    "sublines": {
+        "products": "{name} · สินค้าที่ใบอนุญาตของคุณปลดล็อก",
+        "furniture": "{name} · ราคาเฟอร์นิเจอร์",
+        "paint": "{name} · ราคาสี",
+        "tools": "{name} · เครื่องมือที่คุณมี",
+        "vehicles": "{name} · ยานพาหนะที่คุณมี"
+    },
+    "emptyDescription": "เลือกหรือสร้างรอบการเล่นเพื่อดูว่าคุณมีสินค้า เครื่องมือ และยานพาหนะอะไรบ้าง",
+    "free": "ฟรี",
+    "undoUnlock": "เลิกทำการปลดล็อก",
+    "unlock": "ปลดล็อก",
+    "locked": "ล็อกอยู่",
+    "states": {
+        "unlocked": "ปลดล็อกแล้ว",
+        "canUnlock": "ปลดล็อกได้",
+        "locked": "ล็อกอยู่"
+    },
+    "products": {
+        "search": "ค้นหาตามชื่อหรือบริษัท...",
+        "displayType": "กรองตามประเภทชั้นวาง",
+        "allDisplayTypes": "ประเภทชั้นวางทั้งหมด",
+        "category": "กรองตามหมวดหมู่",
+        "allCategories": "หมวดหมู่ทั้งหมด",
+        "option": "{label} ({count})",
+        "filtersTitle": "กรองสินค้า",
+        "showing": "แสดง {shown} จาก {count, plural, other {{amount} สินค้า}}",
+        "showButton": "แสดง {count, plural, other {{amount} สินค้า}}",
+        "unlocked": "สินค้าที่ปลดล็อกแล้ว ({count})",
+        "locked": "สินค้าที่ล็อกอยู่ ({count})",
+        "lockedHelp": "ปลดล็อกใบอนุญาตในการจัดการเพื่อขายสินค้าเหล่านี้",
+        "noUnlocked": "ไม่มีสินค้าที่ปลดล็อกแล้วตรงกับตัวกรอง",
+        "noLocked": "ไม่มีสินค้าที่ล็อกอยู่ตรงกับตัวกรอง",
+        "requires": "ต้องใช้: ใบอนุญาต {number}",
+        "itemsPerBox": "จำนวนชิ้นต่อกล่อง",
+        "weightPerBox": "น้ำหนักต่อกล่อง",
+        "kg": "{weight} กก.",
+        "boxesPerStorage": "จำนวนกล่องต่อช่องคลัง",
+        "details": "รายละเอียดของ {name}",
+        "detail": {
+            "company": "บริษัท",
+            "displayType": "ประเภทชั้นวาง",
+            "category": "หมวดหมู่",
+            "boughtAt": "ซื้อที่",
+            "license": "ใบอนุญาต",
+            "unlocked": "ใบอนุญาต {number} ปลดล็อกแล้ว",
+            "locked": "ใบอนุญาต {number} ยังไม่ปลดล็อก",
+            "none": "ไม่มีข้อมูล",
+            "toLicenses": "เปิดใบอนุญาต",
+            "close": "ปิด"
+        },
+        "stores": {
+            "liquor_store": "Liquor Store",
+            "janitorial_supply": "Janitorial Supply",
+            "deli_and_grocery": "Deli and Grocery",
+            "meat_and_dairy": "Meat and Dairy",
+            "green_market": "Green Market"
+        }
+    },
+    "furniture": {
+        "heading": "เฟอร์นิเจอร์ทั้งหมด ({count})",
+        "note": "ราคาจากเกม เฟอร์นิเจอร์ไม่มีสถานะที่บันทึกไว้"
+    },
+    "paint": {
+        "heading": "สีทั้งหมด ({count})",
+        "note": "ราคาจากเกม สีไม่มีสถานะที่บันทึกไว้"
+    },
+    "tools": {
+        "totalSpent": "ใช้จ่ายกับเครื่องมือรวม",
+        "unlockedOf": "ปลดล็อกแล้ว {owned} จาก {count, plural, other {{amount} เครื่องมือ}}",
+        "requiresLicenses": "ต้องใช้ {count, plural, other {{amount} ใบอนุญาต}} · คุณมี {owned}",
+        "unlocked": "ปลดล็อก {name} แล้ว",
+        "undone": "{name} ถูกล็อกอีกครั้ง"
+    },
+    "vehicles": {
+        "totalSpent": "ใช้จ่ายกับยานพาหนะรวม",
+        "unlockedOf": "ปลดล็อกแล้ว {owned} จาก {count, plural, other {{amount} คัน}}",
+        "price": "ราคา",
+        "storeLevel": "เลเวลร้าน",
+        "requiresLevel": "ต้องใช้เลเวลร้าน {level} · ตอนนี้เลเวล {current}",
+        "unlocked": "ปลดล็อก {name} แล้ว",
+        "undone": "{name} ถูกล็อกอีกครั้ง"
+    }
+}

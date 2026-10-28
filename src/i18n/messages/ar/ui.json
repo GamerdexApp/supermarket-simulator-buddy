@@ -1,0 +1,43 @@
+{
+    "close": "إغلاق",
+    "undo": "تراجع",
+    "field": {
+        "optional": "اختياري"
+    },
+    "stepper": {
+        "lower": "خفض {label}",
+        "raise": "رفع {label}",
+        "labelPrefix": "{label}، "
+    },
+    "switch": {
+        "on": "تشغيل",
+        "off": "إيقاف"
+    },
+    "tabs": {
+        "locked": " (مقفل)"
+    },
+    "toast": {
+        "dismiss": "تجاهل",
+        "variants": {
+            "success": "نجاح",
+            "info": "معلومة",
+            "warning": "تحذير",
+            "error": "خطأ"
+        }
+    },
+    "filters": {
+        "filters": "عوامل التصفية",
+        "activeCount": "{count, plural, zero {{amount} نشطة} one {{amount} نشط} two {{amount} نشطان} few {{amount} نشطة} many {{amount} نشطًا} other {{amount} نشط}}",
+        "clearFilters": "مسح عوامل التصفية",
+        "reset": "إعادة تعيين",
+        "description": "تُطبَّق التغييرات فورًا. لا تُحفظ عوامل التصفية.",
+        "groupLabel": "عوامل التصفية: {label}"
+    },
+    "savedChip": {
+        "automatic": "يُحفظ تلقائيًا",
+        "justNow": "حُفظ للتو",
+        "minutesAgo": "{count, plural, zero {حُفظ قبل {amount} دقيقة} one {حُفظ قبل {amount} دقيقة} two {حُفظ قبل {amount} دقيقتين} few {حُفظ قبل {amount} دقائق} many {حُفظ قبل {amount} دقيقة} other {حُفظ قبل {amount} دقيقة}}",
+        "at": "حُفظ {time}",
+        "failed": "لم يُحفظ، التخزين ممتلئ"
+    }
+}

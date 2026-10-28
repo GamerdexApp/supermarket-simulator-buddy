@@ -64,3 +64,6 @@ logs
 
 CLAUDE.md
 .claude/
+
+# local docs
+docs/

@@ -1,0 +1,149 @@
+{
+    "title": "Pengurusan",
+    "tabsLabel": "Pengurusan",
+    "tabs": {
+        "licenses": "Lesen",
+        "growth": "Pembesaran",
+        "storage": "Stor",
+        "hiring": "Pengambilan",
+        "customizations": "Penyesuaian"
+    },
+    "sublines": {
+        "licenses": "{name} · Buka kunci lesen untuk menjual lebih banyak produk",
+        "growth": "{name} · Besarkan lantai kedai satu bahagian demi satu bahagian",
+        "storage": "{name} · Besarkan bilik stor satu bahagian demi satu bahagian",
+        "hiring": "{name} · Ambil pekerja untuk mengendalikan kedai",
+        "customizations": "{name} · Perubahan kedai yang dibeli dalam permainan"
+    },
+    "emptyDescription": "Pilih atau cipta sesi permainan untuk menjejak lesen, pembesaran kedai, stor dan pekerja.",
+    "storeLevel": "Tahap kedai",
+    "storeLevelCaption": "Tukar di bar sisi",
+    "free": "Percuma",
+    "requiresLevel": "Memerlukan tahap kedai {level} (anda di tahap {current})",
+    "locked": "Dikunci",
+    "states": {
+        "unlocked": "Dibuka",
+        "canUnlock": "Boleh dibuka",
+        "locked": "Dikunci"
+    },
+    "licenses": {
+        "totalSpent": "Jumlah perbelanjaan untuk lesen",
+        "unlockedOf": "{owned} daripada {count, plural, other {{amount} lesen dibuka}}",
+        "canUnlockNow": "Boleh dibuka sekarang",
+        "lockedByLevel": "Dikunci oleh tahap",
+        "title": "Lesen {number}",
+        "price": "Harga",
+        "level": "Tahap kedai",
+        "unlocks": "Membuka {count, plural, other {{amount} produk}}",
+        "unlock": "Buka kunci lesen",
+        "undoUnlock": "Buat asal buka kunci",
+        "unlocked": "Lesen {number} dibuka",
+        "undone": "Lesen {number} dikunci semula",
+        "filters": {
+            "search": "Cari lesen atau produk",
+            "title": "Tapis lesen",
+            "show": "Tunjuk",
+            "showOptions": {
+                "all": "Semua",
+                "unlocked": "Dibuka",
+                "canUnlock": "Boleh dibuka",
+                "locked": "Dikunci"
+            },
+            "sort": "Isih mengikut",
+            "sortOptions": {
+                "number": "Nombor lesen",
+                "price": "Harga rendah ke tinggi",
+                "storeLevel": "Tahap kedai rendah ke tinggi"
+            },
+            "summary": "Menunjukkan {shown} daripada {count, plural, other {{amount} lesen}}",
+            "showButton": "Tunjuk {count, plural, other {{amount} lesen}}"
+        },
+        "noMatch": "Tiada lesen yang sepadan dengan penapis ini",
+        "noMatchDescription": "Cuba carian lain atau tunjukkan semua lesen."
+    },
+    "sections": {
+        "growth": {
+            "totalSpent": "Jumlah perbelanjaan untuk pembesaran",
+            "unlockedOf": "{owned} daripada {count, plural, other {{amount} bahagian dibuka}}",
+            "title": "Bahagian pembesaran {num}",
+            "pathLabel": "Bahagian pembesaran",
+            "unlocked": "Bahagian pembesaran {num} dibuka",
+            "undone": "{count, plural, other {Bahagian pembesaran {range}}} dikunci semula",
+            "cascadeTitle": "Buat asal bahagian pembesaran {num}?"
+        },
+        "storage": {
+            "totalSpent": "Jumlah perbelanjaan untuk stor",
+            "unlockedOf": "{owned} daripada {count, plural, other {{amount} bahagian dibuka}}",
+            "title": "Bahagian stor {num}",
+            "pathLabel": "Bahagian stor",
+            "firstSectionNote": "Bahagian stor 1 berharga $800 pada tahap kedai 0 dalam data permainan, manakala bahagian pembesaran 1 adalah percuma.",
+            "unlocked": "Bahagian stor {num} dibuka",
+            "undone": "{count, plural, other {Bahagian stor {range}}} dikunci semula",
+            "cascadeTitle": "Buat asal bahagian stor {num}?"
+        },
+        "nextSection": "Bahagian seterusnya",
+        "nextSectionValue": "Bahagian {num} · tahap {level} · {price}",
+        "allUnlocked": "Semua dibuka",
+        "level": "Tahap {level}",
+        "size": "Saiz {size}",
+        "nextToUnlock": "Seterusnya untuk dibuka",
+        "unlock": "Buka kunci",
+        "unlockFirst": "Buka kunci bahagian {num} dahulu.",
+        "cascade": {
+            "body": "{count, plural, other {Bahagian {range} memerlukannya dan akan dikunci bersamanya}}. Jumlah perbelanjaan berkurang sebanyak {price}.",
+            "confirm": "Buat asal {count, plural, other {bahagian {range}}}",
+            "keep": "Kekalkan dibuka"
+        },
+        "range": "{first} hingga {last}"
+    },
+    "hiring": {
+        "dailyWages": "Jumlah gaji harian",
+        "dailyWagesCaption": "Kos harian gabungan untuk semua pekerja yang diambil",
+        "hired": "Pekerja diambil",
+        "hiringCosts": "Kos pengambilan dibayar",
+        "hiringCostsCaption": "Sekali bayar, bukan sebahagian daripada gaji harian",
+        "roles": {
+            "cashiers": {
+                "title": "Juruwang",
+                "stat": "Selesaikan pembayaran: <stat>{value}</stat>",
+                "employeeName": "Juruwang {number}"
+            },
+            "restockers": {
+                "title": "Pengisi rak",
+                "stat": "Bilangan rak: <stat>{value}</stat>",
+                "employeeName": "Pengisi rak {number}"
+            },
+            "customerHelpers": {
+                "title": "Pembantu pelanggan",
+                "stat": "Bilangan kaunter bayaran: <stat>{value}</stat>",
+                "employeeName": "Pembantu pelanggan {number}"
+            },
+            "securityGuards": {
+                "title": "Pengawal keselamatan",
+                "employeeName": "Pengawal keselamatan {number}"
+            },
+            "janitors": {
+                "title": "Pencuci",
+                "employeeName": "Pencuci {number}"
+            }
+        },
+        "hiredOf": "{count} daripada {total} diambil",
+        "roleWages": "Gaji harian: {amount}",
+        "hiredBadge": "Diambil",
+        "level": "Tahap kedai",
+        "cost": "Kos pengambilan",
+        "wage": "Gaji harian",
+        "perDay": "{amount} / hari",
+        "hire": "Ambil",
+        "fire": "Pecat",
+        "hiredToast": "{name} diambil bekerja",
+        "firedToast": "{name} dipecat"
+    },
+    "customizations": {
+        "total": "Harga ketiga-tiganya",
+        "totalCaption": "Dikira daripada data permainan, tidak disimpan",
+        "note": "Perubahan ini dibeli dalam permainan. Tiada apa-apa yang disimpan di sini.",
+        "price": "Harga"
+    },
+    "tabCount": "{owned} / {total}"
+}

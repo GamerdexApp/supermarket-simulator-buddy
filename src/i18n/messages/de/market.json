@@ -1,0 +1,93 @@
+{
+    "title": "Markt",
+    "tabsLabel": "Markt",
+    "tabs": {
+        "products": "Produkte",
+        "furniture": "Möbel",
+        "paint": "Farben",
+        "tools": "Werkzeuge",
+        "vehicles": "Fahrzeuge"
+    },
+    "sublines": {
+        "products": "{name} · Produkte, die deine Lizenzen freischalten",
+        "furniture": "{name} · Möbelpreise",
+        "paint": "{name} · Farbpreise",
+        "tools": "{name} · Deine Werkzeuge",
+        "vehicles": "{name} · Deine Fahrzeuge"
+    },
+    "emptyDescription": "Wähle oder erstelle einen Spielstand, um deine Produkte, Werkzeuge und Fahrzeuge zu sehen.",
+    "free": "Kostenlos",
+    "undoUnlock": "Freischalten rückgängig",
+    "unlock": "Freischalten",
+    "locked": "Gesperrt",
+    "states": {
+        "unlocked": "Freigeschaltet",
+        "canUnlock": "Verfügbar",
+        "locked": "Gesperrt"
+    },
+    "products": {
+        "search": "Nach Name oder Firma suchen …",
+        "displayType": "Nach Displaytyp filtern",
+        "allDisplayTypes": "Alle Displaytypen",
+        "category": "Nach Kategorie filtern",
+        "allCategories": "Alle Kategorien",
+        "option": "{label} ({count})",
+        "filtersTitle": "Produkte filtern",
+        "showing": "{shown} von {count, plural, one {{amount} Produkt} other {{amount} Produkten}} angezeigt",
+        "showButton": "{count, plural, one {{amount} Produkt} other {{amount} Produkte}} anzeigen",
+        "unlocked": "Freigeschaltete Produkte ({count})",
+        "locked": "Gesperrte Produkte ({count})",
+        "lockedHelp": "Schalte die Lizenz unter Verwaltung frei, um diese zu verkaufen.",
+        "noUnlocked": "Keine freigeschalteten Produkte passen zu deinen Filtern.",
+        "noLocked": "Keine gesperrten Produkte passen zu deinen Filtern.",
+        "requires": "Benötigt: Lizenz {number}",
+        "itemsPerBox": "Artikel pro Karton",
+        "weightPerBox": "Gewicht pro Karton",
+        "kg": "{weight} kg",
+        "boxesPerStorage": "Kartons pro Lagerregal",
+        "details": "Details zu {name}",
+        "detail": {
+            "company": "Firma",
+            "displayType": "Displaytyp",
+            "category": "Kategorie",
+            "boughtAt": "Gekauft bei",
+            "license": "Lizenz",
+            "unlocked": "Lizenz {number}, freigeschaltet",
+            "locked": "Lizenz {number}, noch nicht freigeschaltet",
+            "none": "Nicht angegeben",
+            "toLicenses": "Lizenzen öffnen",
+            "close": "Schließen"
+        },
+        "stores": {
+            "liquor_store": "Liquor Store",
+            "janitorial_supply": "Janitorial Supply",
+            "deli_and_grocery": "Deli and Grocery",
+            "meat_and_dairy": "Meat and Dairy",
+            "green_market": "Green Market"
+        }
+    },
+    "furniture": {
+        "heading": "Alle Möbel ({count})",
+        "note": "Preise aus dem Spiel. Möbel werden nicht gespeichert."
+    },
+    "paint": {
+        "heading": "Alle Farben ({count})",
+        "note": "Preise aus dem Spiel. Farben werden nicht gespeichert."
+    },
+    "tools": {
+        "totalSpent": "Ausgaben für Werkzeuge",
+        "unlockedOf": "{owned} von {count, plural, one {{amount} Werkzeug freigeschaltet} other {{amount} Werkzeugen freigeschaltet}}",
+        "requiresLicenses": "Benötigt {count, plural, one {{amount} Lizenz} other {{amount} Lizenzen}} · du hast {owned}",
+        "unlocked": "{name} freigeschaltet",
+        "undone": "{name} wieder gesperrt"
+    },
+    "vehicles": {
+        "totalSpent": "Ausgaben für Fahrzeuge",
+        "unlockedOf": "{owned} von {count, plural, one {{amount} Fahrzeug freigeschaltet} other {{amount} Fahrzeugen freigeschaltet}}",
+        "price": "Preis",
+        "storeLevel": "Ladenlevel",
+        "requiresLevel": "Benötigt Ladenlevel {level} · du hast Level {current}",
+        "unlocked": "{name} freigeschaltet",
+        "undone": "{name} wieder gesperrt"
+    }
+}

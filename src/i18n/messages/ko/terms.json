@@ -1,0 +1,22 @@
+{
+    "displayTypes": {
+        "shelf": "선반",
+        "fridge": "냉장고",
+        "freezer": "냉동고",
+        "stall": "진열대",
+        "pegboard": "페그보드",
+        "garment_rack": "옷걸이"
+    },
+    "categories": {
+        "edible": "식품",
+        "produce": "농산물",
+        "drink": "음료",
+        "cleaning": "청소용품",
+        "books": "도서",
+        "cloth": "의류",
+        "electronics": "전자제품",
+        "hardware": "철물",
+        "kitchen": "주방",
+        "pet": "반려동물"
+    }
+}

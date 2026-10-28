@@ -1,0 +1,63 @@
+{
+    "title": "購物清單",
+    "subline": "為 {name} 規劃商品採購",
+    "emptyDescription": "建立一個存檔來規劃採購。",
+    "addProducts": "加入商品",
+    "summary": {
+        "title": "購物摘要",
+        "purchased": "已購買 {bought}/{count, plural, other {{amount} 項}}",
+        "boxes": "{count, plural, other {共 {amount} 箱}}",
+        "reset": "重設清單"
+    },
+    "reset": {
+        "title": "要重設購物清單嗎？",
+        "body": "這會移除 {count, plural, other {{amount} 項}}（已購買 {bought} 項，{boxCount, plural, other {{boxes} 箱}}）。",
+        "cancel": "取消",
+        "confirm": "重設清單",
+        "done": "購物清單已重設",
+        "doneMessage": "已移除 {count, plural, other {{amount} 項}}。"
+    },
+    "empty": {
+        "title": "你的購物清單是空的",
+        "body": "下次進貨前，先規劃好要買哪些商品。",
+        "steps": {
+            "item1": "從已解鎖的執照中加入商品。",
+            "item2": "再點一下商品可多加一箱。",
+            "item3": "買到後勾選該項目。"
+        },
+        "missing": "找不到某項商品？請在管理中解鎖它的執照。",
+        "toManagement": "開啟執照"
+    },
+    "shop": {
+        "noShop": "沒有可用的供貨店",
+        "items": "{count, plural, other {{amount} 項}}",
+        "progress": "已購買 {bought}/{total} · {count, plural, other {{amount} 箱}}"
+    },
+    "row": {
+        "purchased": "標示為已購買：{label}",
+        "boxes": "箱數",
+        "remove": "移除 {label}",
+        "removed": "已移除 {name}"
+    },
+    "undo": "復原",
+    "dialog": {
+        "title": "將商品加入購物清單",
+        "search": "搜尋商品",
+        "searchPlaceholder": "依名稱或公司搜尋…",
+        "source": "只會列出已解鎖執照中的商品。",
+        "showing": "顯示 {shown}/{total}",
+        "pick": "點一下商品即可加入",
+        "noResults": "找不到符合「{term}」的商品",
+        "noResultsHint": "找不到的商品可能需要你尚未解鎖的執照。",
+        "clearSearch": "清除搜尋",
+        "addOne": "加入一箱 {label}",
+        "pending": "待加入項目（{count}）",
+        "noPending": "尚未加入任何項目。點一下左側的商品可加入一箱，再點一下可加入更多。",
+        "merges": "已在清單中的商品，這些箱數會加到原本那一列。",
+        "boxes": "{count, plural, other {{amount} 箱}}",
+        "removePending": "從待加入項目中移除 {label}",
+        "cancel": "取消",
+        "submit": "{count, plural, other {將 {amount} 項加入清單}}",
+        "added": "已加入 {count, plural, other {{amount} 項}}"
+    }
+}

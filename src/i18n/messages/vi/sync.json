@@ -1,0 +1,229 @@
+{
+    "tab": {
+        "title": "Đồng bộ đám mây"
+    },
+    "unavailable": "Bản dựng này không có đồng bộ.",
+    "provider": {
+        "github": {
+            "name": "GitHub",
+            "tile": "Một kho lưu trữ riêng tư do bạn sở hữu, tên là {repository}.",
+            "badge": "Cho nhà phát triển"
+        },
+        "google": {
+            "name": "Google Drive",
+            "tile": "Một thư mục Gamerdex hiển thị trong Drive của bạn. Gamerdex chỉ thấy các tệp do nó tạo.",
+            "badge": "Khuyên dùng"
+        },
+        "dropbox": {
+            "name": "Dropbox",
+            "tile": "Một thư mục Gamerdex trong thư mục Apps của Dropbox. Gamerdex chỉ thấy thư mục đó.",
+            "badge": "Chỉ thư mục ứng dụng"
+        },
+        "microsoft": {
+            "name": "OneDrive",
+            "tile": "Một thư mục Gamerdex trong thư mục Apps của OneDrive. Gamerdex chỉ thấy thư mục đó.",
+            "badge": "Tài khoản cá nhân"
+        }
+    },
+    "connect": {
+        "title": "Đồng bộ giữa các thiết bị",
+        "pill": "Chưa kết nối",
+        "intro": "Giữ các lượt chơi giống nhau trên máy tính và điện thoại. Đồng bộ là tùy chọn và miễn phí. Chọn nơi lưu bản sao.",
+        "pickerLabel": "Nơi lưu bản sao",
+        "panelTitle": "Kết nối {provider}",
+        "another": "Bạn có thể chọn dịch vụ khác trước khi đăng nhập.",
+        "firstSync": "Nếu cả hai bên đã có dữ liệu, bạn chọn giữ gì ở lần đồng bộ đầu tiên. Không có gì bị thay thế trước khi bạn quyết định.",
+        "google": {
+            "step1": "Đăng nhập Google trong cửa sổ này.",
+            "step2": "Cho phép truy cập các tệp do Gamerdex tạo. Ứng dụng không thấy các tệp khác của bạn.",
+            "button": "Kết nối Google Drive"
+        },
+        "github": {
+            "step1": "Tạo một kho lưu trữ riêng tư trống tên là {repository}. Đánh dấu Add a README file.",
+            "step2": "Đăng nhập GitHub, rồi chỉ cấp cho Gamerdex Sync quyền truy cập kho lưu trữ đó.",
+            "button": "Kết nối GitHub"
+        },
+        "dropbox": {
+            "step1": "Đăng nhập Dropbox trong cửa sổ này.",
+            "step2": "Cho phép truy cập thư mục ứng dụng Gamerdex. Ứng dụng không thấy các tệp khác của bạn.",
+            "button": "Kết nối Dropbox"
+        },
+        "microsoft": {
+            "step1": "Đăng nhập tài khoản Microsoft cá nhân trong cửa sổ này.",
+            "step2": "Cho phép truy cập thư mục ứng dụng Gamerdex. Ứng dụng không thấy các tệp khác của bạn.",
+            "button": "Kết nối OneDrive"
+        }
+    },
+    "how": {
+        "title": "Cách đồng bộ hoạt động",
+        "points": {
+            "item1": "Các lượt chơi được lưu thành một tệp trong bộ nhớ của riêng bạn, cùng định dạng với tệp sao lưu, kèm một tệp nhỏ chứa danh sách thiết bị.",
+            "item2": "Gamerdex không có máy chủ lưu dữ liệu của bạn. Trình duyệt kết nối thẳng với bộ nhớ của bạn.",
+            "item3": "Mở khóa, nhân viên, khoản vay và món trong danh sách mua sắm giữ thay đổi từ cả hai thiết bị, và cấp cửa hàng cao hơn được giữ. Nếu cả hai thiết bị đổi tên, mô tả hoặc cùng một món trong danh sách mua sắm, bạn chọn bản sẽ giữ.",
+            "item4": "Mỗi thiết bị có lượt chơi đang dùng và chủ đề riêng. Đồng bộ không bao giờ thay đổi chúng.",
+            "item5": "Ngắt kết nối bất cứ lúc nào. Các lượt chơi vẫn còn trên mọi thiết bị."
+        }
+    },
+    "repository": {
+        "title": "Thiết lập kho lưu trữ dữ liệu",
+        "body": "Dữ liệu của bạn nằm trong kho lưu trữ riêng tư tên là {name} trong tài khoản GitHub của bạn. Gamerdex Sync chỉ truy cập được kho lưu trữ đó.",
+        "checking": "Đang tìm {name}",
+        "checkFailed": "Không tải được các kho lưu trữ. Kiểm tra kết nối rồi kiểm tra lại.",
+        "public": "Kho lưu trữ {fullName} đang công khai. Hãy đặt nó thành riêng tư trong cài đặt GitHub, rồi kiểm tra lại. Không thể dùng kho lưu trữ công khai vì ai cũng đọc được dữ liệu của bạn.",
+        "missing": "Không tìm thấy kho lưu trữ {name}",
+        "steps": {
+            "create": "Tạo một kho lưu trữ riêng tư tên là {name}. Đánh dấu Add a README file.",
+            "install": "Chỉ cấp cho Gamerdex Sync quyền truy cập kho lưu trữ đó. Chọn Only select repositories, rồi chọn {name}.",
+            "recheck": "Quay lại đây và kiểm tra lại."
+        },
+        "createButton": "Tạo kho lưu trữ",
+        "installButton": "Chọn kho lưu trữ trên GitHub",
+        "recheckButton": "Kiểm tra lại"
+    },
+    "connected": {
+        "repository": "Kho lưu trữ",
+        "lastSync": "Đồng bộ lần cuối",
+        "never": "Chưa đồng bộ",
+        "syncNow": "Đồng bộ ngay",
+        "signOut": "Đăng xuất",
+        "folder": "Thư mục {name}",
+        "signInWith": "Đăng nhập bằng {provider}"
+    },
+    "status": {
+        "idle": "Đã đồng bộ",
+        "syncing": "Đang đồng bộ",
+        "offline": "Ngoại tuyến",
+        "reauth": "Đăng nhập lại",
+        "needsChoice": "Cần bạn chọn",
+        "error": "Đồng bộ thất bại",
+        "signedOut": "Chưa đăng nhập",
+        "needsRepository": "Chọn kho lưu trữ",
+        "conflicts": "Xem lại thay đổi"
+    },
+    "error": {
+        "rateLimit": "GitHub đang giới hạn yêu cầu. Đồng bộ sẽ hoạt động lại sau vài phút.",
+        "notFound": "Không tìm thấy kho lưu trữ. Hãy chọn lại.",
+        "server": "GitHub không phản hồi đúng. Thử lại sau.",
+        "data": "Dữ liệu đồng bộ không hợp lệ nên không có gì thay đổi.",
+        "busy": "Một thiết bị khác liên tục thay đổi dữ liệu. Thử lại sau giây lát.",
+        "other": "Đã xảy ra lỗi. Không có gì thay đổi.",
+        "reauth": "Phiên đăng nhập đã hết. Đăng nhập lại để tiếp tục đồng bộ.",
+        "forbidden": "GitHub từ chối truy cập kho lưu trữ. Kiểm tra Gamerdex Sync có quyền Read and write với Contents, rồi đồng bộ lại.",
+        "httpStatus": "GitHub trả về {status}.",
+        "notFoundFolder": "Không tìm thấy một tệp hoặc thư mục trong {provider}. Đồng bộ lại.",
+        "forbiddenFolder": "{provider} từ chối truy cập. Đăng nhập lại và cho phép truy cập các tệp do Gamerdex tạo.",
+        "httpStatusFolder": "{provider} trả về {status}."
+    },
+    "choice": {
+        "title": "Thiết bị này và đám mây đều có dữ liệu",
+        "body": "Đây là lần đồng bộ đầu tiên từ thiết bị này. Hãy chọn cách xử lý. Không có gì bị xóa khỏi đám mây cho đến khi bạn chọn.",
+        "merge": "Gộp cả hai",
+        "mergeHint": "Giữ mọi thứ từ cả hai bên. Giá trị cao hơn được giữ.",
+        "keepLocal": "Giữ thiết bị này",
+        "keepLocalHint": "Thay dữ liệu đám mây bằng dữ liệu trên thiết bị này.",
+        "keepCloud": "Giữ đám mây",
+        "keepCloudHint": "Thay dữ liệu trên thiết bị này bằng dữ liệu đám mây."
+    },
+    "first": {
+        "thisDevice": "Thiết bị này",
+        "cloud": "Đám mây",
+        "recommended": "Khuyên dùng",
+        "later": "Quyết định sau",
+        "apply": "Áp dụng",
+        "optionsLabel": "Giữ gì"
+    },
+    "playthroughCount": "{count, plural, other {{amount} lượt chơi}}",
+    "conflicts": {
+        "title": "Thay đổi không gộp được",
+        "body": "Hai thiết bị đã đổi cùng một giá trị. Giá trị trên đám mây được giữ. Chọn giá trị của thiết bị này để dùng nó thay thế.",
+        "cloudValue": "Đám mây",
+        "deviceValue": "Thiết bị này",
+        "keepDevice": "Dùng giá trị của thiết bị này",
+        "dismiss": "Bỏ qua",
+        "empty": "Không có",
+        "deletedEdited": "Một thiết bị đã xóa mục này và thiết bị khác đã sửa nó. Bản đã sửa được giữ."
+    },
+    "banner": {
+        "title": "{count, plural, other {{amount} thay đổi cần bạn quyết định}}",
+        "body": "Hai thiết bị đã đổi cùng một giá trị. Giá trị trên đám mây được giữ cho đến khi bạn quyết định.",
+        "review": "Xem lại",
+        "waiting": "Lần đồng bộ đầu tiên đang chờ bạn chọn.",
+        "choose": "Chọn"
+    },
+    "playthroughs": {
+        "title": "Lượt chơi",
+        "thisDevice": "Thiết bị này",
+        "cloud": "Đám mây, lần đồng bộ cuối",
+        "notInCloud": "Chưa có trên đám mây",
+        "review": "Xem lại",
+        "note": "Xóa một lượt chơi sẽ xóa nó khỏi tệp đồng bộ ở lần đồng bộ tiếp theo.",
+        "status": {
+            "synced": "Đã đồng bộ",
+            "changedHere": "Đã đổi ở đây",
+            "conflict": "Xung đột",
+            "newHere": "Mới ở đây"
+        },
+        "describe": "Cấp cửa hàng {level}"
+    },
+    "activity": {
+        "title": "Hoạt động đồng bộ gần đây",
+        "empty": "Chưa đồng bộ gì.",
+        "connected": "Đã kết nối {provider} trên trình duyệt này.",
+        "uploaded": "Đã tải lên thay đổi từ thiết bị này.",
+        "downloaded": "Đã tải về thay đổi từ đám mây.",
+        "merged": "Đã gộp thay đổi của cả hai bên.",
+        "conflicts": "{count, plural, other {{amount} thay đổi cần bạn quyết định.}}",
+        "failed": "Đồng bộ thất bại."
+    },
+    "settings": {
+        "title": "Cài đặt đồng bộ",
+        "auto": "Tự động đồng bộ",
+        "autoHint": "Đồng bộ khi mở công cụ và vài giây sau mỗi thay đổi.",
+        "focus": "Kiểm tra thay đổi khi tôi quay lại tab",
+        "focusHint": "Lấy dữ liệu đám mây mới hơn khi bạn quay lại công cụ.",
+        "metered": "Chờ khi dùng kết nối tính phí theo dung lượng",
+        "meteredHint": "Bỏ qua đồng bộ tự động khi trình duyệt báo đang bật tiết kiệm dữ liệu. Đồng bộ ngay vẫn hoạt động."
+    },
+    "lives": {
+        "title": "Dữ liệu của bạn nằm ở đâu",
+        "storage": "Bộ nhớ",
+        "folder": "Thư mục",
+        "dataFile": "Tệp dữ liệu",
+        "metaFile": "Tệp meta",
+        "size": "Kích thước",
+        "kb": "{amount} KB",
+        "note": "Tệp dữ liệu dùng cùng định dạng với tệp sao lưu. Tệp meta chứa danh sách thiết bị và không có dữ liệu game. Thông tin đăng nhập của bạn không bao giờ nằm trong tệp nào.",
+        "googleNote": "Thư mục Gamerdex hiển thị trong Drive của bạn. Gamerdex chỉ mở được các tệp do nó tạo.",
+        "githubNote": "Giữ kho lưu trữ ở chế độ riêng tư. Ai mở được nó đều đọc được dữ liệu của bạn.",
+        "dropboxNote": "Thư mục Gamerdex nằm trong thư mục Apps của Dropbox. Gamerdex chỉ mở được thư mục đó.",
+        "microsoftNote": "Thư mục Gamerdex nằm trong thư mục Apps của OneDrive. Gamerdex chỉ mở được thư mục đó."
+    },
+    "device": {
+        "title": "Thiết bị này",
+        "name": "Tên thiết bị",
+        "nameHint": "Các tệp đồng bộ hiển thị tên này cho thiết bị này. Đổi tên sẽ cập nhật tệp meta ở lần đồng bộ tiếp theo.",
+        "activePlaythrough": "Lượt chơi đang dùng",
+        "noPlaythrough": "Không có",
+        "login": "Đăng nhập đồng bộ",
+        "loginValue": "Chỉ trên thiết bị này",
+        "loginHint": "Lượt chơi đang dùng và chủ đề là lựa chọn riêng trên mỗi thiết bị, và đồng bộ không bao giờ thay đổi chúng. Thông tin đăng nhập chỉ nằm trên thiết bị này. Nó không bao giờ có trong dữ liệu đã lưu, tệp sao lưu hay các tệp đồng bộ."
+    },
+    "disconnect": {
+        "title": "Ngắt kết nối",
+        "body": "Dừng đồng bộ trên trình duyệt này. Các lượt chơi vẫn còn trên thiết bị này và trên đám mây. Các thiết bị khác vẫn tiếp tục đồng bộ.",
+        "button": "Ngắt kết nối {provider}",
+        "googleHint": "Để tự xóa bản sao trên đám mây, hãy ngắt kết nối, rồi xóa thư mục Gamerdex trong Google Drive.",
+        "githubHint": "Để tự xóa bản sao trên đám mây, hãy ngắt kết nối, rồi xóa thư mục Gamerdex trong kho lưu trữ.",
+        "dropboxHint": "Để tự xóa bản sao trên đám mây, hãy ngắt kết nối, rồi xóa thư mục ứng dụng trong Apps của Dropbox.",
+        "microsoftHint": "Để tự xóa bản sao trên đám mây, hãy ngắt kết nối, rồi xóa thư mục ứng dụng trong Apps của OneDrive."
+    },
+    "callback": {
+        "title": "Đang đăng nhập",
+        "working": "Đang hoàn tất đăng nhập",
+        "back": "Về Cài đặt",
+        "denied": "Đã hủy đăng nhập.",
+        "state": "Không kiểm tra được phiên đăng nhập. Bắt đầu lại từ Cài đặt.",
+        "missing": "Đăng nhập không gửi mã nào. Bắt đầu lại từ Cài đặt.",
+        "failed": "Không hoàn tất được đăng nhập. Thử lại sau."
+    }
+}
