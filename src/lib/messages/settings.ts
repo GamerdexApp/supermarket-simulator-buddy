@@ -6,6 +6,7 @@ export const settingsText = {
   subline: "Manage your data and application settings",
   tabsLabel: "Settings",
   tabs: {
+    sync: "Cloud sync",
     preferences: "Preferences",
     data: "Backup and data",
     about: "About",
@@ -44,6 +45,11 @@ export const settingsText = {
       confirmBody: (names: string) => `This deletes ${names}.`,
       cancel: "Cancel",
       confirm: "Yes, reset all data",
+      syncedCopy: (provider: string) =>
+        `Also delete the synced copy in ${provider}`,
+      syncedOn:
+        "Sync stays on. Your other devices lose these playthroughs at their next sync. Export a backup first if you are not sure.",
+      syncDisconnected: " Sync is disconnected on this browser.",
       done: "All data reset",
       doneMessage: (count: number) =>
         `${plural(count, "playthrough", "playthroughs")} deleted.`,

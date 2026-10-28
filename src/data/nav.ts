@@ -15,6 +15,7 @@ export const PLAYTHROUGHS_HREF = "/playthroughs";
 /** The Playthroughs page opens the New playthrough dialog for this address. */
 export const NEW_PLAYTHROUGH_HREF = "/playthroughs?new=1";
 export const SETTINGS_HREF = "/settings";
+export const SYNC_HREF = "/settings?tab=sync";
 export const BACKUP_HREF = "/settings?tab=data";
 
 export type NavItemId =
