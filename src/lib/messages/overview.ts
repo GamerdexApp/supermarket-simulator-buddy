@@ -1,0 +1,60 @@
+export const overviewText = {
+  title: "Overview",
+  subline: (name: string) => `${name} · Everything at a glance`,
+  emptyDescription:
+    "Pick or create a playthrough to see its progress at a glance.",
+  identity: {
+    created: (date: string) => `Created: ${date}`,
+    lastModified: (date: string) => `Last Modified: ${date}`,
+    manage: "Manage playthroughs",
+  },
+  storeLevel: {
+    title: "Store Level",
+    subtitle: "Current progression level",
+    hint: "Change it with the Store level stepper in the sidebar.",
+  },
+  financial: {
+    title: "Financial Overview",
+    activeLoans: "Active Loans",
+    dailyPayments: "Daily Payments",
+    totalDebt: "Total Loan Debt",
+    none: "No active loans. Open the bank to take one.",
+    formula:
+      "Each loan costs its principal plus principal times daily rate times term. Every active loan is counted as paid each day.",
+    view: "View Bank Details",
+  },
+  investment: {
+    title: "Total Investment",
+    subtitle: "Combined spending across management and market",
+    formula: (managementSpent: string, marketSpent: string, total: string) =>
+      `Management ${managementSpent} + Market ${marketSpent} = ${total}`,
+  },
+  management: {
+    title: "Management",
+    licenses: "Licenses",
+    growth: "Growth Upgrades",
+    storage: "Storage Upgrades",
+    employees: "Employees",
+    unlocked: (owned: number, total: number) => `${owned} of ${total} unlocked`,
+    hired: (owned: number, total: number) => `${owned} of ${total} hired`,
+    perDay: (amount: string) => `${amount}/day`,
+    hiringNote: (amount: string) =>
+      `Hiring fees paid so far: ${amount}. They are not part of Total Invested.`,
+    total: "Total Invested",
+    view: "View Management",
+  },
+  market: {
+    title: "Market",
+    products: "Products",
+    licensesUnlocked: (count: number) => `${count} licenses unlocked`,
+    available: (count: number) => `${count} available`,
+    tools: "Tools",
+    vehicles: "Vehicles",
+    furniture: "Furniture",
+    furnitureItems: (count: number) => `${count} items available`,
+    unlocked: (owned: number, total: number) => `${owned} of ${total} unlocked`,
+    note: "Furniture and paint are not saved, so their spending is not counted.",
+    total: "Total Invested",
+    view: "View Market",
+  },
+} as const;
